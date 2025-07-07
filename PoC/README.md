@@ -1,62 +1,78 @@
-# 🤖 AITL-H / PoC – 実装コードと実験構成
+# 🤖 AITL-H / PoC – 人型ロボット制御の概念実証
 
-本ディレクトリは、AITL-H構想に基づく人型ロボットPoCの**実装コードおよび制御構成**を格納しています。  
-FSM（本能）＋PID（理性）＋LLM（知性）という三層アーキテクチャにより、ロボットの行動制御・判断・改善を統合的に実現するためのPoC設計を支援します。
+本ディレクトリは、AITL-H構想に基づく**人型ロボットPoC（Proof of Concept）**の実験構成・実行環境を格納しています。  
+FSM（本能）＋PID（理性）＋LLM（知性）の三層アーキテクチャにより、制御・推論・動作の統合実証を目的とした構成です。
 
 ---
 
 ## 📁 ディレクトリ構成（PoC）
+
 ```
 PoC/
-├── fsm_engine.py             # FSMエンジン（状態遷移制御）
-├── pid_controller.py         # PID制御ロジック（追従・姿勢制御）
-├── llm_interface.py          # LLMと連携する知的判断モジュール
-├── fsm_state_def.yaml        # 状態遷移定義ファイル（人間可読）
-├── interaction_scenario.md   # 対話・実験シナリオ定義
-├── data/                     # 実験ログ・センサデータ
-├── docs/                     # 設計マニュアル（PoC全体の章構成）
-│   └── README.md             # → PoC設計マニュアルのトップ
-└── README.md                 # ← 本ドキュメント
+├── run_main.py                # PoC制御起動スクリプト（統合実行エントリ）
+├── fsm_config.yaml            # FSMの状態定義・遷移構成
+├── scenario/                  # 対話・行動シナリオ定義群
+│   └── interaction_scenario.md
+├── data/                      # 実験ログ・センサデータ出力
+├── docs/                      # 設計マニュアル（章構成ドキュメント）
+│   └── README.md              # → PoC設計マニュアルのトップページ
+└── README.md                  # ← 本ドキュメント（実行環境概要）
 ```
----
 
-## 🎯 このディレクトリの目的
-
-- 実際のPoC制御・実験を担う**コードベースの中心**
-- FSM/PID/LLMの統合実装に基づくロボット動作の**実証**
-- `fsm_state_def.yaml` による**行動パターンの柔軟定義**
-- 実験シナリオや結果を `data/`, `interaction_scenario.md` に蓄積
+> 🚧 実装コード本体（FSM/PID/UART/LLM等）は `implementary/` に分離しています（詳細は下記参照）
 
 ---
 
-## 📘 設計マニュアル（PoC/docs/）
+## 🎯 このPoCディレクトリの役割
 
-PoC設計の背景・構成方針・章構成に関するマニュアルは、以下のディレクトリに整理しています：
+- AITL構造に基づく**実行構成・実験環境**の統合
+- シナリオ駆動型のPoC制御とセンサデータの記録
+- FSM状態定義・PoCパラメータの設定管理
+- コード実装ではなく、**実験統合・動作構築の場**
+
+---
+
+## 🧩 実装コードとの関係：`implementary/` との分離
+
+FSMやPIDなどの制御モジュールは、共通性と再利用性を高めるため、以下のように分離しています：
+
+| 種別 | 配置先 | 内容 |
+|------|--------|------|
+| 制御モジュール本体 | [`implementary/`](../implementary/) | `fsm_engine.py`, `pid_controller.py`, `uart_driver.py` など |
+| 実行設定・実験構成 | `PoC/` | `fsm_config.yaml`, `run_main.py`, `scenario/` など |
+
+PoCディレクトリでは、これらを**呼び出して統合運用する**形で構成されます。
+
+---
+
+## 📘 PoC設計マニュアル（ドキュメント部）
+
+設計思想・章構成・AITL三層モデルに関する解説は、`docs/` 以下に整理しています：
 
 ▶︎ [📚 PoC設計マニュアルへ](docs/README.md)
 
-マニュアルには、次のような内容が含まれています：
+内容一覧（一部）：
 
-- 第0章：PoC設計全体像とAITL構造の位置づけ
-- 第1章：PoC仕様策定と要件定義
-- 第2章以降：制御設計、RTL連携、PDK選定、SystemDK移行まで
-- 付録：設計テンプレート、評価指標、変換事例集
-
----
-
-## 🔧 今後の開発項目（予定）
-
-- FSM状態のグラフィカル表示ツール
-- LLMによる異常推論と自己修復判断（第8章参照）
-- 制御ログの解析可視化スクリプト
-- PoC成果をSystemDKに移行する変換ツール
+- 第0章：PoC設計全体像と目的
+- 第1章：AITL視点での仕様策定
+- 第2章：PID制御、FSM設計の実務ポイント
+- 第8章：LLMによる自己修復設計のPoC展開
+- 第11章以降：出口戦略とSystemDKへの接続
 
 ---
+
+## 🚀 実行例
+
+```bash
+# FSM定義・制御モジュールを統合してPoC制御を起動
+python run_main.py --config fsm_config.yaml
+```
 
 ## 📬 連絡先
 
-技術監修・設計構成：**三溝 真一（Shinichi Samizo）**  
-GitHub: [Samizo-AITL](https://github.com/Samizo-AITL)  
+技術監修・設計構成：三溝 真一（Shinichi Samizo）
+GitHub: Samizo-AITL
 Email: shin3t72@gmail.com
 
 ---
+

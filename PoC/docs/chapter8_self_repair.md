@@ -74,6 +74,7 @@ sensor_status:
 ---
 
 ## 🧩 実装モジュール構成例（self_repair/）
+```
 self_repair/
 ├── llm_interface.py              # LLMとの連携
 ├── anomaly_log_parser.py        # ログ解析ユーティリティ
@@ -81,7 +82,7 @@ self_repair/
 └── test_logs/
     ├── sample_anomaly1.yaml
     └── sample_anomaly2.yaml
-
+```
 ---
 
 ## 📬 連絡先

@@ -87,3 +87,10 @@ while True:
 
 FSMはPoCの「本能層」として、決定的かつ高速な状態制御を担います。  
 LLM・PIDとの役割分担を踏まえ、PoCでは`fsm_config.yaml`による構成記述を活用し、動作シナリオに柔軟に対応できる状態設計を目指します。
+
+---
+
+<h3>図3-1：FSM状態遷移図</h3>
+<img src="../images/figure3_1_fsm_transition.png" alt="FSM Transition" width="500"/>
+
+---

@@ -1,7 +1,7 @@
 # 🤖 AITL-H / PoC – 人型ロボット制御の概念実証
 
 本ディレクトリは、AITL-H構想に基づく**人型ロボットPoC（Proof of Concept）**の実験構成・実行環境を格納しています。  
-FSM（本能）＋PID（理性）＋LLM（知性）の三層アーキテクチャにより、制御・推論・動作の統合実証を目的とした構成です。
+FSM（本能）＋ PID（理性）＋ LLM（知性）の三層アーキテクチャにより、制御・推論・動作の統合実証を目的とした構成
 
 ---
 
@@ -17,6 +17,7 @@ PoC/
 ├── docs/                      # 設計マニュアル（章構成ドキュメント）
 │   └── README.md              # → PoC設計マニュアルのトップページ
 └── README.md                  # ← 本ドキュメント（実行環境概要）
+
 ```
 
 > 🚧 実装コード本体（FSM/PID/UART/LLM等）は `implementary/` に分離しています（詳細は下記参照）
@@ -70,7 +71,7 @@ python run_main.py --config fsm_config.yaml
 
 ## 📬 連絡先
 
-技術監修・設計構成：三溝 真一（Shinichi Samizo）
+技術監修・設計構成：**三溝 真一**（Shinichi Samizo）
 GitHub: Samizo-AITL
 Email: shin3t72@gmail.com
 

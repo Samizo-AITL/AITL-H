@@ -78,3 +78,10 @@ PID（理性）---→ PWM信号出力
 
 PoC制御の中心は `run_main.py` にあり、FSM・PID・UART・センサを一体化して動作検証を可能にしています。  
 この構造をもとに、将来的にはFSMの再構成やPIDの自動調整などの拡張が見込まれます。
+
+---
+
+<h3>図6-1：PoC統合制御ブロック図</h3>
+<img src="./images/figure6_1_system_block_diagram.png" alt="System Block Diagram" width="500"/>
+
+---

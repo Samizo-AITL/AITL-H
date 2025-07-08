@@ -87,9 +87,8 @@ python run_main.py --config fsm_config.yaml
 
 ## 📬 連絡先
 
-技術監修・設計構成：**三溝 真一**（Shinichi Samizo）
-GitHub: Samizo-AITL
+技術監修・設計構成：**三溝 真一**（Shinichi Samizo）  
+GitHub: Samizo-AITL  
 Email: shin3t72@gmail.com
 
 ---
-

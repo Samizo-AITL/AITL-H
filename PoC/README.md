@@ -46,6 +46,22 @@ PoCディレクトリでは、これらを**呼び出して統合運用する**�
 
 ---
 
+## 🔧 制御構成図（AITL-H PoC）
+
+本PoCでは、UARTによる命令入力、FSMによる行動制御、PIDによる制御量生成、PWM出力までを統合しています。
+
+以下に、全体構成図を示します：
+
+![system_block_diagram](./system_block_diagram_AITL-H_PoC.png)
+
+- **UART Driver**：LLMからの命令をFSMに送信
+- **FSM Engine**：状態管理と制御目標出力（速度・角度）
+- **PID Controller**：目標と実測値の誤差に基づくPWM制御量生成
+- **PWM Driver**：最終出力信号（duty制御）
+- **Sensor Interface**：FSMおよびPIDへ距離・角度センサ値を提供
+
+---
+
 ## 📘 PoC設計マニュアル（ドキュメント部）
 
 設計思想・章構成・AITL三層モデルに関する解説は、`docs/` 以下に整理しています：

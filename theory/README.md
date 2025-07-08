@@ -20,7 +20,7 @@ AITL-H のアーキテクチャは以下の三層で構成されます：
 
 ## 🔁 三層の相互関係（構造図）
 
-![AITL-H 三層アーキテクチャ図](./images/aitl_h_architecture.png)
+![AITL-H 三層アーキテクチャ図](./aitl_h_architecture.png)
 
 > 🔍 上図は `theory/llm/`, `fsm/`, `pid/` に対応した制御層の構造を示しています。
 

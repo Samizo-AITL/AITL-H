@@ -108,11 +108,46 @@ z = Cx + Du
 
 ---
 
-## 🧠 AITL-H における設計戦略
+## 📚 6. 参考資料とリンク集
 
-- 通常時はPIDを基本とした制御ループで稼働
-- 外乱が大きい状況では、H∞制御ロジックを**上書き適用**
-- LLM/FSMとの協調で「制御切り替え条件」を設計に組み込む
+### 📖 制御理論の基礎資料
+
+- **「制御工学入門」**（オーム社）  
+  PIDから現代制御理論まで網羅的に解説された教科書。設計・応用の入口として最適。
+
+- **「制御工学（東京大学出版会）」**  
+  LTIモデル、伝達関数、状態空間表現などを理論的に学ぶための中級書。
+
+- **「Robust and Optimal Control（Zhou, Doyle）」**  
+  H∞制御やμ解析などの理論的背景を深掘りした名著（英語）。
+
+---
+
+### 🌐 オンラインリソース
+
+- [Control Tutorials for MATLAB and Simulink](http://ctms.engin.umich.edu/CTMS/index.php)  
+  モデリング、PID設計、Simulinkによる可視化など実践的チュートリアル。
+
+- [Python Control Systems Library](https://python-control.readthedocs.io/en/latest/)  
+  Pythonでの制御系設計、伝達関数、時系列応答シミュレーションに最適。
+
+- [Jupyter Control Book](https://jupytercontrol.readthedocs.io/)  
+  Jupyter環境で制御理論を体験的に学ぶためのノートブック集。
+
+---
+
+### 🧠 AITL-Hプロジェクトとの連携
+
+- `implementary/pid_module/`：PIDおよびH∞制御器の実装フォルダ
+- `theory/pid/README.md`：本理論と実装の中核文書
+- `PoC/docs/chapter2_control.md`：制御設計実務と評価のPoC資料
+
+---
+
+## 📝 備考
+
+本資料は AITL-Hプロジェクトにおける制御基盤として、教育・実装・PoC検証の3軸に対応しています。  
+**制御理論と知能的制御（LLM/FSM）との橋渡し**として、今後も拡張されていきます。
 
 ---
 

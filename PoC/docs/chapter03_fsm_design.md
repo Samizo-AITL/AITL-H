@@ -91,6 +91,6 @@ LLM・PIDとの役割分担を踏まえ、PoCでは`fsm_config.yaml`による構
 ---
 
 <h3>図3-1：FSM状態遷移図</h3>
-<img src="../images/figure3_1_fsm_transition.png" alt="FSM Transition" width="500"/>
+<img src="./images/figure3_1_fsm_transition.png" alt="FSM Transition" width="500"/>
 
 ---

@@ -16,7 +16,7 @@ AITL-H（All-in-Theory Logic - Hybrid）は、人型ロボットや適応型シ�
 
 ---
 
-## 🧬 三層アーキテクチャ
+## 🧘 三層アーキテクチャ
 
 | 層     | 内容                             | 実装ファイル例                       |
 |--------|----------------------------------|--------------------------------------|
@@ -27,6 +27,25 @@ AITL-H（All-in-Theory Logic - Hybrid）は、人型ロボットや適応型シ�
 > 各層は**疎結合かつ協調的**に構成されており、段階的な開発と柔軟な拡張が可能です。
 
 <img src="theory/aitl_h_architecture.png" alt="AITL-H構造図" width="300">
+
+---
+
+## 📘 AITL-H PoC 設計マニュアル
+
+FSM＋PID＋LLMの三層構造をベースにした人型ロボットPoC設計マニュアル（全16章）を公開中：  
+▶︎ [📖 PoC設計マニュアル](PoC/docs/README.md)
+
+---
+
+## 🤖 ChatGPT支援による設計・状態定義
+
+`accelerated_design/` フォルダでは、ChatGPTを活用した設計支援ツール群を展開しています：
+
+- 状態遷移の自動提案（プロンプト → FSM yaml）
+- テストシナリオやPoCログの整形・可視化
+- ドキュメント生成や設計検証補助（GPT連携）
+
+> 💡 人とAIの**協調設計環境**を具現化する実験的開発です。
 
 ---
 
@@ -58,10 +77,10 @@ AITL-H/
 
 ---
 
-- ## 📚 関連プロジェクト
+## 📚 関連プロジェクト
 
 - [`Edusemi`](https://github.com/Samizo-AITL/Edusemi-v4x)：半導体・SoC設計教材
-- `AITL Architecture`：FSM/制御理論に基づく構造的AI設計の基礎理論（現在 `AITL-H` 内に統合）
+- `AITL Architecture`：FSM/制御理論に基づく構造的AI設計の基礎理論（現在 AITL-H に統合）
 - `TechScape（構想中）`：構造知に基づく技術アーキテクチャ全体の統合構想
 
 ---
@@ -70,7 +89,7 @@ AITL-H/
 
 **三溝 真一（Shinichi Samizo）**  
 元セイコーエプソン株式会社 / 信州大学大学院 電気電子工学修士課程修了  
-専門：半導体デバイス技術  
+専門：半導体デバイス技術、ロボット制御、AI応用設計  
 
 - GitHub: [Samizo-AITL](https://github.com/Samizo-AITL)  
 - お問い合わせ：`shin3t72@gmail.com`  
@@ -78,3 +97,6 @@ AITL-H/
 > 💬 ご意見・ご質問は Issue または Discussions にてお寄せください。
 
 ---
+
+© 2025 Shinichi Samizo — MIT License  
+教材・構想・コード・図版等は、MITライセンスのもとで自由に再利用可能です。

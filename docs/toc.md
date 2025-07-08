@@ -8,7 +8,7 @@
 | [第1章](chapter01_aitl_architecture.md) | 三層構造と設計視点 | FSM（本能）＋PID（理性）＋LLM（知性）の役割整理 |
 | [第2章](chapter02_pid_design.md) | PID制御設計 | PID制御の基本構成・パラメータ調整 |
 | [第3章](chapter03_fsm_design.md) | FSM設計 | 状態遷移の設計とシナリオ連携 |
-| [第4章](chapter04_fsm_config.md) | FSM構成ファイル設計 | YAML定義による構成ファイル設計例 |
+| [第4章](chapter04_sensor_interface.md) | センサ・アクチュエータ制御 | I/O制御・ADC/PWM/デバイス連携の設計手法 |
 | [第5章](chapter05_uart_control.md) | UART通信の構成 | UARTによる命令送信とPoC連携 |
 | [第6章](chapter06_run_main_arch.md) | PoC統合実行構成 | run_mainによる制御統合と構成図 |
 | [第7章](chapter07_log_monitoring.md) | ログ構成と記録設計 | 各制御モジュールからのログ出力 |

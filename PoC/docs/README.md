@@ -96,3 +96,5 @@ FSM（本能）＋ PID（理性）＋ LLM（知性）の三層構造を設計の
 技術監修・設計構成：**三溝 真一（Shinichi Samizo）**  
 GitHub: [Samizo-AITL](https://github.com/Samizo-AITL)  
 Email: shin3t72@gmail.com
+
+---

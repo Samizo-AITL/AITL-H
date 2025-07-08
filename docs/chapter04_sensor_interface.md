@@ -76,3 +76,4 @@ pwm = pid.compute(target_speed, measured_speed)
 
 センサインターフェースは、FSM/PID/LLM間の共通データ基盤として、柔軟かつ拡張性ある構造が求められます。  
 PoC設計においては、`sensor_interface.py` を用いてシンプルなAPIで統合しています。
+

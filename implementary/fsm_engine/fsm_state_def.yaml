@@ -1,0 +1,25 @@
+# fsm_state_def.yaml
+
+initial_state: idle
+
+states:
+  idle:
+    on_input:
+      start: standing_up
+
+  standing_up:
+    on_input:
+      complete: walking
+
+  walking:
+    on_input:
+      obstacle_detected: stopping
+      sit_command: sitting
+
+  stopping:
+    on_input:
+      confirmed: idle
+
+  sitting:
+    on_input:
+      stand_command: standing_up

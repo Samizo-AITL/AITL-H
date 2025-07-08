@@ -35,3 +35,5 @@ FSM（本能）・PID（理性）・LLM（知性）を分離し、それぞれ�
 技術監修・執筆：**三溝 真一（Shinichi Samizo）**  
 GitHub: [Samizo-AITL](https://github.com/Samizo-AITL)  
 Email: shin3t72@gmail.com
+
+---

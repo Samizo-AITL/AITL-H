@@ -77,6 +77,24 @@ AITL-H/
 
 ---
 
+## 🧩 RTL以降のSoC実装・物理設計について
+
+本リポジトリ「AITL-H」では、FSM＋PID＋LLMによる統合制御アーキテクチャとPoC設計を対象としています。  
+一方、**RTL実装以降（Verilog設計〜OpenLaneによるGDSII生成）**に関しては、  
+別途公開している教材プロジェクト「[Edusemi v4.x](https://github.com/Samizo-AITL/Edusemi-v4x)」の**特別編**にて扱っています。
+
+### 🔗 関連教材リンク（Edusemi 特別編）
+
+| 章 | タイトル |
+|----|----------|
+| [第3章](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter3_socsystem) | FSM×PID×LLMによる統合制御システムのSoC実装手法 |
+| [第4章](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter4_openlane) | FSM×PID×LLM制御系のOpenLaneによるRTL-to-GDSII実装 |
+| [第5章](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter5_dfm) | PDKとレイアウト検証による物理整合とDFM設計指針 |
+
+> 💡 「PoC制御」から「実チップ設計」への展開にご関心のある方は、上記教材をご覧ください。
+
+---
+
 ## 📚 関連プロジェクト
 
 - [`Edusemi`](https://github.com/Samizo-AITL/Edusemi-v4x)：半導体・SoC設計教材

@@ -78,7 +78,7 @@ FSM・PID・センサの出力を統合記録し、**PoC設計の品質を客観
 各モジュールは独立して `.csv` ファイルにログを記録し、後段で可視化や解析に利用されます。
 
 <div align="center">
-  <img src="../images/figure7_1_log_output_diagram.png" alt="ログ出力構成図" width="500"/>
+  <img src="./images/figure7_1_log_output_diagram.png" alt="ログ出力構成図" width="500"/>
 </div>
 
 - **FSM Engine** → `fsm_log.csv`：状態遷移ログ

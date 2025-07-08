@@ -52,7 +52,7 @@ PoCディレクトリでは、これらを**呼び出して統合運用する**�
 
 以下に、全体構成図を示します：
 
-![system_block_diagram](./system_block_diagram_AITL-H_PoC.png)
+<img src="./system_block_diagram_AITL-H_PoC.png" alt="system_block_diagram" width="300"/>
 
 - **UART Driver**：LLMからの命令をFSMに送信
 - **FSM Engine**：状態管理と制御目標出力（速度・角度）

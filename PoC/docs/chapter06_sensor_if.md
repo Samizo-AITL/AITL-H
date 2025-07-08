@@ -74,8 +74,8 @@ AFE設計は以下を考慮：
 
 ## 📬 連絡先
 
-執筆・設計：三溝 真一（Shinichi Samizo）
-GitHub: https://github.com/Samizo-AITL
+執筆・設計：**三溝 真一（Shinichi Samizo）**  
+GitHub: [https://github.com/Samizo-AITL](https://github.com/Samizo-AITL)  
 Email: shin3t72@gmail.com
 
 ---

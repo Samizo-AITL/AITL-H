@@ -1,0 +1,45 @@
+# fsm_config.yaml
+# AITL-H FSM 定義ファイル（PoC用）
+
+initial_state: idle
+
+states:
+  idle:
+    on_enter:
+      - control: stop
+    transitions:
+      - event: start_command
+        next_state: approach_target
+
+  approach_target:
+    on_enter:
+      - control: move
+        target: [1.0, 0.5]
+    transitions:
+      - event: reached_target
+        next_state: check_condition
+
+  check_condition:
+    on_enter:
+      - control: llm_decide
+        input: "Is it safe to interact?"
+    transitions:
+      - event: llm_yes
+        next_state: interact
+      - event: llm_no
+        next_state: abort
+
+  interact:
+    on_enter:
+      - control: move
+        target: [0.0, 0.0]
+    transitions:
+      - event: interaction_done
+        next_state: idle
+
+  abort:
+    on_enter:
+      - control: stop
+    transitions:
+      - event: reset
+        next_state: idle

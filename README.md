@@ -18,17 +18,18 @@ AITL-H（All-in-Theory Logic - Hybrid）は、人型ロボットや適応型シ�
 
 ## 🧬 三層アーキテクチャ
 
-| 層 | 内容 | 実装ファイル例 |
-|----|------|----------------|
-| FSM層 | 状態遷移によるロジック制御 | `fsm_engine.py`, `fsm_state_def.yaml` |
-| PID層 | 関節角、移動量など連続量制御 | `pid_controller.py`, `pid_module.py` |
-| LLM層 | 状況判断・異常検出・言語応答 | `llm_interface.py`, `llm_logger.py` |
+| 層     | 内容                             | 実装ファイル例                       |
+|--------|----------------------------------|--------------------------------------|
+| FSM層 | 状態遷移によるロジック制御        | `fsm_engine.py`, `fsm_state_def.yaml` |
+| PID層 | 関節角・移動量などの連続量制御    | `pid_controller.py`, `pid_module.py` |
+| LLM層 | 状況判断・異常検出・言語応答       | `llm_interface.py`, `llm_logger.py`   |
 
-> 各層は疎結合かつ協調的に構成され、段階的な開発と柔軟な拡張が可能です。
+> 各層は**疎結合かつ協調的**に構成されており、段階的な開発と柔軟な拡張が可能です。
 
 ---
 
 ## 📂 ディレクトリ構成
+
 ```
 AITL-H/
 ├── theory/                # アーキテクチャの理論構造と設計思想
@@ -39,10 +40,10 @@ AITL-H/
 
 | ディレクトリ | 内容 |
 |--------------|------|
-| `theory/` | FSM・PID・LLMによる三層アーキテクチャの構造と設計意図を記述 |
-| `PoC/` | 実験シナリオ、状態制御、実験ログを含む統合PoC環境 |
-| `implementary/` | FSM・PID・通信などの制御モジュール群（Python実装） |
-| `accelerated_design/` | 状態定義やテスト生成を補助するChatGPTツール集 |
+| [`theory/`](theory/) | FSM・PID・LLMによる三層アーキテクチャの構造と設計意図を記述 |
+| [`PoC/`](PoC/) | 実験シナリオ、状態制御、実験ログを含む統合PoC環境 |
+| [`implementary/`](implementary/) | FSM・PID・通信などの制御モジュール群（Python実装） |
+| [`accelerated_design/`](accelerated_design/) | 状態定義やテスト生成を補助するChatGPTツール集 |
 
 ---
 
@@ -55,27 +56,23 @@ AITL-H/
 
 ---
 
-## 📚 関連プロジェクト
+- ## 📚 関連プロジェクト
 
 - [`Edusemi`](https://github.com/Samizo-AITL/Edusemi-v4x)：半導体・SoC設計教材
-- `AITL Architecture`: FSM/制御理論に基づく構造的AI設計の基礎理論
+- `AITL Architecture`：FSM/制御理論に基づく構造的AI設計の基礎理論（現在 `AITL-H` 内に統合）
 - `TechScape（構想中）`：構造知に基づく技術アーキテクチャ全体の統合構想
 
 ---
 
 ## 👨‍💻 開発・設計者
 
-- **三溝 真一（Shinichi Samizo）**
-  - 元セイコーエプソン株式会社
-  - 信州大学大学院 電気電子工学修士課程修了
-  - 専門：半導体デバイス技術
-- GitHub: [Samizo-AITL](https://github.com/Samizo-AITL)
-- お問い合わせ：`shin3t72@gmail.com`
+**三溝 真一（Shinichi Samizo）**  
+元セイコーエプソン株式会社 / 信州大学大学院 電気電子工学修士課程修了  
+専門：半導体デバイス技術  
 
-> Issue または Discussions にてご意見・ご質問をお寄せください。
+- GitHub: [Samizo-AITL](https://github.com/Samizo-AITL)  
+- お問い合わせ：`shin3t72@gmail.com`  
+
+> 💬 ご意見・ご質問は Issue または Discussions にてお寄せください。
 
 ---
-
-## 📄 ライセンス
-
-本プロジェクトは [MITライセンス](./LICENSE) のもとで公開されています。

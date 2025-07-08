@@ -80,6 +80,7 @@ PID制御は、FSMで定義された目標行動を物理レベルに落とし�
 
 ## 図2-1：PID制御ループ構成図
 
-![図2-1 PID制御ループ](./images/figure2_1_pid_control_loop.png)
+<h3>図2-1：PID制御ループ構成図</h3>
+<img src="../images/figure2_1_pid_control_loop.png" alt="PID Loop" width="250"/>
 
 ---

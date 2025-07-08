@@ -26,6 +26,8 @@ AITL-H（All-in-Theory Logic - Hybrid）は、人型ロボットや適応型シ�
 
 > 各層は**疎結合かつ協調的**に構成されており、段階的な開発と柔軟な拡張が可能です。
 
+![AITL-H アーキテクチャ構造図](theory/aitl_h_architecture.png)
+
 ---
 
 ## 📂 ディレクトリ構成

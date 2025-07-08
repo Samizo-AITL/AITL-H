@@ -1,50 +1,48 @@
-# run_main.py
-import argparse
-import yaml
-from implementary.fsm_engine import FSMEngine
-from implementary.pid_controller import PIDController
-from implementary.llm_interface import LLMInterface
 
-def load_fsm_config(config_path):
-    with open(config_path, 'r') as f:
-        return yaml.safe_load(f)
+"""
+run_main.py — AITL-H PoC 統合制御エントリスクリプト
+
+UART → FSM → PID → PWM という統合制御フローを実行。
+"""
+
+from fsm_engine import FSMEngine
+from pid_controller import PIDController
+from uart_driver import UARTDriver
+
+def get_sensor_input():
+    """ センサ値（仮に手動入力）を取得 """
+    try:
+        val = float(input("Sensor (measured speed): "))
+        return val
+    except ValueError:
+        print("Invalid input. Defaulting to 0.0")
+        return 0.0
 
 def main():
-    parser = argparse.ArgumentParser(description="AITL-H PoC 実行統合スクリプト")
-    parser.add_argument('--config', type=str, default='fsm_config.yaml',
-                        help='FSM設定ファイル（YAML形式）')
-    args = parser.parse_args()
+    # 初期化
+    fsm = FSMEngine("fsm_config.yaml")
+    pid = PIDController(kp=2.0, ki=0.5, kd=0.1)
+    uart = UARTDriver()
 
-    # FSM設定読み込み
-    fsm_def = load_fsm_config(args.config)
+    print("=== AITL-H PoC 制御開始 ===")
 
-    # モジュール初期化
-    fsm = FSMEngine(fsm_def)
-    pid = PIDController()
-    llm = LLMInterface()
+    while True:
+        cmd = uart.receive_command()
+        if not cmd:
+            continue
 
-    print("✅ AITL-H PoC 起動：FSM + PID + LLM 統合")
+        fsm.update(cmd)
+        targets = fsm.get_output()
 
-    # メイン制御ループ
-    while not fsm.is_finished():
-        current_state = fsm.get_current_state()
-        action = fsm.get_action(current_state)
+        if not targets:
+            print("[FSM] 現在状態に対応する出力なし")
+            continue
 
-        print(f"▶ 現在状態: {current_state} / 実行アクション: {action}")
+        target_speed = targets.get("target_speed", 0.0)
+        measured_speed = get_sensor_input()
 
-        # 状態に応じたPID制御（例：移動、回転、停止）
-        if action.get("control") == "move":
-            pid.move_to(action.get("target"))
-        elif action.get("control") == "stop":
-            pid.stop()
-        elif action.get("control") == "llm_decide":
-            response = llm.judge(action.get("input"))
-            print(f"💬 LLM判断結果: {response}")
-
-        # 次状態へ遷移
-        fsm.next_state()
-
-    print("🏁 PoC 実行完了")
+        pwm = pid.compute(target_speed, measured_speed)
+        print(f"[PID] Target: {target_speed}, Measured: {measured_speed} → PWM: {pwm}")
 
 if __name__ == "__main__":
     main()

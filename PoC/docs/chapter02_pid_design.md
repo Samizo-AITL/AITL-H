@@ -75,3 +75,11 @@ FSMからの `target_speed`、センサからの `measured_speed` を用いてPW
 
 PID制御は、FSMで定義された目標行動を物理レベルに落とし込む**理性の実装**です。  
 本章では、PoCにおけるPID構成と調整の基本を明示しました。次章では、FSM設計に焦点を当てます。
+
+---
+
+## 図2-1：PID制御ループ構成図
+
+![図2-1 PID制御ループ](../images/figure2_1_pid_control_loop.png)
+
+---

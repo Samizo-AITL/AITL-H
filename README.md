@@ -33,7 +33,7 @@ AITL-H（All-in-Theory Logic - Hybrid）は、人型ロボットや適応型シ�
 ## 📘 AITL-H PoC 設計マニュアル
 
 FSM＋PID＋LLMの三層構造をベースにした人型ロボットPoC設計マニュアル（全16章）を公開中：  
-▶︎ [📖 PoC設計マニュアル](PoC/docs/README.md)
+▶︎ [📖 PoC設計マニュアル](docs/README.md)
 
 ---
 

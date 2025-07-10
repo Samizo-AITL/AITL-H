@@ -123,18 +123,23 @@ AITL-Hの制御アーキテクチャ（FSM × PID × LLM）も、第9章「LLM�
 
 ---
 
-## 👨‍💻 開発・設計者
+## 🧑‍🔬 執筆者情報
 
-**三溝 真一（Shinichi Samizo）**  
-元セイコーエプソン株式会社 / 信州大学大学院 電気電子工学修士課程修了  
-専門：半導体デバイス技術、ロボット制御、AI応用設計  
-
-- GitHub: [Samizo-AITL](https://github.com/Samizo-AITL)  
-- お問い合わせ：`shin3t72@gmail.com`  
-
-> 💬 ご意見・ご質問は Issue または Discussions にてお寄せください。
+- **氏名**：三溝 真一（Shinichi Samizo）
+- **学歴**：信州大学大学院 電気電子工学修士課程 修了
+- **職歴**：  
+　1997年 セイコーエプソン株式会社 入社  
+　以下の開発・製品化に従事：  
+　- 半導体デバイス技術（0.35µm〜0.18µmノード）  
+　- ロジックデバイス、メモリデバイス、高耐圧インテグレーション技術の開発・量産化  
+　- インクジェット薄膜ピエゾアクチュエータ開発  
+　- PrecisionCoreプリントヘッド製品展開にも参画
+ - **連絡先**：  
+　GitHub：[Samizo-AITL](https://github.com/Samizo-AITL)  
+  Email: [shin3t72@gmail.com](mailto:shin3t72@gmail.com)
 
 ---
+
 
 © 2025 Shinichi Samizo — MIT License  
 教材・構想・コード・図版等は、MITライセンスのもとで自由に再利用可能です。

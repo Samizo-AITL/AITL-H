@@ -81,7 +81,7 @@ AITL-Hの制御アーキテクチャ（FSM × PID × LLM）も、第9章「LLM�
 |----|------|----------------|
 | [Part 1〜5](https://github.com/Samizo-AITL/EduController#制御理論系) | 古典〜現代制御・実装 | PID層の制御理論・設計に対応 |
 | [Part 6〜8](https://github.com/Samizo-AITL/EduController#ai制御系) | NN制御・強化学習・データ駆動 | AI応用制御の基礎・応用展開 |
-| [Part 9](https://github.com/Samizo-AITL/EduController/tree/main/part09_hybrid_llm) | FSM×PID×LLMの統合制御 | AITL-H構想を教材化し、演習も収録 |
+| [Part 9](https://github.com/Samizo-AITL/EduController/tree/main/part09_llm_hybrid) | FSM×PID×LLMの統合制御 | AITL-H構想を教材化し、演習も収録 |
 
 > 💡 AITL-Hの**設計思想の理解／制御理論の復習／演習支援**として、EduController教材をご活用ください。
 

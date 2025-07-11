@@ -8,10 +8,10 @@
 
 ## 🧭 システム構成図
 
-![Hybrid Control Architecture](../../docs/architecture_gimbal_fsm_pid_llm.svg)
+![Figure 9.1: Hybrid Control Architecture for Gimbal System](../../docs/images/figure9_1_gimbal_control_architecture.svg)
 
 > 上位知能（LLM） → 状態遷移（FSM） → 安定制御（PID） → アクチュエータ  
-> ← IMUセンサ・知覚ループにより、制御フィードバックが完結します。
+> ← IMUセンサによる姿勢情報と、LLMへの知覚フィードバックで閉ループを構成します。
 
 ---
 

@@ -1,8 +1,0 @@
-ファイル名,説明
-README.md,Readme
-config_gimbal.json,Config Gimbal
-control_fsm_pid_llm.py,Control Fsm Pid Llm
-imu_sensor_model.py,Imu Sensor Model
-motor_pwm_driver.py,Motor Pwm Driver
-llm_goal_agent.py,Llm Goal Agent
-gimbal_sim_demo.ipynb,Gimbal Sim Demo

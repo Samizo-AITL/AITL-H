@@ -62,3 +62,4 @@
 
 - 本PoCは [AITL-H](https://github.com/Samizo-AITL/AITL-H) フレームワークの一部です  
 - 教材連携先： [EduController - Part09](https://github.com/Samizo-AITL/EduController/tree/main/part09_llm_hybrid)
+- 

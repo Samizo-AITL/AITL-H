@@ -146,3 +146,7 @@ AITL-Hの制御アーキテクチャ（FSM × PID × LLM）も、第9章「LLM�
 教材・構想・コード・図版等は、MITライセンスのもとで自由に再利用可能です。
 
 ---
+
+💬 [FSM＋PID＋LLM構造制御の議論はこちらへ](https://github.com/Samizo-AITL/AITL-H/discussions)
+
+---

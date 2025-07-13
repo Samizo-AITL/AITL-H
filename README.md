@@ -1,150 +1,135 @@
 # 🤖 AITL-H：Hybrid型構造制御フレームワーク
 
-AITL-H（All-in-Theory Logic - Hybrid）は、人型ロボットや適応型システムに向けて設計された**階層型知能制御アーキテクチャ**です。  
-**FSM（本能）＋ PID（理性）＋ LLM（知性）**の三層構造により、**瞬時性・安定性・柔軟性**を兼ね備えた制御を実現します。
+**AITL-H（All-in-Theory Logic - Hybrid）**は、人型ロボットや適応型システムに向けて設計された**階層型知能制御アーキテクチャ**です。  
+**FSM（本能）× PID（理性）× LLM（知性）**の三層構造により、**瞬時性・安定性・柔軟性**を兼ね備えた制御を実現します。
 
 ---
 
-## 🧭 プロジェクト概要
+## 🧭 概要
 
-- **名称**：AITL-H（Hybrid）
-- **目的**：人型ロボット制御における構造的AI制御の実証と設計手法の確立
-- **中核原理**：
-  - 本能的行動（FSM）
-  - 物理駆動制御（PID）
-  - 意図推定・対話・学習（LLM）
-
----
-
-## 🧘 三層アーキテクチャ
-
-| 層     | 内容                             | 実装ファイル例                       |
-|--------|----------------------------------|--------------------------------------|
-| FSM層 | 状態遷移によるロジック制御        | `fsm_engine.py`, `fsm_state_def.yaml` |
-| PID層 | 関節角・移動量などの連続量制御    | `pid_controller.py`, `pid_module.py` |
-| LLM層 | 状況判断・異常検出・言語応答       | `llm_interface.py`, `llm_logger.py`   |
-
-> 各層は**疎結合かつ協調的**に構成されており、段階的な開発と柔軟な拡張が可能です。
-
-<img src="theory/aitl_h_architecture.png" alt="AITL-H構造図" width="300">
+| 項目       | 内容 |
+|------------|------|
+| **名称**   | AITL-H（Hybrid） |
+| **目的**   | 構造的AI制御による人型ロボット制御手法の確立 |
+| **中核原理** | - FSM：状態遷移による本能的行動制御<br>- PID：物理量（角度・速度）の連続制御<br>- LLM：高度な判断・対話・学習による知能化 |
 
 ---
 
-## 📘 AITL-H PoC 設計マニュアル
+## 🧘 三層アーキテクチャ構成
 
-FSM＋PID＋LLMの三層構造をベースにした人型ロボットPoC設計マニュアル（全16章）を公開中：  
-▶︎ [📖 PoC設計マニュアル](docs/README.md)
+| 層     | 機能                           | 実装例                                   |
+|--------|--------------------------------|------------------------------------------|
+| FSM層 | 状態遷移に基づくロジック制御   | `fsm_engine.py`, `fsm_state_def.yaml`    |
+| PID層 | 各関節・移動量の物理制御       | `pid_controller.py`, `pid_module.py`     |
+| LLM層 | 状況判断、異常検出、言語応答   | `llm_interface.py`, `llm_logger.py`      |
+
+> 各層は**疎結合・協調的**に設計されており、独立した開発・段階的統合が可能です。
+
+<div align="center"><img src="theory/aitl_h_architecture.png" alt="AITL-H構造図" width="400"></div>
 
 ---
 
-## 🤖 ChatGPT支援による設計・状態定義
+## 📘 PoC設計マニュアル（全16章）
 
-`accelerated_design/` フォルダでは、ChatGPTを活用した設計支援ツール群を展開しています：
+FSM×PID×LLM統合に基づいた**人型ロボットPoC設計マニュアル**を公開しています。  
+▶︎ [📖 マニュアルを読む](docs/README.md)
 
-- 状態遷移の自動提案（プロンプト → FSM yaml）
-- テストシナリオやPoCログの整形・可視化
-- ドキュメント生成や設計検証補助（GPT連携）
+---
 
-> 💡 人とAIの**協調設計環境**を具現化する実験的開発です。
+## 🤖 ChatGPT支援：協調型設計ツール群
+
+`accelerated_design/`では、ChatGPTを活用した設計支援ツールを提供：
+
+- 状態遷移自動提案（プロンプト → FSM YAML）
+- テストシナリオ生成／ログ可視化支援
+- ドキュメント自動生成・設計レビュー支援
+
+> 🧠 人とAIの**協調設計環境**構築を目的とした実験的開発群です。
 
 ---
 
 ## 📂 ディレクトリ構成
+
 ```
 AITL-H/
-├── theory/                # アーキテクチャの理論構造と設計思想
-├── PoC/                   # 人型ロボット制御の実証実験（FSM/PID/LLM統合）
-├── implementary/          # 制御ブロックのPython実装コード群
-└── accelerated_design/    # ChatGPT支援による状態提案・設計支援ツール
+├── theory/                # 構造設計思想・アーキテクチャ解説
+├── PoC/                   # 人型ロボット用統合制御の実証コード・ログ
+├── implementary/          # 各制御モジュール（FSM/PID/LLM）のPython実装
+└── accelerated_design/    # GPT連携による状態設計・支援ツール
 ```
 
 | ディレクトリ | 内容 |
 |--------------|------|
-| [`theory/`](theory/) | FSM・PID・LLMによる三層アーキテクチャの構造と設計意図を記述 |
-| [`PoC/`](PoC/) | 実験シナリオ、状態制御、実験ログを含む統合PoC環境 |
-| [`implementary/`](implementary/) | FSM・PID・通信などの制御モジュール群（Python実装） |
-| [`accelerated_design/`](accelerated_design/) | 状態定義やテスト生成を補助するChatGPTツール集 |
+| `theory/` | 設計思想・三層構造の理論背景 |
+| `PoC/` | 制御シナリオ・ロギング・評価 |
+| `implementary/` | FSM・PID・通信・LLM連携コード |
+| `accelerated_design/` | 設計提案支援ツール・ログ整形支援 |
 
 ---
 
-## 🧠 関連教材：EduControllerとの接続
+## 🎓 教育教材：EduControllerとの連携
 
-AITL-Hは、人型ロボットや応答型制御の**実験的PoC設計環境**ですが、  
-その制御理論的基盤やAI制御への発展的理解については、**教育特化教材「EduController」**と連携しています。
-
-### 🔗 EduController とは
-
-> [EduController](https://github.com/Samizo-AITL/EduController) は、古典制御〜現代制御からAI統合制御までを網羅する全9章構成の教育教材です。  
-AITL-Hの制御アーキテクチャ（FSM × PID × LLM）も、第9章「LLM統合型ハイブリッド制御」にて体系的に解説・演習されています。
+AITL-Hの制御理論基盤は、**教育教材「EduController」**の第9章に完全対応しています。
 
 | 章 | 内容 | AITL-Hとの関係 |
 |----|------|----------------|
-| [Part 1〜5](https://github.com/Samizo-AITL/EduController#制御理論系) | 古典〜現代制御・実装 | PID層の制御理論・設計に対応 |
-| [Part 6〜8](https://github.com/Samizo-AITL/EduController#ai制御系) | NN制御・強化学習・データ駆動 | AI応用制御の基礎・応用展開 |
-| [Part 9](https://github.com/Samizo-AITL/EduController/tree/main/part09_llm_hybrid) | FSM×PID×LLMの統合制御 | AITL-H構想を教材化し、演習も収録 |
+| [Part 1〜5](https://github.com/Samizo-AITL/EduController#制御理論系) | 古典〜現代制御理論 | PID層の理論的基盤 |
+| [Part 6〜8](https://github.com/Samizo-AITL/EduController#ai制御系) | NN制御・強化学習 | AI応用制御への展開 |
+| [Part 9](https://github.com/Samizo-AITL/EduController/tree/main/part09_llm_hybrid) | FSM×PID×LLM統合制御 | AITL-Hの構造と実装を教材化 |
 
-> 💡 AITL-Hの**設計思想の理解／制御理論の復習／演習支援**として、EduController教材をご活用ください。
-
----
-
-## 🚀 応用可能性
-
-- 🧓 **介護支援ロボット**：感情的反応＋物理制御の複合動作
-- 🛠 **自己改善型制御**：LLMによる異常推定と行動修正提案
-- 🌏 **災害対応ロボット**：事前定義＋現場推論の組合せ行動
-- 🎓 **教育・研究用教材**：制御・AI・設計論を統合的に学ぶ
+> 🔗 [EduController リポジトリを見る](https://github.com/Samizo-AITL/EduController)
 
 ---
 
-## 🧩 RTL以降のSoC実装・物理設計について
+## 🚀 応用領域
 
-本リポジトリ「AITL-H」では、FSM＋PID＋LLMによる統合制御アーキテクチャとPoC設計を対象としています。  
-一方、**RTL実装以降（Verilog設計〜OpenLaneによるGDSII生成）**に関しては、  
-別途公開している教材プロジェクト「[Edusemi v4.x](https://github.com/Samizo-AITL/Edusemi-v4x)」の**特別編**にて扱っています。
-
-### 🔗 関連教材リンク（Edusemi 特別編）
-
-| 章 | タイトル |
-|----|----------|
-| [第3章](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter3_socsystem) | FSM×PID×LLMによる統合制御システムのSoC実装手法 |
-| [第4章](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter4_openlane) | FSM×PID×LLM制御系のOpenLaneによるRTL-to-GDSII実装 |
-| [第5章](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter5_dfm) | PDKとレイアウト検証による物理整合とDFM設計指針 |
-
-> 💡 「PoC制御」から「実チップ設計」への展開にご関心のある方は、上記教材をご覧ください。
+- 🧓 **介護支援ロボット**：感情認識＋物理制御
+- 🛠 **自己進化型制御**：LLMによる異常検知とフィードバック改善
+- 🌏 **災害対応ロボット**：定型動作と推論行動の組合せ
+- 🎓 **教育・研究用途**：AI×制御の融合教材として最適
 
 ---
 
-## 📚 関連プロジェクト
+## 🧩 実チップ設計への展開：Edusemiとの接続
 
-- [`Edusemi`](https://github.com/Samizo-AITL/Edusemi-v4x)：半導体・SoC設計教材
-- `EduController`：制御理論とAI制御を体系的に学ぶ教材（FSM×PID×LLM連携）
+PoCレベルを超えて**SoC設計・RTL実装・物理設計**まで扱いたい場合は、  
+関連プロジェクト **[Edusemi v4.x](https://github.com/Samizo-AITL/Edusemi-v4x)** の「特別編」が対応しています。
+
+| 章 | 内容 |
+|----|------|
+| [第3章](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter3_socsystem) | FSM×PID×LLM統合制御のSoC設計 |
+| [第4章](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter4_openlane) | OpenLaneによるRTL〜GDSII変換 |
+| [第5章](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter5_dfm) | DRC/LVS/DFM設計指針と物理整合 |
 
 ---
 
-## 🧑‍🔬 執筆者情報
+## 📚 関連プロジェクト一覧
+
+- [Edusemi v4.x](https://github.com/Samizo-AITL/Edusemi-v4x)：半導体／SoC設計教材（実装対応）
+- [EduController](https://github.com/Samizo-AITL/EduController)：制御理論〜AI制御の教育教材
+- [Rekiden](https://github.com/Samizo-AITL/Rekiden)：歴史シミュレーション教材（FSM応用）
+
+---
+
+## 👤 執筆者情報
 
 - **氏名**：三溝 真一（Shinichi Samizo）  
-- **学歴**：信州大学大学院 電気電子工学修士課程 修了  
+- **学歴**：信州大学大学院 電気電子工学専攻 修了  
+- **経歴**：セイコーエプソン（1997年入社）にて以下を歴任  
+  - 0.35µm〜0.18µm世代のロジック・メモリ開発  
+  - 高耐圧CMOS混載・AMS系技術開発  
+  - TFP技術およびPrecisionCore製品化
 
-- **職歴**：  
-  1997年 セイコーエプソン株式会社 入社  
-  以下の開発・製品化に従事：  
-  - 半導体デバイス技術（0.35µm〜0.18µmノード）  
-  - ロジックデバイス、メモリデバイス、高耐圧インテグレーション技術の開発・量産化  
-  - インクジェット薄膜ピエゾアクチュエータ開発  
-  - PrecisionCoreプリントヘッド製品展開にも参画  
-
-- **連絡先**：  
-  GitHub：[Samizo-AITL](https://github.com/Samizo-AITL)  
-  Email：[shin3t72@gmail.com](mailto:shin3t72@gmail.com)
+📧 [shin3t72@gmail.com](mailto:shin3t72@gmail.com)  
+🔗 [GitHub: Samizo-AITL](https://github.com/Samizo-AITL)
 
 ---
 
 © 2025 Shinichi Samizo — MIT License  
-教材・構想・コード・図版等は、MITライセンスのもとで自由に再利用可能です。
+教材・ソースコード・構造図等はMITライセンスにて自由に利用可能です。
 
 ---
 
-💬 [FSM＋PID＋LLM構造制御の議論はこちらへ](https://github.com/Samizo-AITL/AITL-H/discussions)
+💬 ご意見・議論は [Discussionページ](https://github.com/Samizo-AITL/AITL-H/discussions) へどうぞ。
 
 ---

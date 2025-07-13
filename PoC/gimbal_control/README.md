@@ -1,8 +1,8 @@
-# 🤖 ジンバル制御PoC：FSM + MIMO PID + LLM（AITL-HX構成）
+# 🤖 ジンバル制御 PoC：FSM + MIMO PID + LLM（AITL-HX構成）
 
-このディレクトリは、3軸ジンバルの安定化制御を対象とした、  
-**FSM（状態機械）＋ MIMO PID制御 ＋ LLM（大規模言語モデル）**による  
-**ハイブリッド制御アーキテクチャ（AITL-HX）**のPoC実装です。
+本ディレクトリは、3軸ジンバルの安定化制御を対象とした  
+**FSM（状態遷移）＋ MIMO PID制御 ＋ LLM（大規模言語モデル）**による  
+**ハイブリッド知能制御アーキテクチャ（AITL-HX）**のPoC実装を提供します。
 
 ---
 
@@ -10,56 +10,77 @@
 
 ![Figure 9.1: Hybrid Control Architecture for Gimbal System](../../docs/images/figure9_1_gimbal_control_architecture.svg)
 
-> 上位知能（LLM）→ 状態遷移（FSM）→ 安定制御（PID）→ アクチュエータ  
-> ← IMUセンサによる姿勢情報と、LLMへの知覚フィードバックで閉ループを構成します。
+```
+┌──────────────┐
+│    LLM層     │ ← 自然言語による指令生成・意図推論
+└─────┬────────┘
+      ↓
+┌─────▼──────┐
+│   FSM層    │ ← 行動切替（待機・追従・復帰 など）
+└─────┬──────┘
+      ↓
+┌─────▼──────┐
+│   PID層    │ ← Roll/Pitch/YawのMIMO PID制御
+└─────┬──────┘
+      ↓
+┌─────▼──────┐       ┌───────────────┐
+│ アクチュエータ層 │ ←→ │  IMUセンサ層     │
+└────────────────┘       └───────────────┘
+                         ↑
+                  姿勢情報をLLM層へフィードバック
+```
+
+> LLM → FSM → PID → アクチュエータ → センサ → LLM  
+> このように**知能的な意図推論と物理制御が循環する閉ループ制御**を構成します。
 
 ---
 
-## 🔩 構成要素
+## 🔩 モジュール構成
 
-| 層 | モジュール | 説明 |
-|----|------------|------|
-| LLM層 | `llm_goal_agent.py` | 目的推論・対話ベースの指令生成 |
-| FSM層 | `control_fsm_pid_llm.py` | 状態遷移ロジック：待機・追従・復帰など |
-| PID層 | `control_fsm_pid_llm.py` | Roll・Pitch・Yaw に対する3軸MIMO PID制御 |
-| センサ | `imu_sensor_model.py` | 3軸IMU（角速度・加速度）の簡易モデル |
-| アクチュエータ | `motor_pwm_driver.py` | PWM出力 → ブラシレスモータ制御（3軸） |
+| 層             | モジュール                 | 機能概要 |
+|----------------|----------------------------|-----------|
+| **LLM層**      | `llm_goal_agent.py`        | 自然言語からの目的推論・対話指令生成 |
+| **FSM層**      | `control_fsm_pid_llm.py`   | 状態遷移制御（追従・復帰・待機など） |
+| **PID層**      | 同上                       | Roll・Pitch・YawへのMIMO PID制御 |
+| **センサ層**   | `imu_sensor_model.py`      | 3軸IMUセンサモデル（角速度・加速度） |
+| **アクチュエータ層** | `motor_pwm_driver.py` | モータ駆動（PWM出力による模擬制御） |
 
 ---
 
-## 🧪 ファイル一覧
+## 📂 ファイル一覧
 
-| ファイル名 | 内容 |
-|------------|------|
-| `control_fsm_pid_llm.py` | 制御本体（FSM + PID + LLM接続） |
-| `imu_sensor_model.py` | IMUセンサモデル（3軸角度・速度） |
-| `motor_pwm_driver.py` | モータ駆動用PWM出力（模擬） |
-| `llm_goal_agent.py` | 目的設定・状況判断のLLMインターフェース |
-| `config_gimbal.json` | PIDゲイン・システム設定 |
-| `gimbal_sim_demo.ipynb` | 統合制御の可視化・Notebook実行用 |
+| ファイル名               | 説明 |
+|--------------------------|------|
+| `control_fsm_pid_llm.py` | FSM＋PID統合制御本体 |
+| `imu_sensor_model.py`    | IMUセンサの簡易シミュレーションモデル |
+| `motor_pwm_driver.py`    | PWMベースのモータ駆動制御 |
+| `llm_goal_agent.py`      | ChatGPT/LLMによる目標生成インターフェース |
+| `config_gimbal.json`     | PIDゲインなどの設定ファイル |
+| `gimbal_sim_demo.ipynb`  | Notebookベースの統合制御デモ可視化 |
 
 ---
 
 ## 🎯 学習目標
 
-- FSM（行動切替）＋PID（物理安定）＋LLM（意図判断）の協調制御を学ぶ
-- 自然言語指令に応じた目標設定と適応的制御を設計する
-- 外乱下での3軸ジンバル制御をシミュレーションする
-- エッジAI／ロボティクス実装に向けた統合設計を体験する
+- 状態遷移（FSM）とPID制御の統合による**動作切替＋安定制御**の設計を学ぶ  
+- **LLMによる自然言語からの目標設定**とフィードバック制御の融合を体験する  
+- **3軸ジンバル系のMIMO PID制御**に関するシミュレーション実装を理解する  
+- **ロボティクス × LLM統合制御**のPoC設計・検証手法を学ぶ  
 
 ---
 
-## 🚀 今後の拡張
+## 🚀 今後の拡張予定
 
-- 実機IMU＋ESC＋Jetson/Raspberry Pi への接続実験
-- ChatGPT APIとのリアルタイム連携
-- カメラ画像ベースの追従制御・サーボ制御との融合
-- ドローン／視線制御ロボットなどへの応用展開
+- 実機接続：IMUモジュール＋ESC＋Jetson/Raspberry Pi 連携  
+- ChatGPT API を介したリアルタイム制御指令の実験  
+- 画像認識＋サーボによる視覚フィードバック制御の追加  
+- ドローン、カメラジンバル、視線制御ロボットなどへの応用展開  
 
 ---
 
-## 📎 参考
+## 📎 参考リンク・教材連携
 
-- 本PoCは [AITL-H](https://github.com/Samizo-AITL/AITL-H) フレームワークの一部です  
-- 教材連携先： [EduController - Part09](https://github.com/Samizo-AITL/EduController/tree/main/part09_llm_hybrid)
-- 
+- 🔗 AITL-H フレームワーク本体：[AITL-H GitHub](https://github.com/Samizo-AITL/AITL-H)  
+- 📘 教材連携先： [EduController - Part09: LLM Hybrid Control](https://github.com/Samizo-AITL/EduController/tree/main/part09_llm_hybrid)
+
+---

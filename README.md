@@ -36,6 +36,31 @@ FSM×PID×LLM統合に基づいた**人型ロボットPoC設計マニュアル**
 
 ---
 
+## 🧪 実装例：FSM × PID × LLMによる3軸ジンバル制御（AITL-HX）
+
+> **AITL-HXアーキテクチャ**によるジンバル制御のPoC実装。  
+> 自然言語指令 → 状態遷移（FSM） → PID安定制御 → アクチュエータ という閉ループ構成。
+
+📂 ディレクトリ：[`PoC/gimbal_control/`](./PoC/gimbal_control/)  
+📘 詳細：[`READMEはこちら`](./PoC/gimbal_control/README.md)
+
+![gimbal_architecture](./docs/images/figure9_1_gimbal_control_architecture.svg)
+
+| 構成要素 | 説明 |
+|----------|------|
+| LLM層 | 自然言語指令からの目標生成・意図判断 |
+| FSM層 | 状態切替（待機・追従・異常復帰） |
+| PID層 | Roll・Pitch・Yawの3軸PID制御 |
+| センサ層 | 3軸IMUセンサモデル（姿勢推定） |
+| アクチュエータ層 | PWM制御によるモータ出力（模擬） |
+
+🧭 学習ポイント：
+- FSM + PID + LLMによるハイブリッド制御の全体設計
+- 自然言語 → 制御目標への変換と適応
+- MIMO制御と状態管理の連携による閉ループ知能制御の実装
+
+---
+
 ## 🤖 ChatGPT支援：協調型設計ツール群
 
 `accelerated_design/`では、ChatGPTを活用した設計支援ツールを提供：

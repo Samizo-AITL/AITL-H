@@ -60,10 +60,10 @@ AITL-H/
 
 | ディレクトリ | 内容 |
 |--------------|------|
-| `theory/` | 設計思想・三層構造の理論背景 |
-| `PoC/` | 制御シナリオ・ロギング・評価 |
-| `implementary/` | FSM・PID・通信・LLM連携コード |
-| `accelerated_design/` | 設計提案支援ツール・ログ整形支援 |
+| [`theory/`](theory/) | 設計思想・三層構造の理論背景 |
+| [`PoC/`](PoC/) | 制御シナリオ・ロギング・評価 |
+| [`implementary/`](implementary/) | FSM・PID・通信・LLM連携コード |
+| [`accelerated_design/`](accelerated_design/) | 設計提案支援ツール・ログ整形支援 |
 
 ---
 

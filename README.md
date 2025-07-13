@@ -118,8 +118,6 @@ AITL-Hの制御アーキテクチャ（FSM × PID × LLM）も、第9章「LLM�
 
 - [`Edusemi`](https://github.com/Samizo-AITL/Edusemi-v4x)：半導体・SoC設計教材
 - `EduController`：制御理論とAI制御を体系的に学ぶ教材（FSM×PID×LLM連携）
-- `AITL Architecture`：FSM/制御理論に基づく構造的AI設計の基礎理論（現在 AITL-H に統合）
-- `TechScape（構想中）`：構造知に基づく技術アーキテクチャ全体の統合構想
 
 ---
 

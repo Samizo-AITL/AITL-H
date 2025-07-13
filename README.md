@@ -67,6 +67,14 @@ AITL-H/
 
 ---
 
+## 🚀 応用領域
+
+- 🧓 **介護支援ロボット**：感情認識＋物理制御
+- 🛠 **自己進化型制御**：LLMによる異常検知とフィードバック改善
+- 🌏 **災害対応ロボット**：定型動作と推論行動の組合せ
+- 🎓 **教育・研究用途**：AI×制御の融合教材として最適
+
+---
 ## 🎓 教育教材：EduControllerとの連携
 
 AITL-Hの制御理論基盤は、**教育教材「EduController」**の第9章に完全対応しています。
@@ -78,15 +86,6 @@ AITL-Hの制御理論基盤は、**教育教材「EduController」**の第9章�
 | [Part 9](https://github.com/Samizo-AITL/EduController/tree/main/part09_llm_hybrid) | FSM×PID×LLM統合制御 | AITL-Hの構造と実装を教材化 |
 
 > 🔗 [EduController リポジトリを見る](https://github.com/Samizo-AITL/EduController)
-
----
-
-## 🚀 応用領域
-
-- 🧓 **介護支援ロボット**：感情認識＋物理制御
-- 🛠 **自己進化型制御**：LLMによる異常検知とフィードバック改善
-- 🌏 **災害対応ロボット**：定型動作と推論行動の組合せ
-- 🎓 **教育・研究用途**：AI×制御の融合教材として最適
 
 ---
 

@@ -5,6 +5,11 @@
 
 ---
 
+- 🇺🇸 [English README here](./README_en.md)  
+　→ AITL-H: Hybrid Intelligent Control Architecture for Humanoid Systems using FSM × PID × LLM
+
+---
+
 ## 🧭 概要
 
 | 項目       | 内容 |

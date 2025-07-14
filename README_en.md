@@ -5,6 +5,11 @@ It integrates three layers: **FSM (Instinct) × PID (Reason) × LLM (Intelligenc
 
 ---
 
+- 🇯🇵 [日本語版 READMEはこちら](./README.md)  
+　→ AITL-H：FSM × PID × LLM による階層型知能制御アーキテクチャの解説とPoC実装
+
+---
+
 ## 🧭 Overview
 
 | Item        | Description |

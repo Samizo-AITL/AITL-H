@@ -149,17 +149,19 @@ PoCレベルを超えて**SoC設計・RTL実装・物理設計**まで扱いた�
 
 ---
 
-## 👤 執筆者情報
+## 👤 執筆者情報 / Author
 
-- **氏名**：三溝 真一（Shinichi Samizo）  
-- **学歴**：信州大学大学院 電気電子工学専攻 修了  
-- **経歴**：セイコーエプソン（1997年入社）にて以下を歴任  
-  - 0.35µm〜0.18µm世代のロジック・メモリ開発  
-  - 高耐圧CMOS混載・AMS系技術開発  
-  - TFP技術およびPrecisionCore製品化
+**三溝 真一（Shinichi Samizo）**  
+- 信州大学大学院電気電子工学修士課程修了
+- 元 セイコーエプソン株式会社 技術者（1997年〜）  
 
-📧 [shin3t72@gmail.com](mailto:shin3t72@gmail.com)  
-🔗 [GitHub: Samizo-AITL](https://github.com/Samizo-AITL)
+**経験領域**：
+- 半導体デバイス開発・製品化（ロジック・メモリ・高耐圧混載）
+- 薄膜ピエゾアクチュエータ開発
+- PrecisionCoreプリントヘッド製品化
+
+📫 [GitHub: Samizo-AITL](https://github.com/Samizo-AITL)  
+📩 Email: [shin3t72@gmail.com](mailto:shin3t72@gmail.com)
 
 ---
 

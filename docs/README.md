@@ -1,4 +1,3 @@
-# 📚 AITL-H PoC設計マニュアル  
 # 📚 AITL-H PoC Design Manual
 
 本ディレクトリは、AITL-H構想に基づく**三層制御アーキテクチャ（FSM / PID / LLM）**のPoC設計に関する文書群です。  
@@ -7,7 +6,6 @@ _This directory contains documentation for the PoC design of the **three-layer c
 
 ---
 
-## 🗂 章構成一覧（v1.0）  
 ## 🗂 Chapter List (v1.0)
 
 | 章番号 / Chapter | ファイル / File | 内容概要 / Description |
@@ -25,7 +23,6 @@ _This directory contains documentation for the PoC design of the **three-layer c
 
 ---
 
-## 📌 備考  
 ## 📌 Notes
 
 - 各章は `docs/` 以下に整理  
@@ -39,7 +36,6 @@ _This directory contains documentation for the PoC design of the **three-layer c
 
 ---
 
-## 📬 連絡先  
 ## 📬 Contact
 
 技術監修・執筆：**三溝 真一（Shinichi Samizo）**  
@@ -48,8 +44,7 @@ GitHub: [Samizo-AITL](https://github.com/Samizo-AITL)
 Email: shin3t72@gmail.com
 
 ---
-
-## 📜 ライセンス  
+ 
 ## 📜 License
 
 MIT License  

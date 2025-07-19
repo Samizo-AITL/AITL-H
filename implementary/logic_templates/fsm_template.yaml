@@ -1,0 +1,6 @@
+states:
+  - name: IDLE
+    output: 00
+    transitions:
+      - input: 01
+        next_state: RUN

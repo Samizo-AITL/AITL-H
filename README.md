@@ -98,7 +98,7 @@ FSM×PID×LLM統合に基づいた**人型ロボットPoC設計マニュアル**
 
 - ChatGPT（YAML→C→Verilogへの変換を対話で支援）
 - [`auto_generator/`](./PoC/auto_generator/)
-- [`logic_templates/`](./PoC/logic_templates/)
+- [`logic_templates/`](./implementaly/logic_templates/)
 
 ---
 

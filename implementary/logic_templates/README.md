@@ -1,13 +1,15 @@
-# 🧠 AITL Logic Templates (Verilog Modules)
+# 🧠 AITLロジックテンプレート（Verilog）
 
-This directory provides reusable Verilog modules for FSM, PID, and LLM-based control structures,  
-representing the theoretical "core logic" of the AITL architecture.
+このフォルダは、FSM・PID・LLMをベースとした制御構造を  
+**Verilogで理論的に提供**するテンプレート集です。
 
-## Included Modules
-- `fsm_core.v`: Basic Moore-style FSM logic
-- `pid_controller.v`: Discrete PID controller (integer-based)
-- `llm_interface_stub.v`: Placeholder for LLM-assisted instruction input
-- `aitl_top.v`: Example integration of all modules
+## 含まれるモジュール
 
-These templates are provided as a **structure-level reference**,  
-not tied to any specific hardware implementation.
+- `fsm_core.v`：基本的なMoore型の状態機械
+- `pid_controller.v`：離散時間のPID制御器（整数演算）
+- `llm_interface_stub.v`：外部命令入力（LLM想定）のスタブ
+- `aitl_top.v`：FSM・PID・LLMを統合したトップモジュール
+- `testbench/`：FSM・PIDの簡易テストベンチ
+
+> ⚠️ 注意：このテンプレートは**物理実装のための回路ではなく、  
+> 「構造としての理屈」を形式化して提供**するものです。

@@ -1,0 +1,12 @@
+parameters:
+  kp: 1
+  ki: 1
+  kd: 1
+
+  signals:
+  - name: setpoint
+    width: 16
+    description: 目標値
+
+  meta:
+  output_equation: "(KP * error) + (KI * integral) + (KD * derivative)"

@@ -1,68 +1,64 @@
-# 🧠 AITL-H Verilog Demo
 
-このディレクトリは、FSM・PID・LLMを統合した  
-**AITL-Hアーキテクチャのハードウェア検証用PoC構成**です。
+# 🧪 verilog_demo/README.md
 
----
-
-## 🎯 構成目的
-
-YAMLテンプレートから生成された Cコード → ChatGPTによって変換された Verilogコードを  
-**テストベンチ上で検証し、統合制御アーキテクチャのPoC動作を確認**します。
+このディレクトリは、AITL-Hアーキテクチャにおける  
+統合制御モジュール（FSM × PID × LLM）の **Verilog動作検証** を行うためのテスト環境です。
 
 ---
 
-## 📦 含まれるファイル
+## 🧩 構成ファイル一覧
 
-| ファイル名         | 内容                             |
-|------------------|----------------------------------|
-| `fsm_core.v`      | Moore型状態機械のVerilog実装     |
-| `pid_controller.v`| 離散時間PID制御器のVerilog実装   |
-| `aitl_top.v`      | FSM + PID + LLM接続の統合モジュール |
-| `tb_aitl_top.v`   | テストベンチ：統合動作の検証     |
-
----
-
-## 🧪 テストベンチ動作例（想定）
-
-- `clk`, `reset` 信号の生成
-- `input_signal` に条件を与えて状態遷移
-- PID出力の応答変化を `$display` で観測
-- LLMスタブの動作条件を模擬的に再現
+| ファイル名         | 内容 |
+|--------------------|------|
+| `fsm_core.v`       | Moore型FSM制御ロジック |
+| `pid_controller.v` | 離散時間PID制御器 |
+| `llm_interface_stub.v` | 外部命令入力スタブ |
+| `aitl_top.v`       | 上記3要素の統合モジュール |
+| `tb_aitl_top.v`    | テストベンチ（FSM入力・PID反応を模擬） |
 
 ---
 
-## 📘 実行方法（例）
+## 🧪 動作検証の手順（iverilog）
 
-```bash
-iverilog -o sim.out tb_aitl_top.v aitl_top.v fsm_core.v pid_controller.v
-vvp sim.out
+以下のコマンドでコンパイルと実行が可能です：
+
+```sh
+iverilog -o sim_tb tb_aitl_top.v aitl_top.v fsm_core.v pid_controller.v
+vvp sim_tb
 ```
 
-必要に応じて GTKWave で波形を確認：
+波形出力を含む場合：
 
-```bash
-gtkwave dump.vcd
+```sh
+gtkwave aitl_top.vcd
 ```
 
 ---
 
-## 🧩 全体構成図（Mermaid）
+## 💬 `$display` 出力例
 
-```mermaid
-graph LR
-    A[状態入力 input_signal] --> B[FSM: fsm_core.v]
-    B --> C[制御命令 ctrl_mode]
-    C --> D[PID: pid_controller.v]
-    D --> E[出力 pid_output]
-    B --> F[aitl_top.v]
-    D --> F
-    F --> G[テストベンチ tb_aitl_top.v]
+実行時のコンソール出力例：
+
 ```
+=== AITL Unified Test Start ===
+FSM=01, PID_OUT=132
+FSM=10, PID_OUT=98
+FSM=00, PID_OUT=142
+=== AITL Unified Test Done ===
+```
+
+FSM状態とPID出力が段階的に変化することが確認できます。
+
+---
+
+## 📚 参考リンク
+
+- [`../auto_generator/`](../auto_generator/)：YAML→Cコード→Verilog変換の自動設計フロー
+- [`../logic_templates/`](../logic_templates/)：Verilog雛形・ChatGPT用プロンプトテンプレート集
 
 ---
 
 ## 📜 ライセンス
 
 MIT License  
-教育・研究・開発における自由な活用・検証を歓迎します。
+技術者・研究者・教育者による自由利用・拡張を歓迎します。

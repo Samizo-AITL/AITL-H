@@ -46,7 +46,9 @@ FSM×PID×LLM統合に基づいた**人型ロボットPoC設計マニュアル**
 | タイトル | 概要 | パス |
 |----------|------|------|
 | 🧭 ジンバル制御（FSM + PID + LLM） | ハイブリッド閉ループ制御 | [`PoC/gimbal_control`](./PoC/gimbal_control) |
+| ⚙️ Verilog自動生成（FSM + PID） | YAML → C → Verilog生成＋検証 | [`PoC/verilog_demo`](./PoC/verilog_demo) |
 | 🔍 その他PoC | ※今後追加 | - |
+
 
 ---
 

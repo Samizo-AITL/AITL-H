@@ -1,49 +1,49 @@
----
-title: AITL-H PoC マニュアル
----
-
-# 📘 AITL-H PoC マニュアル
+# 📘 AITL-H PoC Manual
 
 本サイトは、AITL-H（All-in-Theory Logic - Hybrid）のPoC実装に関するマニュアルページです。  
-PID・FSM・LLM などの三層構造に基づいた制御設計と、PoC仕様への落とし込み方を解説します。
+PID・FSM・LLM などの三層構造に基づいた制御設計と、PoC仕様への落とし込み方を解説します。  
+_This site serves as the manual page for the PoC implementation of AITL-H (All-in-Theory Logic - Hybrid).  
+It explains the control design based on the three-layer architecture of PID, FSM, and LLM, and how to realize them in PoC specifications._
 
 ---
 
-## 📂 章構成一覧（第1〜8章・第11章）
+## 📂 Chapter Structure (Chapters 1–8, 11)
 
-| 章番号 | タイトル | 説明 |
-|--------|----------|------|
-| [第1章](chapter01_aitl_architecture.md) | PoC仕様策定と要件定義 | AITLの視点に基づくPoC構想・全体設計アーキテクチャ |
-| [第2章](chapter02_pid_design.md) | PID制御設計と応答チューニング | Reason層としてのPIDゲイン設計と誤差補正の基本戦略 |
-| [第3章](chapter03_fsm_design.md) | FSMとRTL制御の実装 | FSMを中心とした本能層の状態設計と制御フロー構成 |
-| [第4章](chapter04_sensor_interface.md) | センサ・アクチュエータ制御 | 物理層インタフェース（ADC, PWM, I/O）の設計 |
-| [第5章](chapter05_uart_control.md) | UART通信制御 | PoCにおけるUART通信設計とホスト連携制御方式 |
-| [第6章](chapter06_run_main_arch.md) | 制御アーキテクチャ実装 | `run_main()` を中心とした統合制御構造と設計手法 |
-| [第7章](chapter07_log_monitoring.md) | ログ出力とモニタリング戦略 | PoC制御ログ出力構成、評価用可視化手法の導入 |
-| [第8章](chapter08_llm_integration.md) | LLM連携と意図推定処理 | 知性層（LLM）との接続方式と推論連携構造 |
-| [第11章](chapter11_exit_strategy.md) | 総括と出口戦略 | AITL-H設計の成果まとめと今後の展望 |
-
----
-
-## 🧩 今後追加予定の章（プレースホルダ）
-
-| 章番号 | タイトル（仮） | ステータス |
-|--------|----------------|------------|
-| 第9章 | 評価と検証方法 | 🔧 作成予定（評価指標とテスト設計） |
-| 第10章 | 応用事例（人型ロボット） | 🔧 作成予定（ロボット実装とユースケース） |
-| 第12章 | モデル予測制御との融合 | 🔧 構想中 |
-| 第13章 | ROS連携と自律移動 | 🔧 準備中 |
-| 第14章 | AI学習との連動（強化学習） | 🔧 未着手 |
-| 第15章 | ハードウェア実装支援ツール群 | 🔧 予定 |
-| 第16章 | 実機動作・展示事例集 | 🔧 予定 |
+| 章番号 / Chapter | タイトル / Title | 説明 / Description |
+|------------------|------------------|---------------------|
+| [第1章](chapter01_aitl_architecture.md) / Ch.1 | PoC仕様策定と要件定義<br>_PoC Specification and Requirements_ | AITLの視点に基づくPoC構想・全体設計アーキテクチャ<br>_AITL-based PoC concept and overall architecture_ |
+| [第2章](chapter02_pid_design.md) / Ch.2 | PID制御設計と応答チューニング<br>_PID Design and Response Tuning_ | Reason層としてのPIDゲイン設計と誤差補正の基本戦略<br>_PID gain tuning and error correction strategies_ |
+| [第3章](chapter03_fsm_design.md) / Ch.3 | FSMとRTL制御の実装<br>_FSM and RTL Implementation_ | FSMを中心とした本能層の状態設計と制御フロー構成<br>_Instinct-layer state design and control flow via FSM_ |
+| [第4章](chapter04_sensor_interface.md) / Ch.4 | センサ・アクチュエータ制御<br>_Sensor and Actuator Control_ | 物理層インタフェース（ADC, PWM, I/O）の設計<br>_Design of physical interfaces (ADC, PWM, I/O)_ |
+| [第5章](chapter05_uart_control.md) / Ch.5 | UART通信制御<br>_UART Communication Control_ | PoCにおけるUART通信設計とホスト連携制御方式<br>_UART and host integration design in PoC_ |
+| [第6章](chapter06_run_main_arch.md) / Ch.6 | 制御アーキテクチャ実装<br>_Control Architecture Implementation_ | `run_main()` を中心とした統合制御構造と設計手法<br>_Unified control architecture centered on `run_main()`_ |
+| [第7章](chapter07_log_monitoring.md) / Ch.7 | ログ出力とモニタリング戦略<br>_Logging and Monitoring Strategy_ | PoC制御ログ出力構成、評価用可視化手法の導入<br>_Log output and visualization for evaluation_ |
+| [第8章](chapter08_llm_integration.md) / Ch.8 | LLM連携と意図推定処理<br>_LLM Integration and Intent Estimation_ | 知性層（LLM）との接続方式と推論連携構造<br>_LLM interface and inference architecture_ |
+| [第11章](chapter11_exit_strategy.md) / Ch.11 | 総括と出口戦略<br>_Conclusion and Exit Strategy_ | AITL-H設計の成果まとめと今後の展望<br>_Summary and future directions of AITL-H design_ |
 
 ---
+ 
+## 🧩 Planned Future Chapters (Placeholders)
 
-## 🔗 関連リンク
+| 章番号 / Chapter | タイトル（仮） / Tentative Title | ステータス / Status |
+|------------------|-------------------------------|----------------------|
+| 第9章 / Ch.9     | 評価と検証方法<br>_Evaluation and Testing Methods_ | 🔧 作成予定 / Planned |
+| 第10章 / Ch.10   | 応用事例（人型ロボット）<br>_Use Case: Humanoid Robot_ | 🔧 作成予定 / Planned |
+| 第12章 / Ch.12   | モデル予測制御との融合<br>_Fusion with Model Predictive Control_ | 🔧 構想中 / In Concept |
+| 第13章 / Ch.13   | ROS連携と自律移動<br>_ROS Integration and Autonomous Navigation_ | 🔧 準備中 / In Preparation |
+| 第14章 / Ch.14   | AI学習との連動（強化学習）<br>_Reinforcement Learning Integration_ | 🔧 未着手 / Not Started |
+| 第15章 / Ch.15   | ハードウェア実装支援ツール群<br>_Hardware Implementation Tools_ | 🔧 予定 / Planned |
+| 第16章 / Ch.16   | 実機動作・展示事例集<br>_Demonstration and Exhibition Cases_ | 🔧 予定 / Planned |
+
+---
+ 
+## 🔗 Related Links
 
 - [AITL-H GitHubリポジトリ](https://github.com/Samizo-AITL/AITL-H)
 
 ---
 
-📅 最終更新：2025年7月  
-✍️ 著者：三溝真一（Shinichi Samizo）
+📅 最終更新 / Last Updated: July 2025  
+✍️ 著者 / Author: 三溝真一（Shinichi Samizo）
+
+---

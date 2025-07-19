@@ -8,18 +8,18 @@ _This directory contains documentation for the PoC design of the **three-layer c
 
 ## 🗂 Chapter List (v1.0)
 
-| 章番号 / Chapter | ファイル / File | 内容概要 / Description |
+|　Chapter | ファイル / File | 内容概要 / Description |
 |------------------|------------------|--------------------------|
-| 第0章 / Ch.0     | [chapter00_overview.md](chapter00_overview.md) | PoC設計全体像と構成方針<br>_Overview and structural policy of PoC design_ |
-| 第1章 / Ch.1     | [chapter01_aitl_architecture.md](chapter01_aitl_architecture.md) | AITL三層構造の設計思想<br>_Design philosophy of the AITL three-layer structure_ |
-| 第2章 / Ch.2     | [chapter02_pid_design.md](chapter02_pid_design.md) | PID制御の基本構成とゲイン設計<br>_PID structure and gain design_ |
-| 第3章 / Ch.3     | [chapter03_fsm_design.md](chapter03_fsm_design.md) | FSMによる状態管理と遷移戦略<br>_FSM-based state management and transition strategy_ |
-| 第4章 / Ch.4     | [chapter04_sensor_interface.md](chapter04_sensor_interface.md) | センサ連携と環境応答性設計<br>_Sensor integration and environmental responsiveness_ |
-| 第5章 / Ch.5     | [chapter05_uart_control.md](chapter05_uart_control.md) | UART通信による命令受信とFSM接続<br>_Receiving commands via UART and FSM integration_ |
-| 第6章 / Ch.6     | [chapter06_run_main_arch.md](chapter06_run_main_arch.md) | `run_main.py` による統合制御構成<br>_Integrated control configuration using `run_main.py`_ |
-| 第7章 / Ch.7     | [chapter07_log_monitoring.md](chapter07_log_monitoring.md) | ログ記録とPoC可視化設計<br>_Logging and PoC visualization design_ |
-| 第8章 / Ch.8     | [chapter08_llm_integration.md](chapter08_llm_integration.md) | LLMとの統合と自己修復設計<br>_LLM integration and self-recovery design_ |
-| 第11章 / Ch.11   | [chapter11_exit_strategy.md](chapter11_exit_strategy.md) | RTL/PDK展開とSystemDK接続戦略<br>_Strategy for RTL/PDK deployment and SystemDK integration_ |
+|  Ch.0     | [chapter00_overview.md](chapter00_overview.md) | PoC設計全体像と構成方針<br>_Overview and structural policy of PoC design_ |
+|  Ch.1     | [chapter01_aitl_architecture.md](chapter01_aitl_architecture.md) | AITL三層構造の設計思想<br>_Design philosophy of the AITL three-layer structure_ |
+|  Ch.2     | [chapter02_pid_design.md](chapter02_pid_design.md) | PID制御の基本構成とゲイン設計<br>_PID structure and gain design_ |
+|  Ch.3     | [chapter03_fsm_design.md](chapter03_fsm_design.md) | FSMによる状態管理と遷移戦略<br>_FSM-based state management and transition strategy_ |
+|  Ch.4     | [chapter04_sensor_interface.md](chapter04_sensor_interface.md) | センサ連携と環境応答性設計<br>_Sensor integration and environmental responsiveness_ |
+|  Ch.5     | [chapter05_uart_control.md](chapter05_uart_control.md) | UART通信による命令受信とFSM接続<br>_Receiving commands via UART and FSM integration_ |
+|  Ch.6     | [chapter06_run_main_arch.md](chapter06_run_main_arch.md) | `run_main.py` による統合制御構成<br>_Integrated control configuration using `run_main.py`_ |
+|  Ch.7     | [chapter07_log_monitoring.md](chapter07_log_monitoring.md) | ログ記録とPoC可視化設計<br>_Logging and PoC visualization design_ |
+|  Ch.8     | [chapter08_llm_integration.md](chapter08_llm_integration.md) | LLMとの統合と自己修復設計<br>_LLM integration and self-recovery design_ |
+|  Ch.11   | [chapter11_exit_strategy.md](chapter11_exit_strategy.md) | RTL/PDK展開とSystemDK接続戦略<br>_Strategy for RTL/PDK deployment and SystemDK integration_ |
 
 ---
 

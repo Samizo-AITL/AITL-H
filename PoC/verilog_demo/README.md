@@ -1,48 +1,68 @@
-# 🧪 PoC: ChatGPT生成ロジック評価（FSM × PID × LLM）
+# 🧠 AITL-H Verilog Demo
 
-このディレクトリは、AITL-H論理テンプレート（FSM / PID / LLM）のVerilog構造を  
-テストベンチ `tb_aitl_top.v` により検証する PoC 評価構成です。
+このディレクトリは、FSM・PID・LLMを統合した  
+**AITL-Hアーキテクチャのハードウェア検証用PoC構成**です。
 
 ---
 
-## 🔗 接続構成（verilog結線）
+## 🎯 構成目的
 
-```mermaid
-graph LR
-    FSM[fsm_core.v]
-    PID[pid_controller.v]
-    LLM[llm_interface_stub.v]
-    TOP[aitl_top.v]
-    TB[tb_aitl_top.v]
+YAMLテンプレートから生成された Cコード → ChatGPTによって変換された Verilogコードを  
+**テストベンチ上で検証し、統合制御アーキテクチャのPoC動作を確認**します。
 
-    FSM --> TOP
-    PID --> TOP
-    LLM --> TOP
-    TOP --> TB
-```
 ---
 
 ## 📦 含まれるファイル
 
-- `fsm_core.v` / `pid_controller.v` / `llm_interface_stub.v`：論理テンプレート
-- `aitl_top.v`：3層統合構造
-- `tb_aitl_top.v`：PoC用トップレベルベンチ
-- `waveform.vcd`：波形出力例
-- `test_config.yaml`：テスト条件（任意拡張）
+| ファイル名         | 内容                             |
+|------------------|----------------------------------|
+| `fsm_core.v`      | Moore型状態機械のVerilog実装     |
+| `pid_controller.v`| 離散時間PID制御器のVerilog実装   |
+| `aitl_top.v`      | FSM + PID + LLM接続の統合モジュール |
+| `tb_aitl_top.v`   | テストベンチ：統合動作の検証     |
 
 ---
 
-## 🛠️ 実行方法（例）
+## 🧪 テストベンチ動作例（想定）
+
+- `clk`, `reset` 信号の生成
+- `input_signal` に条件を与えて状態遷移
+- PID出力の応答変化を `$display` で観測
+- LLMスタブの動作条件を模擬的に再現
+
+---
+
+## 📘 実行方法（例）
 
 ```bash
-iverilog tb_aitl_top.v aitl_top.v fsm_core.v pid_controller.v llm_interface_stub.v -o aitl_test
-vvp aitl_test
-gtkwave waveform.vcd
+iverilog -o sim.out tb_aitl_top.v aitl_top.v fsm_core.v pid_controller.v
+vvp sim.out
+```
+
+必要に応じて GTKWave で波形を確認：
+
+```bash
+gtkwave dump.vcd
+```
+
+---
+
+## 🧩 全体構成図（Mermaid）
+
+```mermaid
+graph LR
+    A[状態入力 input_signal] --> B[FSM: fsm_core.v]
+    B --> C[制御命令 ctrl_mode]
+    C --> D[PID: pid_controller.v]
+    D --> E[出力 pid_output]
+    B --> F[aitl_top.v]
+    D --> F
+    F --> G[テストベンチ tb_aitl_top.v]
 ```
 
 ---
 
 ## 📜 ライセンス
 
-MIT License — 教育・PoC用途での使用・改変を歓迎します。
-
+MIT License  
+教育・研究・開発における自由な活用・検証を歓迎します。

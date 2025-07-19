@@ -77,6 +77,31 @@ FSM×PID×LLM統合に基づいた**人型ロボットPoC設計マニュアル**
 
 ---
 
+### 🧪 Verilog自動生成PoC（FSM×PID）
+
+> ChatGPTと連携し、FSM／PIDの動作仕様（YAML）から  
+> **Cコード → 統合C → Verilog** を自動生成・検証するPoCを整備済。
+
+📂 ディレクトリ：[`PoC/verilog_demo/`](./PoC/verilog_demo/)  
+📘 詳細：[`READMEはこちら`](./PoC/verilog_demo/README.md)
+
+構成概要：
+
+| 要素 | 内容 |
+|------|------|
+| 入力 | `test_config.yaml`（FSM状態遷移＋PID設定） |
+| 自動生成 | `fsm_auto_gen.py`, `pid_auto_gen.py` によるCコード生成 |
+| 統合 | `unified.c` をChatGPTプロンプトでVerilog変換 |
+| 検証 | `tb_aitl_top.v` によるiverilog動作確認済 |
+
+🧠 使用ツール・構成支援：
+
+- ChatGPT（YAML→C→Verilogへの変換を対話で支援）
+- [`auto_generator/`](./PoC/auto_generator/)
+- [`logic_templates/`](./PoC/logic_templates/)
+
+---
+
 ## 🤖 ChatGPT支援：協調型設計ツール群
 
 `accelerated_design/`では、ChatGPTを活用した設計支援ツールを提供：

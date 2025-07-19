@@ -1,0 +1,30 @@
+fsm:
+  initial_state: IDLE
+  states:
+    - IDLE
+    - TRACK
+    - RECOVERY
+  transitions:
+    - from: IDLE
+      to: TRACK
+      condition: start_signal
+    - from: TRACK
+      to: RECOVERY
+      condition: lost_target
+    - from: RECOVERY
+      to: IDLE
+      condition: recovered
+
+pid:
+  kp: 1.2
+  ki: 0.4
+  kd: 0.1
+  setpoint: 90
+  output_limits: [-100, 100]
+
+llm:
+  command_sequence:
+    - time: 0
+      command: start_tracking
+    - time: 150
+      command: stop_tracking

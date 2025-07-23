@@ -187,8 +187,10 @@ PoCレベルを超えて**SoC設計・RTL実装・物理設計**まで扱いた�
 - 薄膜ピエゾアクチュエータ
 - PrecisionCoreプリントヘッド製品化
 
-📫 [GitHub: Samizo-AITL](https://github.com/Samizo-AITL)  
-📩 Email: [shin3t72@gmail.com](mailto:shin3t72@gmail.com)
+📬 **連絡先**
+- ✉️ Email: [shin3t72@gmail.com](mailto:shin3t72@gmail.com)  
+- 🐦 X (Twitter): [https://x.com/shin3t72](https://x.com/shin3t72)  
+- 💻 GitHub: [https://samizo-aitl.github.io/](https://samizo-aitl.github.io/)
 
 ---
 

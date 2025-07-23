@@ -151,17 +151,19 @@ To extend PoC into **SoC design, RTL implementation, and physical layout**, refe
 
 ## 👤 Author Profile
 
-- **Name**: Shinichi Samizo  
-- **Education**: M.E. in Electrical and Electronic Engineering, Shinshu University  
-- **Career**:  
-  - Joined Seiko Epson in 1997  
-  - Roles included:  
-    - Logic/memory development (0.35μm to 0.18μm)  
-    - High-voltage CMOS integration and AMS design  
-    - TFP and PrecisionCore commercialization
+**Shinichi Samizo**  
+- M.S. in Electrical and Electronic Engineering, Shinshu University  
+- Former R&D Engineer at Seiko Epson Corporation (1997–)
 
-📧 [shin3t72@gmail.com](mailto:shin3t72@gmail.com)  
-🔗 [GitHub: Samizo-AITL](https://github.com/Samizo-AITL)
+📌 **Expertise**:  
+- Semiconductor devices (logic, memory, high-voltage mixed process)  
+- Thin-film piezoelectric actuators  
+- PrecisionCore printhead commercialization, configuration management, and technical education
+
+📬 **Contact**  
+- ✉️ Email: [shin3t72@gmail.com](mailto:shin3t72@gmail.com)  
+- 🐦 X (Twitter): [https://x.com/shin3t72](https://x.com/shin3t72)  
+- 💻 GitHub: [https://samizo-aitl.github.io/](https://samizo-aitl.github.io/)
 
 ---
 

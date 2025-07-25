@@ -1,12 +1,12 @@
-# 🤖 AITL-H: Hybrid Structured Control Framework
+# 🤖 AITL-H: Hybrid Intelligent Control Architecture
 
-**AITL-H (All-in-Theory Logic - Hybrid)** is a hierarchical intelligent control architecture designed for humanoid robots and adaptive systems.  
-It integrates three layers: **FSM (Instinct) × PID (Reason) × LLM (Intelligence)** to achieve control with **responsiveness, stability, and flexibility**.
+**AITL-H (All-in-Theory Logic - Hybrid)** is a **three-layered intelligent control framework** designed for humanoid robots and adaptive systems.  
+By integrating **FSM (Instinct) × PID (Reason) × LLM (Intelligence)**, AITL-H realizes real-time, stable, and flexible control systems.
 
 ---
 
-- 🇯🇵 [日本語版 READMEはこちら](./README.md)  
-　→ AITL-H：FSM × PID × LLM による階層型知能制御アーキテクチャの解説とPoC実装
+- 🇯🇵 [日本語READMEはこちら](./README.md)  
+　→ AITL-H：人型制御向けハイブリッド型知能制御アーキテクチャ（FSM × PID × LLM）
 
 ---
 
@@ -15,20 +15,20 @@ It integrates three layers: **FSM (Instinct) × PID (Reason) × LLM (Intelligenc
 | Item        | Description |
 |-------------|-------------|
 | **Name**    | AITL-H (Hybrid) |
-| **Purpose** | Establish intelligent control methods for humanoid systems |
-| **Core Logic** | - FSM: Instinctive behavior control via state transitions<br>- PID: Continuous control of physical quantities (angles, speed)<br>- LLM: Intelligent judgment, conversation, and adaptation |
+| **Purpose** | Establishment of structured intelligent control methods for humanoid robotics |
+| **Core Layers** | - **FSM**: Behavioral logic via state transitions<br>- **PID**: Continuous control of physical quantities (e.g., angle, velocity)<br>- **LLM**: Intelligent decision-making, dialogue, and learning |
 
 ---
 
 ## 🧘 Three-Layer Architecture
 
-| Layer   | Function                         | Implementation Example                    |
-|---------|----------------------------------|-------------------------------------------|
-| FSM     | Logic control via state machines | `fsm_engine.py`, `fsm_state_def.yaml`     |
-| PID     | Physical control (joints, motion) | `pid_controller.py`, `pid_module.py`     |
-| LLM     | Judgment, anomaly detection, language interaction | `llm_interface.py`, `llm_logger.py` |
+| Layer | Function                   | Implementation Examples              |
+|-------|----------------------------|--------------------------------------|
+| FSM   | Logic control based on states | `fsm_engine.py`, `fsm_state_def.yaml` |
+| PID   | Physical control of joints/motion | `pid_controller.py`, `pid_module.py` |
+| LLM   | Decision-making, anomaly detection, dialogue | `llm_interface.py`, `llm_logger.py` |
 
-> Each layer is **loosely coupled yet coordinated**, allowing independent development and gradual integration.
+> Each layer is **loosely coupled but cooperatively integrated**, allowing independent development and step-by-step integration.
 
 <div align="center"><img src="theory/aitl_h_architecture.png" alt="AITL-H Architecture" width="400"></div>
 
@@ -36,140 +36,178 @@ It integrates three layers: **FSM (Instinct) × PID (Reason) × LLM (Intelligenc
 
 ## 📘 PoC Design Manual (16 Chapters)
 
-A complete **PoC design manual for humanoid systems** using FSM × PID × LLM is available:  
-▶︎ [📖 View Manual](docs/README.md)
+A full **PoC design manual for humanoid control systems using FSM×PID×LLM** is available.  
+▶︎ [📖 Read the Manual](docs/README.md)
 
 ---
 
-## 🧪 List of PoC Projects
+## 🧪 Proof-of-Concept (PoC) List
 
-| Title | Summary | Path |
-|-------|---------|------|
+| Title | Description | Path |
+|-------|-------------|------|
 | 🧭 Gimbal Control (FSM + PID + LLM) | Hybrid closed-loop control | [`PoC/gimbal_control`](./PoC/gimbal_control) |
-| 🔍 Additional PoCs | Coming soon | - |
+| ⚙️ Verilog Auto-Generation (FSM + PID) | YAML → C → Verilog conversion & validation | [`PoC/verilog_demo`](./PoC/verilog_demo) |
+| 🔍 Others | Coming soon | - |
 
 ---
 
-## 🧪 Example: 3-Axis Gimbal Control with FSM × PID × LLM (AITL-HX)
+## 🧪 Gimbal Control PoC (AITL-HX)
 
-> Proof-of-concept for gimbal control using the **AITL-HX architecture**.  
-> Natural language command → FSM transition → PID stabilization → Actuator output.
+> **AITL-HX Architecture** implements a 3-axis gimbal control demo.  
+> Natural Language → FSM → PID → Actuator forms a closed intelligent loop.
 
 📂 Directory: [`PoC/gimbal_control/`](./PoC/gimbal_control/)  
 📘 Details: [`See README`](./PoC/gimbal_control/README.md)
 
 ![gimbal_architecture](./docs/images/figure9_1_gimbal_control_architecture.svg)
 
-| Component     | Description |
-|---------------|-------------|
-| LLM Layer     | Goal generation and intent recognition from natural language |
-| FSM Layer     | State transitions (idle, follow, recovery) |
-| PID Layer     | PID control of roll, pitch, yaw |
-| Sensor Layer  | 3-axis IMU model for attitude estimation |
-| Actuator Layer| Motor output control via PWM (simulated) |
+| Component | Description |
+|-----------|-------------|
+| LLM Layer | Converts natural language into goals and intentions |
+| FSM Layer | Manages states: Idle / Track / Recover |
+| PID Layer | Controls Roll, Pitch, and Yaw axes |
+| Sensor Layer | Simulated 3-axis IMU sensor (pose estimation) |
+| Actuator Layer | Simulated PWM-based motor control |
 
-🧭 Key Learning Points:
-- Full-stack design of hybrid FSM + PID + LLM control
-- Translating natural language into control objectives
-- Implementing closed-loop intelligent control with MIMO and state coordination
+🧠 Key Learning Points:
+- End-to-end hybrid control system with FSM + PID + LLM
+- Natural language → adaptive goal generation
+- MIMO control integrated with logical state switching
 
 ---
 
-## 🤖 ChatGPT Integration: Collaborative Design Tools
+### 🧪 Verilog Auto-Generation PoC (FSM × PID)
 
-In the `accelerated_design/` directory, tools utilizing ChatGPT support the design process:
+> Using ChatGPT, define FSM and PID behavior via YAML and generate:  
+> **C Code → Unified C → Verilog** with validation.
 
-- Auto FSM generation (Prompt → FSM YAML)
-- Test scenario creation & log visualization
-- Auto documentation and review assistance
+📂 Directory: [`PoC/verilog_demo/`](./PoC/verilog_demo/)  
+📘 Details: [`See README`](./PoC/verilog_demo/README.md)
 
-> 🧠 Experimental environment for **human-AI collaborative design**.
+| Component | Description |
+|----------|-------------|
+| Input | `test_config.yaml` (FSM transitions + PID parameters) |
+| Auto Gen | `fsm_auto_gen.py`, `pid_auto_gen.py` generate C code |
+| Integration | `unified.c` → transformed into Verilog via GPT prompt |
+| Verification | `tb_aitl_top.v` tested with iverilog |
+
+🛠 Tools and Support Modules:
+- ChatGPT for YAML → C → Verilog transformation
+- [`auto_generator/`](./PoC/auto_generator/)
+- [`logic_templates/`](./implementary/logic_templates/)
+
+---
+
+## 🤖 ChatGPT-Based Design Tools
+
+Under `accelerated_design/`, a suite of GPT-assisted tools is provided:
+
+- Prompt-based FSM generation (YAML output)
+- Test scenario generation and log visualization
+- Auto documentation and design review support
+
+> 🧠 Goal: Build a **cooperative human-AI design environment**.
 
 ---
 
 ## 📂 Directory Structure
+
 ```
 AITL-H/
-├── theory/                # Architecture concepts and design principles
-├── PoC/                   # PoC source codes, logs, and verification
-├── implementary/          # Python implementations of FSM/PID/LLM modules
-└── accelerated_design/    # ChatGPT-based design support tools
+├── theory/                # Design theory & architectural insights
+├── PoC/                   # Proof-of-concept implementations
+├── implementary/          # Python modules for FSM, PID, LLM
+└── accelerated_design/    # ChatGPT-supported design tools
 ```
+
+| Folder | Description |
+|--------|-------------|
+| [`theory/`](theory/) | Design principles and layered architecture |
+| [`PoC/`](PoC/) | Demo codes and evaluation logs |
+| [`implementary/`](implementary/) | Core implementation modules |
+| [`accelerated_design/`](accelerated_design/) | AI-aided design tools & log processors |
+
 ---
 
-| Directory | Description |
-|-----------|-------------|
-| [`theory/`](theory/) | Theoretical background and design rationale |
-| [`PoC/`](PoC/) | Control scenarios, logging, and evaluation |
-| [`implementary/`](implementary/) | FSM, PID, communication, and LLM integration code |
-| [`accelerated_design/`](accelerated_design/) | Design assistance tools and log processors |
+## 🚀 Application Areas
 
----
-
-## 🚀 Application Domains
-
-- 🧓 **Elderly Care Robots**: Emotion-aware physical control
-- 🛠 **Self-Evolving Control**: Anomaly detection and feedback optimization via LLM
-- 🌏 **Disaster Response Robots**: Combining predefined behavior and inference
+- 🧓 **Elderly Care Robots**: Emotion-aware + physical assistance
+- 🛠 **Self-evolving Controllers**: LLM-based feedback adaptation
+- 🌏 **Disaster Response Robotics**: Rule-based + reasoned actions
 - 🎓 **Education & Research**: Ideal platform for AI × control learning
 
 ---
 
-## 🎓 Educational Integration: Linked with EduController
+## 🎓 Educational Linkage: EduController
 
-AITL-H’s theoretical basis aligns with **Chapter 9 of EduController**, a control theory learning platform.
+AITL-H is fully integrated with **EduController**, an open educational framework on control theory and AI control.
 
-| Part | Content | Relevance to AITL-H |
-|------|---------|----------------------|
-| [Part 1–5](https://github.com/Samizo-AITL/EduController#制御理論系) | Classical to modern control | Foundation of PID layer |
-| [Part 6–8](https://github.com/Samizo-AITL/EduController#ai制御系) | Neural nets, reinforcement learning | AI control integration |
-| [Part 9](https://github.com/Samizo-AITL/EduController/tree/main/part09_llm_hybrid) | FSM × PID × LLM Hybrid Control | Directly implements AITL-H architecture |
+| Part | Topics | AITL-H Relation |
+|------|--------|-----------------|
+| [Part 1–5](https://github.com/Samizo-AITL/EduController#制御理論系) | Classical & Modern Control | Theoretical foundation for PID layer |
+| [Part 6–8](https://github.com/Samizo-AITL/EduController#ai制御系) | Neural & Reinforcement Control | AI control pathway |
+| **[Part 9](https://github.com/Samizo-AITL/EduController/tree/main/part09_llm_hybrid)** | FSM × PID × LLM Integration | Direct implementation of AITL-H |
 
-> 🔗 [Visit EduController Repository](https://github.com/Samizo-AITL/EduController)
+Also available:
+
+🔹 **[matlab_tools](https://github.com/Samizo-AITL/EduController/tree/main/matlab_tools)**
+- Visualize PID / state-space via Simulink
+- Generate C code with Simulink Coder
+- Extend to HDL via `c_to_hdl/`
+
+🔹 **[SoC_DesignKit_by_ChatGPT](https://github.com/Samizo-AITL/EduController/tree/main/SoC_DesignKit_by_ChatGPT)**
+- Templates for FSM, PID, LLM integration
+- Verilog generation supported by GPT
+- Testbenches included
+
+> 🧠 Unified framework for **Education × Implementation × AI Design**
+
+🔗 [View EduController](https://github.com/Samizo-AITL/EduController)
 
 ---
 
-## 🧩 SoC-Level Expansion: Linked with Edusemi
+## 🧩 SoC Integration: Linked with Edusemi
 
-To extend PoC into **SoC design, RTL implementation, and physical layout**, refer to the **Special Topics** in the [Edusemi v4.x](https://github.com/Samizo-AITL/Edusemi-v4x) project.
+To extend to **SoC / RTL / Physical Design**, check the related project: **[Edusemi-v4x](https://github.com/Samizo-AITL/Edusemi-v4x)** – Special Edition.
 
-| Chapter | Content |
-|---------|---------|
-| [Ch.3](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter3_socsystem) | SoC design of FSM × PID × LLM architecture |
-| [Ch.4](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter4_openlane) | RTL-to-GDSII with OpenLane |
-| [Ch.5](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter5_dfm) | Physical verification and DFM strategies |
+| Chapter | Topic |
+|---------|-------|
+| [Chapter 3](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter3_socsystem) | SoC design with FSM×PID×LLM integration |
+| [Chapter 4](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter4_openlane) | OpenLane flow from RTL to GDSII |
+| [Chapter 5](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter5_dfm) | DRC/LVS/DFM for manufacturability |
 
 ---
 
 ## 📚 Related Projects
 
-- [Edusemi v4.x](https://github.com/Samizo-AITL/Edusemi-v4x): Semiconductor / SoC design education
-- [EduController](https://github.com/Samizo-AITL/EduController): Control theory to AI control learning platform
-- [Rekiden](https://github.com/Samizo-AITL/Rekiden): History-based simulation using FSM (educational SLG)
+- [Edusemi-v4x](https://github.com/Samizo-AITL/Edusemi-v4x): SoC/semiconductor design curriculum
+- [EduController](https://github.com/Samizo-AITL/EduController): Classical + AI control learning materials
 
 ---
 
-## 👤 Author Profile
+## 👤 Author
 
 **Shinichi Samizo**  
-- M.S. in Electrical and Electronic Engineering, Shinshu University  
-- Former R&D Engineer at Seiko Epson Corporation (1997–)
+- M.Eng. in Electrical & Electronic Engineering, Shinshu University  
+- Former engineer at Seiko Epson Corporation (since 1997)  
 
-📌 **Expertise**:  
-- Semiconductor devices (logic, memory, high-voltage mixed process)  
-- Thin-film piezoelectric actuators  
-- PrecisionCore printhead commercialization, configuration management, and technical education
+📌 **Expertise**:
+- Semiconductor (Logic, Memory, High-voltage mixed-signal)
+- Thin-film piezo actuators
+- PrecisionCore printhead development
 
-📬 **Contact**  
+📬 **Contact**
 - ✉️ Email: [shin3t72@gmail.com](mailto:shin3t72@gmail.com)  
-- 🐦 X (Twitter): [https://x.com/shin3t72](https://x.com/shin3t72)  
+- 🐦 Twitter: [https://x.com/shin3t72](https://x.com/shin3t72)  
 - 💻 GitHub: [https://samizo-aitl.github.io/](https://samizo-aitl.github.io/)
 
 ---
 
 © 2025 Shinichi Samizo — MIT License  
-All source code, documentation, and architecture diagrams are provided under the MIT License.
+All materials, source code, and diagrams are freely available under the MIT License.
 
 ---
 
-💬 Share feedback or join the discussion: [AITL-H Discussions](https://github.com/Samizo-AITL/AITL-H/discussions)
+💬 Feedback or discussions → [Open Discussion](https://github.com/Samizo-AITL/AITL-H/discussions)
+
+---

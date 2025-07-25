@@ -6,7 +6,7 @@
 ---
 
 🇺🇸 [English README here](./README_en.md)  
-　→ AITL-H: Hybrid Intelligent Control Architecture for Humanoid Systems using FSM × PID × LLM
+　  AITL-H: Hybrid Intelligent Control Architecture for Humanoid Systems using FSM × PID × LLM
 
 ---
 
@@ -37,7 +37,7 @@
 ## 📘 PoC設計マニュアル（全16章）
 
 FSM×PID×LLM統合に基づいた**人型ロボットPoC設計マニュアル**を公開しています。  
-▶︎ [📖 マニュアルを読む](docs/README.md)
+▶︎ [📖 マニュアルを読む](docs/)
 
 ---
 

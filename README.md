@@ -167,7 +167,7 @@ AITL-HとEduControllerの設計統合を支える以下の実装支援モジュ�
 
 > 🧠 教材・Simulink・ChatGPTを接続した **「教育×実装×AI」** の統合設計フレームワークです。
 
->  🔗 [EduController リポジトリを見る](https://github.com/Samizo-AITL/EduController)
+🔗 [EduController リポジトリを見る](https://github.com/Samizo-AITL/EduController)
 
 ---
 

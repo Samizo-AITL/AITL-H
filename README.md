@@ -174,7 +174,7 @@ AITL-HとEduControllerの設計統合を支える以下の実装支援モジュ�
 ## 🧩 実チップ設計への展開：Edusemiとの接続
 
 PoCレベルを超えて**SoC設計・RTL実装・物理設計**まで扱いたい場合は、  
-関連プロジェクト **[Edusemi v4x](https://github.com/Samizo-AITL/Edusemi-v4x)** の「特別編」が対応しています。
+関連プロジェクト **[Edusemi-v4x](https://github.com/Samizo-AITL/Edusemi-v4x)** の「特別編」が対応しています。
 
 | 章 | 内容 |
 |----|------|
@@ -186,9 +186,8 @@ PoCレベルを超えて**SoC設計・RTL実装・物理設計**まで扱いた�
 
 ## 📚 関連プロジェクト一覧
 
-- [Edusemi v4.x](https://github.com/Samizo-AITL/Edusemi-v4x)：半導体／SoC設計教材（実装対応）
+- [Edusemi-v4x](https://github.com/Samizo-AITL/Edusemi-v4x)：半導体／SoC設計教材（実装対応）
 - [EduController](https://github.com/Samizo-AITL/EduController)：制御理論〜AI制御の教育教材
-- [Rekiden](https://github.com/Samizo-AITL/Rekiden)：歴史シミュレーション教材（FSM応用）
 
 ---
 

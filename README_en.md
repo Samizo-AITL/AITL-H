@@ -37,7 +37,7 @@ By integrating **FSM (Instinct) × PID (Reason) × LLM (Intelligence)**, AITL-H 
 ## 📘 PoC Design Manual (16 Chapters)
 
 A full **PoC design manual for humanoid control systems using FSM×PID×LLM** is available.  
-▶︎ [📖 Read the Manual](docs/README.md)
+▶︎ [📖 Read the Manual](docs/index.md)
 
 ---
 

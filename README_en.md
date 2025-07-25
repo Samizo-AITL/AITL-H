@@ -6,7 +6,7 @@ By integrating **FSM (Instinct) × PID (Reason) × LLM (Intelligence)**, AITL-H 
 ---
 
 🇯🇵 [日本語READMEはこちら](./README.md)  
-　→ AITL-H：人型制御向けハイブリッド型知能制御アーキテクチャ（FSM × PID × LLM）
+　  AITL-H：人型制御向けハイブリッド型知能制御アーキテクチャ（FSM × PID × LLM）
 
 ---
 

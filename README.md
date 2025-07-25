@@ -155,6 +155,28 @@ AITL-Hの制御理論基盤は、**教育教材「EduController」**の第9章�
 
 ---
 
+## 🔩 実装支援ツールキット（教育×実装×AIの融合設計）
+
+AITL-HとEduControllerの設計統合を支える以下の実装支援モジュールも提供中です：
+
+### 🔹 [`matlab_tools/`](./matlab_tools/)
+- Simulinkによる **PID・状態空間制御の可視化**
+- Simulink Coderによる **Cコード生成**
+- `c_to_hdl/` によりHDL設計への展開も可能
+
+### 🔹 [`SoC_DesignKit_by_ChatGPT/`](./SoC_DesignKit_by_ChatGPT/)
+- FSM、PID、LLM制御構成のテンプレート群
+- ChatGPTプロンプトによるVerilog自動生成支援
+- `testbench/` による波形検証まで対応
+
+> 🧠 教材・Simulink・ChatGPTを接続した **「教育×実装×AI」** の統合設計フレームワークです。
+
+📘 **関連教材との接続**：
+- EduController（第9章）：FSM×PID×LLM制御の演習・検証環境
+- Edusemi（特別編）：RTL～SoC設計・OpenLaneによるGDSII展開
+
+---
+
 ## 🧩 実チップ設計への展開：Edusemiとの接続
 
 PoCレベルを超えて**SoC設計・RTL実装・物理設計**まで扱いたい場合は、  

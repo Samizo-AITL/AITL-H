@@ -30,7 +30,7 @@
 > 各層は **疎結合・協調的** に設計されており、**独立した開発・段階的統合が可能** です。
 
 <div align="center">
-  <img src="theory/aitl_h_architecture.png" alt="AITL-H アーキテクチャ構成図" width="480">
+  <img src="theory/aitl_h_architecture.png" alt="AITL-H アーキテクチャ構成図" width="400">
 </div>
 
 ---

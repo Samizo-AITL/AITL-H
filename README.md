@@ -29,6 +29,10 @@
 
 > 各層は **疎結合・協調的** に設計されており、**独立した開発・段階的統合が可能** です。
 
+<div align="center">
+  <img src="theory/aitl_h_architecture.png" alt="AITL-H アーキテクチャ構成図" width="480">
+</div>
+
 ---
 
 ## 📘 **PoC設計マニュアル**
@@ -54,6 +58,10 @@ FSM×PID×LLM統合に基づいた **人型ロボットPoC設計マニュアル�
 
 📂 ディレクトリ：[`PoC/gimbal_control/`](./PoC/gimbal_control/)  
 📘 詳細：[`READMEはこちら`](./PoC/gimbal_control/README.md)
+
+<div align="center">
+  <img src="./docs/images/figure9_1_gimbal_control_architecture.svg" alt="ジンバル制御アーキテクチャ" width="480">
+</div>
 
 ---
 
@@ -114,7 +122,7 @@ AITL-H/
 
 ---
 
-### 🔧 **実装支援モジュール（EduController内）**
+## 🔧 **実装支援モジュール（EduController内）**
 
 以下のモジュールにより、**教材・シミュレーション・実装設計**をシームレスに連携できます。
 

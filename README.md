@@ -110,6 +110,8 @@ AITL-H/
 | Part 06〜08 | AI制御（NN制御、強化学習、データ駆動） | **AI応用設計の補完知識** |
 | **Part 09** | FSM × PID × LLM 統合制御 | **AITL-Hのアーキテクチャを教材として実装** |
 
+🔗 [**EduControllerリポジトリを見る**](https://github.com/Samizo-AITL/EduController)
+
 ---
 
 ### 🔧 **実装支援モジュール（EduController内）**
@@ -127,8 +129,6 @@ AITL-H/
 - `testbench/` によるHDL動作検証・波形解析も提供
 
 > 💡 教材（理論）と実装支援（設計）をつなぐ「**教育 × 実装 × AI**」の**統合フレームワーク**です。
-
-🔗 [**EduControllerリポジトリを見る**](https://github.com/Samizo-AITL/EduController)
 
 ---
 

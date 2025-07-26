@@ -135,11 +135,15 @@ AITL-H/
 ## 🧩 **Edusemi-v4xとの統合設計展開**
 
 **SoC/RTL設計まで発展**させたい場合は、  
-**[Edusemi-v4x](https://github.com/Samizo-AITL/Edusemi-v4x)** の「特別編」にて、以下を提供：
+**[Edusemi-v4x](https://github.com/Samizo-AITL/Edusemi-v4x)** の「特別編」にて、以下の内容が提供されています：
 
-- FSM×PID×LLM構成のSoC設計（第3章）
-- OpenLaneによるレイアウト自動化（第4章）
-- DRC/LVS/DFMの物理設計検証（第5章）
+| 章 | 内容 | リンク |
+|----|------|--------|
+| 第3章 | FSM × PID × LLM 統合制御による SoC設計 | [🔗 第3章を見る](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter3_socsystem) |
+| 第4章 | OpenLaneによるRTL 〜 GDSII レイアウト自動化 | [🔗 第4章を見る](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter4_openlane) |
+| 第5章 | DRC / LVS / DFM による物理検証と整合性確認 | [🔗 第5章を見る](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter5_dfm) |
+
+🔗 [**Edusemi-v4x リポジトリを見る**](https://github.com/Samizo-AITL/Edusemi-v4x)
 
 ---
 

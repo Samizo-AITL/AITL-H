@@ -60,7 +60,7 @@ FSM×PID×LLM統合に基づいた **人型ロボットPoC設計マニュアル�
 📘 詳細：[`READMEはこちら`](./PoC/gimbal_control/README.md)
 
 <div align="center">
-  <img src="./docs/images/figure9_1_gimbal_control_architecture.svg" alt="ジンバル制御アーキテクチャ" width="480">
+  <img src="./docs/images/figure9_1_gimbal_control_architecture.svg" alt="ジンバル制御アーキテクチャ" width="520">
 </div>
 
 ---

@@ -1,5 +1,9 @@
 # 🤖 **AITL-H: Hybrid Intelligent Control Architecture**
 
+> ⚠️ **Under Development**  
+> This project is currently **in progress**, and its structure, specifications, and implementation details are subject to change.  
+> Please check the latest repository contents before use or reference.
+
 **AITL-H (All-in-Theory Logic - Hybrid)** is a **three-layered intelligent control framework** designed for **humanoid robots** and **adaptive systems**.  
 By integrating **FSM (Instinct)** × **PID (Reason)** × **LLM (Intelligence)**, AITL-H enables real-time, stable, and flexible control.
 

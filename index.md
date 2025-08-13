@@ -1,6 +1,6 @@
 ---
 layout: default
-title: AITL-H/README.md
+title: AITL-H/index.md
 ---
 
 ---

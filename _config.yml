@@ -1,0 +1,26 @@
+title: AITL-H
+description: Hybrid Intelligent Control: FSM × PID × LLM
+url: "https://samizo-aitl.github.io"   # あなたの Pages ルート
+baseurl: "/AITL-H"                     # ← リポジトリ名
+
+theme: minima
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  parse_block_html: true
+  hard_wrap: false
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+timezone: Asia/Tokyo
+permalink: pretty
+
+# ビルド不要なもの
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor

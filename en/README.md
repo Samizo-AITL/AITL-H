@@ -41,7 +41,7 @@ By integrating **FSM (Instinct)** × **PID (Reason)** × **LLM (Intelligence)**,
 
 > Each layer is **loosely coupled but functionally integrated**, supporting **modular development** and **step-by-step fusion**.
 
-<div align="center"><img src="./theory/aitl_h_architecture.png" alt="AITL-H Architecture" width="400"></div>
+<div align="center"><img src="../theory/aitl_h_architecture.png" alt="AITL-H Architecture" width="400"></div>
 
 ---
 

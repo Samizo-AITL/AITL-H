@@ -1,5 +1,5 @@
-title: AITL-H
-description: Hybrid Intelligent Control: FSM × PID × LLM
+title: "AITL-H"
+description: "Hybrid Intelligent Control: FSM × PID × LLM"
 url: "https://samizo-aitl.github.io"   # あなたの Pages ルート
 baseurl: "/AITL-H"                     # ← リポジトリ名
 

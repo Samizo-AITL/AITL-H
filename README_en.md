@@ -1,3 +1,10 @@
+---
+layout: default
+title: AITL-H/en/README.md
+---
+
+---
+
 # 🤖 **AITL-H: Hybrid Intelligent Control Architecture**
 
 > ⚠️ **Under Development**  

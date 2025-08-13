@@ -16,7 +16,7 @@ By integrating **FSM (Instinct)** × **PID (Reason)** × **LLM (Intelligence)**,
 
 ---
 
-🇯🇵 [日本語READMEはこちら](./README.md)  
+🇯🇵 [日本語READMEはこちら](../README.md)  
 　  *AITL-H：人型制御向けハイブリッド型知能制御アーキテクチャ（FSM × PID × LLM）*
 
 ---
@@ -41,14 +41,14 @@ By integrating **FSM (Instinct)** × **PID (Reason)** × **LLM (Intelligence)**,
 
 > Each layer is **loosely coupled but functionally integrated**, supporting **modular development** and **step-by-step fusion**.
 
-<div align="center"><img src="theory/aitl_h_architecture.png" alt="AITL-H Architecture" width="400"></div>
+<div align="center"><img src="./theory/aitl_h_architecture.png" alt="AITL-H Architecture" width="400"></div>
 
 ---
 
 ## 📘 **PoC Design Manual (16 Chapters)**
 
 A complete manual is available for **PoC development** using **FSM × PID × LLM**.  
-▶︎ [📖 Read the Manual](docs/index.md)
+▶︎ [📖 Read the Manual](./docs/index.md)
 
 ---
 
@@ -56,8 +56,8 @@ A complete manual is available for **PoC development** using **FSM × PID × LLM
 
 | Title | Description | Path |
 |-------|-------------|------|
-| 🧭 Gimbal Control (FSM + PID + LLM) | Hybrid closed-loop control | [`PoC/gimbal_control`](./PoC/gimbal_control) |
-| ⚙️ Verilog Auto-Generation (FSM + PID) | YAML → C → Verilog synthesis | [`PoC/verilog_demo`](./PoC/verilog_demo) |
+| 🧭 Gimbal Control (FSM + PID + LLM) | Hybrid closed-loop control | [`PoC/gimbal_control`](../PoC/gimbal_control) |
+| ⚙️ Verilog Auto-Generation (FSM + PID) | YAML → C → Verilog synthesis | [`PoC/verilog_demo`](../PoC/verilog_demo) |
 | 🔍 Other PoCs | (Coming soon) | - |
 
 ---
@@ -67,10 +67,10 @@ A complete manual is available for **PoC development** using **FSM × PID × LLM
 > This PoC demonstrates a **3-axis gimbal controller** based on the **AITL-HX architecture**.  
 > The flow: **Natural Language → FSM → PID → Actuator**, forming a hybrid intelligent control loop.
 
-📂 [`PoC/gimbal_control/`](./PoC/gimbal_control/)  
+📂 [`PoC/gimbal_control/`](../PoC/gimbal_control/)  
 📘 [`See README`](./PoC/gimbal_control/README.md)
 
-![gimbal_architecture](./docs/images/figure9_1_gimbal_control_architecture.svg)
+![gimbal_architecture](../docs/images/figure9_1_gimbal_control_architecture.svg)
 
 | Layer | Role |
 |-------|------|
@@ -88,8 +88,8 @@ A complete manual is available for **PoC development** using **FSM × PID × LLM
 
 > This PoC demonstrates **automatic generation of Verilog** from **FSM and PID YAML specs**, supported by ChatGPT.
 
-📂 [`PoC/verilog_demo/`](./PoC/verilog_demo/)  
-📘 [`See README`](./PoC/verilog_demo/README.md)
+📂 [`PoC/verilog_demo/`](../PoC/verilog_demo/)  
+📘 [`See README`](../PoC/verilog_demo/README.md)
 
 | Component | Description |
 |----------|-------------|

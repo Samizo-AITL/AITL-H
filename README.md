@@ -1,3 +1,10 @@
+---
+layout: default
+title: AITL-H/README.md
+---
+
+---
+
 # 🤖 **AITL-H：Hybrid型構造制御フレームワーク**
 
 > ⚠️ **開発・検証中 / Under Development**  
@@ -9,7 +16,7 @@
 
 ---
 
-🇺🇸 [**English README here**](./README_en.md)
+🇺🇸 [**English README here**](./en/README.md)
 
 ---
 

@@ -29,10 +29,6 @@ title: AITL-H/README.md
 
 ---
 
-🇺🇸 [**English README here**](./en/README.md)
-
----
-
 ## 🧭 **概要**
 
 | 項目 | 内容 |

@@ -1,3 +1,10 @@
+---
+layout: default
+title: AITL-H/PoC/README.md
+---
+
+---
+
 # 🤖 AITL-H / PoC – 人型ロボット制御の概念実証
 
 本ディレクトリは、AITL-H構想に基づく**人型ロボットPoC（Proof of Concept）**の実験構成・実行環境を格納しています。  

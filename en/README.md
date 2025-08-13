@@ -68,7 +68,7 @@ A complete manual is available for **PoC development** using **FSM × PID × LLM
 > The flow: **Natural Language → FSM → PID → Actuator**, forming a hybrid intelligent control loop.
 
 📂 [`PoC/gimbal_control/`](../PoC/gimbal_control/)  
-📘 [`See README`](./PoC/gimbal_control/README.md)
+📘 [`See README`](../PoC/gimbal_control/README.md)
 
 ![gimbal_architecture](../docs/images/figure9_1_gimbal_control_architecture.svg)
 

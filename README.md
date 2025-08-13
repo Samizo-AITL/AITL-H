@@ -7,6 +7,9 @@ title: AITL-H/README.md
 
 # 🤖 **AITL-H：Hybrid型構造制御フレームワーク**
 
+[![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![view](https://img.shields.io/badge/view-site-brightgreen)](https://samizo-aitl.github.io)
+
 > ⚠️ **開発・検証中 / Under Development**  
 > 本プロジェクトは現在も **発展途上** にあり、構成・仕様・実装内容は今後変更される可能性があります。  
 > 利用・参照の際は、最新のリポジトリ内容をご確認ください。

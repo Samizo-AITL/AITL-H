@@ -11,12 +11,21 @@ title: AITL-H/index.md
 > 本プロジェクトは現在も **発展途上** にあり、構成・仕様・実装内容は今後変更される可能性があります。  
 > 利用・参照の際は、最新のリポジトリ内容をご確認ください。
 
-**AITL-H（All-in-Theory Logic - Hybrid）** は、人型ロボットや適応型システムに向けて設計された **階層型知能制御アーキテクチャ** です。  
-**FSM（本能） × PID（理性） × LLM（知性）** の三層構造により、**瞬時性・安定性・柔軟性** を兼ね備えた制御を実現します。
+---
+
+## 🔗 **公式リンク | Official Links**
+
+| 言語 / Language | 種別 / Type | リンク / Link |
+|------|------|--------|
+| 🇯🇵 Japanese Version | 🌐 GitHub Pages | [https://samizo-aitl.github.io/AITL-H/](https://samizo-aitl.github.io/AITL-H/) |
+| 🇯🇵 Japanese Version | 💻 GitHub | [https://github.com/Samizo-AITL/AITL-H](https://github.com/Samizo-AITL/AITL-H) |
+| 🇺🇸 English Version | 🌐 GitHub Pages | [https://samizo-aitl.github.io/AITL-H/en/](https://samizo-aitl.github.io/AITL-H/en/) |
+| 🇺🇸 English Version | 💻 GitHub | [https://github.com/Samizo-AITL/AITL-H/tree/main/en](https://github.com/Samizo-AITL/AITL-H/tree/main/en) |
 
 ---
 
-🇺🇸 [**English README here**](./en/README.md)
+**AITL-H（All-in-Theory Logic - Hybrid）** は、人型ロボットや適応型システムに向けて設計された **階層型知能制御アーキテクチャ** です。  
+**FSM（本能） × PID（理性） × LLM（知性）** の三層構造により、**瞬時性・安定性・柔軟性** を兼ね備えた制御を実現します。
 
 ---
 

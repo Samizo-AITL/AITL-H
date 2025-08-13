@@ -1,3 +1,10 @@
+---
+layout: default
+title: AITL-H/docs/index.md
+---
+
+---
+
 # 📘 **AITL-H PoC Manual**
 
 本サイトは、**AITL-H（All-in-Theory Logic - Hybrid）**のPoC実装に関するマニュアルページです。  

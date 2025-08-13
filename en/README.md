@@ -11,6 +11,19 @@ title: AITL-H/en/README.md
 > This project is currently **in progress**, and its structure, specifications, and implementation details are subject to change.  
 > Please check the latest repository contents before use or reference.
 
+---
+
+## 🔗 **Official Links**
+
+| Language | Type | Link |
+|------|------|--------|
+| 🇺🇸 English Version | 🌐 GitHub Pages | [https://samizo-aitl.github.io/AITL-H/en/](https://samizo-aitl.github.io/AITL-H/en/) |
+| 🇺🇸 English Version | 💻 GitHub | [https://github.com/Samizo-AITL/AITL-H/tree/main/en](https://github.com/Samizo-AITL/AITL-H/tree/main/en) |
+| 🇯🇵 Japanese Version | 🌐 GitHub Pages | [https://samizo-aitl.github.io/AITL-H/](https://samizo-aitl.github.io/AITL-H/) |
+| 🇯🇵 Japanese Version | 💻 GitHub | [https://github.com/Samizo-AITL/AITL-H](https://github.com/Samizo-AITL/AITL-H) |
+
+---
+
 **AITL-H (All-in-Theory Logic - Hybrid)** is a **three-layered intelligent control framework** designed for **humanoid robots** and **adaptive systems**.  
 By integrating **FSM (Instinct)** × **PID (Reason)** × **LLM (Intelligence)**, AITL-H enables real-time, stable, and flexible control.
 

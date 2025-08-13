@@ -1,7 +1,7 @@
 title: "AITL-H"
 description: "Hybrid Intelligent Control: FSM × PID × LLM"
-url: "https://samizo-aitl.github.io"   # あなたの Pages ルート
-baseurl: "/AITL-H"                     # ← リポジトリ名
+url: "https://samizo-aitl.github.io"
+baseurl: "/AITL-H"
 
 theme: minima
 
@@ -18,7 +18,6 @@ plugins:
 timezone: Asia/Tokyo
 permalink: pretty
 
-# ビルド不要なもの
 exclude:
   - Gemfile
   - Gemfile.lock

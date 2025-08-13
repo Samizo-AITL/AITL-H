@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title | default: site.title }}</title>
+    {%- if site.plugins contains "jekyll-seo-tag" -%}{% seo %}{%- endif -%}
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+    <link rel="icon" href="{{ site.baseurl }}/assets/favicon.png">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="{{ site.baseurl }}/">🪐 AITL-H</a>
+      <nav class="nav">
+        <a href="{{ site.baseurl }}/">Home</a>
+        <a href="{{ site.baseurl }}/en/">EN</a>
+        <a href="{{ site.baseurl }}/docs/">Docs</a>
+        <a href="{{ site.baseurl }}/PoC/">PoC</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      {{ content }}
+    </main>
+
+    <footer class="site-footer">
+      <p>© {{ "now" | date: "%Y" }} Shinichi Samizo — MIT License</p>
+    </footer>
+  </body>
+</html>

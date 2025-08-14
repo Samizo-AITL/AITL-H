@@ -54,6 +54,7 @@ title: AITL-H/README.md
 </div>
 
 ---
+
 ## 📘 **PoC設計マニュアル**
 
 FSM×PID×LLM統合に基づいた **人型ロボットPoC設計マニュアル（全16章）** を公開中  

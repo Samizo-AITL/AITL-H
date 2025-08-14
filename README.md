@@ -60,22 +60,6 @@ title: AITL-H/README.md
 📖 **FSM×PID×LLM統合に基づいた人型ロボットPoC設計マニュアル（全16章）**  
 [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/docs/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/docs)
 
-## 📘 **PoC設計マニュアル**
-
-FSM×PID×LLM統合に基づいた **人型ロボットPoC設計マニュアル（全16章）** を公開中  
-[![View Site](https://img.shields.io/badge/View%20Site-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/docs/) [![View Repo](https://img.shields.io/badge/View%20Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/docs)
-
-## 📘 **PoC設計マニュアル**
-
-FSM×PID×LLM統合に基づいた **人型ロボットPoC設計マニュアル（全16章）** を公開中  
-[![View Site](https://img.shields.io/badge/View%20Site-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/docs/) [![View Repo](https://img.shields.io/badge/View%20Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/docs)
-
-
-## 📘 **PoC設計マニュアル**
-
-FSM×PID×LLM統合に基づいた **人型ロボットPoC設計マニュアル（全16章）** を公開中  
-[![View Site](https://img.shields.io/badge/View%20Site-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/docs/) [![View Repo](https://img.shields.io/badge/View%20Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/docs)
-
 ---
 
 ## 🧪 **PoC一覧**

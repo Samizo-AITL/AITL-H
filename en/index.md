@@ -55,8 +55,8 @@ By integrating **FSM (Instinct)** × **PID (Reason)** × **LLM (Intelligence)**,
 
 ## 📘 **PoC Design Manual (16 Chapters)**
 
-A complete manual is available for **PoC development** using **FSM × PID × LLM**.  
-▶︎ [📖 Read the Manual](./docs/index.md)
+📖 **A complete manual for PoC development using FSM × PID × LLM**  
+[![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/docs/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/docs)
 
 ---
 

@@ -7,8 +7,7 @@ title: AITL-H/en/index.md
 
 # 🤖 **AITL-H: Hybrid Intelligent Control Architecture**
 
-[![license](https://img.shields.io/badge/license-MIT-blue)](../LICENSE)
-[![view](https://img.shields.io/badge/view-site-brightgreen)](https://samizo-aitl.github.io/en)
+[![Back to Samizo-AITL Portal](https://img.shields.io/badge/Back%20to%20Samizo--AITL%20Portal-brightgreen)](https://samizo-aitl.github.io/) [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](../LICENSE)
 
 > ⚠️ **Under Development**  
 > This project is currently **in progress**, and its structure, specifications, and implementation details are subject to change.  

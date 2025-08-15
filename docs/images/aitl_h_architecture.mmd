@@ -1,0 +1,19 @@
+%% File: docs/images/aitl_h_architecture.mmd
+%% AITL-H: Three-layer hybrid control
+flowchart TB
+  %% Styles
+  classDef box fill:#e7f0fb,stroke:#6b93d6,stroke-width:1px,color:#0b1b34;
+  classDef iface fill:#ffffff,stroke:#a3a3a3,stroke-dasharray: 3 3,color:#333;
+
+  LLM["LLM Layer\n(Decision-Making / Anomaly Detection / Language Response)"]:::box
+  IF1["Interface"]:::iface
+  PID["PID Layer\n(Continuous Control: Joint Angles, etc.)"]:::box
+  IF2["Interface"]:::iface
+  FSM["FSM Layer\n(Logic Control / State Transitions)"]:::box
+
+  LLM --> IF1 --> PID --> IF2 --> FSM
+
+  %% Feedback path (perception)
+  Sensors(["Sensors\n(IMU, Vision, etc.)"]):::iface
+  Sensors -.-> PID
+  Sensors -.-> LLM

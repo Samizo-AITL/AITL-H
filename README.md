@@ -119,7 +119,7 @@ AITL-H/
 
 ---
 
-## 🎓 **EduControllerとの接続**
+## 🎛️ **EduControllerとの接続**
 
 **AITL-H** は、教育教材 **[EduController](https://github.com/Samizo-AITL/EduController)** の第9章（FSM × PID × LLMハイブリッド制御）と**完全に統合**されています。
 
@@ -127,13 +127,13 @@ AITL-H/
 |----|------|----------------|
 | [**Part 01〜05**](https://github.com/Samizo-AITL/EduController#制御理論系) | 古典〜現代制御理論（PID、状態空間など） | **PID層の理論的基盤** |
 | [**Part 06〜08**](https://github.com/Samizo-AITL/EduController#ai制御系) | AI制御（NN制御、強化学習、データ駆動） | **AI応用設計の補完知識** |
-| [**Part 09**](https://github.com/Samizo-AITL/EduController/tree/main/part09_llm_hybrid) | FSM × PID × LLM 統合制御 | **AITL-Hのアーキテクチャを教材として実装** |
+| [**Part 09,10**](https://github.com/Samizo-AITL/EduController/tree/main/part09_llm_hybrid) | FSM × PID × LLM 統合制御 | **AITL-Hのアーキテクチャを教材として実装** |
 
 🔗 [**EduControllerリポジトリを見る**](https://github.com/Samizo-AITL/EduController)
 
 ---
 
-## 🧩 **Edusemi-v4xとの統合設計展開**
+## 🎓 **Edusemi-v4xとの統合設計展開**
 
 **SoC/RTL設計まで発展**させたい場合は、  
 **[Edusemi-v4x](https://github.com/Samizo-AITL/Edusemi-v4x)** の「特別編」にて、以下の内容が提供されています：

@@ -91,18 +91,6 @@ title: AITL-H/README.md
 
 ---
 
-## 📂 **ディレクトリ構成**
-
-```
-AITL-H/
-├── theory/                # 構造設計思想・アーキテクチャ解説
-├── PoC/                   # 制御PoCコード・シナリオログ
-├── implementary/          # FSM/PID/LLMのPythonモジュール実装
-└── accelerated_design/    # GPT連携の設計支援ツール
-```
-
----
-
 ## 🎛️ **EduControllerとの接続**
 
 **AITL-H** は、教育教材 **EduController** の第9章（FSM × PID × LLMハイブリッド制御）と**完全に統合**されています。  

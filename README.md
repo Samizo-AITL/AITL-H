@@ -188,4 +188,4 @@ AITL-H/
 > 改善提案や議論は **GitHub Discussions** からお願いします。  
 > *Propose improvements or start discussions via GitHub Discussions.*
 
-[![💬 GitHub Discussions](https://img.shields.io/badge/💬%20GitHub-Discussions-brightgreen?logo=github)](https://github.com/Samizo-AITL/EduController/discussions)
+[![💬 GitHub Discussions](https://img.shields.io/badge/💬%20GitHub-Discussions-brightgreen?logo=github)](https://github.com/Samizo-AITL/AITL-H/discussions)

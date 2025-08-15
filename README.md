@@ -53,6 +53,8 @@ title: AITL-H/README.md
   <img src="theory/aitl_h_architecture.png" alt="AITL-H アーキテクチャ構成図" width="400">
 </div>
 
+![AITL-H Architecture](https://kroki.io/mermaid/png/eNqVUk1PwzAQ_SuYdVs0e1GgkH2qlgS0q0q3jN3QmYxwX1kQ1E5oYf8eQq2kE2Lr9vJ2q1Jf2qlC5QeWv5Q-0Z0KfR1u5O4QqgQ1z5Dq1oZl3G5Qb8pQh8T3B1Wqg3x4QsV9QGm4b2WzQh7x6h0p6u6r3kT6Y5J3aVn7tX5Uq6v4h1o7G7W8c1y5m1oB9cL8cCw3oC3G8yY8xg5v9p5k3Gm8b2p1m3K5a3v9m1k)
+
 ---
 
 ## 🌏 **戦略的重要性 / Strategic Significance**

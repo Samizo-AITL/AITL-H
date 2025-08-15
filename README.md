@@ -59,9 +59,11 @@ title: AITL-H/README.md
 
 | タイトル | 概要 | パス |
 |----------|------|------|
-| 📘 **PoC設計マニュアル** | FSM×PID×LLM統合に基づいた人型ロボットPoC設計マニュアル（全16章）<br>[![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/docs/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/docs) | — |
+| 📘 **PoC設計マニュアル** | FSM×PID×LLM統合に基づいた人型ロボットPoC設計マニュアル（全16章） | [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/docs/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/docs) |
 | 🧭 **ジンバル制御（FSM + PID + LLM）** | ハイブリッド閉ループ制御 | [`PoC/gimbal_control`](./PoC/gimbal_control) |
 | ⚙️ **Verilog自動生成（FSM + PID）** | YAML → C → Verilog生成＋検証 | [`PoC/verilog_demo`](./PoC/verilog_demo) |
+
+---
 
 ### 🧭 **PoC例：FSM × PID × LLMによる3軸ジンバル制御**
 

@@ -133,16 +133,13 @@ AITL-H/
 
 ## 🎓 **Edusemi-v4xとの統合設計展開**
 
-**SoC/RTL設計まで発展**させたい場合は、  
-**[Edusemi-v4x](https://github.com/Samizo-AITL/Edusemi-v4x)** の「特別編」にて、以下の内容が提供されています：
+**SoC/RTL設計まで発展**させたい場合は、**[Edusemi-v4x](https://github.com/Samizo-AITL/Edusemi-v4x)** の「特別編」にて、以下の内容が提供されています：
 
 | 章 | 内容 | リンク |
 |----|------|--------|
-| 第3章 | FSM × PID × LLM 統合制御による SoC設計 | [🔗 第3章を見る](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter3_socsystem) |
-| 第4章 | OpenLaneによるRTL 〜 GDSII レイアウト自動化 | [🔗 第4章を見る](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter4_openlane) |
-| 第5章 | DRC / LVS / DFM による物理検証と整合性確認 | [🔗 第5章を見る](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter5_dfm) |
-
-🔗 [**Edusemi-v4x リポジトリを見る**](https://github.com/Samizo-AITL/Edusemi-v4x)
+| 第3章 | FSM × PID × LLM 統合制御による SoC設計 | [![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/f_chapter3_socsystem/) [![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter3_socsystem) |
+| 第4章 | OpenLaneによるRTL 〜 GDSII レイアウト自動化 | [![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/f_chapter4_openlane/) [![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter4_openlane) |
+| 第5章 | DRC / LVS / DFM による物理検証と整合性確認 | [![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/f_chapter5_dfm/) [![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter5_dfm) |
 
 ---
 

@@ -55,43 +55,25 @@ title: AITL-H/README.md
 
 ---
 
-## 📘 **PoC設計マニュアル**
-
-📖 **FSM×PID×LLM統合に基づいた人型ロボットPoC設計マニュアル（全16章）**  
-[![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/docs/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/docs)
-
----
-
-## 🧪 **PoC一覧**
+## 🧪 **PoC関連**
 
 | タイトル | 概要 | パス |
 |----------|------|------|
+| 📘 **PoC設計マニュアル** | FSM×PID×LLM統合に基づいた人型ロボットPoC設計マニュアル（全16章）<br>[![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/docs/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/docs) | — |
 | 🧭 **ジンバル制御（FSM + PID + LLM）** | ハイブリッド閉ループ制御 | [`PoC/gimbal_control`](./PoC/gimbal_control) |
 | ⚙️ **Verilog自動生成（FSM + PID）** | YAML → C → Verilog生成＋検証 | [`PoC/verilog_demo`](./PoC/verilog_demo) |
 
----
+### 🧭 **PoC例：FSM × PID × LLMによる3軸ジンバル制御**
 
-## 🧪 **PoC例：FSM × PID × LLMによる3軸ジンバル制御**
-
-> **自然言語指令 → 状態遷移（FSM） → PID安定制御 → アクチュエータ** という閉ループ構成。  
+> **自然言語指令 → 状態遷移（FSM） → PID安定制御 → アクチュエータ** の閉ループ構成。  
 > 教育・応用に最適な **AITL-HXアーキテクチャ** の基本実装。
 
-📂 ディレクトリ：[`PoC/gimbal_control/`](./PoC/gimbal_control/)  
-📘 詳細：[`READMEはこちら`](./PoC/gimbal_control/README.md)
+📂 ディレクトリ：[**`PoC/gimbal_control/`**](./PoC/gimbal_control/)  
+📘 詳細：[**`READMEはこちら`**](./PoC/gimbal_control/README.md)
 
 <div align="center">
   <img src="./docs/images/figure9_1_gimbal_control_architecture.svg" alt="ジンバル制御アーキテクチャ" width="700">
 </div>
-
----
-
-## 🧪 **Verilog自動生成PoC（FSM×PID）**
-
-> FSM／PIDの **動作仕様（YAML）** から  
-> **Cコード → 統合C → Verilog** を **ChatGPTと連携** して生成・検証
-
-📂 ディレクトリ：[`PoC/verilog_demo/`](./PoC/verilog_demo/)  
-📘 詳細：[`READMEはこちら`](./PoC/verilog_demo/README.md)
 
 ---
 

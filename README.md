@@ -7,7 +7,7 @@ title: AITL-H/README.md
 
 # 🤖 **AITL-H：Hybrid型構造制御フレームワーク**
 
-[![Samizo-AITLポータルサイトに戻る](https://img.shields.io/badge/Samizo--AITL%20ポータルサイトに戻る-brightgreen)](https://samizo-aitl.github.io/) [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Samizo-AITLポータルサイトに戻る](https://img.shields.io/badge/Samizo--AITL%20ポータルサイトに戻る-brightgreen)](https://samizo-aitl.github.io/) [![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](#-ライセンス--license)
 
 > ⚠️ **開発・検証中 / Under Development**  
 > 本プロジェクトは現在も **発展途上** にあり、構成・仕様・実装内容は今後変更される可能性があります。  
@@ -119,15 +119,6 @@ AITL-H/
 
 ---
 
-## 🚀 **応用領域**
-
-- 🧓 **介護支援ロボット**（感情認識×制御）
-- 🛠 **自己進化制御**（異常検知×自己更新）
-- 🌏 **災害対応ロボット**（定型＋推論）
-- 🎓 **教育教材**（AI×制御の融合訓練）
-
----
-
 ## 🎓 **EduControllerとの接続**
 
 **AITL-H** は、教育教材 **[EduController](https://github.com/Samizo-AITL/EduController)** の第9章（FSM × PID × LLMハイブリッド制御）と**完全に統合**されています。
@@ -139,24 +130,6 @@ AITL-H/
 | [**Part 09**](https://github.com/Samizo-AITL/EduController/tree/main/part09_llm_hybrid) | FSM × PID × LLM 統合制御 | **AITL-Hのアーキテクチャを教材として実装** |
 
 🔗 [**EduControllerリポジトリを見る**](https://github.com/Samizo-AITL/EduController)
-
----
-
-## 🔧 **実装支援モジュール（EduController内）**
-
-以下のモジュールにより、**教材・シミュレーション・実装設計**をシームレスに連携できます。
-
-🔹 **[matlab_tools](https://github.com/Samizo-AITL/EduController/tree/main/matlab_tools)**  
-- **SimulinkによるPID・状態空間制御の可視化**
-- **Simulink CoderによるCコード生成**
-- HDL実装への展開に向けた中間出力（Cコード → `c_to_hdl/` 連携）
-
-🔹 **[SoC_DesignKit_by_ChatGPT](https://github.com/Samizo-AITL/EduController/tree/main/SoC_DesignKit_by_ChatGPT)**  
-- **FSM、PID、LLM制御構成のテンプレート群**
-- **ChatGPTプロンプトによるVerilog自動生成支援**
-- `testbench/` によるHDL動作検証・波形解析も提供
-
-> 💡 教材（理論）と実装支援（設計）をつなぐ「**教育 × 実装 × AI**」の**統合フレームワーク**です。
 
 ---
 
@@ -177,36 +150,39 @@ AITL-H/
 
 ## 📚 **関連プロジェクト一覧**
 
-- [**Edusemi-v4x**](https://github.com/Samizo-AITL/Edusemi-v4x)：半導体／SoC設計教材
+- [**Edusemi-v4x**](https://github.com/Samizo-AITL/Edusemi-v4x)：半導体／SoC設計教材  
 - [**EduController**](https://github.com/Samizo-AITL/EduController)：制御理論×AI制御教材
 
 ---
 
 ## 👤 **執筆者情報 / Author**
 
-**三溝 真一（Shinichi Samizo）**  
-- **信州大学大学院 電気電子工学 修了**  
-- 元 **セイコーエプソン**株式会社 技術者（1997年〜）
-
-📌 **経験領域**：  
-- **半導体デバイス（ロジック・メモリ・高耐圧混載）**  
-- **インクジェット薄膜ピエゾアクチュエータ**  
-- **PrecisionCoreプリントヘッド製品化・BOM管理・ISO教育**
-
-📬 **連絡先**  
-- ✉️ [shin3t72@gmail.com](mailto:shin3t72@gmail.com)  
-- 🐦 [https://x.com/shin3t72](https://x.com/shin3t72)  
-- 💻 [https://samizo-aitl.github.io/](https://samizo-aitl.github.io/)
+| 項目 / Item | 詳細 / Details |
+|-------------|----------------|
+| **著者 / Author** | 三溝 真一（Shinichi Samizo） |
+| **学歴 / Education** | 信州大学大学院 電気電子工学 修了 |
+| **職歴 / Career** | 元 セイコーエプソン株式会社 技術者（1997年〜） |
+| **専門分野 / Expertise** | 半導体デバイス（ロジック・メモリ・高耐圧混載）、インクジェット薄膜ピエゾアクチュエータ、PrecisionCoreプリントヘッド製品化・BOM管理・ISO教育 |
+| **GitHub** | [Samizo-AITL](https://github.com/Samizo-AITL) |
+| **Email** | [shin3t72@gmail.com](mailto:shin3t72@gmail.com) |
 
 ---
 
-## 🔖 **ライセンス / License**
+## 📄 **ライセンス / License**
 
-MIT License © 2025 [Shinichi Samizo](https://github.com/Samizo-AITL)  
-教育・研究・個人利用の目的で自由に利用可能です。
+[![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](#-ライセンス--license)  
+
+> **本プロジェクトはハイブリッドライセンスを採用**  
+> 教材・コード・図表の性質に応じて以下のライセンスを適用します。
+
+| **📌 項目 / Item** | **ライセンス / License** | **説明 / Description** |
+|--------------------|--------------------------|------------------------|
+| **コード（Code）** | **[MIT License](https://opensource.org/licenses/MIT)** | 自由に使用・改変・再配布可 |
+| **教材テキスト（Text materials）** | **[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)** | 著者表示必須 |
+| **図表・イラスト（Figures & diagrams）** | **[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)** | 非商用利用のみ可 |
+| **外部引用（External references）** | 元ライセンスに従う | 引用元を明記 |
 
 ---
 
 💬 ご意見・議論は [**Discussionページ**](https://github.com/Samizo-AITL/AITL-H/discussions) へどうぞ。
 
----

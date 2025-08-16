@@ -1,7 +1,8 @@
 ---
 layout: clean
-title: Chapter 11 — Exit Strategy & SystemDK
 permalink: /docs/chapter11_exit_strategy.html
+title: ""
+show_title: false   # ← これで上部の自動H1バーを非表示
 ---
 
 ---

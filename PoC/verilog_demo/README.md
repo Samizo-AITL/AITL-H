@@ -1,3 +1,13 @@
+---
+layout: default
+title: Verilog Demo（AITL-H統合制御モジュール動作検証）
+nav_order: 10
+description: AITL-HアーキテクチャにおけるFSM × PID × LLM統合制御モジュールのVerilog動作検証環境。
+permalink: /AITL-H/verilog_demo/
+---
+
+---
+
 # 🧪 verilog_demo/README.md
 
 このディレクトリは、AITL-Hアーキテクチャにおける  
@@ -25,7 +35,7 @@ _This directory provides a test environment for **Verilog-based functional verif
 以下のコマンドでコンパイルと実行が可能です：  
 _Use the following commands to compile and run the simulation:_
 
-```sh
+```bash
 iverilog -o sim_tb tb_aitl_top.v aitl_top.v fsm_core.v pid_controller.v
 vvp sim_tb
 ```
@@ -33,7 +43,7 @@ vvp sim_tb
 波形出力を含む場合：  
 _To view waveform output:_
 
-```sh
+```bash
 gtkwave aitl_top.vcd
 ```
 
@@ -75,5 +85,3 @@ _You can observe stepwise transitions in FSM states and PID outputs._
 MIT License  
 技術者・研究者・教育者による自由利用・拡張を歓迎します。  
 _Freely available and extensible for engineers, researchers, and educators._
-
----

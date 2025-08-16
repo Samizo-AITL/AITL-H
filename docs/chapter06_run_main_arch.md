@@ -1,7 +1,9 @@
 ---
 layout: clean
-# title: "Ch.6 — 制御アーキテクチャ実装（run_main中心）"
-permalink: /docs/chapter06_run_main_arch/
+title: Chapter 06 — Control Architecture
+permalink: /docs/chapter06_run_main_arch.html
+---
+
 ---
 
 # 🧩 第06章：PoC統合制御構成と run_main.py

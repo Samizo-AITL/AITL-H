@@ -1,6 +1,6 @@
 ---
 layout: clean
-# title: "Ch.1 — AITL三層アーキテクチャ設計"
+title: ""
 permalink: /docs/chapter01_aitl_architecture/
 ---
 

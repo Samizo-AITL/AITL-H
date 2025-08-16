@@ -1,14 +1,16 @@
 ---
 layout: default
-title: AITL-H/PoC/README.md
----
-
+title: AITL-H / PoC – 人型ロボット制御の概念実証
+nav_order: 1
+description: FSM＋PID＋LLMによる三層アーキテクチャを用いたAITL-H PoC（人型ロボット制御）の実験構成と実行環境概要
+permalink: /AITL-H/PoC/
+last_updated: 2025-08-17
 ---
 
 # 🤖 AITL-H / PoC – 人型ロボット制御の概念実証
 
 本ディレクトリは、AITL-H構想に基づく**人型ロボットPoC（Proof of Concept）**の実験構成・実行環境を格納しています。  
-FSM（本能）＋ PID（理性）＋ LLM（知性）の三層アーキテクチャにより、制御・推論・動作の統合実証を目的とした構成
+FSM（本能）＋ PID（理性）＋ LLM（知性）の三層アーキテクチャにより、制御・推論・動作の統合実証を目的とした構成。
 
 ---
 

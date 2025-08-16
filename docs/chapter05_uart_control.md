@@ -7,76 +7,90 @@ show_title: false   # ← これで上部の自動H1バーを非表示
 
 ---
 
-# 🔌 第05章：UART通信制御とFSM接続
+# 🔌 第05章：UART制御と通信管理 / Chapter 05: UART Control and Communication Management
 
-本章では、AITL-H PoCにおける**UART（シリアル通信）による命令受信とFSM制御の接続構造**を解説します。  
-UARTは、LLMや外部ユーザからの制御命令をFSMへ伝達する「入力インターフェース」として機能します。
+本章では、AITL-H PoCにおける**UART（Universal Asynchronous Receiver/Transmitter）**通信の設計方針を説明します。  
+This chapter explains the **UART (Universal Asynchronous Receiver/Transmitter)** communication design policy in AITL-H PoC.
 
----
-
-## 1. 📬 UART通信の役割
-
-UARTはPoC内で次のような役割を担います：
-
-- LLMから生成された**自然言語命令をFSM用イベントに変換して送信**
-- FSMはUARTから受信したイベント文字列をもとに**状態遷移を実行**
-- 双方向通信により、FSMの状態やセンサデータを**外部に送信**することも可能
+UARTは、LLMや上位制御系とPoCデバイス間のデータ授受に用いられ、**コマンド伝達**および**センサデータ送信**を担います。  
+UART is used for data exchange between the LLM or upper control system and the PoC device, handling **command transmission** and **sensor data sending**.
 
 ---
 
-## 2. 🧩 `uart_driver.py` の構成例
+## 1. 📡 UART通信の役割 / Role of UART Communication
 
-PoC内での仮想UART実装は次のような簡易構成です：
+- **コマンド受信**（LLMや外部PCからの操作命令）  
+  **Command Reception** (operation instructions from LLM or external PC)
+- **状態送信**（センサ値・FSM状態・PID情報）  
+  **Status Transmission** (sensor values, FSM states, PID information)
+- **デバッグ出力**（開発時の動作確認）  
+  **Debug Output** (behavior verification during development)
+
+---
+
+## 2. 🧩 UARTインターフェース構造 / UART Interface Structure
+
+PoCでは、UART通信処理を `uart_interface.py` にまとめています：  
+In PoC, UART communication processing is consolidated in `uart_interface.py`:
 
 ```python
-class UARTDriver:
-    def __init__(self):
-        self.rx_buffer = []
+import serial
 
-    def receive(self):
-        if self.rx_buffer:
-            return self.rx_buffer.pop(0)
-        return None
+class UARTInterface:
+    def __init__(self, port="/dev/ttyUSB0", baudrate=115200):
+        self.ser = serial.Serial(port, baudrate, timeout=1)
 
-    def send(self, data):
-        print(f"UART Send: {data}")
+    def send(self, message: str):
+        # メッセージ送信 / Send message
+        self.ser.write((message + "\n").encode())
 
-    def inject_command(self, command):
-        self.rx_buffer.append(command)
+    def receive(self) -> str:
+        # メッセージ受信 / Receive message
+        if self.ser.in_waiting > 0:
+            return self.ser.readline().decode().strip()
+        return ""
 ```
 
-- `inject_command()`：LLMやユーザが命令を挿入する仮想メソッド
-- `receive()`：FSMがポーリング的に命令を取得
+> UARTポート・ボーレートはデバイス構成に応じて設定します。  
+> UART port and baudrate are configured according to the device setup.
 
 ---
 
-## 3. 📄 コマンド形式とFSMイベント対応
+## 3. 🔁 制御ループでの利用例 / Usage in Control Loop
 
-| UART文字列 | 対応するFSMイベント |
-|------------|----------------------|
-| `"start"` | `start` |
-| `"stop"` | `stop` |
-| `"turn_left"` | `turn_left` |
-| `"obstacle_detected"` | `obstacle_detected` |
-| `"cleared"` | `cleared` |
+```python
+uart = UARTInterface()
 
-UARTコマンドはFSM構成（`fsm_config.yaml`）に対応している必要があります。
+while True:
+    cmd = uart.receive()
+    if cmd:
+        fsm.handle_event(cmd)
 
----
-
-## 4. 🔄 応用通信方式と今後の展開
-
-将来的には、以下のような通信方式への拡張が可能です：
-
-| 通信方式 | 特徴 | 用途 |
-|----------|------|------|
-| USB-C仮想COM | 高速・安定 | PC ⇔ マイコン連携 |
-| Bluetooth (BLE) | 無線・省電力 | モバイル制御・ウェアラブル連携 |
-| WiFi (UDP/TCP) | 長距離・ネット統合 | リモート制御・クラウド制御 |
+    speed, angle = fsm.get_output()
+    pwm = pid.compute(speed, sensor.read_distance())
+    uart.send(f"Speed:{speed}, Angle:{angle}, PWM:{pwm}")
+```
 
 ---
 
-## 🔚 まとめ
+## 4. 🔄 拡張設計の方向性 / Extension Design Directions
 
-UART通信は、AITL-H構成における**知性層（LLM）と本能層（FSM）を接続する重要インターフェース**です。  
-本章では、UARTによる命令伝達とFSM接続の実装例を示し、今後の通信拡張への布石を整理しました。
+| 項目 / Item | 設計方針 / Design Policy |
+|-------------|--------------------------|
+| **コマンドプロトコル化 / Command Protocol** | JSONやバイナリでコマンド体系化 / Structure commands in JSON or binary |
+| **双方向同期 / Bi-Directional Sync** | 状態同期とコマンド適用のタイムスタンプ化 / Timestamp synchronization |
+| **エラーハンドリング / Error Handling** | 再送・CRCチェックによる信頼性確保 / Ensure reliability via retransmission and CRC |
+
+---
+
+## 🔚 まとめ / Summary
+
+UART通信は、AITL-H PoCにおける**上位系と制御系の橋渡し**として機能します。  
+UART communication functions as the **bridge between upper-level systems and the control system** in AITL-H PoC.
+
+適切なプロトコル化とエラー対策により、堅牢で拡張可能な通信基盤を実現します。  
+Proper protocol structuring and error handling ensure a robust and extensible communication infrastructure.
+
+---
+
+[← PoCマニュアルのREADMEに戻る / Back to AITL-H PoC Manual README](README.md)

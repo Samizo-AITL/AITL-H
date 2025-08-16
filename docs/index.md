@@ -9,6 +9,8 @@ layout: clean
 
 [![Samizo-AITLポータルサイトに戻る](https://img.shields.io/badge/Samizo--AITL%20ポータルサイトに戻る-brightgreen)](https://samizo-aitl.github.io/) 
 
+[![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](#-ライセンス--license)
+
 本サイトは、**AITL-H（All-in-Theory Logic - Hybrid）**のPoC実装に関するマニュアルページです。  
 **PID・FSM・LLM**の三層構造に基づいた制御設計と、PoC仕様への落とし込み方を解説します。  
 _This site serves as the manual page for the PoC implementation of AITL-H (All-in-Theory Logic - Hybrid)._  

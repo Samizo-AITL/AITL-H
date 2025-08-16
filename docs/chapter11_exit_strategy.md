@@ -1,6 +1,7 @@
 ---
 layout: clean
-permalink: /docs/chapter11_exit_strategy.html
+title: "Ch.11 — 出口戦略とSystemDKへの接続展望"
+permalink: /AITL-H/docs/chapter11_exit_strategy.html
 ---
 
 ---

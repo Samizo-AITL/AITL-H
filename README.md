@@ -68,16 +68,23 @@ flowchart TB
     F2["State Transitions"]
   end
 
-  %% --- Connections (1 line per statement) ---
+  %% --- Connections ---
   LLM -->|Scenario / Commands| FSM
   FSM -->|Mode Control / Gain Select| PID
   PID -->|PWM / Control Signals| ACT["Actuators"]
   ACT -->|Motion Response| SEN["Sensors (IMU etc.)"]
   SEN -.->|Perception Feedback| LLM
 
-  %% --- Styling (GitHub互換の書き方) ---
+  %% --- Styling ---
   classDef box fill:#eaf5ff,stroke:#6ca7ff,stroke-width:1px,rx:6,ry:6
   class LLM,PID,FSM,ACT,SEN box
+
+  %% --- Clickable Links (GitHub Pages or Repo) ---
+  click LLM "https://github.com/Samizo-AITL/AITL-H/tree/main/llm_layer" "Go to LLM Layer docs"
+  click PID "https://github.com/Samizo-AITL/AITL-H/tree/main/pid_layer" "Go to PID Layer docs"
+  click FSM "https://github.com/Samizo-AITL/AITL-H/tree/main/fsm_layer" "Go to FSM Layer docs"
+  click ACT "https://github.com/Samizo-AITL/AITL-H/tree/main/actuators" "Go to Actuators docs"
+  click SEN "https://github.com/Samizo-AITL/AITL-H/tree/main/sensors" "Go to Sensors docs"
 ```
 
 ---

@@ -1,7 +1,8 @@
 ---
 layout: clean
-title: Chapter 08 — LLM Integration
 permalink: /docs/chapter08_llm_integration.html
+title: ""
+show_title: false   # ← これで上部の自動H1バーを非表示
 ---
 
 ---

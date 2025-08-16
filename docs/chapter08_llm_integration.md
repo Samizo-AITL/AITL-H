@@ -18,9 +18,9 @@ PoCにおける命令伝達、構成補正、状態再構築といった展開�
 
 LLMは主に以下のような**知的判断・命令生成**に関与します：
 
-- ユーザ指令や外部状況を自然言語で解釈
-- UARTを通じて**FSMにイベント（コマンド）を送信**
-- 状態設計やPID設定の**構成ファイルを再生成・修正**
+- ユーザ指令や外部状況を自然言語で解釈  
+- UARTを通じて**FSMにイベント（コマンド）を送信**  
+- 状態設計やPID設定の**構成ファイルを再生成・修正**  
 
 LLMは「抽象的知性を実行系に落とし込む橋渡し」として機能します。
 
@@ -28,14 +28,17 @@ LLMは「抽象的知性を実行系に落とし込む橋渡し」として機�
 
 ## 2. 🔄 UART経由の命令送信構造
 
-PoCでは、LLMからFSMに命令を送るためにUART（仮想通信）を使用：
+PoCでは、LLMからFSMに命令を送るためにUART（仮想通信）を使用します。
 
-```
-[LLM命令]
-   ↓（自然言語→FSMイベントへ変換）
-UART送信（例："start", "stop", "turn_left"）
-   ↓
-FSMがイベントとして受信し、状態遷移を実行
+```mermaid
+sequenceDiagram
+    participant LLM as LLM
+    participant UART as UART Driver
+    participant FSM as FSM Engine
+
+    LLM->>UART: "start" / "stop" / "turn_left"
+    UART->>FSM: handle_event(command)
+    FSM->>FSM: 状態遷移実行
 ```
 
 FSM側の実装例：
@@ -75,3 +78,7 @@ LLMは、PoC中で次のような**自己修復型制御**に応用可能です�
 
 LLMはAITL-Hにおける「知性」を担い、FSMやPIDに対して構造的命令や自己修復補正を提供する役割を果たします。  
 PoC段階ではUART連携により段階的に実験し、**構成ファイルの自動生成・再設計支援**などを通じて、AIと制御の橋渡しを試みます。
+
+---
+
+[← PoCマニュアルのREADMEに戻る / Back to AITL-H PoC Manual README](README.md)

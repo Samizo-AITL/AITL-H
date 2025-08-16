@@ -49,33 +49,34 @@ title: AITL-H/README.md
 
 > 各層は **疎結合・協調的** に設計されており、**独立した開発・段階的統合が可能** です。
 
-<div align="center">
-  <img src="theory/aitl_h_architecture.png" alt="AITL-H アーキテクチャ構成図" width="400">
-</div>
-
 ```mermaid
 flowchart TB
+  %% --- Layers ---
   subgraph LLM["LLM Layer"]
-    L1[Decision-Making]
-    L2[Anomaly Detection]
-    L3[Language Response]
-  end
-  subgraph PID["PID Layer"]
-    P1[Continuous Control]
-    P2[Joint Angles / MIMO]
-  end
-  subgraph FSM["FSM Layer"]
-    F1[Logic Control]
-    F2[State Transitions]
+    L1["Decision-Making"]
+    L2["Anomaly Detection"]
+    L3["Language Response"]
   end
 
+  subgraph PID["PID Layer"]
+    P1["Continuous Control"]
+    P2["Joint Angles / MIMO"]
+  end
+
+  subgraph FSM["FSM Layer"]
+    F1["Logic Control"]
+    F2["State Transitions"]
+  end
+
+  %% --- Connections (1 line per statement) ---
   LLM -->|Scenario / Commands| FSM
   FSM -->|Mode Control / Gain Select| PID
-  PID -->|PWM / Control Signals| ACT[Actuators]
-  ACT -->|Motion Response| SEN[Sensors (IMU, etc.)]
+  PID -->|PWM / Control Signals| ACT["Actuators"]
+  ACT -->|Motion Response| SEN["Sensors (IMU etc.)"]
   SEN -.->|Perception Feedback| LLM
 
-  classDef box fill:#eaf5ff,stroke:#6ca7ff,stroke-width:1px,rx:6,ry:6;
+  %% --- Styling (GitHub互換の書き方) ---
+  classDef box fill:#eaf5ff,stroke:#6ca7ff,stroke-width:1px,rx:6,ry:6
   class LLM,PID,FSM,ACT,SEN box
 ```
 

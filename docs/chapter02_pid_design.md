@@ -97,4 +97,11 @@ It is the **Reason Layer** implementation that transforms FSM-defined goals into
 
 ## 🖼 **図2-1：PID制御ループ構成図 / Figure 2-1: PID Control Loop**
 
-<img src="./images/figure2_1_pid_control_loop.png" alt="PID Loop" width="400"/>
+```mermaid
+flowchart TD
+    A[Target Value r(t)] -->|e(t)| B[PID Controller]
+    B -->|u(t)| C[PWM Signal]
+    C --> D[Actuator / Motor]
+    D --> E[Sensor Feedback y(t)]
+    E -->|Feedback| B
+```

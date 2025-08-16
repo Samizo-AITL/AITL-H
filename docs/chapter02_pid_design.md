@@ -1,4 +1,3 @@
-<!-- AITL-H/docs/chapter02_pid_design.md -->
 ---
 layout: clean
 title: "Ch.2 — PID制御設計と応答チューニング"

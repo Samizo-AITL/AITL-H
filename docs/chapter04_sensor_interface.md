@@ -1,7 +1,9 @@
 ---
 layout: clean
-# title: "Ch.4 — センサ・アクチュエータ制御"
-permalink: /docs/chapter04_sensor_interface/
+title: Chapter 04 — Sensor & Actuator Control
+permalink: /docs/chapter04_sensor_interface.html
+---
+
 ---
 
 # 📡 第04章：センサ連動と環境反応性の設計

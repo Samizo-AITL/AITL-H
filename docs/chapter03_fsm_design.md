@@ -1,7 +1,8 @@
 ---
 layout: clean
-title: Chapter 03 — FSM & RTL Implementation
 permalink: /docs/chapter03_fsm_design.html
+title: ""
+show_title: false   # ← これで上部の自動H1バーを非表示
 ---
 
 ---

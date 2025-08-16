@@ -1,3 +1,11 @@
+---
+layout: default
+title: PID制御仕様書（AITL-H PoC）
+nav_order: 3
+description: FSM出力に基づくPID制御ブロックの設計仕様
+permalink: /AITL-H/pid_design_spec/
+---
+
 # ⚙️ pid_design_spec.md — PID制御仕様書（AITL-H PoC）
 
 本ドキュメントでは、FSMが出力する制御目標に対して、PID制御ブロックがどのように動作し、どのようなパラメータ設定・信号処理を行うかを明記します。  
@@ -64,10 +72,8 @@ error = target - measured
 integral += error * dt
 derivative = (error - prev_error) / dt
 u = Kp * error + Ki * integral + Kd * derivative
-```
 
 # スケーリングしてPWM出力へ変換
-```
 control_pwm = max(0, min(255, int(u)))
 ```
 

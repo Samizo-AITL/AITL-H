@@ -54,7 +54,21 @@ _It explains the control design based on the three-layer architecture of **PID**
 
 ---
 
-📅 **最終更新 / Last Updated**: July 2025  
-✍️ **著者 / Author**: 三溝 真一（Shinichi Samizo）
+## 📄 **ライセンス / License**
+
+[![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](#-ライセンス--license)  
+
+> **本プロジェクトはハイブリッドライセンスを採用**  
+> 教材・コード・図表の性質に応じて以下のライセンスを適用します。
+
+| **📌 項目 / Item** | **ライセンス / License** | **説明 / Description** |
+|--------------------|--------------------------|------------------------|
+| **コード（Code）** | **[MIT License](https://opensource.org/licenses/MIT)** | 自由に使用・改変・再配布可 |
+| **教材テキスト（Text materials）** | **[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)** | 著者表示必須 |
+| **図表・イラスト（Figures & diagrams）** | **[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)** | 非商用利用のみ可 |
+| **外部引用（External references）** | 元ライセンスに従う | 引用元を明記 |
 
 ---
+
+📅 **最終更新 / Last Updated**: July 2025  
+✍️ **著者 / Author**: 三溝 真一（Shinichi Samizo）

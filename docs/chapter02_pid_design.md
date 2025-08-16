@@ -1,6 +1,6 @@
 ---
 layout: clean
-# title: 
+permalink: /docs/chapter02_pid_design.html
 ---
 
 ---

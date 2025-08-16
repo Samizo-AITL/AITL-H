@@ -1,0 +1,12 @@
+/* custom.css - サイト独自カスタムスタイル */
+body {
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

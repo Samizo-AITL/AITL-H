@@ -1,6 +1,6 @@
 ---
 layout: clean
-title: "AITL-H PoC Manual"
+# title: "AITL-H PoC Manual"
 permalink: /docs/
 ---
 

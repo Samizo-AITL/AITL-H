@@ -114,17 +114,16 @@ flowchart LR
 
 ---
 
-### 📝 **ライセンス / License**
+### 🔗 **ナビゲーション / Navigation**
+- ⏮ [第06章：制御アーキテクチャ実装 / Control Architecture](https://samizo-aitl.github.io/AITL-H/docs/chapter06_run_main_arch.html)  
+- ▶️ [第08章：LLM連携と意図推定 / LLM Integration](https://samizo-aitl.github.io/AITL-H/docs/chapter08_llm_integration.html)  
 
+[← AITL-H PoC マニュアル README / Back to AITL-H PoC Manual README](https://samizo-aitl.github.io/AITL-H/docs/)
+
+---
+
+### 📝 **ライセンス / License**
 - **Code:** MIT  
 - **Text:** CC BY 4.0  
 - **Figures:** CC BY-NC 4.0  
-（詳細は [Docs Index のライセンス表](/AITL-H/docs/#-ライセンス--license) を参照）
-
-### 🔗 **ナビゲーション / Navigation**
-- 🏠 **[AITL-H PoC マニュアル README](/AITL-H/docs/)**
-- ⏮ **[前の章 / Previous: 第06章 制御アーキテクチャ実装](/AITL-H/docs/chapter06_run_main_arch.html)**  
-  _Control Architecture_
-- ▶️ **[次の章 / Next: 第08章 LLM連携と意図推定](/AITL-H/docs/chapter08_llm_integration.html)**  
-  _LLM Integration_
-  
+（詳細は [Docs Index のライセンス表 / License Table in Docs Index](https://samizo-aitl.github.io/AITL-H/docs/#-ライセンス--license) を参照）

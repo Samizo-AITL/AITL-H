@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: clean
 title: AITL-H/README.md
 ---
 

@@ -77,16 +77,16 @@ AITL三層モデルは、**多階層制御（Hierarchical Control）**のAI拡�
 
 ---
 
-### 📝 **ライセンス / License**
+### 🔗 **ナビゲーション / Navigation**
+- ⏮ [第00章：PoC全体像と三層アーキテクチャの背景 / PoC Overview & Three-Layer Architecture Background](https://samizo-aitl.github.io/AITL-H/docs/chapter00_overview.html)  
+- ▶️ [第02章：PID制御設計と応答チューニング / PID Design & Tuning](https://samizo-aitl.github.io/AITL-H/docs/chapter02_pid_design.html)  
 
+[← AITL-H PoC マニュアル README / Back to AITL-H PoC Manual README](https://samizo-aitl.github.io/AITL-H/docs/)
+
+---
+
+### 📝 **ライセンス / License**
 - **Code:** MIT  
 - **Text:** CC BY 4.0  
 - **Figures:** CC BY-NC 4.0  
-（詳細は [Docs Index のライセンス表](/AITL-H/docs/#-ライセンス--license) を参照）
-
-### 🔗 **ナビゲーション / Navigation**
-- 🏠 **[AITL-H PoC マニュアル README](/AITL-H/docs/)**
-- ⏮ **[前の章 / Previous: 第00章 PoC全体像と三層アーキテクチャの背景](/AITL-H/docs/chapter00_overview.html)**  
-  _Overview of PoC and Three-layer Architecture Background_
-- ▶️ **[次の章 / Next: 第02章 PID制御設計と応答チューニング](/AITL-H/docs/chapter02_pid_design.html)**  
-  _PID Design & Tuning_
+（詳細は [Docs Index のライセンス表 / License Table in Docs Index](https://samizo-aitl.github.io/AITL-H/docs/#-ライセンス--license) を参照）

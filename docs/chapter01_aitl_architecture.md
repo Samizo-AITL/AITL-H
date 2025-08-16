@@ -1,6 +1,8 @@
+<!-- AITL-H/docs/chapter01_aitl_architecture.md -->
 ---
 layout: clean
-permalink: /docs/chapter01_aitl_architecture.html
+title: "Ch.1 — PoC仕様策定と要件定義"
+permalink: /AITL-H/docs/chapter01_aitl_architecture.html
 ---
 
 ---

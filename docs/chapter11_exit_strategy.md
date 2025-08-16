@@ -1,7 +1,9 @@
 ---
 layout: clean
-# title: "Ch.11 — 出口戦略とSystemDKへの接続展望"
-permalink: /docs/chapter11_exit_strategy/
+title: Chapter 11 — Exit Strategy & SystemDK
+permalink: /docs/chapter11_exit_strategy.html
+---
+
 ---
 
 # 🚪 第11章：PoC出口戦略とSystemDKへの接続展望

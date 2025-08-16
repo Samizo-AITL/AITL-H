@@ -1,6 +1,7 @@
 ---
 layout: clean
-permalink: /docs/chapter07_log_monitoring.html
+title: "Ch.7 — ログ出力とモニタリング戦略"
+permalink: /AITL-H/docs/chapter07_log_monitoring.html
 ---
 
 ---

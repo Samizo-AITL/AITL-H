@@ -1,7 +1,9 @@
 ---
 layout: clean
-title: ""
-permalink: /docs/chapter01_aitl_architecture/
+title: Chapter 01 — PoC Specification & Requirements
+permalink: /docs/chapter01_aitl_architecture.html
+---
+
 ---
 
 # 🏗 第01章：AITL三層アーキテクチャ設計

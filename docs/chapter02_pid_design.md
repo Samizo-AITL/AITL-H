@@ -99,9 +99,9 @@ It is the **Reason Layer** implementation that transforms FSM-defined goals into
 
 ```mermaid
 flowchart TD
-    A[Target Value r(t)] -->|e(t)| B[PID Controller]
-    B -->|u(t)| C[PWM Signal]
-    C --> D[Actuator / Motor]
-    D --> E[Sensor Feedback y(t)]
+    A["Target Value r(t)"] -->|e(t)| B["PID Controller"]
+    B -->|u(t)| C["PWM Signal"]
+    C --> D["Actuator / Motor"]
+    D --> E["Sensor Feedback y(t)"]
     E -->|Feedback| B
 ```

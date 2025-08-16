@@ -6,6 +6,8 @@ show_title: false
 description: "AITL-H三層制御（FSM/PID/LLM）の役割・責務・連携構造を体系的に解説。"
 ---
 
+---
+
 # 🏗 **第01章：AITL三層アーキテクチャ設計**  
 _**Chapter 01: AITL Three-Layer Architecture Design**_
 
@@ -78,3 +80,5 @@ AITL三層モデルは、**多階層制御（Hierarchical Control）**のAI拡�
 ### 🔗 **ナビゲーション / Navigation**
 - ⏮ [第00章：PoC全体像と三層アーキテクチャの背景](/AITL-H/docs/chapter00_overview.html)  
 - ▶️ [第02章：PID制御設計と応答チューニング](/AITL-H/docs/chapter02_pid_design.html)
+
+[← PoCマニュアルのREADMEに戻る / Back to AITL-H PoC Manual README](README.md)

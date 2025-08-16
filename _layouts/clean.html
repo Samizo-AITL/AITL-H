@@ -8,20 +8,21 @@ layout: null
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>{{ page.title | default: site.title | escape }}</title>
 
-  <!-- 基本スタイル（任意。assetsが無ければこの2行は削ってOK） -->
+  <!-- 任意: ベース/カスタムCSS（無ければ削除可） -->
   <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
   <link rel="stylesheet" href="{{ "/assets/css/custom.css" | relative_url }}">
 
-  <!-- SEO（使っていなければ自動で何も出ません） -->
+  <!-- SEO（使っていなければ何も出ません） -->
   {% if site.plugins contains "jekyll-seo-tag" %}{% seo %}{% endif %}
 
-  <!-- MathJax（使わないなら丸ごと削ってOK） -->
+  <!-- MathJax（不要なら削除OK） -->
   <script>
     window.MathJax = {
       tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']],
-        displayMath: [['$$', '$$'], ['\\[', '\\]']],
-        processEscapes: true, tags: 'ams'
+        inlineMath: [['$', '$'], ['\$begin:math:text$', '\\$end:math:text$']],
+        displayMath: [['$$', '$$'], ['\$begin:math:display$', '\\$end:math:display$']],
+        processEscapes: true,
+        tags: 'ams'
       },
       options: { skipHtmlTags: ['script','style','textarea','pre','code'] },
       chtml: { scale: 1 }
@@ -29,36 +30,67 @@ layout: null
   </script>
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
-  <!-- Mermaid（図を使うならON、使わないなら削除OK） -->
+  <!-- Mermaid -->
   <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function(){
-      if (window.mermaid) mermaid.initialize({ startOnLoad: true, securityLevel: 'loose' });
+    // GitHub Pages側でも ```mermaid を描画できるように変換した上で初期化
+    document.addEventListener('DOMContentLoaded', function () {
+      // 1) ```mermaid のコードブロックを <div class="mermaid"> に差し替え
+      document.querySelectorAll('pre > code.language-mermaid').forEach(function (code) {
+        var pre = code.parentElement;
+        var graph = code.textContent;           // コードをそのままテキストで
+        var div = document.createElement('div');
+        div.className = 'mermaid';
+        div.textContent = graph;
+        pre.replaceWith(div);
+      });
+
+      // 2) Mermaid 初期化（差し替え後に実行）
+      if (window.mermaid) {
+        mermaid.initialize({
+          startOnLoad: true,
+          securityLevel: 'loose',  // クリックリンク等を許可したい場合
+          theme: 'default'
+        });
+      }
     });
   </script>
 
-  <!-- レイアウトの基本幅など（軽いリセット） -->
+  <!-- 軽いレイアウト調整 -->
   <style>
     :root { --content-max: 72rem; }
-    body { margin: 0; font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; line-height: 1.6; }
-    main.container, footer.container { max-width: var(--content-max); margin: 0 auto; padding: 1.25rem 1rem; }
+    body {
+      margin: 0;
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+      line-height: 1.6;
+    }
+    main.container, footer.container {
+      max-width: var(--content-max);
+      margin: 0 auto;
+      padding: 1.25rem 1rem;
+    }
     img, svg, canvas, video { max-width: 100%; height: auto; display: block; }
     pre { overflow-x: auto; -webkit-overflow-scrolling: touch; }
     table { width: 100%; border-collapse: collapse; }
     h1, h2, h3 { scroll-margin-top: 80px; }
-    /* GitHubテーマなどが勝手にタイトルを消すのを防止 */
+
+    /* GitHubテーマ等が自動タイトルを消すのを防止（保険） */
     .page-title, .post-title { display: block !important; }
-    /* ページ先頭に自動H1を出す */
-    .title-bar h1 {
+
+    /* ページ先頭タイトル（Front Matter の title を見出し化） */
+    .title-bar h1{
       font-size: clamp(1.8rem, 3vw, 2.4rem);
-      margin: .2rem 0 1rem; padding-bottom: .4rem; border-bottom: 2px solid #e5e7eb;
-      letter-spacing: -0.01em; font-weight: 800;
+      margin: .2rem 0 1rem;
+      padding-bottom: .4rem;
+      border-bottom: 2px solid #e5e7eb;
+      letter-spacing: -0.01em;
+      font-weight: 800;
     }
   </style>
 </head>
 <body>
   <main class="container">
-    <!-- 先頭タイトル（Front Matter の title が無ければ site.title を表示） -->
+    <!-- 先頭タイトル（Front Matter の title が無ければ site.title） -->
     <div class="title-bar">
       <h1>{{ page.title | default: site.title }}</h1>
     </div>
@@ -69,7 +101,10 @@ layout: null
 
   <footer class="container" role="contentinfo" aria-label="Site footer">
     <hr />
-    <p>&copy; {{ "now" | date: "%Y" }} <a href="https://github.com/Samizo-AITL" target="_blank" rel="noopener">Samizo Shinichi</a></p>
+    <p>
+      &copy; {{ "now" | date: "%Y" }}
+      <a href="https://github.com/Samizo-AITL" target="_blank" rel="noopener">Samizo Shinichi</a>
+    </p>
   </footer>
 </body>
 </html>

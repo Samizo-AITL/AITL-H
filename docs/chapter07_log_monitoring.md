@@ -1,7 +1,8 @@
 ---
 layout: clean
-title: Chapter 07 — Logging & Monitoring
 permalink: /docs/chapter07_log_monitoring.html
+title: ""
+show_title: false   # ← これで上部の自動H1バーを非表示
 ---
 
 ---

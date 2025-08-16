@@ -1,7 +1,8 @@
 ---
 layout: clean
-title: Chapter 04 — Sensor & Actuator Control
 permalink: /docs/chapter04_sensor_interface.html
+title: ""
+show_title: false   # ← これで上部の自動H1バーを非表示
 ---
 
 ---

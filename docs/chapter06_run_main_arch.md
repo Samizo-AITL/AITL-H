@@ -1,7 +1,8 @@
 ---
 layout: clean
-title: Chapter 06 — Control Architecture
 permalink: /docs/chapter06_run_main_arch.html
+title: ""
+show_title: false   # ← これで上部の自動H1バーを非表示
 ---
 
 ---

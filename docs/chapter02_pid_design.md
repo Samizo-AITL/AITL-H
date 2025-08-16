@@ -1,7 +1,8 @@
 ---
 layout: clean
-title: Chapter 02 — PID Design & Tuning
 permalink: /docs/chapter02_pid_design.html
+title: ""
+show_title: false   # ← これで上部の自動H1バーを非表示
 ---
 
 ---

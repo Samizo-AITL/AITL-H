@@ -8,19 +8,20 @@ layout: null
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>{{ page.title | default: site.title | escape }}</title>
 
-  <!-- 任意: ベース/カスタムCSS（無ければ削除可） -->
-  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+  <!-- 基本CSS（存在しない場合は削除OK） -->
+  <link rel="stylesheet" href="{{ "/assets/css/style.css"  | relative_url }}">
   <link rel="stylesheet" href="{{ "/assets/css/custom.css" | relative_url }}">
 
-  <!-- SEO（使っていなければ何も出ません） -->
+  <!-- SEO（jekyll-seo-tag を使っている場合のみ） -->
   {% if site.plugins contains "jekyll-seo-tag" %}{% seo %}{% endif %}
+  <link rel="canonical" href="{{ page.url | absolute_url }}"/>
 
-  <!-- MathJax（不要なら削除OK） -->
+  <!-- MathJax（不要なら丸ごと削除OK） -->
   <script>
     window.MathJax = {
       tex: {
-        inlineMath: [['$', '$'], ['\$begin:math:text$', '\\$end:math:text$']],
-        displayMath: [['$$', '$$'], ['\$begin:math:display$', '\\$end:math:display$']],
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
         processEscapes: true,
         tags: 'ams'
       },
@@ -30,72 +31,84 @@ layout: null
   </script>
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
-  <!-- Mermaid -->
+  <!-- Mermaid（Github Pages でも ```mermaid を描画できるように置換してから初期化） -->
   <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
   <script>
-    // GitHub Pages側でも ```mermaid を描画できるように変換した上で初期化
     document.addEventListener('DOMContentLoaded', function () {
-      // 1) ```mermaid のコードブロックを <div class="mermaid"> に差し替え
+      // 1) ```mermaid の <pre><code class="language-mermaid"> を <div class="mermaid"> に置換
       document.querySelectorAll('pre > code.language-mermaid').forEach(function (code) {
-        var pre = code.parentElement;
-        var graph = code.textContent;           // コードをそのままテキストで
-        var div = document.createElement('div');
-        div.className = 'mermaid';
-        div.textContent = graph;
+        var pre  = code.parentElement;
+        var div  = document.createElement('div');
+        div.className   = 'mermaid';
+        div.textContent = code.textContent;   // 図のソースをそのまま入れる
         pre.replaceWith(div);
       });
 
-      // 2) Mermaid 初期化（差し替え後に実行）
+      // 2) Mermaid を初期化（置換後に）
       if (window.mermaid) {
         mermaid.initialize({
           startOnLoad: true,
-          securityLevel: 'loose',  // クリックリンク等を許可したい場合
+          securityLevel: 'loose',    // クリックリンク等を許可
           theme: 'default'
         });
       }
     });
   </script>
 
-  <!-- 軽いレイアウト調整 -->
+  <!-- レイアウト調整（中央寄せ・可読性） -->
   <style>
     :root { --content-max: 72rem; }
+
+    html, body { margin:0; padding:0; }
     body {
-      margin: 0;
-      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
       line-height: 1.6;
+      color: #111827;
+      background: #ffffff;
     }
+
     main.container, footer.container {
       max-width: var(--content-max);
       margin: 0 auto;
       padding: 1.25rem 1rem;
     }
+
     img, svg, canvas, video { max-width: 100%; height: auto; display: block; }
     pre { overflow-x: auto; -webkit-overflow-scrolling: touch; }
     table { width: 100%; border-collapse: collapse; }
     h1, h2, h3 { scroll-margin-top: 80px; }
 
-    /* GitHubテーマ等が自動タイトルを消すのを防止（保険） */
-    .page-title, .post-title { display: block !important; }
-
-    /* ページ先頭タイトル（Front Matter の title を見出し化） */
-    .title-bar h1{
-      font-size: clamp(1.8rem, 3vw, 2.4rem);
+    /* 自動H1（Front Matterのtitle or site.title） */
+    .title-bar h1 {
+      font-size: clamp(1.8rem, 3vw, 2.2rem);
       margin: .2rem 0 1rem;
       padding-bottom: .4rem;
       border-bottom: 2px solid #e5e7eb;
       letter-spacing: -0.01em;
       font-weight: 800;
     }
+
+    /* Mermaid 図の中央寄せ＆適切な横幅 */
+    .mermaid, .mermaid > svg {
+      display: block;
+      margin: 1rem auto;
+      max-width: min(1200px, 100%);
+    }
   </style>
 </head>
 <body>
-  <main class="container">
-    <!-- 先頭タイトル（Front Matter の title が無ければ site.title） -->
-    <div class="title-bar">
-      <h1>{{ page.title | default: site.title }}</h1>
-    </div>
+  <main class="container" role="main">
+    {%- comment -%}
+      show_title フラグ：
+      - 既定: 表示（true）
+      - ページで show_title:false を指定すると非表示
+    {%- endcomment -%}
+    {% if page.show_title != false %}
+      <div class="title-bar">
+        <h1>{{ page.title | default: site.title }}</h1>
+      </div>
+    {% endif %}
 
-    <!-- 本文 -->
     {{ content }}
   </main>
 

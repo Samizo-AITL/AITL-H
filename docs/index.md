@@ -31,14 +31,6 @@ _This site serves as the manual page for the PoC implementation of AITL-H (All-i
 
 ---
 
-### Shortcuts
-- **Docs Index** → [https://samizo-aitl.github.io/AITL-H/docs/](https://samizo-aitl.github.io/AITL-H/docs/)
-- **Top** → [https://samizo-aitl.github.io/AITL-H/](https://samizo-aitl.github.io/AITL-H/)
-
-
-
----
-
 ## 🧩 **Planned Future Chapters (Placeholders)**
 
 | 章番号 / Chapter | タイトル（仮） / Tentative Title | ステータス / Status |

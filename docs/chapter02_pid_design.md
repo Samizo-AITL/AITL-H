@@ -1,9 +1,7 @@
 ---
 layout: clean
 title: "Ch.2 — PID制御設計と応答チューニング"
-permalink: /AITL-H/docs/chapter02_pid_design.html
----
-
+permalink: /docs/chapter02_pid_design/
 ---
 
 # ⚙️ 第02章：PID制御器の設計と応答チューニング

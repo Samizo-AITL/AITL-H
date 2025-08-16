@@ -125,7 +125,8 @@ AITL-Hは、単なる制御アーキテクチャではなく、
 > **自然言語指令 → 状態遷移（FSM） → PID安定制御 → アクチュエータ** の閉ループ構成。  
 > 教育・応用に最適な **AITL-HXアーキテクチャ** の基本実装。
 
-📂 ディレクトリ：[**`PoC/gimbal_control/`**](https://samizo-aitl.github.io/AITL-H/PoC/gimbal_control/)  
+📂 ディレクトリ：[**`PoC/gimbal_control/`**]  [![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/PoC/gimbal_control)
+<br>
 📘 詳細：[**`READMEはこちら`**](https://samizo-aitl.github.io/AITL-H/PoC/gimbal_control/)
 
 <div align="center">

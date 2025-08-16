@@ -49,42 +49,37 @@ title: AITL-H/README.md
 
 > 各層は **疎結合・協調的** に設計されており、**独立した開発・段階的統合が可能** です。
 
+### AITL-H: Hybrid Architecture
+
+> 📌 この図は **GitHub では表示**されます。サイトでは下のボタンから GitHub 版をご覧ください。  
+> [![View on GitHub](https://img.shields.io/badge/View_on-GitHub-black?logo=github)](https://github.com/Samizo-AITL/AITL-H/blob/main/README.md#aitl-h-hybrid-architecture)
+
 ```mermaid
 flowchart TB
-  %% --- Layers ---
   subgraph LLM["LLM Layer"]
-    L1["Decision-Making"]
-    L2["Anomaly Detection"]
-    L3["Language Response"]
+    L1[Decision-Making]
+    L2[Anomaly Detection]
+    L3[Language Response]
   end
 
   subgraph PID["PID Layer"]
-    P1["Continuous Control"]
-    P2["Joint Angles / MIMO"]
+    P1[Continuous Control]
+    P2[Joint Angles / MIMO]
   end
 
   subgraph FSM["FSM Layer"]
-    F1["Logic Control"]
-    F2["State Transitions"]
+    F1[Logic Control]
+    F2[State Transitions]
   end
 
-  %% --- Connections ---
   LLM -->|Scenario / Commands| FSM
   FSM -->|Mode Control / Gain Select| PID
-  PID -->|PWM / Control Signals| ACT["Actuators"]
-  ACT -->|Motion Response| SEN["Sensors (IMU etc.)"]
-  SEN -.->|Perception Feedback| LLM
+  PID -->|PWM / Control Signals| ACT[Actuators]
+  ACT -->|Motion Response| SEN[Sensors (IMU, etc.)]
+  SEN -->|Perception Feedback| LLM
 
-  %% --- Styling ---
-  classDef box fill:#eaf5ff,stroke:#6ca7ff,stroke-width:1px,rx:6,ry:6
+  classDef box fill:#eaf5ff,stroke:#6ca7ff,stroke-width:1px,rx:6,ry:6;
   class LLM,PID,FSM,ACT,SEN box
-
-  %% --- Clickable Links (GitHub Pages or Repo) ---
-  click LLM "https://github.com/Samizo-AITL/AITL-H/tree/main/llm_layer" "Go to LLM Layer docs"
-  click PID "https://github.com/Samizo-AITL/AITL-H/tree/main/pid_layer" "Go to PID Layer docs"
-  click FSM "https://github.com/Samizo-AITL/AITL-H/tree/main/fsm_layer" "Go to FSM Layer docs"
-  click ACT "https://github.com/Samizo-AITL/AITL-H/tree/main/actuators" "Go to Actuators docs"
-  click SEN "https://github.com/Samizo-AITL/AITL-H/tree/main/sensors" "Go to Sensors docs"
 ```
 
 ---

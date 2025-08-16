@@ -1,7 +1,7 @@
 ---
 layout: clean
-title: "AITL-H Docs Index"
-permalink: /AITL-H/docs/index.html
+title: "AITL-H PoC Manual"
+permalink: /docs/
 ---
 
 # 📘 **AITL-H PoC Manual**

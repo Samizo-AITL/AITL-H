@@ -4,6 +4,8 @@ title: "AITL-H PoC Manual"
 permalink: /docs/
 ---
 
+---
+
 # 📘 **AITL-H PoC Manual**
 
 [![Samizo-AITLポータルサイトに戻る](https://img.shields.io/badge/Samizo--AITL%20ポータルサイトに戻る-brightgreen)](https://samizo-aitl.github.io/)  

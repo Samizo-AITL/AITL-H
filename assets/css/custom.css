@@ -1,9 +1,13 @@
 /* custom.css - サイト独自カスタムスタイル */
 body {
   background-color: #ffffff;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  margin: 20px;
 }
 
 a {
+  color: #0066cc;
   text-decoration: none;
 }
 

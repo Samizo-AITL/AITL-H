@@ -30,6 +30,8 @@ _This site serves as the manual page for the PoC implementation of AITL-H (All-i
 | **8**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/docs/chapter08_llm_integration.html) [![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/blob/main/docs/chapter08_llm_integration.md) | **LLM連携と意図推定** _LLM Integration_ | 知性層との連携構造と推論接続 |
 | **11**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/docs/chapter11_exit_strategy.html) [![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/blob/main/docs/chapter11_exit_strategy.md) | **出口戦略とSystemDK接続** _Exit Strategy_ | RTL/PDK展開とSystemDK連携構想 |
 
+---
+
 ## 🧩 **Planned Future Chapters (Placeholders)**
 
 | 章番号 / Chapter | タイトル（仮） / Tentative Title | ステータス / Status |

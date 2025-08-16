@@ -7,6 +7,8 @@ show_title: false   # ← これで上部の自動H1バーを非表示
 
 <style>.title-bar{display:none;}</style>
 
+---
+
 # 🤖 **AITL-H：Hybrid型構造制御フレームワーク**
 
 [![Samizo-AITLポータルサイトに戻る](https://img.shields.io/badge/Samizo--AITL%20ポータルサイトに戻る-brightgreen)](https://samizo-aitl.github.io/) [![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](#-ライセンス--license)

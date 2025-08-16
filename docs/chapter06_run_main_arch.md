@@ -1,6 +1,6 @@
 ---
 layout: clean
-# title: 
+permalink: /docs/chapter06_run_main_arch.html
 ---
 
 ---

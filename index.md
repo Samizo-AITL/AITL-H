@@ -1,7 +1,12 @@
 ---
 layout: clean
-# title: AITL-H/index.md
 ---
+
+<style>
+.title-bar {
+  display: none;
+}
+</style>
 
 ---
 

@@ -1,6 +1,7 @@
 ---
 layout: clean
-permalink: /docs/chapter03_fsm_design.html
+title: "Ch.3 — FSMとRTL制御実装"
+permalink: /AITL-H/docs/chapter03_fsm_design.html
 ---
 
 ---

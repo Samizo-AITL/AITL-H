@@ -1,6 +1,6 @@
 ---
 layout: clean
-title: "Ch.3 — FSMとRTL制御実装"
+# title: "Ch.3 — FSMとRTL制御実装"
 permalink: /docs/chapter03_fsm_design/
 ---
 

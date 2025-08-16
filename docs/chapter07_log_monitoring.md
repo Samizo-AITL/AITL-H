@@ -1,9 +1,7 @@
 ---
 layout: clean
-title: "Ch.7 — ログ出力とモニタリング戦略"
-permalink: /AITL-H/docs/chapter07_log_monitoring.html
----
-
+# title: "Ch.7 — ログ出力とモニタリング戦略"
+permalink: /docs/chapter07_log_monitoring/
 ---
 
 # 📊 第07章：PoCログ記録とモニタリング設計

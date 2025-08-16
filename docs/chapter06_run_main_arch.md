@@ -90,8 +90,34 @@ PoC制御の中心は `run_main.py` にあり、FSM・PID・UART・センサを�
 
 ---
 
-<h3>図6-1：PoC統合制御ブロック図</h3>
-<img src="./images/figure6_1_system_block_diagram.png" alt="System Block Diagram" width="500"/>
+## 図6-1：PoC統合制御ブロック図（Mermaid）
+
+```mermaid
+flowchart TD
+    subgraph Intelligence
+        UART["UART\n(知性)"]
+    end
+
+    subgraph Instinct
+        FSM["FSM\n(本能)"]
+    end
+
+    subgraph Reality
+        Sensor["Sensor\n(現実)"]
+    end
+
+    subgraph Reason
+        PID["PID\n(理性)"]
+    end
+
+    UART -->|command| FSM
+    FSM -->|target_speed| PID
+    Sensor -->|measured_speed| PID
+    PID -->|PWM信号| Actuator["Actuator\n(モータ等)"]
+    Sensor -.->|環境入力| Environment["Environment"]
+    Environment --> Sensor
+```
 
 ---
 
+[← PoCマニュアルのREADMEに戻る / Back to AITL-H PoC Manual README](README.md)

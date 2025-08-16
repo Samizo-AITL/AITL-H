@@ -1,6 +1,7 @@
 ---
 layout: clean
-permalink: /docs/chapter04_sensor_interface.html
+title: "Ch.4 — センサ・アクチュエータ制御"
+permalink: /AITL-H/docs/chapter04_sensor_interface.html
 ---
 
 ---

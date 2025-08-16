@@ -1,9 +1,7 @@
 ---
 layout: clean
-title: "Ch.6 — 制御アーキテクチャ実装（run_main中心）"
-permalink: /AITL-H/docs/chapter06_run_main_arch.html
----
-
+# title: "Ch.6 — 制御アーキテクチャ実装（run_main中心）"
+permalink: /docs/chapter06_run_main_arch/
 ---
 
 # 🧩 第06章：PoC統合制御構成と run_main.py

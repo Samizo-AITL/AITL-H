@@ -1,3 +1,11 @@
+---
+layout: default
+title: FSM状態遷移表（PoC設計仕様）
+nav_order: 1
+description: AITL-H 三層制御構造（FSM–PID–LLM）のうち、FSM（行動制御）のPoC設計仕様。
+permalink: /AITL-H/fsm_state_table/
+---
+
 # 🧠 FSM状態遷移表（PoC設計仕様）
 
 AITL-Hプロジェクトにおける「三層制御構造（FSM–PID–LLM）」のうち、FSM（行動制御）の設計仕様です。  

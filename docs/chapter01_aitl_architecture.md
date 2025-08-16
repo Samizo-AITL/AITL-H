@@ -1,6 +1,6 @@
 ---
 layout: clean
-title: "Ch.1 — PoC仕様策定と要件定義"
+# title: "Ch.1 — AITL三層アーキテクチャ設計"
 permalink: /docs/chapter01_aitl_architecture/
 ---
 

@@ -1,7 +1,8 @@
 ---
 layout: clean
-title: "AITL-H"
 permalink: /
+title: ""
+show_title: false   # ← これで上部の自動H1バーを非表示
 ---
 
 <style>.title-bar{display:none;}</style>

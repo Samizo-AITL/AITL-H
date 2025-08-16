@@ -1,6 +1,6 @@
 ---
 layout: clean
-# title: 
+permalink: /docs/chapter04_sensor_interface.html
 ---
 
 ---

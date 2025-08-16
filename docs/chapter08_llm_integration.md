@@ -81,16 +81,17 @@ PoC段階ではUART連携により段階的に実験し、**構成ファイル�
 
 ---
 
-### 🔗 **ナビゲーション / Navigation**
-- ⏮ [第07章：ログ出力とモニタリング / Logging & Monitoring](https://samizo-aitl.github.io/AITL-H/docs/chapter07_log_monitoring.html)  
-- ▶️ [第11章：出口戦略とSystemDK接続 / Exit Strategy](https://samizo-aitl.github.io/AITL-H/docs/chapter11_exit_strategy.html)  
-
-[← AITL-H PoC マニュアル README / Back to AITL-H PoC Manual README](https://samizo-aitl.github.io/AITL-H/docs/)
-
----
-
 ### 📝 **ライセンス / License**
 - **Code:** MIT  
 - **Text:** CC BY 4.0  
 - **Figures:** CC BY-NC 4.0  
 （詳細は [Docs Index のライセンス表 / License Table in Docs Index](https://samizo-aitl.github.io/AITL-H/docs/#-ライセンス--license) を参照）
+
+---
+
+### 🔗 **ナビゲーション / Navigation**
+- ⏮ [第07章：ログ出力とモニタリング / Logging & Monitoring](https://samizo-aitl.github.io/AITL-H/docs/chapter07_log_monitoring.html)  
+- ▶️ [第11章：出口戦略とSystemDK接続 / Exit Strategy](https://samizo-aitl.github.io/AITL-H/docs/chapter11_exit_strategy.html)  
+
+[![📄 READMEに戻る / Back to README](https://img.shields.io/badge/Back%20to-README-blue?logo=readme)](https://samizo-aitl.github.io/AITL-H/docs/)  
+[![🏠 AITL-Hトップ / AITL-H Top](https://img.shields.io/badge/AITL--H-Top-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/)

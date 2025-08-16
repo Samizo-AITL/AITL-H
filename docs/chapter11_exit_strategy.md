@@ -78,4 +78,16 @@ AITL-H PoCは、**実用制御アーキテクチャの理論設計をRTLに接�
 
 ---
 
-[← PoCマニュアルのREADMEに戻る / Back to AITL-H PoC Manual README](README.md)
+### 📝 **ライセンス / License**
+
+- **Code:** MIT  
+- **Text:** CC BY 4.0  
+- **Figures:** CC BY-NC 4.0  
+（詳細は [Docs Index のライセンス表](/AITL-H/docs/#-ライセンス--license) を参照）
+
+### 🔗 **ナビゲーション / Navigation**
+- 🏠 **[AITL-H PoC マニュアル README](/AITL-H/docs/)**
+- ⏮ **[前の章 / Previous: 第08章 LLM連携と意図推定](/AITL-H/docs/chapter08_llm_integration.html)**  
+  _LLM Integration_
+- 🔚 **[AITL-H PoC マニュアル 終了 / End of Manual](/AITL-H/docs/)**
+  

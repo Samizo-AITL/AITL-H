@@ -112,5 +112,16 @@ stateDiagram-v2
 
 ---
 
-[← PoCマニュアルのREADMEに戻る / Back to AITL-H PoC Manual README](README.md)
+### 📝 **ライセンス / License**
 
+- **Code:** MIT  
+- **Text:** CC BY 4.0  
+- **Figures:** CC BY-NC 4.0  
+（詳細は [Docs Index のライセンス表](/AITL-H/docs/#-ライセンス--license) を参照）
+
+### 🔗 **ナビゲーション / Navigation**
+- 🏠 **[AITL-H PoC マニュアル README](/AITL-H/docs/)**
+- ⏮ **[前の章 / Previous: 第02章 PID制御設計と応答チューニング](/AITL-H/docs/chapter02_pid_design.html)**  
+  _PID Design & Tuning_
+- ▶️ **[次の章 / Next: 第04章 センサ・アクチュエータ制御](/AITL-H/docs/chapter04_sensor_interface.html)**  
+  _Sensor & Actuator Control_

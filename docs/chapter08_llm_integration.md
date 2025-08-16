@@ -1,9 +1,7 @@
 ---
 layout: clean
-title: "Ch.8 — LLM連携と意図推定処理"
-permalink: /AITL-H/docs/chapter08_llm_integration.html
----
-
+# title: "Ch.8 — LLM連携と意図推定処理"
+permalink: /docs/chapter08_llm_integration/
 ---
 
 # 🤖 第08章：LLM統合と自己修復設計のPoC展開

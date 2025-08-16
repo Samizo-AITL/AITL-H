@@ -199,16 +199,18 @@ AITL-H PoCは、**決定性（FSM） × 連続制御（PID） × 柔軟知性（
 
 ---
 
-### 🔗 **ナビゲーション / Navigation**
-- ▶️ [第01章：PoC仕様策定と要件定義 / PoC Specification & Requirements](https://samizo-aitl.github.io/AITL-H/docs/chapter01_aitl_architecture.html)  
-
-[← AITL-H PoC マニュアル README / Back to AITL-H PoC Manual README](https://samizo-aitl.github.io/AITL-H/docs/)
-
----
-
 ### 📝 **ライセンス / License**
 - **Code:** MIT  
 - **Text:** CC BY 4.0  
 - **Figures:** CC BY-NC 4.0  
 （詳細は [Docs Index のライセンス表 / License Table in Docs Index](https://samizo-aitl.github.io/AITL-H/docs/#-ライセンス--license) を参照）
 
+---
+
+### 🔗 **ナビゲーション / Navigation**
+- ▶️ [第01章：PoC仕様策定と要件定義 / PoC Specification & Requirements](https://samizo-aitl.github.io/AITL-H/docs/chapter01_aitl_architecture.html)  
+
+[![📄 READMEに戻る / Back to README](https://img.shields.io/badge/Back%20to-README-blue?logo=readme)](https://samizo-aitl.github.io/AITL-H/docs/)  
+[![🏠 AITL-Hトップ / AITL-H Top](https://img.shields.io/badge/AITL--H-Top-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/)
+
+---

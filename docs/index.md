@@ -1,8 +1,7 @@
 ---
 layout: clean
-# title: AITL-H/docs/index.md
----
-
+title: "AITL-H Docs Index"
+permalink: /AITL-H/docs/index.html
 ---
 
 # 📘 **AITL-H PoC Manual**

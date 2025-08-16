@@ -16,25 +16,28 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: Install mermaid-cli
-        run: npm install -g @mermaid-js/mermaid-cli
-
-      - name: Render Mermaid to PNG
+      # Docker 版 mermaid-cli を使うので Node や Puppeteer の準備は不要
+      - name: Render Mermaid (*.mmd) to PNG via Docker
         run: |
           set -euo pipefail
-          mkdir -p docs/images
           shopt -s nullglob
-          export PUPPETEER_EXECUTABLE_PATH=$(which chromium || which chromium-browser || true)
-          export PUPPETEER_NO_SANDBOX=true
-          for f in docs/images/**/*.mmd docs/images/*.mmd; do
+          mkdir -p docs/images
+          files=(docs/images/**/*.mmd docs/images/*.mmd)
+          if [ ${#files[@]} -eq 0 ]; then
+            echo "No .mmd files found under docs/images/"
+            exit 0
+          fi
+
+          for f in "${files[@]}"; do
             out="${f%.mmd}.png"
             echo "Rendering $f -> $out"
-            mmdc -i "$f" -o "$out" -b transparent -w 1200
+            docker run --rm \
+              -v "${GITHUB_WORKSPACE}:/data" \
+              ghcr.io/mermaid-js/mermaid-cli:10.9.1 \
+              -i "/data/$f" \
+              -o "/data/$out" \
+              -b transparent \
+              -w 1200
           done
 
       - name: Optimize PNGs (optional)

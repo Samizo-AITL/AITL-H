@@ -1,3 +1,10 @@
+---
+layout: clean
+# title: 
+---
+
+---
+
 # 🧩 第06章：PoC統合制御構成と run_main.py
 
 本章では、AITL-H PoCにおける**統合制御スクリプト `run_main.py` の構成と制御ループ設計**を説明します。  

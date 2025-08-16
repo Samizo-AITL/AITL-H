@@ -6,6 +6,8 @@ description: 3軸ジンバル安定化制御を対象に、FSM・MIMO PID制御�
 permalink: /AITL-H/PoC/gimbal_control/
 ---
 
+---
+
 # 🤖 ジンバル制御 PoC：FSM + MIMO PID + LLM（AITL-HX構成）
 
 本ディレクトリは、3軸ジンバルの安定化制御を対象とした  

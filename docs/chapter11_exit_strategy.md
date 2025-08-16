@@ -18,9 +18,9 @@ show_title: false   # ← これで上部の自動H1バーを非表示
 
 PoCで実現する範囲は以下の通りです：
 
-- FSM・PID・LLMによる**統合制御設計**
-- UART/PWM/Sensor制御の**Pythonレベルでの模擬運用**
-- 状態遷移・制御パラメータの明示的な設計構造（yaml/python）
+- FSM・PID・LLMによる**統合制御設計**  
+- UART/PWM/Sensor制御の**Pythonレベルでの模擬運用**  
+- 状態遷移・制御パラメータの明示的な設計構造（yaml/python）  
 
 一方で、RTL記述・シリコン実装・レイアウト設計などは**範囲外**です。
 
@@ -47,13 +47,20 @@ SystemDK（System Design Kit）は、複数の知能要素と制御要素をSoC/
 
 PoCは以下の点でSystemDKのプロトタイプと見なせます：
 
-- 三層構造（FSM/PID/LLM）を**明示的にモジュール化**
-- 状態・命令・信号の構造が**記述可能な形式で分離**
+- 三層構造（FSM/PID/LLM）を**明示的にモジュール化**  
+- 状態・命令・信号の構造が**記述可能な形式で分離**  
 - **PoCで設計したものをブロック単位でRTL化**して持ち込める
 
 ---
 
 ## 4. 🔄 展開シナリオとフェーズ
+
+```mermaid
+graph TD
+    A[Phase 0<br/>AITL-H PoC設計完了] --> B[Phase 1<br/>RTL記述への変換]
+    B --> C[Phase 2<br/>OpenLaneによる論理合成]
+    C --> D[Phase 3<br/>SoC統合とSystemDK化]
+```
 
 | フェーズ | 内容 | 参考 |
 |---------|------|------|
@@ -70,3 +77,5 @@ AITL-H PoCは、**実用制御アーキテクチャの理論設計をRTLに接�
 今後の展開はEdusemi特別編との連携を通じて、**実機ハードウェアへの接続と知的制御の実装**へ進んでいきます。
 
 ---
+
+[← PoCマニュアルのREADMEに戻る / Back to AITL-H PoC Manual README](README.md)

@@ -1,7 +1,8 @@
 ---
 layout: clean
-title: "AITL-H PoC Manual"
 permalink: /docs/
+title: ""
+show_title: false   # ← これで上部の自動H1バーを非表示
 ---
 
 ---

@@ -1,4 +1,6 @@
 /* custom.css - サイト独自カスタムスタイル */
+
+/* 全体ベース */
 body {
   background-color: #ffffff;
   font-family: "Helvetica Neue", Arial, sans-serif;
@@ -6,6 +8,7 @@ body {
   margin: 20px;
 }
 
+/* リンク */
 a {
   color: #0066cc;
   text-decoration: none;
@@ -19,4 +22,64 @@ a:hover {
 .mermaid {
   display: flex;
   justify-content: center;
+}
+
+/* --- ここから追加提案 --- */
+
+/* 章テーブルの見やすさ向上 */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 0.6rem;
+  vertical-align: top;
+}
+
+table th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+  text-align: left;
+}
+
+table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+/* リンクボタンの横並びと間隔調整 */
+.docs-links {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.docs-links img {
+  height: 20px;
+}
+
+/* プレースホルダ行のグレーアウト */
+.placeholder-row {
+  background-color: #f6f6f6;
+  color: #888;
+}
+
+.placeholder-row td {
+  opacity: 0.8;
+}
+
+/* ツールチップ風のabbr */
+abbr[title] {
+  border-bottom: 1px dotted #999;
+  cursor: help;
+}
+
+/* ページ上部の章インデックス見出しを少し強調 */
+h2, h3 {
+  margin-top: 2rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: .3rem;
 }

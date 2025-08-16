@@ -40,6 +40,7 @@ _This site serves as the manual page for the PoC implementation of AITL-H (All-i
 
 | Ch. | タイトル / Title | 説明 / Description | Links |
 |-----|------------------|--------------------|-------|
+| **0** | **序章：PoC概要と背景**<br>_Introduction & Background_ | <abbr title="AITL-H PoCの目的、背景、全体像、および本マニュアルの使い方を解説">目的と背景説明</abbr> | <div class="docs-links"><a href="https://samizo-aitl.github.io/AITL-H/docs/chapter00_introduction.html"><img alt="View Site" src="https://img.shields.io/badge/View-Site-brightgreen?logo=github"></a><a href="https://github.com/Samizo-AITL/AITL-H/blob/main/docs/chapter00_introduction.md"><img alt="View Repo" src="https://img.shields.io/badge/View-Repo-blue?logo=github"></a></div> |
 | **1** | **PoC仕様策定と要件定義**<br>_PoC Specification & Requirements_ | <abbr title="AITL視点でのPoC構想・目的・非機能要件・全体ブロック図を定義">PoC構想と全体設計</abbr> | <div class="docs-links"><a href="https://samizo-aitl.github.io/AITL-H/docs/chapter01_aitl_architecture.html"><img alt="View Site" src="https://img.shields.io/badge/View-Site-brightgreen?logo=github"></a><a href="https://github.com/Samizo-AITL/AITL-H/blob/main/docs/chapter01_aitl_architecture.md"><img alt="View Repo" src="https://img.shields.io/badge/View-Repo-blue?logo=github"></a></div> |
 | **2** | **PID制御設計と応答チューニング**<br>_PID Design & Tuning_ | <abbr title="Reason層のPIDゲイン設計・整定時間/オーバーシュート・ロバスト化">PIDゲイン設計と誤差補正</abbr> | <div class="docs-links"><a href="https://samizo-aitl.github.io/AITL-H/docs/chapter02_pid_design.html"><img alt="View Site" src="https://img.shields.io/badge/View-Site-brightgreen?logo=github"></a><a href="https://github.com/Samizo-AITL/AITL-H/blob/main/docs/chapter02_pid_design.md"><img alt="View Repo" src="https://img.shields.io/badge/View-Repo-blue?logo=github"></a></div> |
 | **3** | **FSMとRTL制御実装**<br>_FSM & RTL Implementation_ | <abbr title="Instinct層の状態設計・遷移論理・安全設計（フェイルセーフ/ウォッチドッグ）">状態設計と制御フロー</abbr> | <div class="docs-links"><a href="https://samizo-aitl.github.io/AITL-H/docs/chapter03_fsm_design.html"><img alt="View Site" src="https://img.shields.io/badge/View-Site-brightgreen?logo=github"></a><a href="https://github.com/Samizo-AITL/AITL-H/blob/main/docs/chapter03_fsm_design.md"><img alt="View Repo" src="https://img.shields.io/badge/View-Repo-blue?logo=github"></a></div> |
@@ -49,59 +50,6 @@ _This site serves as the manual page for the PoC implementation of AITL-H (All-i
 | **7** | **ログ出力とモニタリング**<br>_Logging & Monitoring_ | <abbr title="観測項目・ログレベル・収集周期・可視化・健全性監視">ログ構成と可視化</abbr> | <div class="docs-links"><a href="https://samizo-aitl.github.io/AITL-H/docs/chapter07_log_monitoring.html"><img alt="View Site" src="https://img.shields.io/badge/View-Site-brightgreen?logo=github"></a><a href="https://github.com/Samizo-AITL/AITL-H/blob/main/docs/chapter07_log_monitoring.md"><img alt="View Repo" src="https://img.shields.io/badge/View-Repo-blue?logo=github"></a></div> |
 | **8** | **LLM連携と意図推定**<br>_LLM Integration_ | <abbr title="知性層とのAPI設計・プロンプト方針・安全枠組・出力検証">連携構造と推論接続</abbr> | <div class="docs-links"><a href="https://samizo-aitl.github.io/AITL-H/docs/chapter08_llm_integration.html"><img alt="View Site" src="https://img.shields.io/badge/View-Site-brightgreen?logo=github"></a><a href="https://github.com/Samizo-AITL/AITL-H/blob/main/docs/chapter08_llm_integration.md"><img alt="View Repo" src="https://img.shields.io/badge/View-Repo-blue?logo=github"></a></div> |
 | **11** | **出口戦略とSystemDK接続**<br>_Exit Strategy_ | <abbr title="RTL/PDK展開、SystemDK連携のロードマップと移行ガイド">RTL/PDK展開とSystemDK連携</abbr> | <div class="docs-links"><a href="https://samizo-aitl.github.io/AITL-H/docs/chapter11_exit_strategy.html"><img alt="View Site" src="https://img.shields.io/badge/View-Site-brightgreen?logo=github"></a><a href="https://github.com/Samizo-AITL/AITL-H/blob/main/docs/chapter11_exit_strategy.md"><img alt="View Repo" src="https://img.shields.io/badge/View-Repo-blue?logo=github"></a></div> |
-
----
-
-## 🧩 **Planned Future Chapters (Placeholders)**
-
-> クリック無効のプレースホルダ。進捗は表記で区別しています。
-
-<table>
-  <thead>
-    <tr>
-      <th>章番号 / Chapter</th>
-      <th>タイトル（仮） / Tentative Title</th>
-      <th>ステータス / Status</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr class="placeholder-row">
-      <td><strong>第9章 / Ch.9</strong></td>
-      <td>評価と検証方法 <em>Evaluation &amp; Testing</em></td>
-      <td><span>🔧 作成予定 / Planned</span></td>
-    </tr>
-    <tr>
-      <td><strong>第10章 / Ch.10</strong></td>
-      <td>応用事例（人型ロボット） <em>Humanoid Use Cases</em></td>
-      <td><span>🔧 作成予定 / Planned</span></td>
-    </tr>
-    <tr class="placeholder-row">
-      <td><strong>第12章 / Ch.12</strong></td>
-      <td>モデル予測制御との融合 <em>Fusion with MPC</em></td>
-      <td><span>🔧 構想中 / In Concept</span></td>
-    </tr>
-    <tr>
-      <td><strong>第13章 / Ch.13</strong></td>
-      <td>ROS連携と自律移動 <em>ROS &amp; Autonomous Navigation</em></td>
-      <td><span>🔧 準備中 / In Preparation</span></td>
-    </tr>
-    <tr class="placeholder-row">
-      <td><strong>第14章 / Ch.14</strong></td>
-      <td>強化学習との連動 <em>Reinforcement Learning</em></td>
-      <td><span>🔧 未着手 / Not Started</span></td>
-    </tr>
-    <tr>
-      <td><strong>第15章 / Ch.15</strong></td>
-      <td>ハードウェア実装支援ツール群 <em>HW Implementation Tools</em></td>
-      <td><span>🔧 予定 / Planned</span></td>
-    </tr>
-    <tr class="placeholder-row">
-      <td><strong>第16章 / Ch.16</strong></td>
-      <td>実機動作・展示事例集 <em>Demonstrations</em></td>
-      <td><span>🔧 予定 / Planned</span></td>
-    </tr>
-  </tbody>
-</table>
 
 ---
 
@@ -118,20 +66,13 @@ _This site serves as the manual page for the PoC implementation of AITL-H (All-i
 
 ---
 
-## 🔗 **AITL-H Top**
-
-[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/)
-[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H)
-
----
-
 📅 **最終更新 / Last Updated**:
 {% if page.last_modified_at %}
   {{ page.last_modified_at | date: "%Y-%m-%d" }}
 {% elsif page.date %}
   {{ page.date | date: "%Y-%m-%d" }}
 {% else %}
-  July 2025
+  August 2025
 {% endif %}
 
 ✍️ **著者 / Author**: 三溝 真一（Shinichi Samizo）

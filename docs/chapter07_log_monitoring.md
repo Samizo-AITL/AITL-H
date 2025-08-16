@@ -81,20 +81,37 @@ FSM・PID・センサの出力を統合記録し、**PoC設計の品質を客観
 
 ---
 
-## 🖼 図7-1：ログ出力構成図
+## 図7-1：ログ出力構成図（Mermaid）
 
-以下は、PoCにおける主要制御モジュールとログファイル出力の関係を示した図です。  
-各モジュールは独立して `.csv` ファイルにログを記録し、後段で可視化や解析に利用されます。
+```mermaid
+flowchart LR
+    subgraph Modules
+        FSM["FSM Engine\n(状態制御)"]
+        Sensor["Sensor Interface\n(センサ取得)"]
+        PID["PID Controller\n(制御演算)"]
+    end
 
-<div align="center">
-  <img src="./images/figure7_1_log_output_diagram.png" alt="ログ出力構成図" width="500"/>
-</div>
+    subgraph Logs
+        FSMLog["fsm_log.csv"]
+        SensorLog["sensor_log.csv"]
+        PIDLog["pid_log.csv"]
+    end
 
-- **FSM Engine** → `fsm_log.csv`：状態遷移ログ
-- **Sensor Interface** → `sensor_log.csv`：実測値（距離・角度など）
-- **PID Controller** → `pid_log.csv`：制御応答ログ（目標 vs 実測 vs 出力）
+    FSM --> FSMLog
+    Sensor --> SensorLog
+    PID --> PIDLog
+
+    FSMLog -.-> Visualization["可視化/解析"]
+    SensorLog -.-> Visualization
+    PIDLog -.-> Visualization
+```
+
+- **FSM Engine** → `fsm_log.csv`：状態遷移ログ  
+- **Sensor Interface** → `sensor_log.csv`：実測値（距離・角度など）  
+- **PID Controller** → `pid_log.csv`：制御応答ログ（目標 vs 実測 vs 出力）  
 
 > この構成により、制御挙動を時系列でトレースでき、システム全体の評価とデバッグが容易になります。
 
 ---
 
+[← PoCマニュアルのREADMEに戻る / Back to AITL-H PoC Manual README](README.md)

@@ -48,13 +48,6 @@ _It explains the control design based on the three-layer architecture of **PID**
 
 ---
 
-## 🔗 **Related Links**
-
-[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/)  
-[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H)
-
----
-
 ## 📄 **ライセンス / License**
 
 [![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](#-ライセンス--license)  
@@ -68,6 +61,12 @@ _It explains the control design based on the three-layer architecture of **PID**
 | **教材テキスト（Text materials）** | **[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)** | 著者表示必須 |
 | **図表・イラスト（Figures & diagrams）** | **[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)** | 非商用利用のみ可 |
 | **外部引用（External references）** | 元ライセンスに従う | 引用元を明記 |
+
+---
+
+## 🔗 **AITL-H Top**
+
+[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/)  [![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H)
 
 ---
 

@@ -1,7 +1,9 @@
 ---
 layout: clean
-# title: "Ch.5 — UART通信制御"
-permalink: /docs/chapter05_uart_control/
+title: Chapter 05 — UART Communication
+permalink: /docs/chapter05_uart_control.html
+---
+
 ---
 
 # 🔌 第05章：UART通信制御とFSM接続

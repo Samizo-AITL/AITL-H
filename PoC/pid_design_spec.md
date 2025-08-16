@@ -3,7 +3,7 @@ layout: default
 title: PID制御仕様書（AITL-H PoC）
 nav_order: 3
 description: FSM出力に基づくPID制御ブロックの設計仕様
-permalink: /AITL-H/pid_design_spec/
+permalink: /AITL-H/PoC/pid_design_spec/
 ---
 
 ---

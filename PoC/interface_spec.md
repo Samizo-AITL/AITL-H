@@ -6,6 +6,8 @@ description: FSMを起点とした制御ブロック（PID, PWM, UART, センサ
 permalink: /AITL-H/interface_spec/
 ---
 
+---
+
 # 🔌 interface_spec.md — モジュール間インタフェース仕様（AITL-H PoC）
 
 FSMを起点とした制御ブロック（PID, PWM, UART, センサ）間の信号構造・入出力仕様を定義します。

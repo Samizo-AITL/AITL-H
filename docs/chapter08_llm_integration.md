@@ -81,17 +81,16 @@ PoC段階ではUART連携により段階的に実験し、**構成ファイル�
 
 ---
 
-### 📝 **ライセンス / License**
+### 🔗 **ナビゲーション / Navigation**
+- ⏮ [第07章：ログ出力とモニタリング / Logging & Monitoring](https://samizo-aitl.github.io/AITL-H/docs/chapter07_log_monitoring.html)  
+- ▶️ [第11章：出口戦略とSystemDK接続 / Exit Strategy](https://samizo-aitl.github.io/AITL-H/docs/chapter11_exit_strategy.html)  
 
+[← AITL-H PoC マニュアル README / Back to AITL-H PoC Manual README](https://samizo-aitl.github.io/AITL-H/docs/)
+
+---
+
+### 📝 **ライセンス / License**
 - **Code:** MIT  
 - **Text:** CC BY 4.0  
 - **Figures:** CC BY-NC 4.0  
-（詳細は [Docs Index のライセンス表](/AITL-H/docs/#-ライセンス--license) を参照）
-
-### 🔗 **ナビゲーション / Navigation**
-- 🏠 **[AITL-H PoC マニュアル README](/AITL-H/docs/)**
-- ⏮ **[前の章 / Previous: 第07章 ログ出力とモニタリング](/AITL-H/docs/chapter07_log_monitoring.html)**  
-  _Logging & Monitoring_
-- ▶️ **[次の章 / Next: 第11章 出口戦略とSystemDK接続](/AITL-H/docs/chapter11_exit_strategy.html)**  
-  _Exit Strategy_
-  
+（詳細は [Docs Index のライセンス表 / License Table in Docs Index](https://samizo-aitl.github.io/AITL-H/docs/#-ライセンス--license) を参照）

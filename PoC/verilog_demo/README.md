@@ -3,7 +3,7 @@ layout: default
 title: Verilog Demo（AITL-H統合制御モジュール動作検証）
 nav_order: 10
 description: AITL-HアーキテクチャにおけるFSM × PID × LLM統合制御モジュールのVerilog動作検証環境。
-permalink: /AITL-H/PoC/verilog_demo/
+permalink: /PoC/verilog_demo/
 ---
 
 ---

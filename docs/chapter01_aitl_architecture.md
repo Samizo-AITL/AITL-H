@@ -1,6 +1,6 @@
 ---
 layout: clean
-# title: 
+permalink: /docs/chapter01_aitl_architecture.html
 ---
 
 ---

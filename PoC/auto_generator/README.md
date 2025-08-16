@@ -6,6 +6,8 @@ description: AITL-Hアーキテクチャに基づくFSM・PIDをYAML→C→Veril
 permalink: /PoC/auto_generator/
 ---
 
+---
+
 # ⚙️ auto_generator/README.md
 
 このディレクトリは、AITL-Hアーキテクチャに基づくFSM・PIDの構成を  

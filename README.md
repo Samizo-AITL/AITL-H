@@ -56,30 +56,36 @@ title: AITL-H/README.md
 
 ```mermaid
 flowchart TB
+  %% ===== Layers =====
   subgraph LLM["LLM Layer"]
     L1[Decision-Making]
     L2[Anomaly Detection]
     L3[Language Response]
   end
-
   subgraph PID["PID Layer"]
     P1[Continuous Control]
     P2[Joint Angles / MIMO]
   end
-
   subgraph FSM["FSM Layer"]
     F1[Logic Control]
     F2[State Transitions]
   end
 
+  %% ===== Flows =====
   LLM -->|Scenario / Commands| FSM
   FSM -->|Mode Control / Gain Select| PID
-  PID -->|PWM / Control Signals| ACT[Actuators]
-  ACT -->|Motion Response| SEN[Sensors (IMU, etc.)]
+  PID -->|PWM / Control Signals| ACT["Actuators"]
+  ACT -->|Motion Response| SEN["Sensors (IMU, etc.)"]
   SEN -->|Perception Feedback| LLM
 
+  %% ===== Styles =====
   classDef box fill:#eaf5ff,stroke:#6ca7ff,stroke-width:1px,rx:6,ry:6;
   class LLM,PID,FSM,ACT,SEN box
+
+  %% ===== Clickable (GitHub 上では有効 / PNG では無効) =====
+  click F1 "https://github.com/Samizo-AITL/AITL-H/search?q=fsm_engine.py" "FSM 実装へ"
+  click P1 "https://github.com/Samizo-AITL/AITL-H/search?q=pid_controller.py" "PID 実装へ"
+  click L1 "https://github.com/Samizo-AITL/AITL-H/search?q=llm_interface.py" "LLM IF へ"
 ```
 
 ---

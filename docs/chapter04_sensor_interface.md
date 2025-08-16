@@ -1,7 +1,7 @@
 ---
 layout: clean
 # title: "Ch.4 — センサ・アクチュエータ制御"
-permalink: /docs/chapter04_sensor_interface
+permalink: /docs/chapter04_sensor_interface/
 ---
 
 ---

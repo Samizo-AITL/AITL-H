@@ -3,8 +3,6 @@ layout: default
 title: AITL-H/PoC/README.md
 ---
 
----
-
 # 🤖 AITL-H / PoC – 人型ロボット制御の概念実証
 
 本ディレクトリは、AITL-H構想に基づく**人型ロボットPoC（Proof of Concept）**の実験構成・実行環境を格納しています。  
@@ -24,7 +22,6 @@ PoC/
 ├── docs/                      # 設計マニュアル（章構成ドキュメント）
 │   └── README.md              # → PoC設計マニュアルのトップページ
 └── README.md                  # ← 本ドキュメント（実行環境概要）
-
 ```
 
 > 🚧 実装コード本体（FSM/PID/UART/LLM等）は `implementary/` に分離しています（詳細は下記参照）
@@ -57,9 +54,16 @@ PoCディレクトリでは、これらを**呼び出して統合運用する**�
 
 本PoCでは、UARTによる命令入力、FSMによる行動制御、PIDによる制御量生成、PWM出力までを統合しています。
 
-以下に、全体構成図を示します：
-
-<img src="./system_block_diagram_AITL-H_PoC.png" alt="system_block_diagram" width="300"/>
+```mermaid
+graph TD
+    UART[UART Driver] --> FSM[FSM Engine]
+    FSM --> PID[PID Controller]
+    PID --> PWM[PWM Driver]
+    FSM -->|pwm_enable| PWM
+    FSM -->|target_speed/angle| PID
+    Sensor[Sensor Interface] --> FSM
+    Sensor --> PID
+```
 
 - **UART Driver**：LLMからの命令をFSMに送信
 - **FSM Engine**：状態管理と制御目標出力（速度・角度）
@@ -97,5 +101,3 @@ python run_main.py --config fsm_config.yaml
 技術監修・設計構成：**三溝 真一**（Shinichi Samizo）  
 GitHub: Samizo-AITL  
 Email: shin3t72@gmail.com
-
----

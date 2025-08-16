@@ -120,14 +120,6 @@ flowchart TD
 
 ---
 
-### 🔗 **ナビゲーション / Navigation**
-- ⏮ [第05章：UART通信制御 / UART Communication](https://samizo-aitl.github.io/AITL-H/docs/chapter05_uart_control.html)  
-- ▶️ [第07章：ログ出力とモニタリング / Logging & Monitoring](https://samizo-aitl.github.io/AITL-H/docs/chapter07_log_monitoring.html)  
-
-[← AITL-H PoC マニュアル README / Back to AITL-H PoC Manual README](https://samizo-aitl.github.io/AITL-H/docs/)
-
----
-
 ### 📝 **ライセンス / License**
 - **Code:** MIT  
 - **Text:** CC BY 4.0  

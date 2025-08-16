@@ -15,8 +15,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Node
         uses: actions/setup-node@v4
@@ -24,19 +22,19 @@ jobs:
           node-version: '20'
 
       - name: Install mermaid-cli
-        run: npm i -g @mermaid-js/mermaid-cli
+        run: npm install -g @mermaid-js/mermaid-cli
 
       - name: Render Mermaid to PNG
-        shell: bash
         run: |
           set -euo pipefail
           mkdir -p docs/images
           shopt -s nullglob
+          export PUPPETEER_EXECUTABLE_PATH=$(which chromium || which chromium-browser || true)
+          export PUPPETEER_NO_SANDBOX=true
           for f in docs/images/**/*.mmd docs/images/*.mmd; do
             out="${f%.mmd}.png"
             echo "Rendering $f -> $out"
-            # 重要: CI で Chromium を動かすために --no-sandbox を付与
-            mmdc --no-sandbox -i "$f" -o "$out" -b transparent -w 1200
+            mmdc -i "$f" -o "$out" -b transparent -w 1200
           done
 
       - name: Optimize PNGs (optional)
@@ -50,5 +48,3 @@ jobs:
         with:
           commit_message: "chore: render Mermaid PNGs"
           file_pattern: docs/images/*.png
-          commit_user_name: "github-actions[bot]"
-          commit_user_email: "41898282+github-actions[bot]@users.noreply.github.com"

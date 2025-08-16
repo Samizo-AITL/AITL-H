@@ -1,4 +1,3 @@
-# .github/workflows/mermaid-build.yml
 name: Build Mermaid PNG
 
 on:
@@ -33,15 +32,13 @@ jobs:
           set -euo pipefail
           mkdir -p docs/images
           shopt -s nullglob
-          # 再帰 & 直下の .mmd を対象
           for f in docs/images/**/*.mmd docs/images/*.mmd; do
             out="${f%.mmd}.png"
             echo "Rendering $f -> $out"
-            # 高さは自動（-Hは指定しない）。必要なら -H 800 など正の整数で指定してください。
-            mmdc -i "$f" -o "$out" -b transparent -w 1200
+            # 重要: CI で Chromium を動かすために --no-sandbox を付与
+            mmdc --no-sandbox -i "$f" -o "$out" -b transparent -w 1200
           done
 
-      # 省略可：PNG最適化（サイズ縮小）
       - name: Optimize PNGs (optional)
         run: |
           sudo apt-get update -y

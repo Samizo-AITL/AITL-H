@@ -3,7 +3,7 @@ layout: default
 title: AITL-H / PoC – 人型ロボット制御の概念実証
 nav_order: 1
 description: FSM＋PID＋LLMによる三層アーキテクチャを用いたAITL-H PoC（人型ロボット制御）の実験構成と実行環境概要
-permalink: /AITL-H/PoC/
+permalink: /PoC/
 last_updated: 2025-08-17
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: clean
-# title: 
+permalink: /docs/chapter07_log_monitoring.html
 ---
 
 ---

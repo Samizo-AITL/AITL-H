@@ -3,7 +3,7 @@ description: "Hybrid Intelligent Control: FSM × PID × LLM"
 url: "https://samizo-aitl.github.io"
 baseurl: "/AITL-H"
 
-theme: minima
+theme: null          # ← minimaは使わない
 
 markdown: kramdown
 kramdown:
@@ -17,6 +17,13 @@ plugins:
 
 timezone: Asia/Tokyo
 permalink: pretty
+
+# 既定レイアウトを clean に（各mdに毎回書かなくてOK）
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: clean
 
 exclude:
   - Gemfile

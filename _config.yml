@@ -3,39 +3,32 @@ description: "Hybrid Intelligent Control: FSM × PID × LLM"
 url: "https://samizo-aitl.github.io"
 baseurl: "/AITL-H"
 
-# テーマは使わず独自レイアウト
 theme: null
 
-# Markdown
 markdown: kramdown
 kramdown:
   input: GFM
   parse_block_html: true
   hard_wrap: false
 
-# 公式に許可済みのプラグイン
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
 timezone: Asia/Tokyo
+permalink: pretty   # 既定は /path/ 形式
 
-# 既定はpretty（/path/ 形式）でOK。docsは下のdefaultsで上書きする
-permalink: pretty
-
-# 既定レイアウトを clean
 defaults:
   - scope:
       path: ""
     values:
       layout: clean
 
-  # 👇 これを追加：docs配下だけ「/AITL-H/docs/ファイル名.html」で出力
+  # ✅ docs 直下だけ .html で固定。baseurl は書かない！
   - scope:
       path: "docs"
     values:
-      # :basename は拡張子除いたファイル名
-      permalink: "/AITL-H/docs/:basename.html"
+      permalink: "/docs/:basename.html"
 
 exclude:
   - Gemfile

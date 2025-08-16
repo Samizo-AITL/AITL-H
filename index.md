@@ -1,8 +1,6 @@
 ---
 layout: clean
-title: AITL-H/index.md
----
-
+title: "AITL-H: Hybrid型構造制御フレームワーク"
 ---
 
 # 🤖 **AITL-H：Hybrid型構造制御フレームワーク**
@@ -12,6 +10,40 @@ title: AITL-H/index.md
 > ⚠️ **開発・検証中 / Under Development**  
 > 本プロジェクトは現在も **発展途上** にあり、構成・仕様・実装内容は今後変更される可能性があります。  
 > 利用・参照の際は、最新のリポジトリ内容をご確認ください。
+
+---
+
+## 🧘 三層アーキテクチャ構成（Mermaid図）
+
+```mermaid
+flowchart TB
+  subgraph LLM["LLM Layer"]
+    L1[Decision-Making]
+    L2[Anomaly Detection]
+    L3[Language Response]
+  end
+  subgraph PID["PID Layer"]
+    P1[Continuous Control]
+    P2[Joint Angles / MIMO]
+  end
+  subgraph FSM["FSM Layer"]
+    F1[Logic Control]
+    F2[State Transitions]
+  end
+
+  LLM -->|Scenario / Commands| FSM
+  FSM -->|Mode Control / Gain Select| PID
+  PID -->|PWM / Control Signals| ACT[Actuators]
+  ACT -->|Motion Response| SEN[Sensors (IMU, etc.)]
+  SEN -->|Perception Feedback| LLM
+
+  classDef box fill:#eaf5ff,stroke:#6ca7ff,stroke-width:1px,rx:6,ry:6;
+  class LLM,PID,FSM,ACT,SEN box
+
+  click F1 "https://github.com/Samizo-AITL/AITL-H/search?q=fsm_engine.py" "FSM 実装へ"
+  click P1 "https://github.com/Samizo-AITL/AITL-H/search?q=pid_controller.py" "PID 実装へ"
+  click L1 "https://github.com/Samizo-AITL/AITL-H/search?q=llm_interface.py" "LLM IF へ"
+```
 
 ---
 

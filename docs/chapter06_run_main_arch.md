@@ -120,4 +120,17 @@ flowchart TD
 
 ---
 
-[← PoCマニュアルのREADMEに戻る / Back to AITL-H PoC Manual README](README.md)
+### 📝 **ライセンス / License**
+
+- **Code:** MIT  
+- **Text:** CC BY 4.0  
+- **Figures:** CC BY-NC 4.0  
+（詳細は [Docs Index のライセンス表](/AITL-H/docs/#-ライセンス--license) を参照）
+
+### 🔗 **ナビゲーション / Navigation**
+- 🏠 **[AITL-H PoC マニュアル README](/AITL-H/docs/)**
+- ⏮ **[前の章 / Previous: 第05章 UART通信制御](/AITL-H/docs/chapter05_uart_control.html)**  
+  _UART Communication_
+- ▶️ **[次の章 / Next: 第07章 ログ出力とモニタリング](/AITL-H/docs/chapter07_log_monitoring.html)**  
+  _Logging & Monitoring_
+  

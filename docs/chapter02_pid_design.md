@@ -1,51 +1,54 @@
 ---
 layout: clean
 permalink: /docs/chapter02_pid_design.html
-title: ""
-show_title: false   # ← これで上部の自動H1バーを非表示
+title: "第02章：PID制御器の設計と応答チューニング / PID Controller Design & Response Tuning"
+show_title: false
 ---
 
+# ⚙️ **第02章：PID制御器の設計と応答チューニング**  
+_**Chapter 02: PID Controller Design & Response Tuning**_
+
+> **要旨 / Abstract**  
+> 本章では、AITL-Hにおける**理性層（Reason Layer）**としての**PID制御設計**方針を解説します。  
+> This chapter explains the **PID control design** policy for the **Reason Layer** in AITL-H.  
+> Within the PoC, the FSM outputs target values (e.g., speed, angle), and the PID compensates for errors to produce actual control signals (PWM, etc.).
+
 ---
 
-# ⚙️ 第02章：PID制御器の設計と応答チューニング
+## 📐 **1. PID制御とは / What is PID Control?**
 
-本章では、AITL-Hにおける**理性層（Reason Layer）**としてのPID制御の設計方針を解説します。  
-PoC内では、FSMが出力した目標値（速度・角度など）に対し、PIDが誤差を補正しながら実機制御信号（PWM等）を生成します。
-
----
-
-## 1. 📐 PID制御とは
-
-PID制御は以下の制御式に基づいて、目標と現在値の差（誤差）を調整します：
+PID制御は、以下の制御式に基づき**目標値と現在値の差（誤差）**を補正します：  
+_PID control adjusts the error between the target value and the current value according to the following formula:_
 
 $$
-u(t) = K_p e(t) + K_i \int e(t) dt + K_d \frac{de(t)}{dt}
+u(t) = K_p \cdot e(t) + K_i \int e(t) \, dt + K_d \frac{de(t)}{dt}
 $$
 
-- $e(t) = r(t) - y(t) $：目標値 $r$ と測定値 $y$ の誤差
-- $K_p$：比例ゲイン（反応の速さ）
-- $K_i$：積分ゲイン（定常偏差の解消）
-- $K_d$：微分ゲイン（予測的補正）
+- **$e(t) = r(t) - y(t)$**：目標値 $r$ と測定値 $y$ の誤差  
+  _Error between target $r$ and measured $y$._
+- **$K_p$（比例 / Proportional）**：反応の速さ / Speed of reaction  
+- **$K_i$（積分 / Integral）**：定常偏差の解消 / Eliminates steady-state error  
+- **$K_d$（微分 / Derivative）**：予測的補正 / Predictive correction
 
 ---
 
-## 2. 🧮 ゲイン設計の基本戦略
+## 🧮 **2. ゲイン設計の基本戦略 / Basic Gain Tuning Strategy**
 
-| ゲイン | 役割 | 高くすると | 低くすると |
+| ゲイン / Gain | 役割 / Role | 高くすると / If Increased | 低くすると / If Decreased |
 |--------|------|-------------|-------------|
-| $K_p$| 誤差への即時反応 | 応答が速くなるが不安定に | 鈍くなるが安定 |
-| $K_i$ | 誤差の累積解消 | 定常誤差が減るが振動しやすく | 定常誤差が残る |
-| $K_d$ | 変化の抑制 | オーバーシュート抑制 | 遅れが大きくなる |
+| **$K_p$** | 即時反応 / Immediate response | 応答が速くなるが不安定に / Faster but less stable | 鈍くなるが安定 / Slower but stable |
+| **$K_i$** | 累積誤差解消 / Cumulative error correction | 定常誤差が減るが振動しやすく / Less steady-state error but oscillation risk | 定常誤差が残る / Steady-state error remains |
+| **$K_d$** | 変化抑制 / Change suppression | オーバーシュート抑制 / Suppresses overshoot | 遅れが増す / Slower reaction |
 
 ---
 
-## 3. 📊 ステップ応答と安定性評価
+## 📊 **3. ステップ応答と安定性評価 / Step Response & Stability Evaluation**
 
-- ステップ入力（例：目標速度を 0 → 5 に）に対する応答を観察
-- **オーバーシュート・立ち上がり時間・定常誤差**などを指標とする
-- 例：
+- **ステップ入力**（例：目標速度を 0 → 5 に）で応答を観察  
+- 指標 / Metrics: **オーバーシュート**, **立ち上がり時間**, **定常誤差**  
+- 実装例 / Example:
 
-```
+```python
 target_speed = 5.0
 measured_speed = sensor.get_distance()
 pwm = pid.compute(target_speed, measured_speed)
@@ -53,9 +56,10 @@ pwm = pid.compute(target_speed, measured_speed)
 
 ---
 
-## 4. 🧩 AITL-H PoCにおけるPID制御器
+## 🧩 **4. AITL-H PoCにおけるPID制御器 / PID Controller in AITL-H PoC**
 
-PoC内の `pid_controller.py` は以下の形式を持ちます：
+PoC内の `pid_controller.py` の骨格は以下の通りです：  
+_The `pid_controller.py` in the PoC has the following structure:_
 
 ```python
 class PIDController:
@@ -68,30 +72,29 @@ class PIDController:
         return pwm
 ```
 
-FSMからの `target_speed`、センサからの `measured_speed` を用いてPWM出力を生成します。
+**データフロー / Data Flow:**  
+- FSM → `target_speed`  
+- Sensor → `measured_speed`  
+- PID → PWM出力
 
 ---
 
-## 5. 🔄 将来的展開：自己最適化へ
+## 🔄 **5. 将来的展開：自己最適化へ / Toward Self-Optimization**
 
-- FSM状態によってPIDゲインを**動的に切り替える**
-- LLMがステップ応答を観察し、**ゲインを最適化**する補正戦略
-- 自動同定や強化学習との連携による知的制御層への拡張
-
----
-
-## 🔚 まとめ
-
-PID制御は、FSMで定義された目標行動を物理レベルに落とし込む**理性の実装**です。  
-本章では、PoCにおけるPID構成と調整の基本を明示しました。次章では、FSM設計に焦点を当てます。
+- FSM状態による**PIDゲイン動的切替**  
+- LLMが応答を解析し**ゲイン自動調整**  
+- 自動同定や強化学習との**ハイブリッド制御**
 
 ---
 
-## 図2-1：PID制御ループ構成図
+## 🔚 **6. まとめ / Summary**
+
+PID制御は、FSMが定義した目標行動を物理的制御信号に変換する**理性の実装**です。  
+It is the **Reason Layer** implementation that transforms FSM-defined goals into actionable control outputs.  
+本章で示した設計方針と調整方法は、次章の**FSM設計**に接続されます。
+
+---
+
+## 🖼 **図2-1：PID制御ループ構成図 / Figure 2-1: PID Control Loop**
 
 <img src="./images/figure2_1_pid_control_loop.png" alt="PID Loop" width="400"/>
-
----
-
-
-

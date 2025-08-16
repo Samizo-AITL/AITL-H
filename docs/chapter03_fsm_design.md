@@ -1,6 +1,6 @@
 ---
 layout: clean
-# title: 
+permalink: /docs/chapter03_fsm_design.html
 ---
 
 ---

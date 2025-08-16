@@ -1,9 +1,7 @@
 ---
 layout: clean
-title: "Ch.5 — UART通信制御"
-permalink: /AITL-H/docs/chapter05_uart_control.html
----
-
+# title: "Ch.5 — UART通信制御"
+permalink: /docs/chapter05_uart_control/
 ---
 
 # 🔌 第05章：UART通信制御とFSM接続

@@ -1,3 +1,11 @@
+---
+layout: default
+title: ジンバル制御 PoC（FSM + MIMO PID + LLM / AITL-HX構成）
+nav_order: 9
+description: 3軸ジンバル安定化制御を対象に、FSM・MIMO PID制御・LLMを組み合わせたハイブリッド知能制御アーキテクチャ（AITL-HX）のPoC実装。
+permalink: /AITL-H/PoC/gimbal_control/
+---
+
 # 🤖 ジンバル制御 PoC：FSM + MIMO PID + LLM（AITL-HX構成）
 
 本ディレクトリは、3軸ジンバルの安定化制御を対象とした  
@@ -8,26 +16,32 @@
 
 ## 🧭 システム構成図
 
-![Figure 9.1: Hybrid Control Architecture for Gimbal System](../../docs/images/figure9_1_gimbal_control_architecture.svg)
+```mermaid
+flowchart TB
+    subgraph LLM["LLM層"]
+        direction TB
+        LLM_desc["自然言語による指令生成・意図推論"]
+    end
 
-```
-┌──────────────┐
-│    LLM層     │ ← 自然言語による指令生成・意図推論
-└─────┬────────┘
-      ↓
-┌─────▼──────┐
-│   FSM層    │ ← 行動切替（待機・追従・復帰 など）
-└─────┬──────┘
-      ↓
-┌─────▼──────┐
-│   PID層    │ ← Roll/Pitch/YawのMIMO PID制御
-└─────┬──────┘
-      ↓
-┌─────▼──────┐       ┌───────────────┐
-│ アクチュエータ層 │ ←→ │  IMUセンサ層     │
-└────────────┘       └───────────────┘
-                         ↑
-                  姿勢情報をLLM層へフィードバック
+    subgraph FSM["FSM層"]
+        FSM_desc["行動切替（待機・追従・復帰 など）"]
+    end
+
+    subgraph PID["PID層"]
+        PID_desc["Roll / Pitch / Yaw の MIMO PID制御"]
+    end
+
+    subgraph ACT["アクチュエータ層"]
+        ACT_desc["モータ駆動（PWM制御）"]
+    end
+
+    subgraph SENSOR["IMUセンサ層"]
+        SENSOR_desc["姿勢センサ（角速度・加速度）"]
+    end
+
+    LLM --> FSM --> PID --> ACT
+    ACT <--> SENSOR
+    SENSOR --> LLM
 ```
 
 > LLM → FSM → PID → アクチュエータ → センサ → LLM  
@@ -123,7 +137,5 @@ jupyter notebook gimbal_sim_demo.ipynb
 
 ## 📎 参考リンク・教材連携
 
-- 🔗 AITL-H フレームワーク本体：[AITL-H GitHub](https://github.com/Samizo-AITL/AITL-H)  
-- 📘 教材連携先：[EduController - Part09: LLM Hybrid Control](https://github.com/Samizo-AITL/EduController/tree/main/part09_llm_hybrid)
-
----
+- 🔗 AITL-H フレームワーク本体：[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H)  
+- 📘 教材連携先：[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/EduController/tree/main/part09_llm_hybrid)

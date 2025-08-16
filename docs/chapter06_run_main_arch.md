@@ -1,6 +1,7 @@
 ---
 layout: clean
-permalink: /docs/chapter06_run_main_arch.html
+title: "Ch.6 — 制御アーキテクチャ実装（run_main中心）"
+permalink: /AITL-H/docs/chapter06_run_main_arch.html
 ---
 
 ---

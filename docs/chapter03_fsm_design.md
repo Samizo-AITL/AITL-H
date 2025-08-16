@@ -1,7 +1,9 @@
 ---
 layout: clean
-# title: "Ch.3 — FSMとRTL制御実装"
-permalink: /docs/chapter03_fsm_design/
+title: Chapter 03 — FSM & RTL Implementation
+permalink: /docs/chapter03_fsm_design.html
+---
+
 ---
 
 # 🔄 第03章：FSM状態設計と遷移戦略

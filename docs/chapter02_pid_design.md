@@ -1,6 +1,6 @@
 ---
 layout: clean
-# title: "Ch.2 — PID制御設計と応答チューニング"
+title: ""
 permalink: /docs/chapter02_pid_design/
 ---
 

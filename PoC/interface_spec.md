@@ -1,3 +1,11 @@
+---
+layout: default
+title: モジュール間インタフェース仕様（AITL-H PoC）
+nav_order: 2
+description: FSMを起点とした制御ブロック（PID, PWM, UART, センサ）間の信号構造・入出力仕様
+permalink: /AITL-H/interface_spec/
+---
+
 # 🔌 interface_spec.md — モジュール間インタフェース仕様（AITL-H PoC）
 
 FSMを起点とした制御ブロック（PID, PWM, UART, センサ）間の信号構造・入出力仕様を定義します。
@@ -91,5 +99,3 @@ FSMを起点とした制御ブロック（PID, PWM, UART, センサ）間の信�
 - [`fsm_state_table.md`](./fsm_state_table.md)：状態と出力定義
 - [`pid_design_spec.md`](./pid_design_spec.md)：PID制御目標と設計仕様（次ステップで作成）
 - [`system_block_diagram.svg`](./system_block_diagram.svg)：構成図（作図予定）
-
----

@@ -1,9 +1,7 @@
 ---
 layout: clean
 title: "Ch.1 — PoC仕様策定と要件定義"
-permalink: /AITL-H/docs/chapter01_aitl_architecture.html
----
-
+permalink: /AITL-H/docs/chapter01_aitl_architecture/
 ---
 
 # 🏗 第01章：AITL三層アーキテクチャ設計

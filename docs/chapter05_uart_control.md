@@ -1,7 +1,8 @@
 ---
 layout: clean
-title: Chapter 05 — UART Communication
 permalink: /docs/chapter05_uart_control.html
+title: ""
+show_title: false   # ← これで上部の自動H1バーを非表示
 ---
 
 ---

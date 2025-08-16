@@ -1,4 +1,3 @@
-<!-- AITL-H/docs/chapter01_aitl_architecture.md -->
 ---
 layout: clean
 title: "Ch.1 — PoC仕様策定と要件定義"

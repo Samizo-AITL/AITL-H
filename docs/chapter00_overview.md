@@ -1,7 +1,7 @@
 ---
 layout: clean
 title: "第00章：PoC設計全体像と三層アーキテクチャの背景"
-permalink: /AITL-H/docs/chapter00_overview.html
+permalink: /docs/chapter00_overview.html
 description: "AITL-H PoCの全体像、目的、三層（FSM/PID/LLM）アーキテクチャ、信号I/Fとデータフロー、将来拡張方針を概説。"
 show_title: true
 ---

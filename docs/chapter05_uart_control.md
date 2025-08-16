@@ -93,16 +93,18 @@ Proper protocol structuring and error handling ensure a robust and extensible co
 
 ---
 
-### 🔗 **ナビゲーション / Navigation**
-- ⏮ [第04章：センサ・アクチュエータ制御 / Sensor & Actuator Control](https://samizo-aitl.github.io/AITL-H/docs/chapter04_sensor_interface.html)  
-- ▶️ [第06章：制御アーキテクチャ実装 / Control Architecture](https://samizo-aitl.github.io/AITL-H/docs/chapter06_run_main_arch.html)  
-
-[← AITL-H PoC マニュアル README / Back to AITL-H PoC Manual README](https://samizo-aitl.github.io/AITL-H/docs/)
-
----
-
 ### 📝 **ライセンス / License**
 - **Code:** MIT  
 - **Text:** CC BY 4.0  
 - **Figures:** CC BY-NC 4.0  
 （詳細は [Docs Index のライセンス表 / License Table in Docs Index](https://samizo-aitl.github.io/AITL-H/docs/#-ライセンス--license) を参照）
+
+---
+
+### 🔗 **ナビゲーション / Navigation**
+- ⏮ [第04章：センサ・アクチュエータ制御 / Sensor & Actuator Control](https://samizo-aitl.github.io/AITL-H/docs/chapter04_sensor_interface.html)  
+- ▶️ [第06章：制御アーキテクチャ実装 / Control Architecture](https://samizo-aitl.github.io/AITL-H/docs/chapter06_run_main_arch.html)  
+
+[![📄 READMEに戻る / Back to README](https://img.shields.io/badge/Back%20to-README-blue?logo=readme)](https://samizo-aitl.github.io/AITL-H/docs/)  
+[![🏠 AITL-Hトップ / AITL-H Top](https://img.shields.io/badge/AITL--H-Top-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/)
+

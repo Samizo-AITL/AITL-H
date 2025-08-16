@@ -89,16 +89,17 @@ PoC設計においては、`sensor_interface.py` を用いてシンプルなAPI�
 
 ---
 
-### 🔗 **ナビゲーション / Navigation**
-- ⏮ [第03章：FSMとRTL制御実装 / FSM & RTL Implementation](https://samizo-aitl.github.io/AITL-H/docs/chapter03_fsm_design.html)  
-- ▶️ [第05章：UART通信制御 / UART Communication](https://samizo-aitl.github.io/AITL-H/docs/chapter05_uart_control.html)  
-
-[← AITL-H PoC マニュアル README / Back to AITL-H PoC Manual README](https://samizo-aitl.github.io/AITL-H/docs/)
-
----
-
 ### 📝 **ライセンス / License**
 - **Code:** MIT  
 - **Text:** CC BY 4.0  
 - **Figures:** CC BY-NC 4.0  
 （詳細は [Docs Index のライセンス表 / License Table in Docs Index](https://samizo-aitl.github.io/AITL-H/docs/#-ライセンス--license) を参照）
+
+---
+
+### 🔗 **ナビゲーション / Navigation**
+- ⏮ [第03章：FSMとRTL制御実装 / FSM & RTL Implementation](https://samizo-aitl.github.io/AITL-H/docs/chapter03_fsm_design.html)  
+- ▶️ [第05章：UART通信制御 / UART Communication](https://samizo-aitl.github.io/AITL-H/docs/chapter05_uart_control.html)  
+
+[![📄 READMEに戻る / Back to README](https://img.shields.io/badge/Back%20to-README-blue?logo=readme)](https://samizo-aitl.github.io/AITL-H/docs/)  
+[![🏠 AITL-Hトップ / AITL-H Top](https://img.shields.io/badge/AITL--H-Top-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/)

@@ -1,8 +1,10 @@
+# .github/workflows/mermaid-build.yml
 name: Build Mermaid PNG
 
 on:
   push:
     paths:
+      - 'docs/images/**/*.mmd'
       - 'docs/images/*.mmd'
       - '.github/workflows/mermaid-build.yml'
   workflow_dispatch:
@@ -14,6 +16,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Node
         uses: actions/setup-node@v4
@@ -21,24 +25,33 @@ jobs:
           node-version: '20'
 
       - name: Install mermaid-cli
-        run: |
-          npm i -g @mermaid-js/mermaid-cli@10
+        run: npm i -g @mermaid-js/mermaid-cli
 
       - name: Render Mermaid to PNG
+        shell: bash
         run: |
+          set -euo pipefail
           mkdir -p docs/images
-          for f in docs/images/*.mmd; do
+          shopt -s nullglob
+          # 再帰 & 直下の .mmd を対象
+          for f in docs/images/**/*.mmd docs/images/*.mmd; do
             out="${f%.mmd}.png"
             echo "Rendering $f -> $out"
-            mmdc -i "$f" -o "$out" -b transparent -w 1200 -H 0
+            # 高さは自動（-Hは指定しない）。必要なら -H 800 など正の整数で指定してください。
+            mmdc -i "$f" -o "$out" -b transparent -w 1200
           done
 
-      - name: Commit PNGs
+      # 省略可：PNG最適化（サイズ縮小）
+      - name: Optimize PNGs (optional)
         run: |
-          if [ -n "$(git status --porcelain)" ]; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add docs/images/*.png
-            git commit -m "chore(diagram): render Mermaid PNGs"
-            git push
-          fi
+          sudo apt-get update -y
+          sudo apt-get install -y pngquant
+          find docs/images -name '*.png' -print0 | xargs -0 -I{} pngquant --skip-if-larger --force --ext .png {}
+
+      - name: Commit PNGs
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: render Mermaid PNGs"
+          file_pattern: docs/images/*.png
+          commit_user_name: "github-actions[bot]"
+          commit_user_email: "41898282+github-actions[bot]@users.noreply.github.com"

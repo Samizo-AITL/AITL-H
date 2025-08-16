@@ -1,7 +1,9 @@
 ---
 layout: clean
-# title: "Ch.7 — ログ出力とモニタリング戦略"
-permalink: /docs/chapter07_log_monitoring/
+title: Chapter 07 — Logging & Monitoring
+permalink: /docs/chapter07_log_monitoring.html
+---
+
 ---
 
 # 📊 第07章：PoCログ記録とモニタリング設計

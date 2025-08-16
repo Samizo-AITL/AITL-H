@@ -1,14 +1,10 @@
 ---
 layout: clean
+title: "AITL-H"
+permalink: /
 ---
 
-<style>
-.title-bar {
-  display: none;
-}
-</style>
-
----
+<style>.title-bar{display:none;}</style>
 
 # 🤖 **AITL-H：Hybrid型構造制御フレームワーク**
 

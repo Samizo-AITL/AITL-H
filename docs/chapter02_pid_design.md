@@ -5,6 +5,8 @@ title: "第02章：PID制御器の設計と応答チューニング / PID Contro
 show_title: false
 ---
 
+---
+
 # ⚙️ **第02章：PID制御器の設計と応答チューニング**  
 _**Chapter 02: PID Controller Design & Response Tuning**_
 
@@ -105,3 +107,7 @@ flowchart TD
     D --> E["Sensor Feedback y(t)"]
     E -->|"Feedback"| B
 ```
+
+---
+
+[← PoCマニュアルのREADMEに戻る / Back to AITL-H PoC Manual README](README.md)

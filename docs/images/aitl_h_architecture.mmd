@@ -1,19 +1,26 @@
-%% File: docs/images/aitl_h_architecture.mmd
-%% AITL-H: Three-layer hybrid control
 flowchart TB
-  %% Styles
-  classDef box fill:#e7f0fb,stroke:#6b93d6,stroke-width:1px,color:#0b1b34;
-  classDef iface fill:#ffffff,stroke:#a3a3a3,stroke-dasharray: 3 3,color:#333;
+  subgraph LLM["LLM Layer"]
+    L1[Decision-Making]
+    L2[Anomaly Detection]
+    L3[Language Response]
+  end
 
-  LLM["LLM Layer\n(Decision-Making / Anomaly Detection / Language Response)"]:::box
-  IF1["Interface"]:::iface
-  PID["PID Layer\n(Continuous Control: Joint Angles, etc.)"]:::box
-  IF2["Interface"]:::iface
-  FSM["FSM Layer\n(Logic Control / State Transitions)"]:::box
+  subgraph PID["PID Layer"]
+    P1[Continuous Control]
+    P2[Joint Angles / MIMO]
+  end
 
-  LLM --> IF1 --> PID --> IF2 --> FSM
+  subgraph FSM["FSM Layer"]
+    F1[Logic Control]
+    F2[State Transitions]
+  end
 
-  %% Feedback path (perception)
-  Sensors(["Sensors\n(IMU, Vision, etc.)"]):::iface
-  Sensors -.-> PID
-  Sensors -.-> LLM
+  LLM -->|Scenario / Commands| FSM
+  FSM -->|Mode Control / Gain Select| PID
+  PID -->|PWM / Control Signals| ACT[Actuators]
+  ACT -->|Motion Response| SEN[Sensors (IMU, etc.)]
+  SEN -.->|Perception Feedback| LLM
+
+  classDef box fill:#eaf5ff,stroke:#6ca7ff,stroke-width:1px,rx:6,ry:6;
+  class LLM,PID,FSM box
+  class ACT,SEN box

@@ -125,3 +125,14 @@ flowchart TD
 - **Text:** CC BY 4.0  
 - **Figures:** CC BY-NC 4.0  
 （詳細は [Docs Index のライセンス表 / License Table in Docs Index](https://samizo-aitl.github.io/AITL-H/docs/#-ライセンス--license) を参照）
+
+---
+
+### 🔗 **ナビゲーション / Navigation**
+- ⏮ [第05章：UART通信制御 / UART Communication](https://samizo-aitl.github.io/AITL-H/docs/chapter05_uart_control.html)  
+- ▶️ [第07章：ログ出力とモニタリング / Logging & Monitoring](https://samizo-aitl.github.io/AITL-H/docs/chapter07_log_monitoring.html)  
+
+[![📄 READMEに戻る / Back to README](https://img.shields.io/badge/Back%20to-README-blue?logo=readme)](https://samizo-aitl.github.io/AITL-H/docs/)  
+[![🏠 AITL-Hトップ / AITL-H Top](https://img.shields.io/badge/AITL--H-Top-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/)
+
+---

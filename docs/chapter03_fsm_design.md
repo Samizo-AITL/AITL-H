@@ -1,9 +1,7 @@
 ---
 layout: clean
 title: "Ch.3 — FSMとRTL制御実装"
-permalink: /AITL-H/docs/chapter03_fsm_design.html
----
-
+permalink: /docs/chapter03_fsm_design/
 ---
 
 # 🔄 第03章：FSM状態設計と遷移戦略

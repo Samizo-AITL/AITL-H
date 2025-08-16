@@ -15,20 +15,6 @@ _This site serves as the manual page for the PoC implementation of AITL-H (All-i
 
 ---
 
-## 📂 **Chapter Structure** _(Ch.1–8, 11)_
-
-| Ch. | タイトル / Title | 説明 / Description |
-|-----|------------------|--------------------|
-| **1**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)]({{ site.baseurl }}/docs/chapter01_aitl_architecture/) [![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/blob/main/docs/chapter01_aitl_architecture.md) | **PoC仕様策定と要件定義** _PoC Specification & Requirements_ | AITL視点でのPoC構想と全体設計 |
-| **2**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)]({{ site.baseurl }}/docs/chapter02_pid_design/) [![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/blob/main/docs/chapter02_pid_design.md) | **PID制御設計と応答チューニング** _PID Design & Tuning_ | Reason層のPIDゲイン設計と誤差補正 |
-| **3**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)]({{ site.baseurl }}/docs/chapter03_fsm_design/) [![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/blob/main/docs/chapter03_fsm_design.md) | **FSMとRTL制御実装** _FSM & RTL Implementation_ | Instinct層の状態設計と制御フロー |
-| **4**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)]({{ site.baseurl }}/docs/chapter04_sensor_interface/) [![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/blob/main/docs/chapter04_sensor_interface.md) | **センサ・アクチュエータ制御** _Sensor & Actuator Control_ | ADC・PWM・I/Oの物理層インタフェース |
-| **5**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)]({{ site.baseurl }}/docs/chapter05_uart_control/) [![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/blob/main/docs/chapter05_uart_control.md) | **UART通信制御** _UART Communication_ | PoCのUART設計とホスト連携 |
-| **6**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)]({{ site.baseurl }}/docs/chapter06_run_main_arch/) [![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/blob/main/docs/chapter06_run_main_arch.md) | **制御アーキテクチャ実装** _Control Architecture_ | `run_main()` 中心の統合制御 |
-| **7**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)]({{ site.baseurl }}/docs/chapter07_log_monitoring/) [![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/blob/main/docs/chapter07_log_monitoring.md) | **ログ出力とモニタリング** _Logging & Monitoring_ | 制御ログ構成と可視化 |
-| **8**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)]({{ site.baseurl }}/docs/chapter08_llm_integration/) [![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/blob/main/docs/chapter08_llm_integration.md) | **LLM連携と意図推定** _LLM Integration_ | 知性層との連携構造と推論接続 |
-| **11**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)]({{ site.baseurl }}/docs/chapter11_exit_strategy/) [![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/blob/main/docs/chapter11_exit_strategy.md) | **出口戦略とSystemDK接続** _Exit Strategy_ | RTL/PDK展開とSystemDK連携構想 |
-
 ## 📂 **Chapter Structure** _(Absolute URLs with Description)_
 
 | Ch. | タイトル / Title | 説明 / Description | Links |

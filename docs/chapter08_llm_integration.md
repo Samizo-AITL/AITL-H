@@ -1,6 +1,6 @@
 ---
 layout: clean
-# title: 
+permalink: /docs/chapter08_llm_integration.html
 ---
 
 ---

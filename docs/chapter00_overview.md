@@ -6,6 +6,8 @@ description: "AITL-H PoCの全体像、目的、三層（FSM/PID/LLM）アーキ
 show_title: true
 ---
 
+---
+
 # 🧠 **第00章：PoC設計全体像と三層アーキテクチャの背景**  
 _**Chapter 00: Overall PoC Design & Three-Layer Architecture**_
 

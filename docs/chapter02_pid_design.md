@@ -1,7 +1,9 @@
 ---
 layout: clean
-title: ""
-permalink: /docs/chapter02_pid_design/
+title: Chapter 02 — PID Design & Tuning
+permalink: /docs/chapter02_pid_design.html
+---
+
 ---
 
 # ⚙️ 第02章：PID制御器の設計と応答チューニング

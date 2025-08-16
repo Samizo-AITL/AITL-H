@@ -124,7 +124,7 @@ to enable **real-time, physically-constrained optimal design**.
 📘 Details: [**`README here`**](../PoC/gimbal_control/README.md)
 
 <div align="center">
-  <img src="./docs/images/figure9_1_gimbal_control_architecture.svg" alt="Gimbal Control Architecture" width="700">
+  <img src="../docs/images/figure9_1_gimbal_control_architecture.svg" alt="Gimbal Control Architecture" width="700">
 </div>
 
 ---

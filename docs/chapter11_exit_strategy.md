@@ -1,6 +1,6 @@
 ---
 layout: clean
-# title: 
+permalink: /docs/chapter11_exit_strategy.html
 ---
 
 ---

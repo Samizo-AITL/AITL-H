@@ -155,10 +155,6 @@ flowchart TB
     SENSOR --> LLM
 ```
 
-<div align="center">
-  <img src="https://samizo-aitl.github.io/AITL-H/docs/images/figure9_1_gimbal_control_architecture.svg" alt="ジンバル制御アーキテクチャ" width="700">
-</div>
-
 ---
 
 ## 🤖 **ChatGPT支援ツール群**

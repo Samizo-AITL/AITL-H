@@ -130,6 +130,33 @@ to enable **real-time, physically-constrained optimal design**.
 📂 Directory: [**`PoC/gimbal_control/`**]  [![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/PoC/gimbal_control)  
 📘 Details: [**`See README`**](https://samizo-aitl.github.io/AITL-H/PoC/gimbal_control/)
 
+```mermaid
+flowchart TB
+    subgraph LLM["LLM Layer"]
+        direction TB
+        LLM_desc["Instruction generation & intent inference (Natural Language)"]
+    end
+
+    subgraph FSM["FSM Layer"]
+        FSM_desc["Behavior switching (Idle, Follow, Recovery, etc.)"]
+    end
+
+    subgraph PID["PID Layer"]
+        PID_desc["MIMO PID control for Roll / Pitch / Yaw"]
+    end
+
+    subgraph ACT["Actuator Layer"]
+        ACT_desc["Motor drive (PWM control)"]
+    end
+
+    subgraph SENSOR["IMU Sensor Layer"]
+        SENSOR_desc["Posture sensing (Angular velocity & Acceleration)"]
+    end
+
+    LLM --> FSM --> PID --> ACT
+    ACT <--> SENSOR
+    SENSOR --> LLM
+```
 
 ---
 

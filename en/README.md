@@ -125,6 +125,34 @@ to enable **real-time, physically-constrained optimal design**.
 📂 Directory: [**`PoC/gimbal_control/`**]  [![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/PoC/gimbal_control)  
 📘 Details: [**`See README`**](https://samizo-aitl.github.io/AITL-H/PoC/gimbal_control/)
 
+```mermaid
+flowchart TB
+    subgraph LLM["LLM層"]
+        direction TB
+        LLM_desc["自然言語による指令生成・意図推論"]
+    end
+
+    subgraph FSM["FSM層"]
+        FSM_desc["行動切替（待機・追従・復帰 など）"]
+    end
+
+    subgraph PID["PID層"]
+        PID_desc["Roll / Pitch / Yaw の MIMO PID制御"]
+    end
+
+    subgraph ACT["アクチュエータ層"]
+        ACT_desc["モータ駆動（PWM制御）"]
+    end
+
+    subgraph SENSOR["IMUセンサ層"]
+        SENSOR_desc["姿勢センサ（角速度・加速度）"]
+    end
+
+    LLM --> FSM --> PID --> ACT
+    ACT <--> SENSOR
+    SENSOR --> LLM
+```
+
 <div align="center">
   <img src="https://samizo-aitl.github.io/AITL-H/docs/images/figure9_1_gimbal_control_architecture.svg" alt="Gimbal Control Architecture" width="700">
 </div>

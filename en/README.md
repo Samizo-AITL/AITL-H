@@ -105,28 +105,29 @@ to enable **real-time, physically-constrained optimal design**.
 
 ---
 
-## 🧪 PoC-Related
+## 🧪 **PoC Projects**
 
-| Title | Summary | Path |
-|-------|---------|------|
-| 📘 **PoC Design Manual** | Humanoid robot PoC design manual based on FSM×PID×LLM integration (16 chapters) | [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/docs/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/docs) |
-| 🧭 **Gimbal Control (FSM + PID + LLM)** | Hybrid closed-loop control | [`PoC/gimbal_control`](../PoC/gimbal_control) |
-| ⚙️ **Verilog Auto-Generation (FSM + PID)** | YAML → C → Verilog generation & verification | [`PoC/verilog_demo`](../PoC/verilog_demo) |
+| Title | Overview | Links |
+|-------|----------|-------|
+| 📘 **PoC Design Manual** | Humanoid robot PoC design manual (16 chapters) based on FSM × PID × LLM integration | [![View Manual](https://img.shields.io/badge/View-Manual-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/docs/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/docs) |
+| 🤖 **Integrated PoC Execution Environment** | Experimental setup and runtime environment of AITL-H PoC (humanoid robot control) using a three-layer architecture: FSM + PID + LLM | [![View Manual](https://img.shields.io/badge/View-Manual-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/PoC/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/PoC) |
+| 🧭 **Gimbal Control (FSM + PID + LLM)** | Hybrid closed-loop control system | [![View Manual](https://img.shields.io/badge/View-Manual-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/PoC/gimbal_control/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/PoC/gimbal_control) |
+| ⚙️ **Verilog Auto-Generation (FSM + PID)** | YAML → C → Verilog conversion and validation | [![View Manual](https://img.shields.io/badge/View-Manual-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/PoC/verilog_demo/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/PoC/verilog_demo) |
+| 🛠 **Auto Generator (FSM & PID Toolchain)** | Auto-generation toolset for FSM and PID structures in AITL-H architecture, converting YAML → C → Verilog | [![View Manual](https://img.shields.io/badge/View-Manual-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/PoC/auto_generator/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/PoC/auto_generator) |
 
 ---
 
-## 🧭 PoC Example: 3-Axis Gimbal Control with FSM × PID × LLM
+### 🧭 **PoC Example: 3-Axis Gimbal Control with FSM × PID × LLM**
 
-> **Natural language command → State transition (FSM) → PID stabilization → Actuator** closed-loop configuration.  
-> A basic implementation of the **AITL-HX architecture**, ideal for education and applied use.
+> **Natural language command → State transition (FSM) → PID stabilization → Actuator control** in a closed-loop architecture.  
+> Serves as a fundamental implementation of the **AITL-HX architecture**, optimized for both education and applied research.
 
-📂 Directory: [**`PoC/gimbal_control/`**](../PoC/gimbal_control/)  
-📘 Details: [**`README here`**](../PoC/gimbal_control/README.md)
+📂 Directory: [**`PoC/gimbal_control/`**]  [![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/PoC/gimbal_control)  
+📘 Details: [**`See README`**](https://samizo-aitl.github.io/AITL-H/PoC/gimbal_control/)
 
 <div align="center">
-  <img src="../docs/images/figure9_1_gimbal_control_architecture.svg" alt="Gimbal Control Architecture" width="700">
+  <img src="https://samizo-aitl.github.io/AITL-H/docs/images/figure9_1_gimbal_control_architecture.svg" alt="Gimbal Control Architecture" width="700">
 </div>
-
 ---
 
 ## 🤖 ChatGPT Support Tools

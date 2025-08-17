@@ -127,25 +127,25 @@ to enable **real-time, physically-constrained optimal design**.
 
 ```mermaid
 flowchart TB
-    subgraph LLM["LLM層"]
+    subgraph LLM["LLM Layer"]
         direction TB
-        LLM_desc["自然言語による指令生成・意図推論"]
+        LLM_desc["Instruction generation & intent inference (Natural Language)"]
     end
 
-    subgraph FSM["FSM層"]
-        FSM_desc["行動切替（待機・追従・復帰 など）"]
+    subgraph FSM["FSM Layer"]
+        FSM_desc["Behavior switching (Idle, Follow, Recovery, etc.)"]
     end
 
-    subgraph PID["PID層"]
-        PID_desc["Roll / Pitch / Yaw の MIMO PID制御"]
+    subgraph PID["PID Layer"]
+        PID_desc["MIMO PID control for Roll / Pitch / Yaw"]
     end
 
-    subgraph ACT["アクチュエータ層"]
-        ACT_desc["モータ駆動（PWM制御）"]
+    subgraph ACT["Actuator Layer"]
+        ACT_desc["Motor drive (PWM control)"]
     end
 
-    subgraph SENSOR["IMUセンサ層"]
-        SENSOR_desc["姿勢センサ（角速度・加速度）"]
+    subgraph SENSOR["IMU Sensor Layer"]
+        SENSOR_desc["Posture sensing (Angular velocity & Acceleration)"]
     end
 
     LLM --> FSM --> PID --> ACT

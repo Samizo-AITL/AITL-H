@@ -130,9 +130,7 @@ to enable **real-time, physically-constrained optimal design**.
 📂 Directory: [**`PoC/gimbal_control/`**]  [![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/PoC/gimbal_control)  
 📘 Details: [**`See README`**](https://samizo-aitl.github.io/AITL-H/PoC/gimbal_control/)
 
-<div align="center">
-  <img src="https://samizo-aitl.github.io/AITL-H/docs/images/figure9_1_gimbal_control_architecture.svg" alt="Gimbal Control Architecture" width="700">
-</div>
+
 ---
 
 ## 🤖 ChatGPT Support Tools

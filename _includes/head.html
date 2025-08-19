@@ -5,7 +5,7 @@
 <script>
   MathJax = {
     tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      inlineMath: [['$', '$'], ['\$begin:math:text$', '\\$end:math:text$']],
       processEscapes: true
     },
     svg: { fontCache: 'global' }
@@ -16,6 +16,19 @@
 
 <!-- Mermaid -->
 <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-<script>mermaid.initialize({ startOnLoad: true });</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // ```mermaid フェンスを <div class="mermaid"> に変換
+    document.querySelectorAll('pre > code.language-mermaid').forEach(function (code) {
+      const pre = code.parentElement;
+      const div = document.createElement('div');
+      div.className = 'mermaid';
+      div.textContent = code.textContent;
+      pre.replaceWith(div);
+    });
+    // Mermaid 初期化
+    mermaid.initialize({ startOnLoad: true });
+  });
+</script>
 
-<link rel="stylesheet" href="{{ '/assets/css/custom.css?v=1' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/custom.css?v=2' | relative_url }}">

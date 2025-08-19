@@ -1,123 +1,26 @@
----
-layout: null
----
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>{{ page.title | default: site.title | escape }}</title>
+  <head>
+    {%- include head.html -%}
+    <!-- MathJax (数式) -->
+    <script>
+      MathJax = { tex:{ inlineMath:[['$', '$'], ['\\(', '\\)']] }, svg:{fontCache:'global'} };
+    </script>
+    <script id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-  <!-- 基本CSS（存在しない場合は削除OK） -->
-  <link rel="stylesheet" href="{{ "/assets/css/style.css"  | relative_url }}">
-  <link rel="stylesheet" href="{{ "/assets/css/custom.css" | relative_url }}">
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({ startOnLoad:true });</script>
 
-  <!-- SEO（jekyll-seo-tag を使っている場合のみ） -->
-  {% if site.plugins contains "jekyll-seo-tag" %}{% seo %}{% endif %}
-  <link rel="canonical" href="{{ page.url | absolute_url }}"/>
-
-  <!-- MathJax（不要なら丸ごと削除OK） -->
-  <script>
-    window.MathJax = {
-      tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']],
-        displayMath: [['$$', '$$'], ['\\[', '\\]']],
-        processEscapes: true,
-        tags: 'ams'
-      },
-      options: { skipHtmlTags: ['script','style','textarea','pre','code'] },
-      chtml: { scale: 1 }
-    };
-  </script>
-  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
-
-  <!-- Mermaid（Github Pages でも ```mermaid を描画できるように置換してから初期化） -->
-  <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // 1) ```mermaid の <pre><code class="language-mermaid"> を <div class="mermaid"> に置換
-      document.querySelectorAll('pre > code.language-mermaid').forEach(function (code) {
-        var pre  = code.parentElement;
-        var div  = document.createElement('div');
-        div.className   = 'mermaid';
-        div.textContent = code.textContent;   // 図のソースをそのまま入れる
-        pre.replaceWith(div);
-      });
-
-      // 2) Mermaid を初期化（置換後に）
-      if (window.mermaid) {
-        mermaid.initialize({
-          startOnLoad: true,
-          securityLevel: 'loose',    // クリックリンク等を許可
-          theme: 'default'
-        });
-      }
-    });
-  </script>
-
-  <!-- レイアウト調整（中央寄せ・可読性） -->
-  <style>
-    :root { --content-max: 72rem; }
-
-    html, body { margin:0; padding:0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      line-height: 1.6;
-      color: #111827;
-      background: #ffffff;
-    }
-
-    main.container, footer.container {
-      max-width: var(--content-max);
-      margin: 0 auto;
-      padding: 1.25rem 1rem;
-    }
-
-    img, svg, canvas, video { max-width: 100%; height: auto; display: block; }
-    pre { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-    table { width: 100%; border-collapse: collapse; }
-    h1, h2, h3 { scroll-margin-top: 80px; }
-
-    /* 自動H1（Front Matterのtitle or site.title） */
-    .title-bar h1 {
-      font-size: clamp(1.8rem, 3vw, 2.2rem);
-      margin: .2rem 0 1rem;
-      padding-bottom: .4rem;
-      border-bottom: 2px solid #e5e7eb;
-      letter-spacing: -0.01em;
-      font-weight: 800;
-    }
-
-    /* Mermaid 図の中央寄せ＆適切な横幅 */
-    .mermaid, .mermaid > svg {
-      display: block;
-      margin: 1rem auto;
-      max-width: min(1200px, 100%);
-    }
-  </style>
-</head>
-<body>
-  <main class="container" role="main">
-    {%- comment -%}
-      show_title フラグ：
-      - 既定: 表示（true）
-      - ページで show_title:false を指定すると非表示
-    {%- endcomment -%}
-    {% if page.show_title != false %}
-      <div class="title-bar">
-        <h1>{{ page.title | default: site.title }}</h1>
+    <link rel="stylesheet" href="{{ '/assets/css/custom.css?v=clean1' | relative_url }}">
+  </head>
+  <body>
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {{ content }}
       </div>
-    {% endif %}
-
-    {{ content }}
-  </main>
-
-  <footer class="container" role="contentinfo" aria-label="Site footer">
-    <hr />
-    <p>
-      &copy; {{ "now" | date: "%Y" }}
-      <a href="https://github.com/Samizo-AITL" target="_blank" rel="noopener">Samizo Shinichi</a>
-    </p>
-  </footer>
-</body>
+    </main>
+    {%- include footer.html -%}
+  </body>
 </html>

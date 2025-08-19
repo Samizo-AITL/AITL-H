@@ -60,7 +60,7 @@ flowchart TB
   end
 
   subgraph PID[Reason Layer: PID Controller]
-    OUT1 --> P1[PID(speed)]
+    OUT1 --> P1[PID - speed]
     P1 --> MUX[Mixer]
     P2 --> MUX
     MUX --> PWM[PWM Driver]

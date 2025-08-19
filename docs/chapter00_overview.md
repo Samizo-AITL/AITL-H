@@ -48,35 +48,34 @@ _**Chapter 00: Overall PoC Design & Three-Layer Architecture**_
 
 ## 🧩 **0.3 システムブロック / System Block Diagram**
 
-    ```mermaid
-    flowchart TB
-      subgraph LLM[LLM Intelligence Layer]
-        U[UART/Host Command] -->|parsed intent| ILLM[Intent Mapper]
-      end
+```mermaid
+flowchart TB
+  subgraph LLM[LLM Intelligence Layer]
+    U[UART/Host Command] -->|parsed intent| ILLM[Intent Mapper]
+  end
 
-      subgraph FSM[Instinct Layer: FSM Engine]
-        ILLM -->|goal: target_speed, target_angle| S1[State Machine<br/>IDLE/ALIGN/TRACK/FAULT]
-        S1 -->|goals| OUT1[Goals to PID]
-      end
+  subgraph FSM[Instinct Layer: FSM Engine]
+    ILLM -->|goal: target_speed, target_angle| S1[State Machine<br/>IDLE/ALIGN/TRACK]
+    S1 -->|goals| OUT1[Goals to PID]
+  end
 
-      subgraph PID[Reason Layer: PID Controller]
-        OUT1 --> P1[PID(speed)]
-        OUT1 --> P2[PID(angle)]
-        P1 --> MUX[[Mixer]]
-        P2 --> MUX
-        MUX --> PWM[PWM Driver]
-      end
+  subgraph PID[Reason Layer: PID Controller]
+    OUT1 --> P1[PID(speed)]
+    P1 --> MUX[Mixer]
+    P2 --> MUX
+    MUX --> PWM[PWM Driver]
+  end
 
-      subgraph IO[Physical I/O]
-        PWM --> ACT[Actuator]
-        SEN[Sensor Suite] -->|measured speed/angle/dist| PID
-        SEN --> FSM
-      end
+  subgraph IO[Physical I/O]
+    PWM --> ACT[Actuator]
+    SEN[Sensor Suite] -->|measured speed/angle/dist| PID
+    SEN --> FSM
+  end
 
-      LOG[Logging/Telemetry] --- FSM
-      LOG --- PID
-      U <--> LOG
-    ```
+  LOG[Logging/Telemetry] --- FSM
+  LOG --- PID
+  U <--> LOG
+```
 
 ---
 

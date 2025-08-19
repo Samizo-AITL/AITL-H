@@ -1,37 +1,9 @@
-title: "AITL-H"
-description: "Hybrid Intelligent Control: FSM × PID × LLM"
-url: "https://samizo-aitl.github.io"
-baseurl: "/AITL-H"
-
-theme: null
-
+title: AITL-H
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
 markdown: kramdown
 kramdown:
   input: GFM
-  parse_block_html: true
-  hard_wrap: false
-
-plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap
-
-timezone: Asia/Tokyo
-permalink: pretty   # 既定は /path/ 形式
-
-defaults:
-  - scope:
-      path: ""
-    values:
-      layout: clean
-
-  # ✅ docs 直下だけ .html で固定。baseurl は書かない！
-  - scope:
-      path: "docs"
-    values:
-      permalink: "/docs/:basename.html"
-
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor

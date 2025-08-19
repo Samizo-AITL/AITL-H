@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: clean
 title: Auto Generator（AITL-H FSM・PID自動生成ツール）
 nav_order: 9
 description: AITL-Hアーキテクチャに基づくFSM・PIDをYAML→C→Verilogに変換する自動生成支援ツール群。

@@ -2,24 +2,8 @@
 layout: clean
 permalink: /docs/
 title: "AITL-H PoC Manual | Project Design Hub"
-show_title: false
-description: "AITL-H (All-in-Theory Logic - Hybrid) のPoC実装マニュアル。PID・FSM・LLM三層構造の制御設計とPoC仕様を解説。"
+description: "AITL-HのPoC実装マニュアル。PID・FSM・LLM三層構造の制御設計とPoC仕様を解説。"
 ---
-
-<!-- Structured Data (SEO) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "TechArticle",
-  "headline": "AITL-H PoC Manual",
-  "about": ["PID", "FSM", "LLM", "Control Architecture", "PoC"],
-  "author": {"@type": "Person","name": "Shinichi Samizo"},
-  "inLanguage": "ja",
-  "url": "https://samizo-aitl.github.io/AITL-H/docs/",
-  "license": "https://opensource.org/licenses/MIT",
-  "isPartOf": {"@type": "CreativeWorkSeries","name": "Project Design Hub"}
-}
-</script>
 
 ---
 

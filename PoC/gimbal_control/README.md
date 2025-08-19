@@ -1,5 +1,5 @@
 ---
-layout: clean
+layout: clean 
 title: ジンバル制御 PoC（FSM + MIMO PID + LLM / AITL-HX構成）
 nav_order: 9
 description: 3軸ジンバル安定化制御を対象に、FSM・MIMO PID制御・LLMを組み合わせたハイブリッド知能制御アーキテクチャ（AITL-HX）のPoC実装。

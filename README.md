@@ -62,7 +62,7 @@ AITL-Hは、単なる制御アーキテクチャではなく、
   - 故障対応時間の大幅短縮（PoC評価値：94%削減）  
   - 生産ライン再構成時間を8倍短縮  
   - 設計変更対応コストを40%削減  
-  *- **Industrial effects**  
+- **Industrial effects**  
   - Significantly reduced fault response time (PoC evaluation: 94% reduction)  
   - 8× faster reconfiguration of production lines  
   - 40% reduction in design change costs*  
@@ -70,7 +70,7 @@ AITL-Hは、単なる制御アーキテクチャではなく、
 - **国家的意義**  
   - 先端ノード半導体や産業用自律システムの競争力確保  
   - 国際標準化における主導権獲得  
-  *- **National significance**  
+- **National significance**  
   - Securing competitiveness in advanced-node semiconductors and industrial autonomous systems  
   - Gaining leadership in international standardization*  
 

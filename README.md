@@ -19,7 +19,7 @@ show_title: false   # ← これで上部の自動H1バーを非表示
 
 ---
 
-## 🔗 公式リンク | Official Links
+## 🔗 公式リンク / Official Links
 
 | 言語 / Language | GitHub Pages 🌐 | GitHub 💻 |
 |-----------------|----------------|-----------|
@@ -28,7 +28,7 @@ show_title: false   # ← これで上部の自動H1バーを非表示
 
 ---
 
-## 🧭 概要　|　Overview
+## 🧭 概要　/　Overview
 
 | 項目 | 内容 |
 |------|------|
@@ -38,7 +38,7 @@ show_title: false   # ← これで上部の自動H1バーを非表示
 
 ---
 
-## 🧘 三層アーキテクチャ構成　|　Three-Layer Architecture
+## 🧘 三層アーキテクチャ構成　/　Three-Layer Architecture
 
 | 層 | 機能 | 実装例 |
 |----|------|--------|
@@ -51,7 +51,7 @@ show_title: false   # ← これで上部の自動H1バーを非表示
 
 ---
 
-## 🌏 戦略的重要性 | Strategic Significance
+## 🌏 戦略的重要性　/  Strategic Significance
 
 AITL-Hは、単なる制御アーキテクチャではなく、  
 **状態フィードバック制御**と**状態遷移制御**を統合し、さらに**LLM（大規模言語モデル）**と**SystemDK**を組み合わせることで、  
@@ -80,7 +80,7 @@ AITL-Hは、単なる制御アーキテクチャではなく、
 
 ---
 
-## 🧪 PoC関連　| PoC Related
+## 🧪 PoC関連　/  PoC Related
 
 | タイトル | 概要 | パス |
 |----------|------|------|
@@ -136,8 +136,7 @@ flowchart TB
 
 ---
 
-## 🤖 ChatGPT支援ツール
-*🤖 ChatGPT-Assisted Toolset
+## 🤖 ChatGPT支援ツール　/  ChatGPT-Assisted Toolset
 
 `accelerated_design/` にて **ChatGPTを用いた設計支援ツール** を提供：  
 *The directory `accelerated_design/` provides **design support tools using ChatGPT***:
@@ -154,8 +153,7 @@ flowchart TB
 
 ---
 
-## 🎛️ EduControllerとの接続
-*🎛️ Connection with EduController*
+## 🎛️ EduControllerとの接続　　/  Connection with EduController
 
 **AITL-H** は、教育教材 **EduController** の第9章（FSM × PID × LLMハイブリッド制御）と**完全に統合**されています。  
 *AITL-H is **fully integrated** with Chapter 9 of the educational material **EduController** (FSM × PID × LLM hybrid control).*
@@ -191,8 +189,7 @@ SoC設計〜物理検証の流れを理解したら、**特別編 第2a章：Sys
 
 ---
 
-## 📚 関連プロジェクト一覧
-*📚 Related Project List*
+## 📚 関連プロジェクト一覧　　/  Related Project List
 
 | プロジェクト | 説明 | リンク |
 |--------------|------|--------|

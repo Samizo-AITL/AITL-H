@@ -133,62 +133,77 @@ flowchart TB
     ACT <--> SENSOR
     SENSOR --> LLM
 ```
----
-
-## 🤖 **ChatGPT支援ツール群**
-
-`accelerated_design/` にて **ChatGPTを用いた設計支援ツール** を提供：
-
-- 状態遷移設計支援（プロンプト → FSM YAML自動化）
-- テストシナリオ／ログ可視化
-- 設計ドキュメントの自動生成
-
-> 人とAIの **協調設計フレームワーク** を実現するツール群です。
 
 ---
 
-## 🎛️ **EduControllerとの接続**
+## 🤖 ChatGPT支援ツール
+*🤖 ChatGPT-Assisted Toolset
+
+`accelerated_design/` にて **ChatGPTを用いた設計支援ツール** を提供：  
+*The directory `accelerated_design/` provides **design support tools using ChatGPT***:
+
+- 状態遷移設計支援（プロンプト → FSM YAML自動化）  
+  *State transition design support (prompt → automatic FSM YAML generation)*  
+- テストシナリオ／ログ可視化  
+  *Test scenario and log visualization*  
+- 設計ドキュメントの自動生成  
+  *Automatic generation of design documents*  
+
+> 人とAIの **協調設計フレームワーク** を実現するツール群です。  
+> *A toolset to realize a **collaborative design framework between humans and AI**.*
+
+---
+
+## 🎛️ EduControllerとの接続
+*🎛️ Connection with EduController*
 
 **AITL-H** は、教育教材 **EduController** の第9章（FSM × PID × LLMハイブリッド制御）と**完全に統合**されています。  
+*AITL-H is **fully integrated** with Chapter 9 of the educational material **EduController** (FSM × PID × LLM hybrid control).*
 
 | 章 | 内容 | AITL-Hとの関係 |
 |----|------|----------------|
-| **Part 01〜05**<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/EduController#制御理論系) | 古典〜現代制御理論（PID、状態空間など） | **PID層の理論的基盤** |
-| **Part 06〜08**<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/EduController#ai制御系) | AI制御（NN制御、強化学習、データ駆動） | **AI応用設計の補完知識** |
-| **Part 09**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/EduController/part09_llm_hybrid/)&nbsp;[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/EduController/tree/main/part09_llm_hybrid) | FSM × PID × LLM 統合制御 | **AITL-Hのアーキテクチャを教材として実装** |
+| **Part 01〜05**<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/EduController#制御理論系) | 古典〜現代制御理論（PID、状態空間など）<br>*Classical to modern control theory (PID, state-space, etc.)* | **PID層の理論的基盤**<br>*Theoretical foundation of the PID layer* |
+| **Part 06〜08**<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/EduController#ai制御系) | AI制御（NN制御、強化学習、データ駆動）<br>*AI control (neural networks, reinforcement learning, data-driven)* | **AI応用設計の補完知識**<br>*Complementary knowledge for AI-based design* |
+| **Part 09**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/EduController/part09_llm_hybrid/)&nbsp;[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/EduController/tree/main/part09_llm_hybrid) | FSM × PID × LLM 統合制御<br>*Integrated control of FSM × PID × LLM* | **AITL-Hのアーキテクチャを教材として実装**<br>*Implements the AITL-H architecture as teaching material* |
 
 ---
 
-## 🎓 **Edusemi-v4xとの統合設計展開**
+## 🎓 Edusemi-v4xとの統合設計展開
+*🎓 Integrated Design Development with Edusemi-v4x*
 
-**SoC/RTL設計まで発展**させたい場合は、**[Edusemi-v4x](https://github.com/Samizo-AITL/Edusemi-v4x)** の「特別編」にて、以下の内容が提供されています：
+**SoC/RTL設計まで発展**させたい場合は、**[Edusemi-v4x](https://github.com/Samizo-AITL/Edusemi-v4x)** の「特別編」にて、以下の内容が提供されています：  
+*If you want to expand to **SoC/RTL design**, the “Special Editions” of **[Edusemi-v4x](https://github.com/Samizo-AITL/Edusemi-v4x)** provide the following:*
 
 | 章 | 内容 | リンク |
 |----|------|--------|
-| 第3章 | FSM × PID × LLM 統合制御による SoC設計 | [![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/f_chapter3_socsystem/) [![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter3_socsystem) |
-| 第4章 | OpenLaneによるRTL 〜 GDSII レイアウト自動化 | [![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/f_chapter4_openlane/) [![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter4_openlane) |
-| 第5章 | DRC / LVS / DFM による物理検証と整合性確認 | [![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/f_chapter5_dfm/) [![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter5_dfm) |
+| 第3章 | FSM × PID × LLM 統合制御による SoC設計<br>*SoC design with integrated FSM × PID × LLM control* | [![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/f_chapter3_socsystem/) [![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter3_socsystem) |
+| 第4章 | OpenLaneによるRTL 〜 GDSII レイアウト自動化<br>*RTL-to-GDSII layout automation using OpenLane* | [![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/f_chapter4_openlane/) [![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter4_openlane) |
+| 第5章 | DRC / LVS / DFM による物理検証と整合性確認<br>*Physical verification and consistency checks with DRC / LVS / DFM* | [![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/f_chapter5_dfm/) [![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter5_dfm) |
 
 ### 📌 さらに物理制約を深く学びたい場合
-SoC設計〜物理検証の流れを理解したら、**特別編 第2a章：SystemDKにおける熱・応力・ノイズ制約の設計対応**へ進んでください。
+*📌 For deeper study of physical constraints*
 
-[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/f_chapter2a_systemdk/) 
+SoC設計〜物理検証の流れを理解したら、**特別編 第2a章：SystemDKにおける熱・応力・ノイズ制約の設計対応**へ進んでください。  
+*After understanding the SoC design-to-physical verification flow, proceed to **Special Edition Chapter 2a: Design for thermal, stress, and noise constraints in SystemDK**.*
+
+[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/f_chapter2a_systemdk/)  
 [![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter2a_systemdk)
 
 ---
 
-## 📚 **関連プロジェクト一覧**
+## 📚 関連プロジェクト一覧
+*📚 Related Project List*
 
 | プロジェクト | 説明 | リンク |
 |--------------|------|--------|
-| **Edusemi-v4x** | 半導体／SoC設計教材 | [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x) |
-| **EduController** | 制御理論×AI制御教材 | [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/EduController/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/EduController) |
-| **SamizoGPT** | Project Design Hubガイド管理 | [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/SamizoGPT/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/SamizoGPT) |
-| **AITL-Strategy-Proposal** | AITL戦略提言・政策提案 | [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-Strategy-Proposal/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-Strategy-Proposal) |
+| **Edusemi-v4x** | 半導体／SoC設計教材<br>*Semiconductor / SoC design learning material* | [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x) |
+| **EduController** | 制御理論×AI制御教材<br>*Control theory × AI control learning material* | [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/EduController/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/EduController) |
+| **SamizoGPT** | Project Design Hubガイド管理<br>*Project Design Hub guide management* | [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/SamizoGPT/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/SamizoGPT) |
+| **AITL-Strategy-Proposal** | AITL戦略提言・政策提案<br>*AITL strategy proposals and policy recommendations* | [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-Strategy-Proposal/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-Strategy-Proposal) |
 
 ---
 
-## 👤 **執筆者情報 / Author**
+## 👤 執筆者情報 / Author
 
 | **📌 項目 / Item** | **内容 / Details** |
 |--------------------|--------------------|
@@ -200,27 +215,27 @@ SoC設計〜物理検証の流れを理解したら、**特別編 第2a章：Sys
 
 ---
 
-## 📄 **ライセンス / License**
+## 📄 ライセンス / License
 
 [![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](#-ライセンス--license)  
 
 > **本プロジェクトはハイブリッドライセンスを採用**  
-> 教材・コード・図表の性質に応じて以下のライセンスを適用します。
+> *This project adopts a Hybrid License*  
+> 教材・コード・図表の性質に応じて以下のライセンスを適用します。  
+> *Different licenses are applied depending on whether the content is code, text, or figures.*
 
 | **📌 項目 / Item** | **ライセンス / License** | **説明 / Description** |
 |--------------------|--------------------------|------------------------|
-| **コード（Code）** | **[MIT License](https://opensource.org/licenses/MIT)** | 自由に使用・改変・再配布可 |
-| **教材テキスト（Text materials）** | **[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)** | 著者表示必須 |
-| **図表・イラスト（Figures & diagrams）** | **[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)** | 非商用利用のみ可 |
-| **外部引用（External references）** | 元ライセンスに従う | 引用元を明記 |
+| **コード（Code）** | **[MIT License](https://opensource.org/licenses/MIT)** | 自由に使用・改変・再配布可<br>*Free to use, modify, and redistribute* |
+| **教材テキスト（Text materials）** | **[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)** | 著者表示必須<br>*Attribution required* |
+| **図表・イラスト（Figures & diagrams）** | **[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)** | 非商用利用のみ可<br>*Non-commercial use only* |
+| **外部引用（External references）** | 元ライセンスに従う<br>*Follow original license* | 引用元を明記<br>*Cite the original source* |
 
 ---
 
-## 💬 **フィードバック | Feedback**
+## 💬 フィードバック / Feedback
 
 > 改善提案や議論は **GitHub Discussions** からお願いします。  
-> *Propose improvements or start discussions via GitHub Discussions.*
+> *Propose improvements or start discussions via **GitHub Discussions**.*
 
 [![💬 GitHub Discussions](https://img.shields.io/badge/💬%20GitHub-Discussions-brightgreen?logo=github)](https://github.com/Samizo-AITL/AITL-H/discussions)
-
-

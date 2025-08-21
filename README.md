@@ -8,12 +8,14 @@ show_title: false   # ← これで上部の自動H1バーを非表示
 ---
 
 # 🤖 **AITL-H：Hybrid型構造制御フレームワーク**
+* 🤖 **AITL-H: Hybrid Structural Control Framework*
 
 [![Samizo-AITLポータルサイトに戻る](https://img.shields.io/badge/Samizo--AITL%20ポータルサイトに戻る-brightgreen)](https://samizo-aitl.github.io/) [![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](#-ライセンス--license)
 
 > ⚠️ **開発・検証中 / Under Development**  
 > 本プロジェクトは現在も **発展途上** にあり、構成・仕様・実装内容は今後変更される可能性があります。  
-> 利用・参照の際は、最新のリポジトリ内容をご確認ください。
+> 利用・参照の際は、最新のリポジトリ内容をご確認ください。  
+> *⚠️ **Under development/testing.** This project is still evolving, and its structure, specifications, and implementation may change. Please check the latest repository contents when using or referencing it.*
 
 ---
 
@@ -26,84 +28,55 @@ show_title: false   # ← これで上部の自動H1バーを非表示
 
 ---
 
-## 🧭 **概要**
+## 🧭 概要　|　Overview
 
 | 項目 | 内容 |
 |------|------|
-| **名称** | **AITL-H（Hybrid）** |
-| **目的** | **構造的AI制御による人型ロボット制御手法の確立** |
-| **中核原理** | - **FSM**：状態遷移による本能的行動制御<br>- **PID**：物理量（角度・速度）の連続制御<br>- **LLM**：高度な判断・対話・学習による知能化 |
+| **名称** | **AITL-H（Hybrid）**<br>*AITL-H (Hybrid)* |
+| **目的** | **構造的AI制御による人型ロボット制御手法の確立**<br>*Establishing humanoid robot control methods using structural AI control* |
+| **中核原理** | - **FSM**：状態遷移による本能的行動制御<br>- **PID**：物理量（角度・速度）の連続制御<br>- **LLM**：高度な判断・対話・学習による知能化<br>*- **FSM**: instinctive behavior control through state transitions<br>- **PID**: continuous control of physical quantities (angle, velocity)<br>- **LLM**: intelligence through advanced decision-making, dialogue, and learning* |
 
 ---
 
-## 🧘 **三層アーキテクチャ構成**
+## 🧘 三層アーキテクチャ構成　|　Three-Layer Architecture
 
 | 層 | 機能 | 実装例 |
 |----|------|--------|
-| **FSM層** | 状態遷移に基づくロジック制御 | `fsm_engine.py`, `fsm_state_def.yaml` |
-| **PID層** | 各関節・移動量の物理制御 | `pid_controller.py`, `pid_module.py` |
-| **LLM層** | 状況判断、異常検出、言語応答 | `llm_interface.py`, `llm_logger.py` |
+| **FSM層** | 状態遷移に基づくロジック制御<br>*Logic control based on state transitions* | `fsm_engine.py`, `fsm_state_def.yaml` |
+| **PID層** | 各関節・移動量の物理制御<br>*Physical control of joints and motion quantities* | `pid_controller.py`, `pid_module.py` |
+| **LLM層** | 状況判断、異常検出、言語応答<br>*Situation assessment, anomaly detection, and language response* | `llm_interface.py`, `llm_logger.py` |
 
-> 各層は **疎結合・協調的** に設計されており、**独立した開発・段階的統合が可能** です。
-
-### AITL-H: Hybrid Architecture
-
-> 📌 この図は **GitHub では表示**されます。サイトでは下のボタンから GitHub 版をご覧ください。  
-> [![View on GitHub](https://img.shields.io/badge/View_on-GitHub-black?logo=github)](https://github.com/Samizo-AITL/AITL-H/blob/main/README.md#aitl-h-hybrid-architecture)
-
-```mermaid
-flowchart TB
-  %% ===== Layers =====
-  subgraph LLM["LLM Layer"]
-    L1[Decision-Making]
-    L2[Anomaly Detection]
-    L3[Language Response]
-  end
-  subgraph PID["PID Layer"]
-    P1[Continuous Control]
-    P2[Joint Angles / MIMO]
-  end
-  subgraph FSM["FSM Layer"]
-    F1[Logic Control]
-    F2[State Transitions]
-  end
-
-  %% ===== Flows =====
-  LLM -->|Scenario / Commands| FSM
-  FSM -->|Mode Control / Gain Select| PID
-  PID -->|PWM / Control Signals| ACT["Actuators"]
-  ACT -->|Motion Response| SEN["Sensors (IMU\, etc\.)"]
-  SEN -->|Perception Feedback| LLM
-
-  %% ===== Styles =====
-  classDef box fill:#eaf5ff,stroke:#6ca7ff,stroke-width:1px,rx:6,ry:6;
-  class LLM,PID,FSM,ACT,SEN box
-
-  %% ===== Clickable (GitHub 上では有効 / PNG では無効) =====
-  click F1 "https://github.com/Samizo-AITL/AITL-H/search?q=fsm_engine.py" "FSM 実装へ"
-  click P1 "https://github.com/Samizo-AITL/AITL-H/search?q=pid_controller.py" "PID 実装へ"
-  click L1 "https://github.com/Samizo-AITL/AITL-H/search?q=llm_interface.py" "LLM IF へ"
-```
+> 各層は **疎結合・協調的** に設計されており、**独立した開発・段階的統合が可能** です。  
+> *Each layer is designed to be **loosely coupled yet cooperative**, allowing **independent development and step-by-step integration**.*
 
 ---
 
-## 🌏 **戦略的重要性 / Strategic Significance**
+## 🌏 戦略的重要性 | Strategic Significance
 
 AITL-Hは、単なる制御アーキテクチャではなく、  
 **状態フィードバック制御**と**状態遷移制御**を統合し、さらに**LLM（大規模言語モデル）**と**SystemDK**を組み合わせることで、  
-**リアルタイムかつ物理制約を考慮した最適設計**を実現します。
+**リアルタイムかつ物理制約を考慮した最適設計**を実現します。  
+*AITL-H is not just a control architecture. By integrating **state feedback control** and **state transition control**, and further combining **LLMs** with **SystemDK**, it achieves **real-time optimal design under physical constraints**.*
 
 - **産業的効果**  
   - 故障対応時間の大幅短縮（PoC評価値：94%削減）  
   - 生産ライン再構成時間を8倍短縮  
   - 設計変更対応コストを40%削減  
+  *- **Industrial effects**  
+  - Significantly reduced fault response time (PoC evaluation: 94% reduction)  
+  - 8× faster reconfiguration of production lines  
+  - 40% reduction in design change costs*  
+
 - **国家的意義**  
   - 先端ノード半導体や産業用自律システムの競争力確保  
   - 国際標準化における主導権獲得  
+  *- **National significance**  
+  - Securing competitiveness in advanced-node semiconductors and industrial autonomous systems  
+  - Gaining leadership in international standardization*  
 
 > **この技術は「今」統合しなければならない。**  
-> 特にSystemDKはAITL-H固有ではなく、**全ての先端ノード半導体設計に必須の基盤技術**です。
-
+> 特にSystemDKはAITL-H固有ではなく、**全ての先端ノード半導体設計に必須の基盤技術**です。  
+> *This technology must be integrated **now**. In particular, SystemDK is not unique to AITL-H but is an **essential foundational technology for all advanced-node semiconductor designs**.*
 ---
 
 ## 🧪 **PoC関連**

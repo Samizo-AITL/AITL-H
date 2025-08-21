@@ -8,7 +8,7 @@ show_title: false   # ← これで上部の自動H1バーを非表示
 ---
 
 # 🤖 **AITL-H：Hybrid型構造制御フレームワーク**
-* 🤖 **AITL-H: Hybrid Structural Control Framework*
+*🤖 AITL-H: Hybrid Structural Control Framework*
 
 [![Samizo-AITLポータルサイトに戻る](https://img.shields.io/badge/Samizo--AITL%20ポータルサイトに戻る-brightgreen)](https://samizo-aitl.github.io/) [![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](#-ライセンス--license)
 
@@ -77,17 +77,18 @@ AITL-Hは、単なる制御アーキテクチャではなく、
 > **この技術は「今」統合しなければならない。**  
 > 特にSystemDKはAITL-H固有ではなく、**全ての先端ノード半導体設計に必須の基盤技術**です。  
 > *This technology must be integrated **now**. In particular, SystemDK is not unique to AITL-H but is an **essential foundational technology for all advanced-node semiconductor designs**.*
+
 ---
 
-## 🧪 **PoC関連**
+## 🧪 PoC関連　| PoC Related
 
 | タイトル | 概要 | パス |
 |----------|------|------|
-| 📘 **PoC設計マニュアル** | FSM×PID×LLM統合に基づいた人型ロボットPoC設計マニュアル（全16章） | [![View Manual](https://img.shields.io/badge/View-Manual-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/docs/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/docs) |
-| 🤖 **PoC統合実行環境** | FSM＋PID＋LLMの三層アーキテクチャを用いたAITL-H PoC（人型ロボット制御）の実験構成・実行環境 | [![View Manual](https://img.shields.io/badge/View-Manual-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/PoC/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/PoC) |
-| 🧭 **ジンバル制御（FSM + PID + LLM）** | ハイブリッド閉ループ制御 | [![View Manual](https://img.shields.io/badge/View-Manual-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/PoC/gimbal_control/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/PoC/gimbal_control) |
-| ⚙️ **Verilog自動生成（FSM + PID）** | YAML → C → Verilog生成＋検証 | [![View Manual](https://img.shields.io/badge/View-Manual-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/PoC/verilog_demo/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/PoC/verilog_demo) |
-| 🛠 **Auto Generator（FSM・PID自動生成ツール）** | AITL-Hアーキテクチャに基づくFSM・PID構成をYAML→C→Verilog変換する自動生成支援ツール群 | [![View Manual](https://img.shields.io/badge/View-Manual-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/PoC/auto_generator/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/PoC/auto_generator) |
+| 📘 **PoC設計マニュアル** | FSM×PID×LLM統合に基づいた人型ロボットPoC設計マニュアル（全16章）<br>*Humanoid robot PoC design manual (16 chapters) based on FSM × PID × LLM integration.* | [![View Manual](https://img.shields.io/badge/View-Manual-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/docs/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/docs) |
+| 🤖 **PoC統合実行環境** | FSM＋PID＋LLMの三層アーキテクチャを用いたAITL-H PoC（人型ロボット制御）の実験構成・実行環境<br>*Experimental setup and execution environment for AITL-H PoC (humanoid robot control) using the three-layer architecture of FSM + PID + LLM.* | [![View Manual](https://img.shields.io/badge/View-Manual-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/PoC/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/PoC) |
+| 🧭 **ジンバル制御（FSM + PID + LLM）** | ハイブリッド閉ループ制御<br>*Hybrid closed-loop control.* | [![View Manual](https://img.shields.io/badge/View-Manual-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/PoC/gimbal_control/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/PoC/gimbal_control) |
+| ⚙️ **Verilog自動生成（FSM + PID）** | YAML → C → Verilog生成＋検証<br>*Automatic conversion from YAML → C → Verilog with verification.* | [![View Manual](https://img.shields.io/badge/View-Manual-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/PoC/verilog_demo/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/PoC/verilog_demo) |
+| 🛠 **Auto Generator（FSM・PID自動生成ツール）** | AITL-Hアーキテクチャに基づくFSM・PID構成をYAML→C→Verilog変換する自動生成支援ツール群<br>*Auto-generation support toolset for converting FSM/PID configurations based on the AITL-H architecture from YAML → C → Verilog.* | [![View Manual](https://img.shields.io/badge/View-Manual-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/PoC/auto_generator/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/PoC/auto_generator) |
 
 ---
 

@@ -49,6 +49,41 @@ show_title: false   # ← これで上部の自動H1バーを非表示
 > 各層は **疎結合・協調的** に設計されており、**独立した開発・段階的統合が可能** です。  
 > *Each layer is designed to be **loosely coupled yet cooperative**, allowing **independent development and step-by-step integration**.*
 
+### AITL-H: Hybrid Architecture
+
+> 📌 This diagram is **displayed on GitHub**. On the site, use the button below to view the GitHub version.  
+> [![View on GitHub](https://img.shields.io/badge/View_on-GitHub-black?logo=github)](https://github.com/Samizo-AITL/AITL-H/blob/main/README.md#aitl-h-hybrid-architecture)
+
+```mermaid
+flowchart TB
+  subgraph LLM["LLM Layer"]
+    L1[Decision-Making]
+    L2[Anomaly Detection]
+    L3[Language Response]
+  end
+  subgraph PID["PID Layer"]
+    P1[Continuous Control]
+    P2[Joint Angles / MIMO]
+  end
+  subgraph FSM["FSM Layer"]
+    F1[Logic Control]
+    F2[State Transitions]
+  end
+
+  LLM -->|Scenario / Commands| FSM
+  FSM -->|Mode Control / Gain Select| PID
+  PID -->|PWM / Control Signals| ACT["Actuators"]
+  ACT -->|Motion Response| SEN["Sensors (IMU, etc.)"]
+  SEN -->|Perception Feedback| LLM
+
+  classDef box fill:#eaf5ff,stroke:#6ca7ff,stroke-width:1px,rx:6,ry:6;
+  class LLM,PID,FSM,ACT,SEN box
+
+  click F1 "https://github.com/Samizo-AITL/AITL-H/search?q=fsm_engine.py" "FSM Implementation"
+  click P1 "https://github.com/Samizo-AITL/AITL-H/search?q=pid_controller.py" "PID Implementation"
+  click L1 "https://github.com/Samizo-AITL/AITL-H/search?q=llm_interface.py" "LLM Interface"
+```
+
 ---
 
 ## 🌏 戦略的重要性　/  Strategic Significance

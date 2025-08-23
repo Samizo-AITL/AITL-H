@@ -2,12 +2,19 @@
 <html lang="ja">
   <head>
     {%- include head.html -%}
-    <!-- ✅ 共通スタイル（キャッシュバスター付きで常に最新を読み込み） -->
+
+    <!-- 可能なら canonical（head.html に無ければ有効） -->
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+    <!-- ✅ 共通スタイル：常に最新を読む（キャッシュバスター） -->
     <link rel="stylesheet"
-          href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.time | date: '%s' }}" />
-    <meta name="color-scheme" content="light"><!-- ダーク強制回避 -->
+          href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+
+    <!-- ダーク自動切替を抑止（Mermaid/画像の黒潰れ防止） -->
+    <meta name="color-scheme" content="light">
   </head>
 
+  <!-- ★ ポータル統一トーン（セピア固定） -->
   <body class="theme-sepia">
     <main class="page-content" aria-label="Content">
       <div class="wrapper" style="max-width:980px;margin:0;padding:1.5rem 1rem;">
@@ -16,7 +23,7 @@
     </main>
     {%- include footer.html -%}
 
-    <!-- ✅ Mermaid -->
+    <!-- ✅ Mermaid（```mermaid → <div class="mermaid"> 変換 + ライト固定） -->
     <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
@@ -33,14 +40,11 @@
       });
     </script>
 
-    <!-- ✅ MathJax -->
+    <!-- ✅ MathJax（head.html に無ければ読み込み） -->
     <script>
       window.MathJax = {
-        tex: {
-          inlineMath: [["$", "$"], ["\\(", "\\)"]],
-          displayMath: [["$$", "$$"], ["\\[", "\\]"]]
-        },
-        options: { skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"] }
+        tex: { inlineMath: [["$", "$"], ["\$begin:math:text$", "\\$end:math:text$"]], displayMath: [["$$", "$$"], ["\$begin:math:display$", "\\$end:math:display$"]] },
+        options: { skipHtmlTags: ["script","noscript","style","textarea","pre","code"] }
       };
     </script>
     <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>

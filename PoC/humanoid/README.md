@@ -82,6 +82,15 @@ humanoid/
 
 ---
 
+## 📚 関連プロジェクト一覧　　/  Related Project List
+
+| プロジェクト | 説明 | リンク |
+|--------------|------|--------|
+| **Edusemi-v4x** | 半導体／SoC設計教材<br>*Semiconductor / SoC design learning material* | [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x) |
+| **EduController** | 制御理論×AI制御教材<br>*Control theory × AI control learning material* | [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/EduController/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/EduController) |
+| **SamizoGPT** | Project Design Hubガイド管理<br>*Project Design Hub guide management* | [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/SamizoGPT/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/SamizoGPT) |
+| **AITL-Strategy-Proposal** | AITL戦略提言・政策提案<br>*AITL strategy proposals and policy recommendations* | [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-Strategy-Proposal/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-Strategy-Proposal) |
+
 ## 🔗 関連リンク
 - [EduController Part09](https://samizo-aitl.github.io/EduController/part09_llm_hybrid/)  
 - [Edusemi-v4x 特別編](https://samizo-aitl.github.io/Edusemi-v4x/f_chapter3_socsystem/)  

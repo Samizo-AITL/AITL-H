@@ -7,6 +7,8 @@ permalink: /PoC/humanoid/
 last_updated: 2025-08-25
 ---
 
+---
+
 # 🚩 フラグシップPoC：人型ロボット（Samizo-AITL集大成）
 *🚩 Flagship PoC: Humanoid Robot (Culmination of Samizo-AITL)*
 
@@ -45,7 +47,7 @@ last_updated: 2025-08-25
 
 ## 🧭 SystemDK統合設計フロー
 ```mermaid
-flowchart LR
+flowchart TB
   Spec[Use-Case Spec] --> Model[SystemDK Multi-physics Model]
   Model --> Ctrl[PID + State-Space Design]
   Ctrl --> RTL[22nm SoC]

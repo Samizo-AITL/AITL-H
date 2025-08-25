@@ -1,0 +1,20 @@
+meta:
+  node: 0.18um_AMS
+  desc: Sensor AFE/ADC simplified noise & PSRR model
+
+adc:
+  type: sigma_delta
+  fs_khz: 96
+  osr: 64
+  enob_bits_nominal: 15.2
+  psrr_dB_at:
+    1kHz: 60
+    20kHz: 40
+
+afe:
+  input_range_v: 2.0
+  noise_uv_rms: 18
+  cmrr_dB: 70
+
+supply_sensitivity:
+  ripple_to_enob_loss_bits_per_mVrms: 0.03

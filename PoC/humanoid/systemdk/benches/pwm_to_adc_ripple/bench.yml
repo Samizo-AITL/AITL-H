@@ -1,0 +1,21 @@
+supply:
+  model: ldm_035_drive_thermal
+  pwm:
+    freq_khz: [20, 40, 80]
+    duty: [0.2, 0.5, 0.8]
+    edge_ns: 30
+
+pdn:
+  cin_uF: 47
+  l_trace_nH: 6
+  r_trace_mOhm: 12
+
+afe_adc:
+  model: ams_018_afe_noise
+  fs_khz: 96
+  osr: 64
+
+metrics:
+  - supply_ripple_mVrms
+  - enob_drop_bits
+  - crosstalk_dBc

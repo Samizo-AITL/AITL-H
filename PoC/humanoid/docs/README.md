@@ -1,9 +1,9 @@
 ---
-title: Humanoid PoC Reports
-description: 人型ロボットPoCにおける解析レポート集
-nav_order: 0
+title: Humanoid PoC Docs README
+description: 人型ロボットPoC docsディレクトリのREADME
+nav_order: 99
 layout: clean
-permalink: /AITL-H/PoC/humanoid/docs/
+permalink: /PoC/humanoid/docs/readme/
 ---
 
 ---

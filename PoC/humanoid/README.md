@@ -7,14 +7,12 @@ permalink: /PoC/humanoid/
 last_updated: 2025-08-25
 ---
 
----
-
 # 🚩 フラグシップPoC：人型ロボット（Samizo-AITL集大成）
 *🚩 Flagship PoC: Humanoid Robot (Culmination of Samizo-AITL)*
 
 > **本PoCは Samizo-AITL プロジェクトの「集大成」**。  
 > AITL-Hの三層アーキテクチャ（FSM × PID × LLM）を基盤に、  
-> **頭脳（22 nm SoC）／感覚（0.18 µm AMS）／筋肉（0.35 µm LDMOS）**を跨いだクロスノード設計を、SystemDKで統合検証します。  
+> **頭脳（22 nm SoC）／感覚（0.18 µm AMS）／筋肉（0.35 µm LDMOS）／自己発電ブロック**を跨いだクロスノード設計を、SystemDKで統合検証します。  
 
 ---
 
@@ -24,6 +22,7 @@ last_updated: 2025-08-25
 | **Brain SoC** | **22 nm** | LLM推論・FSM管理・状態空間制御（LQR/LQG IP）<br>**UART / SPI / I²C / MIPI-CSI2** |
 | **Sensor Hub** | **0.18 µm AMS** | CMOSカメラ, IMU, エンコーダ, 力覚/圧力, MEMSマイク<br>**I²C / SPI / DVP / CSI2** |
 | **Power Drive** | **0.35 µm LDMOS** | サーボ・BLDC駆動, PWM/Hブリッジ, ゲートドライバ, 温度/電流モニタ |
+| **Energy Harvest** | **圧電MEMS / 薄膜PV / 回生ブレーキ** | DC-DC変換を介して蓄電池／SoCへ給電 |
 
 ---
 
@@ -31,9 +30,10 @@ last_updated: 2025-08-25
 | 層 | 実装 | 役割 |
 |----|------|------|
 | **LLM層** | SoC上アプリ/RTOS | 目標生成・異常解釈・学習 |
-| **FSM層** | `fsm_engine.py` / YAML→C→Verilog | 行動モード切替（立位／歩行／旋回／転倒回避） |
+| **FSM層** | `fsm_engine.py` / YAML→C→Verilog | 行動モード切替（立位／歩行／旋回／転倒回避／省エネ） |
 | **物理制御層** | PID＋状態空間（LQR/LQG） | 関節のSISO安定化＋全身のMIMO協調制御 |
 | **駆動層** | LDMOS PWM/Hブリッジ | トルク出力・安全監視 |
+| **エネルギー層** | 圧電／PV／回生制御 | 発電・蓄電・電力マネジメント |
 
 ---
 
@@ -43,6 +43,8 @@ last_updated: 2025-08-25
 - **力覚／圧力センサ**（グリップ・足裏）  
 - **MEMSマイク**（音声入力）  
 - **温度センサ**（駆動系／SoCサーマル管理）  
+- **圧電素子アレイ**（歩行衝撃からのエネルギー回収）  
+- **薄膜PVセル**（外装からの光発電）  
 
 ---
 
@@ -54,10 +56,14 @@ flowchart TB
   Ctrl --> RTL[22nm SoC]
   Model --> AMS[0.18µm AMS AFE/ADC]
   Model --> PWR[0.35µm LDMOS Drive]
+  Model --> Harvest[Energy Harvest: Regen / Piezo / PV]
   RTL -->|UART/SPI/I2C/CSI2| AMS
   RTL -->|PWM/Telemetry| PWR
+  Harvest --> PWR
+  Harvest --> RTL
   PWR -.Heat/Noise/Stress.-> Model
   AMS -.Noise/Coupling.-> Model
+  Harvest -.Heat/Stress/Noise.-> Model
 ```
 
 ---
@@ -65,8 +71,9 @@ flowchart TB
 ## 🎯 成功指標（KPI）
 - **姿勢回復時間** ≤ 200 ms  
 - **歩容安定度**（CoM偏差RMS）30%改善（PID単独比）  
-- **エネルギー効率** 15%改善（協調制御導入）  
+- **エネルギー効率** 15%改善（協調制御導入＋ハーベスト連携）  
 - **異常検知誤差率**（LLM+FSM） < 2%  
+- **自己発電寄与率**：消費電力量の最大 **20%補填**  
 
 ---
 
@@ -77,6 +84,7 @@ humanoid/
  ├─ hw/            # SoC, AMS, LDMOS 設計
  ├─ control/       # FSM, PID, 状態空間, LLM
  ├─ systemdk/      # モデル & シミュレーション
+ ├─ energy/        # 自己発電・電力回生モデル
  ├─ docs/          # マニュアル・テスト仕様
  └─ logs/          # 実験ログ
 ```

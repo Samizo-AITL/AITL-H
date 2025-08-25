@@ -112,7 +112,7 @@ last_updated: 2025-08-25
 | **エネルギー自立 / Energy Autonomy** | バッテリ依存<br/>*Battery only* | バッテリ依存<br/>*Battery only* | **圧電＋PV＋回生で持続行動**<br/>*Piezo + PV + regen for sustained operation* |
 | **公開性 / Openness** | 非公開（デモ動画のみ）<br/>*Closed, demo videos only* | 限定公開（動画・一部発表）<br/>*Partially open, demos* | **GitHub Pagesで日英公開**<br/>*Published bilingual on GitHub Pages* |
 
----
+![Comparison of Humanoid Robots](./images/humanoid_comparison_chart.png){: style="width:80%;" }
 
 📌 **総評**  
 - **Atlas** → 「運動性能」で突出（跳躍・宙返りなどアクロバット重視）。  

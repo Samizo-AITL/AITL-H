@@ -1,0 +1,25 @@
+meta:
+  node: 22nm_SOI
+  desc: Brain SoC power/thermal/DVFS model (RBB/FBB capable)
+
+power_blocks:
+  cpu_cluster:
+    p_idle_mw: 35
+    p_active_mw_per_ghz: 220
+    freq_ghz: [0.3, 1.2]
+    body_bias: {rbb_v: -1.2, fbb_v: 0.8}
+  dsp_npu:
+    p_idle_mw: 15
+    p_active_mw_per_tops: 350
+    tops_range: [0.1, 2.0]
+  peripherals_misc_mw: 40
+
+thermal:
+  rtheta_ja_c_per_w: 25
+  c_th_j_j_per_c: 12
+
+io:
+  mipi_csi2_lanes: 2
+  uart: true
+  spi: true
+  i2c: true

@@ -1,6 +1,6 @@
 ---
 title: Humanoid PoC Reports
-description: 人型ロボットPoCにおける解析レポート集 
+description: 人型ロボットPoCにおける解析レポート集  
 nav_order: 0
 ---
 

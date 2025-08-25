@@ -1,145 +1,240 @@
 ---
 layout: clean
-title: AITL-H / PoC - 人型ロボット制御（集大成）
-nav_order: 2
-description: FSM + PID + 状態空間制御 + LLM による三層アーキテクチャを用いた人型ロボット制御の概念実証
-permalink: /PoC/humanoid/
-last_updated: 2025-08-25
+permalink: /
+show_title: false
 ---
 
----
+------------------------------------------------------------------------
 
-# 🚩 フラグシップPoC：人型ロボット（Samizo-AITL集大成）
-*🚩 Flagship PoC: Humanoid Robot (Culmination of Samizo-AITL)*
+# 🤖 **AITL-H：Hybrid型構造制御フレームワーク**
 
-[![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](#-ライセンス--license)  
+*🤖 AITL-H: Hybrid Structural Control Framework*
 
-> **本PoCは Samizo-AITL プロジェクトの「集大成」**  
-> *This PoC is positioned as the culmination of the Samizo-AITL project.*  
-> AITL-H三層アーキテクチャ（FSM × PID × LLM）を基盤に、  
-> **頭脳（22 nm SoC）／感覚（0.18 µm AMS）／筋肉（0.35 µm LDMOS）／自己発電ブロック**を跨いだクロスノード設計を、SystemDKで統合検証します。  
-> *Cross-node design spanning Brain (22nm SoC), Sensing (0.18µm AMS), Muscles (0.35µm LDMOS), and Energy Harvesting integrated with SystemDK.*  
+[![Samizo-AITLポータルサイトに戻る](https://img.shields.io/badge/Samizo--AITL%20ポータルサイトに戻る-brightgreen)](https://samizo-aitl.github.io/)
+[![Hybrid
+License](https://img.shields.io/badge/license-Hybrid-blueviolet)](#-ライセンス--license)
 
----
+> ⚠️ **開発・検証中 / Under Development**\
+> 本プロジェクトは現在も **発展途上**
+> にあり、構成・仕様・実装内容は今後変更される可能性があります。\
+> 利用・参照の際は、最新のリポジトリ内容をご確認ください。\
+> *⚠️ **Under development/testing.** This project is still evolving, and
+> its structure, specifications, and implementation may change. Please
+> check the latest repository contents when using or referencing it.*
 
-## 📌 戦略的意義 / Strategic Significance
-- **教育 × PoC × 政策提言**を一体化した「勝てるテーマ」  
-- **クロスノード統合** (22nm SoC / 0.18µm AMS / 0.35µm LDMOS / Energy Harvest) を SystemDKで一貫設計  
-- **FSM × PID × 状態空間 × LLM** の三層ハイブリッド制御  
-- **自己発電統合**で持続可能なロボット設計  
+------------------------------------------------------------------------
 
-> **結論：教育・産業・政策の三領域で優位性を発揮できるテーマ**  
-> *Conclusion: A winning theme across education, industry, and policy*  
+## 🆕 最新情報 / Update Log
 
----
+  ------------------------------------------------------------------------------------------------------------
+  日付                    更新内容 / Update             参照
+  ----------------------- ----------------------------- ------------------------------------------------------
+  2025-08-25              🚩 Humanoid Robot             [PoCページ](./PoC/humanoid/)
+                          PoC（集大成）をトップに追加   
 
-## 🧩 クロスノード・チップセット / Cross-Node Chipset
-| ブロック | ノード | 役割 / Interface |
-|----------|--------|------------------|
-| **Brain SoC** | **22 nm** | FSM+PID+LLM制御、LQR/LQG制御IP<br>*Control + AI inference*<br>**UART / SPI / I²C / MIPI-CSI2** |
-| **Sensor Hub** | **0.18 µm AMS** | CMOSカメラ / IMU / 力覚センサ / MEMSマイク<br>*Imaging, motion, force, audio*<br>**I²C / SPI / DVP / CSI2** |
-| **Power Drive** | **0.35 µm LDMOS** | PWM/Hブリッジ、サーボ・BLDC駆動<br>*Motor drive & torque control* |
-| **Energy Harvest** | **Piezo / PV / Regen** | 発電・蓄電・電力供給<br>*Energy harvesting & DC-DC power* |
+  2025-08-25              📑 PoCレポート3本（PWM Ripple [Docs Index](./PoC/humanoid/docs/)
+                          / Thermal / Mission           
+                          Energy）公開                  
 
----
+  2025-08-25              🎤 発表用スライド雛形を追加   [Slides](./PoC/humanoid/docs/flagship_poc_slides.md)
+  ------------------------------------------------------------------------------------------------------------
 
-## ⚙️ 制御アーキテクチャ / Control Architecture
-| 層 | 実装 | 役割 |
-|----|------|------|
-| **LLM層** | SoCアプリ/RTOS | 目標生成・異常解釈・学習<br>*Goal generation, anomaly handling, learning* |
-| **FSM層** | `fsm_engine.py` / YAML→C→Verilog | 行動モード切替（歩行・旋回・転倒回避・省エネ）<br>*Behavior switching* |
-| **物理制御層** | PID + 状態空間 (LQR/LQG) | 関節SISO安定化 + 全身MIMO協調<br>*Joint + whole-body control* |
-| **駆動層** | LDMOS PWM/Hブリッジ | トルク出力・安全監視<br>*Torque & safety* |
-| **エネルギー層** | 圧電 / PV / 回生制御 | 発電・蓄電・管理<br>*Harvesting & power mgmt* |
+------------------------------------------------------------------------
 
----
+## 🔗 公式リンク / Official Links
 
-## 📷 センサ構成 / Sensors
-- CMOSイメージセンサ（MIPI-CSI2 / DVP）  
-- IMU（6/9軸）＋エンコーダ  
-- 力覚／圧力センサ（グリップ・足裏）  
-- MEMSマイク  
-- 温度センサ（駆動・SoCサーマル）  
-- 圧電素子アレイ（歩行衝撃回収）  
-- 薄膜PVセル（外装発電）  
+  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  言語 / Language         GitHub Pages 🌐                                                                                                               GitHub 💻
+  ----------------------- ----------------------------------------------------------------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------------------
+  🇯🇵 Japanese             [![GitHub Pages                                                                                                               [![GitHub Repo
+                          JP](https://img.shields.io/badge/GitHub%20Pages-日本語版-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/)     JP](https://img.shields.io/badge/GitHub-日本語版-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H)
 
----
+  🇺🇸 English              [![GitHub Pages                                                                                                               [![GitHub Repo
+                          EN](https://img.shields.io/badge/GitHub%20Pages-English-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/en/)   EN](https://img.shields.io/badge/GitHub-English-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/en)
+  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## 🧭 SystemDK統合設計フロー / SystemDK Flow
-```mermaid
+------------------------------------------------------------------------
+
+## 🧭 概要 / Overview
+
+  ----------------------------------------------------------------------------------------------------------------
+  項目                                内容
+  ----------------------------------- ----------------------------------------------------------------------------
+  **名称**                            **AITL-H（Hybrid）**`<br>`{=html}*AITL-H (Hybrid)*
+
+  **目的**                            **構造的AI制御による人型ロボット制御手法の確立**`<br>`{=html}*Establishing
+                                      humanoid robot control methods using structural AI control*
+
+  **中核原理**                        \- **FSM**：状態遷移による本能的行動制御`<br>`{=html}-
+                                      **PID**：物理量（角度・速度）の連続制御`<br>`{=html}-
+                                      **LLM**：高度な判断・対話・学習による知能化`<br>`{=html}*- **FSM**:
+                                      instinctive behavior control through state transitions`<br>`{=html}-
+                                      **PID**: continuous control of physical quantities (angle,
+                                      velocity)`<br>`{=html}- **LLM**: intelligence through advanced
+                                      decision-making, dialogue, and learning*
+  ----------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+## 🧘 三層アーキテクチャ構成 / Three-Layer Architecture
+
+  -----------------------------------------------------------------------------------------------------
+  層                      機能                                                  実装例
+  ----------------------- ----------------------------------------------------- -----------------------
+  **FSM層**               状態遷移に基づくロジック制御`<br>`{=html}*Logic       `fsm_engine.py`,
+                          control based on state transitions*                   `fsm_state_def.yaml`
+
+  **PID層**               各関節・移動量の物理制御`<br>`{=html}*Physical        `pid_controller.py`,
+                          control of joints and motion quantities*              `pid_module.py`
+
+  **LLM層**               状況判断、異常検出、言語応答`<br>`{=html}*Situation   `llm_interface.py`,
+                          assessment, anomaly detection, and language response* `llm_logger.py`
+  -----------------------------------------------------------------------------------------------------
+
+> 各層は **疎結合・協調的**
+> に設計されており、**独立した開発・段階的統合が可能** です。\
+> *Each layer is designed to be **loosely coupled yet cooperative**,
+> allowing **independent development and step-by-step integration**.*
+
+------------------------------------------------------------------------
+
+## 🌏 戦略的重要性 / Strategic Significance
+
+AITL-Hは、単なる制御アーキテクチャではなく、\
+**状態フィードバック制御**と**状態遷移制御**を統合し、さらに**LLM（大規模言語モデル）**と**SystemDK**を組み合わせることで、\
+**リアルタイムかつ物理制約を考慮した最適設計**を実現します。\
+*AITL-H is not just a control architecture. By integrating **state
+feedback control** and **state transition control**, and further
+combining **LLMs** with **SystemDK**, it achieves **real-time optimal
+design under physical constraints**.*
+
+-   **産業的効果**
+    -   故障対応時間の大幅短縮（PoC評価値：94%削減）\
+    -   生産ライン再構成時間を8倍短縮\
+    -   設計変更対応コストを40%削減
+-   **Industrial effects**
+    -   Significantly reduced fault response time (PoC evaluation: 94%
+        reduction)\
+    -   8× faster reconfiguration of production lines\
+    -   40% reduction in design change costs
+-   **国家的意義**
+    -   先端ノード半導体や産業用自律システムの競争力確保\
+    -   国際標準化における主導権獲得
+-   **National significance**
+    -   Securing competitiveness in advanced-node semiconductors and
+        industrial autonomous systems\
+    -   Gaining leadership in international standardization
+
+> **この技術は「今」統合しなければならない。**\
+> *This technology must be integrated **now**.*\
+> 特にSystemDKはAITL-H固有ではなく、**全ての先端ノード半導体設計に必須の基盤技術**です。\
+> *In particular, SystemDK is not unique to AITL-H but is an **essential
+> foundational technology for all advanced-node semiconductor
+> designs**.*
+
+------------------------------------------------------------------------
+
+## 🧪 PoC関連 / PoC Related
+
+  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  タイトル                   概要                                  パス
+  -------------------------- ------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------
+  🚩 **Humanoid Robot        FSM × PID × LLM × 状態空間 ×          [![View Manual](https://img.shields.io/badge/View-Manual-brightgreen?logo=github)](./PoC/humanoid/) [![View
+  PoC（集大成）**            自己発電を統合したフラグシップ        Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/PoC/humanoid)
+
+  🧭 **ジンバル制御（FSM +   ハイブリッド閉ループ制御の教育用PoC   [![View Manual](https://img.shields.io/badge/View-Manual-brightgreen?logo=github)](./PoC/gimbal_control/) [![View
+  PID + LLM）**                                                    Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/PoC/gimbal_control)
+
+  ⚙️                         YAML → C → Verilog 自動生成＋検証     [![View Manual](https://img.shields.io/badge/View-Manual-brightgreen?logo=github)](./PoC/verilog_demo/) [![View
+  **Verilog自動生成（FSM +                                         Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/PoC/verilog_demo)
+  PID）**                                                          
+
+  🛠 **Auto Generator**       FSM・PID構成の自動生成ツール群        [![View Manual](https://img.shields.io/badge/View-Manual-brightgreen?logo=github)](./PoC/auto_generator/) [![View
+                                                                   Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/PoC/auto_generator)
+  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+> 🚩 **フラグシップPoC：人型ロボット** --- クロスノード（22nm SoC /
+> 0.18µm AMS / 0.35µm LDMOS / 自己発電）を SystemDK で統合。
+
+------------------------------------------------------------------------
+
+## 🗺️ プロジェクト関係図 / Project Relationship Map
+
+``` mermaid
 flowchart TB
-  Spec[Use-Case Spec] --> Model[SystemDK Multi-physics Model]
-  Model --> Ctrl[PID + State-Space Design]
-  Ctrl --> RTL[22nm SoC]
-  Model --> AMS[0.18µm AMS AFE/ADC]
-  Model --> PWR[0.35µm LDMOS Drive]
-  Model --> Harvest[Energy Harvest]
-  RTL -->|UART/SPI/I2C/CSI2| AMS
-  RTL -->|PWM/Telemetry| PWR
-  Harvest --> PWR
-  Harvest --> RTL
-  PWR -.Heat/Noise.-> Model
-  AMS -.Noise/Coupling.-> Model
-  Harvest -.Heat/Stress.-> Model
+  EC["EduController
+(制御理論〜AI制御)"]
+  AITLH["AITL-H
+Hybrid Control & SystemDK"]
+  ESV["Edusemi-v4x
+(SoC/RTL/レイアウト)"]
+
+  EC -- 教材フィード / Teaching Feed --> AITLH
+  AITLH -- 設計手法・PoC成果 / Methods & PoC Results --> ESV
+  EC -- 参照リンク / Cross Reference --> ESV
 ```
 
----
+*EduController ⇔ AITL-H ⇔ Edusemi-v4x の相互参照関係を示す簡易図。*
 
-## 🎯 成功指標 / KPI
-- 姿勢回復 ≤ 200 ms  
-- 歩容安定度 +30%（PID比）  
-- エネルギー効率 +15%（協調制御＋発電）  
-- 異常検知誤差率 < 2%  
-- 自己発電寄与率 最大20%  
+------------------------------------------------------------------------
 
----
+## 📚 関連プロジェクト一覧 / Related Project List
 
-## 📂 ディレクトリ構成（予定） / Directory
-```
-humanoid/
- ├─ README.md
- ├─ hw/         # SoC, AMS, LDMOS
- ├─ control/    # FSM, PID, 状態空間, LLM
- ├─ systemdk/   # モデル & シミュレーション
- ├─ energy/     # 自己発電・回生
- ├─ docs/       # マニュアル・テスト仕様
- └─ logs/       # 実験ログ
-```
+  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  プロジェクト                 説明                     リンク
+  ---------------------------- ------------------------ -------------------------------------------------------------------------------------------------------------------------------
+  **Edusemi-v4x**              半導体／SoC設計教材      [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/)
+                                                        [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x)
 
----
+  **EduController**            制御理論×AI制御教材      [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/EduController/)
+                                                        [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/EduController)
 
-## 📚 関連プロジェクト・教材 / Related Projects
-| プロジェクト | 説明 | リンク |
-|--------------|------|--------|
-| **EduController Part09** | FSM × PID × LLM制御教材 | [![🌐 Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/EduController/part09_llm_hybrid/) [![💻 Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/EduController/tree/main/part09_llm_hybrid) |
-| **Edusemi-v4x 特別編** | FSM × PID × LLM SoC設計教材 | [![🌐 Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/f_chapter3_socsystem/) [![💻 Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter3_socsystem) |
-| **AITL-Strategy-Proposal** | 戦略提言・政策提案 | [![🌐 Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-Strategy-Proposal/) [![💻 Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-Strategy-Proposal) |
+  **SamizoGPT**                Project Design           [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/SamizoGPT/)
+                               Hubガイド管理            [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/SamizoGPT)
 
----
+  **AITL-Strategy-Proposal**   AITL戦略提言・政策提案   [![🌐 View
+                                                        Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-Strategy-Proposal/)
+                                                        [![💻 View
+                                                        Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-Strategy-Proposal)
+  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------
 
 ## 👤 執筆者 / Author
-| 項目 | 内容 |
-|------|------|
-| **著者 / Author** | 三溝 真一（Shinichi Samizo）<br>*Shinichi Samizo* |
-| **Email** | [![Email](https://img.shields.io/badge/Email-shin3t72%40gmail.com-red?style=for-the-badge&logo=gmail)](mailto:shin3t72@gmail.com) |
-| **X** | [![X](https://img.shields.io/badge/X-@shin3t72-black?style=for-the-badge&logo=x)](https://x.com/shin3t72) |
-| **GitHub** | [![GitHub](https://img.shields.io/badge/GitHub-Samizo--AITL-blue?style=for-the-badge&logo=github)](https://github.com/Samizo-AITL) |
 
----
+  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  項目                                内容
+  ----------------------------------- ------------------------------------------------------------------------------------------------------------------------------------
+  **著者 / Author**                   三溝 真一（Shinichi Samizo）
+
+  **Email**                           [![Email](https://img.shields.io/badge/Email-shin3t72%40gmail.com-red?style=for-the-badge&logo=gmail)](mailto:shin3t72@gmail.com)
+
+  **X**                               [![X](https://img.shields.io/badge/X-@shin3t72-black?style=for-the-badge&logo=x)](https://x.com/shin3t72)
+
+  **GitHub**                          [![GitHub](https://img.shields.io/badge/GitHub-Samizo--AITL-blue?style=for-the-badge&logo=github)](https://github.com/Samizo-AITL)
+  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------
 
 ## 📄 ライセンス / License
-| 項目 | ライセンス | 説明 |
-|------|------------|------|
-| **コード** | [MIT](https://opensource.org/licenses/MIT) | 自由に使用・改変・再配布可 |
-| **教材テキスト** | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | 著者表示必須 |
-| **図表** | [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) | 非商用利用のみ |
-| **外部引用** | 元ライセンスに従う | 引用元を明記 |
 
----
+  ------------------------------------------------------------------------------------------------------------
+  項目                    ライセンス                                              説明
+  ----------------------- ------------------------------------------------------- ----------------------------
+  **コード**              [MIT](https://opensource.org/licenses/MIT)              自由に使用・改変・再配布可
 
-## 🔝 トップに戻る / Back to Top
-[![🌐 Back to Site](https://img.shields.io/badge/Back_to-Site-brightgreen?logo=github)](../../)  
-[![💻 Back to Repo](https://img.shields.io/badge/Back_to-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H)  
+  **教材テキスト**        [CC BY                                                  著者表示必須
+                          4.0](https://creativecommons.org/licenses/by/4.0/)      
 
-📑 **詳細レポート** → [PoC/humanoid/docs/index.md](../docs/index.md)  
+  **図表**                [CC BY-NC                                               非商用利用のみ
+                          4.0](https://creativecommons.org/licenses/by-nc/4.0/)   
 
+  **外部引用**            元ライセンスに従う                                      引用元を明記
+  ------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+## 💬 フィードバック / Feedback
+
+[![💬 GitHub
+Discussions](https://img.shields.io/badge/💬%20GitHub-Discussions-brightgreen?logo=github)](https://github.com/Samizo-AITL/AITL-H/discussions)

@@ -139,16 +139,26 @@ AITL-Hは、単なる制御アーキテクチャではなく、
 ## 🗺️ プロジェクト関係図 / Project Relationship Map
 ```mermaid
 flowchart LR
-  EC[EduController<br>(制御理論〜AI制御)]
-  AITLH[AITL-H<br>Hybrid Control & SystemDK]
-  ESV[Edusemi-v4x<br>(SoC/RTL/レイアウト)]
+  EC["EduController\n(制御理論〜AI制御)"]
+  AITLH["AITL-H\nHybrid Control & SystemDK"]
+  ESV["Edusemi-v4x\n(SoC/RTL/レイアウト)"]
+
+  EC -- 教材フィード / Teaching Feed --> AITLH
+  AITLH -- 設計手法・PoC成果 / Methods & PoC Results --> ESV
+  EC -- 参照リンク / Cross Reference --> ESV
+```
+*EduController ⇔ AITL-H ⇔ Edusemi-v4x の相互参照関係を示す簡易図。*
+
+```mermaid
+flowchart LR
+  EC["EduController\n(制御理論〜AI制御)"]
+  AITLH["AITL-H\nHybrid Control & SystemDK"]
+  ESV["Edusemi-v4x\n(SoC/RTL/レイアウト)"]
 
   EC -->|教材フィード / Teaching Feed| AITLH
   AITLH -->|設計手法・PoC成果 / Methods & PoC Results| ESV
   EC -->|参照リンク / Cross Reference| ESV
 ```
-*EduController ⇔ AITL-H ⇔ Edusemi-v4x の相互参照関係を示す簡易図。*
-
 ---
 
 ### ​ PoC例：FSM × PID × LLMによる3軸ジンバル制御

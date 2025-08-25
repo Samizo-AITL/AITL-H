@@ -2,6 +2,8 @@
 title: Mission Energy Report
 description: 自己発電（回生・圧電・PV）の寄与率とバッテリSOC変動を評価
 nav_order: 3
+layout: clean
+permalink: /PoC/humanoid/docs/mission_energy/
 ---
 
 ---

@@ -119,8 +119,11 @@ humanoid/
 ---
 
 ## 📑 詳細資料リンク / Reference Links
-- [📄 **Humanoid PoC Reports**](./docs/index.md) — *PWM Ripple / Thermal Derating / Mission Energy*
-- [🎤 **Flagship PoC Slides**](./docs/flagship_poc_slides.md) — *Presentation draft slides*
+
+| 資料 / Material | 内容 / Description | リンク / Links |
+|-----------------|--------------------|----------------|
+| **Humanoid PoC Reports** | PWM Ripple / Thermal Derating / Mission Energy | [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](./docs/index.md) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/PoC/humanoid/docs) |
+| **Flagship PoC Slides** | 発表用スライド雛形 / *Presentation draft slides* | [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](./docs/flagship_poc_slides.md) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/blob/main/PoC/humanoid/docs/flagship_poc_slides.md) |
 
 ---
 

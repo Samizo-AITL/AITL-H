@@ -97,6 +97,32 @@ last_updated: 2025-08-25
 
 ---
 
+## 🌍 世界主要人型ロボットとの比較 / Comparison with World-Leading Humanoid Robots
+
+| 項目 / Feature | Boston Dynamics **Atlas** | Tesla **Optimus** | **Samizo-AITL PoC** |
+|----------------|----------------------------|-------------------|---------------------|
+| **開発目的 / Goal** | 研究用プラットフォーム（動的モーションデモ）<br/>*Research platform for dynamic motion demos* | 工場・物流向けの量産型<br/>*Mass production for factory & logistics* | 教育＋研究の集大成 / 自律・冗長性重視<br/>*Educational + research culmination, with autonomy & fault tolerance* |
+| **制御 / Control** | 高速動的制御（跳躍・宙返り）<br/>*Dynamic control for jumps/flips* | シンプルな歩行・物体操作<br/>*Simple walking & manipulation* | FSM × PID × 状態空間 × LLM<br/>*FSM × PID × State-space × LLM* |
+| **外乱耐性 / Disturbance Recovery** | 強力（押しても転ばない）<br/>*Robust (resists pushes)* | 限定的（動画では慎重な動き）<br/>*Limited (careful movements in demos)* | **200ms以内に姿勢回復**<br/>*Posture recovery ≤200 ms* |
+| **会話 / Conversation** | なし<br/>*None* | 基本AI応答（将来予定）<br/>*Basic AI response planned* | **LLMによる自然会話対応**<br/>*Conversational via LLM* |
+| **個人認識 / Person Recognition** | なし<br/>*None* | 顔/声認識は未実装<br/>*Not yet implemented* | **顔＋声紋で個別応答**<br/>*Face + voiceprint recognition* |
+| **目的地移動 / Navigation** | 実験的（障害物回避あり）<br/>*Experimental, with obstacle avoidance* | 工場内ナビゲーションを計画<br/>*Planned factory navigation* | **SLAM＋音声指示で目的地移動**<br/>*SLAM + voice command navigation* |
+| **損傷対応 / Damage Tolerance** | 転倒時は動作停止<br/>*Stops after falls* | 未実装<br/>*Not implemented* | **残存関節で行動継続**<br/>*Continues acting with remaining actuators* |
+| **パワー / Power Output** | 外部バッテリ＋高出力油圧<br/>*External battery + hydraulics* | 内蔵バッテリ駆動<br/>*Internal battery powered* | **0.35 µm LDMOS＋外付けパワーチップ**で大関節高トルク<br/>*0.35 µm LDMOS + external power chips for high-torque joints* |
+| **エネルギー自立 / Energy Autonomy** | バッテリ依存<br/>*Battery only* | バッテリ依存<br/>*Battery only* | **圧電＋PV＋回生で持続行動**<br/>*Piezo + PV + regen for sustained operation* |
+| **公開性 / Openness** | 非公開（デモ動画のみ）<br/>*Closed, demo videos only* | 限定公開（動画・一部発表）<br/>*Partially open, demos* | **GitHub Pagesで日英公開**<br/>*Published bilingual on GitHub Pages* |
+
+---
+
+📌 **総評**  
+- **Atlas** → 「運動性能」で突出（跳躍・宙返りなどアクロバット重視）。  
+- **Optimus** → 「量産・産業応用」に焦点（工場導入前提）。  
+- **Samizo-AITL PoC** → 「教育＋研究集大成＋エネルギー自立＋損傷対応」で差別化。  
+
+👉 世界トップを目指すなら、「**Atlas級の運動性能**」＋「**Optimus級の産業実装性**」に加え、**Samizo-AITL独自の“自立性・冗長性”** を強調することがカギになります。
+
+---
+
 ## 🧭 SystemDK統合設計フロー / SystemDK Integrated Design Flow
 ```mermaid
 flowchart TB

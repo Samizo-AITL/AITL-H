@@ -98,7 +98,6 @@ humanoid/
 
 ---
 
-
 ## 📚 関連プロジェクト・教材 / Related Projects & Materials
 
 | プロジェクト / Project | 説明 / Description | リンク / Links |
@@ -106,6 +105,12 @@ humanoid/
 | **EduController Part09** | FSM × PID × LLM統合制御教材<br/>*Integrated control (FSM × PID × LLM)* | [![🌐 Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/EduController/part09_llm_hybrid/) [![💻 Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/EduController/tree/main/part09_llm_hybrid) |
 | **Edusemi-v4x Chapter3** | FSM × PID × LLMによるSoC設計教材<br/>*SoC design with FSM × PID × LLM* | [![🌐 Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/f_chapter3_socsystem/) [![💻 Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter3_socsystem) |
 | **AITL-Strategy-Proposal** | AITL戦略提言・政策提案<br/>*Strategy proposals & policy* | [![🌐 Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-Strategy-Proposal/) [![💻 Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-Strategy-Proposal) |
+
+---
+
+## 📑 詳細資料リンク / Reference Links
+- [📄 **Humanoid PoC Reports**](./docs/index.md) — *PWM Ripple / Thermal Derating / Mission Energy*
+- [🎤 **Flagship PoC Slides**](./docs/flagship_poc_slides.md) — *Presentation draft slides*
 
 ---
 

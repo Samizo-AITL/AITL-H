@@ -128,4 +128,7 @@ humanoid/
 
 ---
 
-[⬆️ トップに戻る](../../)
+## 🔝 トップに戻る / Back to Top
+
+[![🌐 Back to Site](https://img.shields.io/badge/Back_to-Site-brightgreen?logo=github)](../../)  
+[![💻 Back to Repo](https://img.shields.io/badge/Back_to-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H)

@@ -1,0 +1,31 @@
+meta:
+  desc: Energy harvesting aggregated sources -> DC-DC -> battery
+
+sources:
+  regenerative:
+    type: back_emf
+    avg_power_mw_walk: 500
+    peak_power_w: 5.0
+    efficiency: 0.82
+  piezo_array:
+    type: piezo
+    avg_power_mw_walk: 120
+    peak_power_w: 0.8
+    efficiency: 0.65
+  thinfilm_pv:
+    type: pv
+    avg_power_mw_indoor: 20
+    avg_power_mw_outdoor: 150
+    efficiency: 0.18
+
+dc_dc:
+  topology: buck_boost
+  efficiency_curve:
+    - {load_mw: 10, eff: 0.75}
+    - {load_mw: 100, eff: 0.88}
+    - {load_mw: 500, eff: 0.92}
+    - {load_mw: 1000, eff: 0.9}
+
+battery:
+  capacity_wh: 60
+  soc_init: 0.7

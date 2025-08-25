@@ -39,7 +39,9 @@ nav_order: 4
 👉 **40kHz以上で安全マージン確保**  
 *Safe margin ensured at ≥40kHz*
 
-![ENOB vs PWM freq](../systemdk/reports/pwm_to_adc_ripple/enob_vs_freq_duty_0_5.png)
+<p align="center">
+  <img src="../systemdk/reports/pwm_to_adc_ripple/enob_vs_freq_duty_0_5.png" alt="ENOB vs PWM freq" width="80%">
+</p>
 
 ---
 
@@ -52,7 +54,9 @@ nav_order: 4
 👉 **冷却強化 or 負荷制御で解決**  
 *Solution: enhanced cooling or load control*
 
-![Thermal](../systemdk/reports/thermal_derating/thermal_vs_phase_40C.png)
+<p align="center">
+  <img src="../systemdk/reports/thermal_derating/thermal_vs_phase_40C.png" alt="Thermal vs Phase" width="80%">
+</p>
 
 ---
 
@@ -65,7 +69,9 @@ nav_order: 4
 👉 **圧電アレイ拡張 / PV面積増加で改善可能**  
 *Improvement: expand piezo array / increase PV area*
 
-![SOC](../systemdk/reports/mission_energy/soc_vs_phase.png)
+<p align="center">
+  <img src="../systemdk/reports/mission_energy/soc_vs_phase.png" alt="SOC vs Phase" width="80%">
+</p>
 
 ---
 

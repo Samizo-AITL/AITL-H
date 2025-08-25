@@ -22,8 +22,9 @@ last_updated: 2025-08-25
 ---
 
 ## 🧩 クロスノード・チップセット / Cross-Node Chipset
-| ブロック / Block | ノード / Node | 役割・Interface / Role & Interface |
-|------------------|---------------|------------------------------------|
+
+| ブロック / Block | ノード / Node | 役割・IF / Role & Interface |
+|---|---|---|
 | **Brain SoC** | **22 nm** | **LLM推論・FSM管理・状態空間制御（LQR/LQG IP）**<br/>*LLM inference, FSM management, state-space control (LQR/LQG IP)*<br/>UART / SPI / I²C / MIPI-CSI2 |
 | **Sensor Hub** | **0.18 µm AMS** | **CMOSカメラ・IMU・エンコーダ・力覚/圧力・MEMSマイク**<br/>*CMOS camera, IMU, encoders, force/pressure, MEMS microphone*<br/>I²C / SPI / DVP / CSI2 |
 | **Power Drive** | **0.35 µm LDMOS** | **PWM/Hブリッジ・サーボ/BLDC駆動・温度/電流モニタ**<br/>*PWM/H-bridge, servo/BLDC drive, temp/current monitor* |
@@ -32,13 +33,14 @@ last_updated: 2025-08-25
 ---
 
 ## ⚙️ 制御アーキテクチャ / Control Architecture
+
 | 層 / Layer | 実装 / Implementation | 役割 / Role |
-|------------|------------------------|-------------|
-| **LLM層** | SoC上アプリ / RTOS | **目標生成・異常解釈・学習**<br/>*Goal generation, anomaly interpretation, learning* |
-| **FSM層** | `fsm_engine.py` / YAML→C→Verilog | **行動モード切替（立位／歩行／旋回／転倒回避／省エネ）**<br/>*Behavior switching (standing, walking, turning, fall avoidance, energy saving)* |
+|---|---|---|
+| **LLM層** | SoCアプリ / RTOS | **目標生成・異常解釈・学習**<br/>*Goal generation, anomaly interpretation, learning* |
+| **FSM層** | `fsm_engine.py` ・ YAML→C→Verilog | **行動モード切替（立位/歩行/旋回/転倒回避/省エネ）**<br/>*Behavior mode switching* |
 | **物理制御層** | PID＋状態空間（LQR/LQG） | **関節SISO安定化＋全身MIMO協調制御**<br/>*Joint SISO stabilization + whole-body MIMO control* |
 | **駆動層** | LDMOS PWM/Hブリッジ | **トルク出力・安全監視**<br/>*Torque output, safety monitoring* |
-| **エネルギー層** | 圧電／PV／回生制御 | **発電・蓄電・電力マネジメント**<br/>*Energy harvesting, storage, power management* |
+| **エネルギー層** | 圧電 / PV / 回生制御 | **発電・蓄電・電力マネジメント**<br/>*Energy harvesting, storage, power management* |
 
 ---
 

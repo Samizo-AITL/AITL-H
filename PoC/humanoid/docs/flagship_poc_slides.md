@@ -4,6 +4,8 @@ description: Samizo-AITL集大成 人型ロボットPoC 発表用スライド
 nav_order: 4
 ---
 
+---
+
 # 🚩 Samizo-AITL 集大成：人型ロボットPoC
 *Flagship PoC: Humanoid Robot*
 

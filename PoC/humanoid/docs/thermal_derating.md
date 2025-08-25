@@ -45,7 +45,9 @@ showing at which phases derating (output limiting) or shutdown occurs.*
 フェーズごとの接合温度とデレートライン:  
 *Junction temperature vs phase and derating line:*
 
-![Thermal vs Phase (Ambient=40°C)](../systemdk/reports/thermal_derating/thermal_vs_phase_40C.png)
+<p align="center">
+  <img src="../systemdk/reports/thermal_derating/thermal_vs_phase_40C.png" alt="Thermal vs Phase (Ambient=40°C)" width="80%">
+</p>
 
 ---
 

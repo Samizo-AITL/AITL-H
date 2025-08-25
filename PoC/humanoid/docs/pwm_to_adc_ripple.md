@@ -43,7 +43,9 @@ nav_order: 1
 Dutyごとの PWM周波数 vs 実効ENOB:  
 *Effective ENOB vs PWM frequency at duty=0.5:*
 
-![ENOB vs PWM freq (duty=0.5)](../systemdk/reports/pwm_to_adc_ripple/enob_vs_freq_duty_0_5.png)
+<p align="center">
+  <img src="../systemdk/reports/pwm_to_adc_ripple/enob_vs_freq_duty_0_5.png" alt="ENOB vs PWM freq (duty=0.5)" width="80%">
+</p>
 
 ---
 

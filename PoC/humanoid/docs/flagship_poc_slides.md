@@ -24,16 +24,13 @@ permalink: /PoC/humanoid/docs/flagship_poc_slides/
 ---
 
 ## 🧩 クロスノード・チップセット / Cross-Node Chipset
-<div style="overflow-x:auto;">
-  
+
 | ブロック / Block | ノード / Node | 役割 / Role |
 |-----------------|---------------|-------------|
-| **Brain SoC** | 22nm | FSM＋PID＋LLM制御、状態空間制御<br/>*FSM+PID+LLM control, state-space control* |
-| **Sensor Hub** | 0.18µm AMS | CMOSカメラ / IMU / 力覚センサ<br/>*CMOS camera / IMU / force sensors* |
-| **Power Drive** | 0.35µm LDMOS | PWM/Hブリッジ、トルク制御<br/>*PWM/H-bridge, torque control* |
-| **Energy Harvest** | MEMS / PV / Regen | 自己発電・蓄電<br/>*Energy harvesting & storage* |
-
-</div>
+| **Brain SoC**   | 22nm          | FSM＋PID＋LLM制御、状態空間制御 (*FSM+PID+LLM control, state-space control*) |
+| **Sensor Hub**  | 0.18µm AMS    | CMOSカメラ / IMU / 力覚センサ (*CMOS camera / IMU / force sensors*) |
+| **Power Drive** | 0.35µm LDMOS  | PWM/Hブリッジ、トルク制御 (*PWM/H-bridge, torque control*) |
+| **Energy Harvest** | MEMS / PV / Regen | 自己発電・蓄電 (*Energy harvesting & storage*) |
 
 ---
 

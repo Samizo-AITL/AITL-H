@@ -87,11 +87,13 @@ graph TD
 
 ---
 
-## 📘 PoC設計マニュアル（ドキュメント部）
+## 📑 PoCマニュアル / PoC Manual
 
 設計思想・章構成・AITL三層モデルに関する解説は、`docs/` 以下に整理しています：
 
-▶︎ [📚 PoC設計マニュアルへ](docs/README.md)
+| ドキュメント | 説明 | リンク |
+|---|---|---|
+| 📘 **AITL-H PoC Manual** | PoC全体をカバーする実装マニュアル<br/>PID・FSM・LLM三層構造の設計と仕様 | [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](../docs/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/docs) |
 
 内容一覧（一部）：
 

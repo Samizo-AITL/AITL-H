@@ -98,24 +98,27 @@ humanoid/
 
 ---
 
+
 ## 📚 関連プロジェクト・教材 / Related Projects & Materials
-| プロジェクト・教材 | 説明 | リンク |
-|--------------------|------|--------|
+
+| プロジェクト / Project | 説明 / Description | リンク / Links |
+|---|---|---|
 | **EduController Part09** | FSM × PID × LLM統合制御教材<br/>*Integrated control (FSM × PID × LLM)* | [![🌐 Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/EduController/part09_llm_hybrid/) [![💻 Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/EduController/tree/main/part09_llm_hybrid) |
-| **Edusemi-v4x 特別編 Chapter3** | FSM × PID × LLMによるSoC設計教材<br/>*SoC design with FSM × PID × LLM* | [![🌐 Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/f_chapter3_socsystem/) [![💻 Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter3_socsystem) |
-| **AITL-Strategy-Proposal** | AITL戦略提言・政策提案<br/>*AITL strategy proposals & policy* | [![🌐 Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-Strategy-Proposal/) [![💻 Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-Strategy-Proposal) |
+| **Edusemi-v4x Chapter3** | FSM × PID × LLMによるSoC設計教材<br/>*SoC design with FSM × PID × LLM* | [![🌐 Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/f_chapter3_socsystem/) [![💻 Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter3_socsystem) |
+| **AITL-Strategy-Proposal** | AITL戦略提言・政策提案<br/>*Strategy proposals & policy* | [![🌐 Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-Strategy-Proposal/) [![💻 Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-Strategy-Proposal) |
 
 ---
 
 ## 👤 執筆者 / Author
 
 | 項目 / Item | 内容 / Details |
-|-------------|----------------|
+|---|---|
 | **著者 / Author** | 三溝 真一（Shinichi Samizo）<br/>*Shinichi Samizo* |
-| **Email** | <a href="mailto:shin3t72@gmail.com"><img src="https://img.shields.io/badge/Email-shin3t72%40gmail.com-red?style=flat-square&logo=gmail"/></a> |
-| **X** | <a href="https://x.com/shin3t72"><img src="https://img.shields.io/badge/X-@shin3t72-black?style=flat-square&logo=x"/></a> |
-| **GitHub** | <a href="https://github.com/Samizo-AITL"><img src="https://img.shields.io/badge/GitHub-Samizo--AITL-blue?style=flat-square&logo=github"/></a> |
+| **Email** | [![Email](https://img.shields.io/badge/Email-shin3t72%40gmail.com-red?style=for-the-badge&logo=gmail)](mailto:shin3t72@gmail.com) |
+| **X** | [![X](https://img.shields.io/badge/X-@shin3t72-black?style=for-the-badge&logo=x)](https://x.com/shin3t72) |
+| **GitHub** | [![GitHub](https://img.shields.io/badge/GitHub-Samizo--AITL-blue?style=for-the-badge&logo=github)](https://github.com/Samizo-AITL) |
 
+---
 ---
 
 ## 📄 ライセンス / License

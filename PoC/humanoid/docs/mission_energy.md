@@ -52,7 +52,7 @@ The KPI target (20%) is not yet achieved, requiring further optimization.*
 *Battery SOC transition over mission phases:*
 
 <p align="center">
-  <img src="{{ site.baseurl }}/PoC/humanoid/systemdk/reports/mission_energy/soc_vs_phase.png" 
+  <img src="https://samizo-aitl.github.io/AITL-H/PoC/humanoid/systemdk/reports/mission_energy/soc_vs_phase.png"
        alt="SOC vs Phase" width="80%">
 </p>
 

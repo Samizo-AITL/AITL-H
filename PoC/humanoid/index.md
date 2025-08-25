@@ -14,6 +14,8 @@ last_updated: 2025-08-25
 
 [![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](#-ライセンス--license)
 
+---
+
 > **本PoCは Samizo-AITL プロジェクトの「集大成」**。<br/>
 > *This PoC is positioned as the "culmination" of the Samizo-AITL project.*<br/>
 > AITL-Hの三層アーキテクチャ（FSM × PID × LLM）を基盤に、**頭脳（22 nm SoC）／感覚（0.18 µm AMS）／筋肉（0.35 µm LDMOS）／自己発電ブロック**を跨いだクロスノード設計を、SystemDKで統合検証します。<br/>

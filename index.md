@@ -139,12 +139,13 @@ AITL-Hは、単なる制御アーキテクチャではなく、
 ## 🗺️ プロジェクト関係図 / Project Relationship Map
 ```mermaid
 flowchart LR
-  EC[EduController
-(制御理論〜AI制御)] <--教材フィード--> AITLH[AITL-H
-Hybrid Control & SystemDK]
-  AITLH <--設計手法/PoC成果--> ESV[Edusemi-v4x
-(SoC/RTL/レイアウト)]
-  EC <--参照リンク--> ESV
+  EC[EduController<br>(制御理論〜AI制御)]
+  AITLH[AITL-H<br>Hybrid Control & SystemDK]
+  ESV[Edusemi-v4x<br>(SoC/RTL/レイアウト)]
+
+  EC -->|教材フィード / Teaching Feed| AITLH
+  AITLH -->|設計手法・PoC成果 / Methods & PoC Results| ESV
+  EC -->|参照リンク / Cross Reference| ESV
 ```
 *EduController ⇔ AITL-H ⇔ Edusemi-v4x の相互参照関係を示す簡易図。*
 

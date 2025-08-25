@@ -24,21 +24,21 @@ last_updated: 2025-08-25
 ## 🧩 クロスノード・チップセット / Cross-Node Chipset
 | ブロック | ノード | 役割 / Interface |
 |----------|--------|------------------|
-| **Brain SoC** | **22 nm** | LLM推論・FSM管理・状態空間制御（LQR/LQG IP）<br/>*LLM inference, FSM management, state-space control (LQR/LQG IP)*<br/>**UART / SPI / I²C / MIPI-CSI2** |
-| **Sensor Hub** | **0.18 µm AMS** | CMOSカメラ・IMU・エンコーダ・力覚/圧力・MEMSマイク<br/>*CMOS camera, IMU, encoders, force/pressure, MEMS microphone*<br/>**I²C / SPI / DVP / CSI2** |
-| **Power Drive** | **0.35 µm LDMOS** | PWM/Hブリッジ・サーボ/BLDC駆動・温度/電流モニタ<br/>*PWM/H-bridge, servo/BLDC drive, temp/current monitor* |
-| **Energy Harvest** | **Piezo / PV / Regen** | 発電・蓄電・DC-DC電源供給<br/>*Energy harvesting, storage, DC-DC power* |
+| Brain SoC | 22 nm | LLM推論・FSM管理・状態空間制御（LQR/LQG IP）<br/>*LLM inference, FSM management, state-space control (LQR/LQG IP)*<br/>UART / SPI / I²C / MIPI-CSI2 |
+| Sensor Hub | 0.18 µm AMS | CMOSカメラ・IMU・エンコーダ・力覚/圧力・MEMSマイク<br/>*CMOS camera, IMU, encoders, force/pressure, MEMS microphone*<br/>I²C / SPI / DVP / CSI2 |
+| Power Drive | 0.35 µm LDMOS | PWM/Hブリッジ・サーボ/BLDC駆動・温度/電流モニタ<br/>*PWM/H-bridge, servo/BLDC drive, temp/current monitor* |
+| Energy Harvest | Piezo / PV / Regen | 発電・蓄電・DC-DC電源供給<br/>*Energy harvesting, storage, DC-DC power* |
 
 ---
 
 ## ⚙️ 制御アーキテクチャ / Control Architecture
 | 層 | 実装 | 役割 |
 |----|------|------|
-| **LLM層** | SoC上アプリ/RTOS | 目標生成・異常解釈・学習<br/>*Goal generation, anomaly interpretation, learning* |
-| **FSM層** | `fsm_engine.py` / YAML→C→Verilog | 行動モード切替（立位／歩行／旋回／転倒回避／省エネ）<br/>*Behavior mode switching (standing, walking, turning, fall avoidance, energy saving)* |
-| **物理制御層** | PID＋状態空間（LQR/LQG） | 関節SISO安定化＋全身MIMO協調制御<br/>*Joint SISO stabilization + whole-body MIMO control* |
-| **駆動層** | LDMOS PWM/Hブリッジ | トルク出力・安全監視<br/>*Torque output, safety monitoring* |
-| **エネルギー層** | 圧電／PV／回生制御 | 発電・蓄電・電力マネジメント<br/>*Energy harvesting, storage, power management* |
+| LLM層 | SoC上アプリ/RTOS | 目標生成・異常解釈・学習<br/>*Goal generation, anomaly interpretation, learning* |
+| FSM層 | `fsm_engine.py` / YAML→C→Verilog | 行動モード切替（立位／歩行／旋回／転倒回避／省エネ）<br/>*Behavior mode switching (standing, walking, turning, fall avoidance, energy saving)* |
+| 物理制御層 | PID＋状態空間（LQR/LQG） | 関節SISO安定化＋全身MIMO協調制御<br/>*Joint SISO stabilization + whole-body MIMO control* |
+| 駆動層 | LDMOS PWM/Hブリッジ | トルク出力・安全監視<br/>*Torque output, safety monitoring* |
+| エネルギー層 | 圧電／PV／回生制御 | 発電・蓄電・電力マネジメント<br/>*Energy harvesting, storage, power management* |
 
 ---
 
@@ -106,12 +106,13 @@ humanoid/
 ---
 
 ## 👤 執筆者 / Author
+
 | 項目 / Item | 内容 / Details |
 |-------------|----------------|
 | **著者 / Author** | 三溝 真一（Shinichi Samizo）<br/>*Shinichi Samizo* |
-| **Email** | [![Email](https://img.shields.io/badge/Email-shin3t72%40gmail.com-red?style=for-the-badge&logo=gmail)](mailto:shin3t72@gmail.com) |
-| **X** | [![X](https://img.shields.io/badge/X-@shin3t72-black?style=for-the-badge&logo=x)](https://x.com/shin3t72) |
-| **GitHub** | [![GitHub](https://img.shields.io/badge/GitHub-Samizo--AITL-blue?style=for-the-badge&logo=github)](https://github.com/Samizo-AITL) |
+| **Email** | <a href="mailto:shin3t72@gmail.com"><img src="https://img.shields.io/badge/Email-shin3t72%40gmail.com-red?style=flat-square&logo=gmail"/></a> |
+| **X** | <a href="https://x.com/shin3t72"><img src="https://img.shields.io/badge/X-@shin3t72-black?style=flat-square&logo=x"/></a> |
+| **GitHub** | <a href="https://github.com/Samizo-AITL"><img src="https://img.shields.io/badge/GitHub-Samizo--AITL-blue?style=flat-square&logo=github"/></a> |
 
 ---
 

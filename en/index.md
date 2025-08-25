@@ -130,37 +130,91 @@ Hybrid Control & SystemDK"]
 
 ---
 
+## 🤖 ChatGPT Support Tools
+
+Provided in `accelerated_design/`: **Design support tools using ChatGPT**
+
+- State transition design support (prompt → FSM YAML automation)
+- Test scenario / log visualization
+- Automatic generation of design documents
+
+> A **human-AI collaborative design framework**.
+
+---
+
+## 🎛️ Connection with EduController
+
+**AITL-H** is **fully integrated** with **Chapter 9** (FSM × PID × LLM Hybrid Control) of the educational material **EduController**.
+
+| Part | Content | Relation to AITL-H |
+|------|---------|--------------------|
+| **Part 01–05**<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/EduController#制御理論系) | Classical to modern control theory (PID, state-space, etc.) | **Theoretical basis of PID layer** |
+| **Part 06–08**<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/EduController#ai制御系) | AI control (NN control, reinforcement learning, data-driven) | **Supplementary knowledge for AI application design** |
+| **Part 09**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/EduController/part09_llm_hybrid/)&nbsp;[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/EduController/tree/main/part09_llm_hybrid) | FSM × PID × LLM integrated control | **AITL-H architecture implemented as educational material** |
+
+---
+
+## 🎓 Integrated Design Deployment with Edusemi-v4x
+
+To extend towards **SoC/RTL design**, see the “Special Edition” of **[Edusemi-v4x](https://github.com/Samizo-AITL/Edusemi-v4x)**, which covers:
+
+| Chapter | Content | Link |
+|---------|---------|------|
+| Chapter 3 | SoC design with FSM × PID × LLM integrated control | [![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/f_chapter3_socsystem/) [![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter3_socsystem) |
+| Chapter 4 | RTL → GDSII layout automation with OpenLane | [![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/f_chapter4_openlane/) [![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter4_openlane) |
+| Chapter 5 | Physical verification and consistency check with DRC / LVS / DFM | [![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/f_chapter5_dfm/) [![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter5_dfm) |
+
+### 📌 If you want to study physical constraints in more depth
+Once you understand the flow from SoC design to physical verification, proceed to **Special Edition Chapter 2a: Handling Thermal, Stress, and Noise Constraints in SystemDK**.
+
+[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/f_chapter2a_systemdk/)  
+[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter2a_systemdk)
+
+---
+
+## 📚 Related Projects
+
+| Project | Description | Link |
+|---------|-------------|------|
+| **Edusemi-v4x** | Semiconductor / SoC design educational material | [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x) |
+| **EduController** | Control theory × AI control educational material | [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/EduController/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/EduController) |
+| **SamizoGPT** | Project Design Hub guide management | [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/SamizoGPT/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/SamizoGPT) |
+| **AITL-Strategy-Proposal** | AITL strategic proposals and policy recommendations | [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-Strategy-Proposal/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-Strategy-Proposal) |
+
+---
+
 ## 👤 Author
 
-| Item | Details |
-|------|---------|
-| **Name** | **Shinichi Samizo** |
-| **Education** | M.S. in Electrical and Electronic Engineering, Shinshu University |
-| **Career** | Former Engineer at Seiko Epson Corporation (since 1997) |
-| **Expertise** | Semiconductor devices (logic, memory, HV mixed-signal)<br>Inkjet thin-film piezo actuators<br>PrecisionCore printhead productization, BOM management, ISO training |
-| **Email** | [![Email](https://img.shields.io/badge/Email-shin3t72%40gmail.com-red?style=for-the-badge&logo=gmail)](mailto:shin3t72@gmail.com) |
-| **X** | [![X](https://img.shields.io/badge/X-@shin3t72-black?style=for-the-badge&logo=x)](https://x.com/shin3t72) |
-| **GitHub** | [![GitHub](https://img.shields.io/badge/GitHub-Samizo--AITL-blue?style=for-the-badge&logo=github)](https://github.com/Samizo-AITL) |
+| 📌 Item | Details |
+|---------|---------|
+| **Name** | **Shinichi Samizo**<br>*Shinichi Samizo* |
+| **Education** | **M.S. in Electrical and Electronic Engineering, Shinshu University** |
+| **Career** | **Former Engineer at Seiko Epson Corporation (since 1997)** |
+| **Expertise** | **Semiconductor devices** (logic, memory, high-voltage mixed integration)<br>**Inkjet thin-film piezo actuators**<br>**Productization of PrecisionCore printheads, BOM management, ISO training** |
+| **✉️ Email** | [![Email](https://img.shields.io/badge/Email-shin3t72%40gmail.com-red?style=for-the-badge&logo=gmail)](mailto:shin3t72@gmail.com) |
+| **🐦　X** | [![X](https://img.shields.io/badge/X-@shin3t72-black?style=for-the-badge&logo=x)](https://x.com/shin3t72) |
+| **💻 GitHub** | [![GitHub](https://img.shields.io/badge/GitHub-Samizo--AITL-blue?style=for-the-badge&logo=github)](https://github.com/Samizo-AITL) |
 
 ---
 
 ## 📄 License
 
-[![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](#-license)
+[![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](#-license)  
 
-This project adopts a **Hybrid License**. Different licenses apply depending on whether the content is code, text, or figures.
+> **This project adopts a hybrid license**  
+> Depending on the nature of the educational materials, code, and figures, the following licenses apply.
 
-| Item | License | Description |
-|------|---------|-------------|
-| **Code** | [MIT License](https://opensource.org/licenses/MIT) | Free to use, modify, and redistribute |
-| **Text materials** | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | Attribution required |
-| **Figures & diagrams** | [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) | Non-commercial use only |
-| **External references** | Follow the original license | Cite the source |
+| 📌 Item | License | Description |
+|---------|---------|-------------|
+| **Code** | **[MIT License](https://opensource.org/licenses/MIT)** | Free to use, modify, redistribute |
+| **Text materials** | **[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)** | Attribution required |
+| **Figures & diagrams** | **[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)** | Non-commercial use only |
+| **External references** | Follow original license | Clearly indicate source |
 
 ---
 
 ## 💬 Feedback
 
-> Please propose improvements or start discussions via **GitHub Discussions**.
+> Please submit improvement suggestions or start discussions via **GitHub Discussions**.
 
 [![💬 GitHub Discussions](https://img.shields.io/badge/💬%20GitHub-Discussions-brightgreen?logo=github)](https://github.com/Samizo-AITL/AITL-H/discussions)

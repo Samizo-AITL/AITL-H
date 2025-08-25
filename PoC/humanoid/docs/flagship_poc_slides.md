@@ -24,12 +24,16 @@ permalink: /PoC/humanoid/docs/flagship_poc_slides/
 ---
 
 ## 🧩 クロスノード・チップセット / Cross-Node Chipset
+<div style="overflow-x:auto;">
+  
 | ブロック / Block | ノード / Node | 役割 / Role |
 |-----------------|---------------|-------------|
 | **Brain SoC** | 22nm | FSM＋PID＋LLM制御、状態空間制御<br/>*FSM+PID+LLM control, state-space control* |
 | **Sensor Hub** | 0.18µm AMS | CMOSカメラ / IMU / 力覚センサ<br/>*CMOS camera / IMU / force sensors* |
 | **Power Drive** | 0.35µm LDMOS | PWM/Hブリッジ、トルク制御<br/>*PWM/H-bridge, torque control* |
 | **Energy Harvest** | MEMS / PV / Regen | 自己発電・蓄電<br/>*Energy harvesting & storage* |
+
+</div>
 
 ---
 
@@ -42,7 +46,9 @@ permalink: /PoC/humanoid/docs/flagship_poc_slides/
 *Safe margin ensured at ≥40kHz*
 
 <p align="center">
-  <img src="../systemdk/reports/pwm_to_adc_ripple/enob_vs_freq_duty_0_5.png" alt="ENOB vs PWM freq" width="80%">
+  <img
+    src="https://samizo-aitl.github.io/AITL-H/PoC/humanoid/systemdk/reports/pwm_to_adc_ripple/enob_vs_freq_duty_0_5.png"
+    alt="ENOB vs PWM freq" width="80%">
 </p>
 
 ---
@@ -57,7 +63,9 @@ permalink: /PoC/humanoid/docs/flagship_poc_slides/
 *Solution: enhanced cooling or load control*
 
 <p align="center">
-  <img src="../systemdk/reports/thermal_derating/thermal_vs_phase_40C.png" alt="Thermal vs Phase" width="80%">
+  <img
+    src="https://samizo-aitl.github.io/AITL-H/PoC/humanoid/systemdk/reports/thermal_derating/thermal_vs_phase_40C.png"
+    alt="Thermal vs Phase" width="80%">
 </p>
 
 ---
@@ -72,7 +80,9 @@ permalink: /PoC/humanoid/docs/flagship_poc_slides/
 *Improvement: expand piezo array / increase PV area*
 
 <p align="center">
-  <img src="../systemdk/reports/mission_energy/soc_vs_phase.png" alt="SOC vs Phase" width="80%">
+  <img
+    src="https://samizo-aitl.github.io/AITL-H/PoC/humanoid/systemdk/reports/mission_energy/soc_vs_phase.png"
+    alt="SOC vs Phase" width="80%">
 </p>
 
 ---

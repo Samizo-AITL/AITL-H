@@ -21,6 +21,14 @@ last_updated: 2025-08-25
 
 ---
 
+## 🔗 公式リンク / Official Links
+
+| 言語 / Language | GitHub Pages 🌐 | GitHub 💻 |
+|-----------------|----------------|-----------|
+| 🇯🇵 Japanese | [![GitHub Pages JP](https://img.shields.io/badge/GitHub%20Pages-日本語版-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/) | [![GitHub Repo JP](https://img.shields.io/badge/GitHub-日本語版-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H) |
+
+---
+
 ## 🧩 クロスノード・チップセット / Cross-Node Chipset
 
 | ブロック / Block | ノード / Node | 役割・IF / Role & Interface |

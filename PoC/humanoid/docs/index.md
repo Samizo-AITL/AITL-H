@@ -16,11 +16,11 @@ nav_order: 0
 
 ## 📑 レポート一覧 / Report List
 
-| レポート | 内容 / Description | リンク |
-|----------|-------------------|--------|
-| ⚡ **PWM Ripple Report** | PWM駆動リップルがADC精度に与える影響<br>*Effect of PWM ripple on ADC accuracy* | [📄 View Report](pwm_to_adc_ripple.md) |
-| 🌡️ **Thermal Derating Report** | LDMOS駆動ICの熱挙動とデレート評価<br>*Thermal behavior & derating of LDMOS driver* | [📄 View Report](thermal_derating.md) |
-| 🔋 **Mission Energy Report** | 自己発電の寄与率とバッテリSOC変動<br>*Energy harvesting & battery SOC variation* | [📄 View Report](mission_energy.md) |
+| レポート / Report | 内容 / Description | 更新日 / Updated | 学習目標 / Learning Goal | リンク / Link |
+|------------------|-------------------|-----------------|--------------------------|---------------|
+| ⚡ **PWM Ripple Report** | PWM駆動リップルがADC精度に与える影響<br>*Effect of PWM ripple on ADC accuracy* | 2025-08-15 | PWMノイズがADCに与える影響を理解する<br>*Understand PWM noise effects on ADC* | [📄 View Report](pwm_to_adc_ripple.md) |
+| 🌡️ **Thermal Derating Report** | LDMOS駆動ICの熱挙動とデレート評価<br>*Thermal behavior & derating of LDMOS driver* | 2025-08-18 | 熱特性とデレーティングの関係を把握する<br>*Learn relation between thermal behavior and derating* | [📄 View Report](thermal_derating.md) |
+| 🔋 **Mission Energy Report** | 自己発電の寄与率とバッテリSOC変動<br>*Energy harvesting & battery SOC variation* | 2025-08-22 | 自己発電とバッテリSOC変動の評価手法を学ぶ<br>*Evaluate energy harvesting & SOC variation* | [📄 View Report](mission_energy.md) |
 
 ---
 

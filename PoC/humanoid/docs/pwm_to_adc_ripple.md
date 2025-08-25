@@ -2,6 +2,8 @@
 title: PWM → ADC Ripple Report
 description: PWM駆動がADCの実効ENOBに与える影響を評価
 nav_order: 1
+layout: clean
+permalink: /PoC/humanoid/docs/pwm_to_adc_ripple/
 ---
 
 ---

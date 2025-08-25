@@ -25,6 +25,25 @@ FSM（本能）＋ PID（理性）＋ LLM（知性）の三層アーキテクチ
 
 ---
 
+## 📁 ディレクトリ構成 / Directory Structure
+
+```
+PoC/
+├── humanoid/              # フラグシップPoC（人型ロボット制御）
+├── gimbal_control/        # 教育用ジンバル制御PoC
+├── verilog_demo/          # FSM+PID Verilog自動生成デモ
+├── auto_generator/        # FSM・PID自動生成ツール群
+├── scenario/              # 対話・行動シナリオ定義
+├── data/                  # 実験ログ・センサデータ
+├── docs/                  # PoC設計マニュアル（章構成）
+├── hw/                    # ハードウェア関連
+├── run_main.py            # PoC統合実行エントリ
+├── fsm_config.yaml        # FSM状態定義
+└── README.md              # ← 本ドキュメント
+```
+
+---
+
 ## 📚 PoC 一覧 / PoC List
 
 | タイトル | 概要 | リンク |
@@ -36,20 +55,42 @@ FSM（本能）＋ PID（理性）＋ LLM（知性）の三層アーキテクチ
 
 ---
 
-## 📁 ディレクトリ構成 / Directory Layout
+## 📑 PoCマニュアル / PoC Manual
 
+PoC全体の設計思想・章構成は **docs/** 以下に整理しています。
+
+| ドキュメント | 説明 | リンク |
+|--------------|------|--------|
+| 📘 **AITL-H PoC Manual** | PID・FSM・LLM三層構成を含むPoC全体の設計思想・仕様解説 | [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](../docs/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/docs) |
+
+---
+
+## ⚙️ 制御構成図 / Control Structure
+
+```mermaid
+graph TD
+    UART[UART Driver] --> FSM[FSM Engine]
+    FSM --> PID[PID Controller]
+    PID --> PWM[PWM Driver]
+    FSM -->|pwm_enable| PWM
+    FSM -->|target_speed/angle| PID
+    Sensor[Sensor Interface] --> FSM
+    Sensor --> PID
 ```
-PoC/
-├── humanoid/         # 人型ロボット制御PoC（集大成）
-├── gimbal_control/   # 教育用ジンバル制御PoC
-├── verilog_demo/     # Verilog自動生成PoC
-├── auto_generator/   # FSM・PID自動生成ツール群
-├── data/             # 実験ログ・センサデータ
-├── scenario/         # 対話・行動シナリオ
-├── hw/               # ハードウェア仕様
-├── run_main.py       # PoC実行エントリ
-├── fsm_config.yaml   # FSM状態定義
-└── README.md         # ← 本ページ
+
+- **UART Driver**：LLMからの命令をFSMに送信  
+- **FSM Engine**：状態管理と制御目標出力（速度・角度）  
+- **PID Controller**：誤差に基づくPWM制御量生成  
+- **PWM Driver**：最終出力信号（duty制御）  
+- **Sensor Interface**：FSMおよびPIDへ距離・角度センサ値を提供  
+
+---
+
+## 🚀 実行例 / Execution Example
+
+```bash
+# FSM定義・制御モジュールを統合してPoC制御を起動
+python run_main.py --config fsm_config.yaml
 ```
 
 ---

@@ -127,6 +127,20 @@ AITL-Hは、単なる制御アーキテクチャではなく、
 
 ## 🧪 PoC関連 / PoC Related
 
+| タイトル | 概要 | リンク |
+|---|---|---|
+| 🚩 **Humanoid Robot PoC（集大成）** | FSM × PID × LLM × 状態空間 × 自己発電を統合したフラグシップ | [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](./PoC/humanoid/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/PoC/humanoid) [![📑 View Manual](https://img.shields.io/badge/View-Manual-lightgrey?logo=markdown)](./docs/) |
+| 🧭 **ジンバル制御（FSM + PID + LLM）** | ハイブリッド閉ループ制御の教育用PoC | [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](./PoC/gimbal_control/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/PoC/gimbal_control) |
+| ⚙️ **Verilog自動生成（FSM + PID）** | YAML → C → Verilog 自動生成＋検証 | [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](./PoC/verilog_demo/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/PoC/verilog_demo) |
+| 🛠 **Auto Generator** | FSM・PID構成の自動生成ツール群 | [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](./PoC/auto_generator/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/PoC/auto_generator) |
+
+> 🚩 **フラグシップPoC：人型ロボット** — クロスノード（22nm SoC / 0.18µm AMS / 0.35µm LDMOS / 自己発電）を SystemDK で統合。
+
+
+
+
+## 🧪 PoC関連 / PoC Related
+
 | タイトル | 概要 | パス |
 |---|---|---|
 | 🚩 **Humanoid Robot PoC（集大成）** | FSM × PID × LLM × 状態空間 × 自己発電を統合したフラグシップ | [![View Manual](https://img.shields.io/badge/View-Manual-brightgreen?logo=github)](./PoC/humanoid/) [![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/PoC/humanoid) |

@@ -2,6 +2,8 @@
 title: Thermal Derating Report
 description: LDMOS駆動ICの熱挙動とデレート発生の評価
 nav_order: 2
+layout: clean
+permalink: /PoC/humanoid/docs/thermal_derating/
 ---
 
 ---

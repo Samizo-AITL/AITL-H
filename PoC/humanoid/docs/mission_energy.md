@@ -49,7 +49,9 @@ The KPI target (20%) is not yet achieved, requiring further optimization.*
 バッテリSOC推移：  
 *Battery SOC transition over mission phases:*
 
-![SOC vs Phase](../systemdk/reports/mission_energy/soc_vs_phase.png)
+<p align="center">
+  <img src="../systemdk/reports/mission_energy/soc_vs_phase.png" alt="SOC vs Phase" width="80%">
+</p>
 
 ---
 

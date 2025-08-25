@@ -1,0 +1,14 @@
+harvest_models:
+  - harvest_sources
+battery_model: harvest_sources
+
+mission_profile:
+  - {name: walk_phase1, duration_s: 300, power_load_w: 25}
+  - {name: lift_phase, duration_s: 60, power_load_w: 40}
+  - {name: walk_phase2, duration_s: 300, power_load_w: 20}
+  - {name: idle_phase, duration_s: 120, power_load_w: 10}
+
+metrics:
+  - soc_change_pct
+  - harvest_contribution_pct
+  - unmet_energy_deficit_wh

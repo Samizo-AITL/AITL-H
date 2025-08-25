@@ -1,0 +1,19 @@
+meta:
+  node: 0.35um_LDMOS
+  desc: BLDC/servo driver electro-thermal model
+
+driver:
+  pwm_freq_khz_range: [20, 80]
+  rds_on_mohm: 45
+  gate_charge_nC: 35
+  current_limit_a: 8
+
+thermal:
+  rtheta_ja_c_per_w: 18
+  c_th_j_j_per_c: 20
+  shutdown_c: 125
+  derate_start_c: 100
+
+telemetry:
+  sense_current: true
+  sense_temp: true

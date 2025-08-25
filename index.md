@@ -19,6 +19,15 @@ show_title: false   # ← これで上部の自動H1バーを非表示
 
 ---
 
+## 🆕 最新情報 / Update Log
+| 日付 | 更新内容 / Update | 参照 |
+|-----|-------------------|------|
+| 2025-08-25 | 🚩 **Humanoid Robot PoC（集大成）** をトップに追加 | [PoCページ](./PoC/humanoid/) |
+| 2025-08-25 | 📑 PoCレポート3本（PWM Ripple / Thermal / Mission Energy）公開 | [Docs Index](./PoC/humanoid/docs/) |
+| 2025-08-25 | 🎤 発表用スライド雛形を追加 | [Slides](./PoC/humanoid/docs/flagship_poc_slides.md) |
+
+---
+
 ## 🔗 公式リンク / Official Links
 
 | 言語 / Language | GitHub Pages 🌐 | GitHub 💻 |

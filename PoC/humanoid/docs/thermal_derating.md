@@ -48,7 +48,8 @@ showing at which phases derating (output limiting) or shutdown occurs.*
 *Junction temperature vs phase and derating line:*
 
 <p align="center">
-  <img src="../systemdk/reports/thermal_derating/thermal_vs_phase_40C.png" alt="Thermal vs Phase (Ambient=40°C)" width="80%">
+  <img src="https://samizo-aitl.github.io/AITL-H/PoC/humanoid/systemdk/reports/thermal_derating/thermal_vs_phase_40C.png" 
+       alt="Thermal vs Phase (Ambient=40°C)" width="80%">
 </p>
 
 ---

@@ -12,6 +12,8 @@ last_updated: 2025-08-25
 # 🚩 フラグシップPoC：人型ロボット（Samizo-AITL集大成）
 *🚩 Flagship PoC: Humanoid Robot (Culmination of Samizo-AITL)*
 
+[![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](#-ライセンス--license)  
+
 > **本PoCは Samizo-AITL プロジェクトの「集大成」**。  
 > AITL-Hの三層アーキテクチャ（FSM × PID × LLM）を基盤に、  
 > **頭脳（22 nm SoC）／感覚（0.18 µm AMS）／筋肉（0.35 µm LDMOS）／自己発電ブロック**を跨いだクロスノード設計を、SystemDKで統合検証します。  

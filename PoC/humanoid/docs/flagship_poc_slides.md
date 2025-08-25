@@ -3,7 +3,7 @@ title: Flagship PoC Slides
 description: Samizo-AITL集大成 人型ロボットPoC 発表用スライド
 nav_order: 4
 layout: clean
-permalink: /AITL-H/PoC/humanoid/docs/flagship_poc_slides/
+permalink: /PoC/humanoid/docs/flagship_poc_slides/
 ---
 
 ---

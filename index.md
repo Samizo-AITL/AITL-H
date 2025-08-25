@@ -151,50 +151,6 @@ flowchart TB
 
 ---
 
-### ​ PoC例：FSM × PID × LLMによる3軸ジンバル制御
-*PoC Example: 3-Axis Gimbal Control with FSM × PID × LLM*
-
-> **自然言語指令 → 状態遷移（FSM） → PID安定制御 → アクチュエータ** の閉ループ構成。  
-> 教育・応用に最適な **AITL-HXアーキテクチャ** の基本実装。  
-> *Closed-loop structure: **Natural language commands → State transitions (FSM) → PID stabilization → Actuators**.  
-> A basic implementation of the **AITL-HX architecture**, ideal for education and applications.*
-
-📂 ディレクトリ：[**`PoC/gimbal_control/`**]  [![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/PoC/gimbal_control)  
-*📂 Directory: [**`PoC/gimbal_control/`**](https://github.com/Samizo-AITL/AITL-H/tree/main/PoC/gimbal_control)*  
-
-📘 詳細：[**`READMEはこちら`**](https://samizo-aitl.github.io/AITL-H/PoC/gimbal_control/)  
-*📘 Details: [**`README here`**](https://samizo-aitl.github.io/AITL-H/PoC/gimbal_control/)*  
-
-```mermaid
-flowchart TB
-    subgraph LLM["LLM層 / *LLM Layer*"]
-        direction TB
-        LLM_desc["自然言語による指令生成・意図推論 / *Command generation & intent inference from natural language*"]
-    end
-
-    subgraph FSM["FSM層 / *FSM Layer*"]
-        FSM_desc["行動切替（待機・追従・復帰 など） / *Behavior switching (standby, tracking, recovery, etc.)*"]
-    end
-
-    subgraph PID["PID層 / *PID Layer*"]
-        PID_desc["Roll / Pitch / Yaw の MIMO PID制御 / *MIMO PID control of roll, pitch, yaw*"]
-    end
-
-    subgraph ACT["アクチュエータ層 / *Actuator Layer*"]
-        ACT_desc["モータ駆動（PWM制御） / *Motor drive (PWM control)*"]
-    end
-
-    subgraph SENSOR["IMUセンサ層 / *IMU Sensor Layer*"]
-        SENSOR_desc["姿勢センサ（角速度・加速度） / *Attitude sensors (angular velocity, acceleration)*"]
-    end
-
-    LLM --> FSM --> PID --> ACT
-    ACT <--> SENSOR
-    SENSOR --> LLM
-```
-
----
-
 ## 🤖 ChatGPT支援ツール　/  ChatGPT-Assisted Toolset
 
 `accelerated_design/` にて **ChatGPTを用いた設計支援ツール** を提供：  

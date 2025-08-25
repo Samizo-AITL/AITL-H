@@ -95,6 +95,8 @@ last_updated: 2025-08-25
   圧電素子・薄膜PVセル・回生ブレーキを組み合わせ、外部電源がない山中やフィールド環境でも活動を継続可能。  
   *By combining piezoelectric elements, thin-film PV cells, and regenerative braking, the robot can sustain operation even in mountains or field environments without external power.*
 
+---
+
 ## 🌍 世界主要人型ロボットとの比較 / Comparison with World-Leading Humanoid Robots
 
 | 項目 / Feature | Boston Dynamics **Atlas** | Tesla **Optimus** | **Samizo-AITL PoC** |

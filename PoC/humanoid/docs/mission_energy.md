@@ -4,6 +4,8 @@ description: 自己発電（回生・圧電・PV）の寄与率とバッテリSO
 nav_order: 3
 ---
 
+---
+
 # 🔋 Mission Energy Report
 *🔋 Mission Energy Report*
 

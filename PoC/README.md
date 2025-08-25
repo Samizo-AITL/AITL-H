@@ -16,6 +16,14 @@ FSM（本能）＋ PID（理性）＋ LLM（知性）の三層アーキテクチ
 
 ---
 
+## 🔗 公式リンク / Official Links
+
+| 言語 / Language | GitHub Pages 🌐 | GitHub 💻 |
+|-----------------|----------------|-----------|
+| 🇯🇵 Japanese | [![GitHub Pages JP](https://img.shields.io/badge/GitHub%20Pages-日本語版-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/PoC/) | [![GitHub Repo JP](https://img.shields.io/badge/GitHub-日本語版-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/PoC) |
+
+---
+
 ## 📁 ディレクトリ構成（PoC）
 
 ```

@@ -124,23 +124,29 @@ AITL-Hは、単なる制御アーキテクチャではなく、
 
 ---
 
-## 🧪 PoC関連　/  PoC Related
-
+## 🧪 PoC関連 / PoC Related 
 | タイトル | 概要 | パス |
 |----------|------|------|
-| 📘 **PoC設計マニュアル** | FSM×PID×LLM統合に基づいた人型ロボットPoC設計マニュアル（全16章）<br>*Humanoid robot PoC design manual (16 chapters) based on FSM × PID × LLM integration.* | [![View Manual](https://img.shields.io/badge/View-Manual-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/docs/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/docs) |
-| 🤖 **PoC統合実行環境** | FSM＋PID＋LLMの三層アーキテクチャを用いたAITL-H PoC（人型ロボット制御）の実験構成・実行環境<br>*Experimental setup and execution environment for AITL-H PoC (humanoid robot control) using the three-layer architecture of FSM + PID + LLM.* | [![View Manual](https://img.shields.io/badge/View-Manual-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/PoC/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/PoC) |
-| 🧭 **ジンバル制御（FSM + PID + LLM）** | ハイブリッド閉ループ制御<br>*Hybrid closed-loop control.* | [![View Manual](https://img.shields.io/badge/View-Manual-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/PoC/gimbal_control/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/PoC/gimbal_control) |
-| ⚙️ **Verilog自動生成（FSM + PID）** | YAML → C → Verilog生成＋検証<br>*Automatic conversion from YAML → C → Verilog with verification.* | [![View Manual](https://img.shields.io/badge/View-Manual-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/PoC/verilog_demo/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/PoC/verilog_demo) |
-| 🛠 **Auto Generator（FSM・PID自動生成ツール）** | AITL-Hアーキテクチャに基づくFSM・PID構成をYAML→C→Verilog変換する自動生成支援ツール群<br>*Auto-generation support toolset for converting FSM/PID configurations based on the AITL-H architecture from YAML → C → Verilog.* | [![View Manual](https://img.shields.io/badge/View-Manual-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/PoC/auto_generator/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/PoC/auto_generator) |
-| 🚩 **Humanoid Robot PoC（集大成）** | FSM × PID × LLM × 状態空間 × 自己発電を統合したフラグシップPoC<br>*Flagship PoC integrating FSM × PID × LLM × State-Space × Energy Harvesting* | [![View Manual](https://img.shields.io/badge/View-Manual-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/PoC/humanoid/) <br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/PoC/humanoid) |
+| 🚩 **Humanoid Robot PoC（集大成）** | FSM × PID × LLM × 状態空間 × 自己発電を統合したフラグシップPoC | [![View Manual](https://img.shields.io/badge/View-Manual-brightgreen?logo=github)](./PoC/humanoid/) <br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/PoC/humanoid) |
+| 🧭 **ジンバル制御（FSM + PID + LLM）** | ハイブリッド閉ループ制御 | [![View Manual](https://img.shields.io/badge/View-Manual-brightgreen?logo=github)](./PoC/gimbal_control/) <br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/PoC/gimbal_control) |
+| ⚙️ **Verilog自動生成（FSM + PID）** | YAML → C → Verilog生成＋検証 | [![View Manual](https://img.shields.io/badge/View-Manual-brightgreen?logo=github)](./PoC/verilog_demo/) <br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/PoC/verilog_demo) |
+| 🛠 **Auto Generator** | FSM・PID構成のYAML→C→Verilog自動生成ツール群 | [![View Manual](https://img.shields.io/badge/View-Manual-brightgreen?logo=github)](./PoC/auto_generator/) <br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/PoC/auto_generator) |
+
+> 🚩 **フラグシップPoC：人型ロボット** — クロスノード（22nm SoC / 0.18µm AMS / 0.35µm LDMOS / 自己発電）を SystemDK で統合。教育・産業・政策の三領域で優位性を発揮。
 
 ---
 
-> 🚩 **フラグシップPoC：人型ロボット**  
-> *Flagship PoC: Humanoid Robot*  
-> Samizo-AITLの集大成として、クロスノード設計（22nm SoC / 0.18µm AMS / 0.35µm LDMOS / 自己発電）をSystemDKで統合。  
-> 教育・産業・政策の三領域で優位性を発揮できるテーマです。
+## 🗺️ プロジェクト関係図 / Project Relationship Map
+```mermaid
+flowchart LR
+  EC[EduController
+(制御理論〜AI制御)] <--教材フィード--> AITLH[AITL-H
+Hybrid Control & SystemDK]
+  AITLH <--設計手法/PoC成果--> ESV[Edusemi-v4x
+(SoC/RTL/レイアウト)]
+  EC <--参照リンク--> ESV
+```
+*EduController ⇔ AITL-H ⇔ Edusemi-v4x の相互参照関係を示す簡易図。*
 
 ---
 

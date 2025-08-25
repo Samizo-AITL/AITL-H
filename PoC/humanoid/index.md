@@ -16,6 +16,21 @@ last_updated: 2025-08-25
 
 ---
 
+## ⚡ TL;DR / エグゼクティブサマリー
+- **Samizo-AITL PoC = フラグシップ人型ロボットプロジェクト**  
+  FSM × PID × 状態空間制御 × LLM を統合したクロスノード設計。  
+  *Samizo-AITL PoC = Flagship humanoid robot project integrating FSM × PID × State-space × LLM in a cross-node design.*
+
+- **Atlas & Optimus を超える領域**  
+  会話・個人認識・損傷対応・自己発電による自律行動を実現。  
+  *Goes beyond Atlas & Optimus by enabling conversation, person recognition, damage tolerance, and self-powering autonomy.*
+
+- **目標 / Goal**  
+  持続可能で冗長性を備えた知能的人型制御システムを実証し、Samizo-AITLの「集大成」とする。  
+  *Demonstrate a sustainable, fault-tolerant, and intelligent humanoid control system as the culmination of Samizo-AITL.*
+  
+---
+
 > **本PoCは Samizo-AITL プロジェクトの「集大成」**。<br/>
 > *This PoC is positioned as the "culmination" of the Samizo-AITL project.*<br/>
 > AITL-Hの三層アーキテクチャ（FSM × PID × LLM）を基盤に、**頭脳（22 nm SoC）／感覚（0.18 µm AMS）／筋肉（0.35 µm LDMOS＋外付けパワーチップ）／自己発電ブロック**を跨いだクロスノード設計を、SystemDKで統合検証します。<br/>
@@ -176,6 +191,34 @@ humanoid/
 | **Humanoid PoC Reports** | PWM Ripple / Thermal Derating / Mission Energy | [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](./docs/index.md) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/PoC/humanoid/docs) |
 | **Flagship PoC Slides** | 発表用スライド雛形 / *Presentation draft slides* | [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](./docs/flagship_poc_slides.md) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/blob/main/PoC/humanoid/docs/flagship_poc_slides.md) |
 
+---
+
+## 🚀 今後の展望 / Roadmap
+
+- **実証実験ステップ / Experimental Steps**  
+  - シミュレーションでのKPI検証（姿勢回復200ms・省エネ効率+15%）  
+    *Validate KPIs in simulation (200 ms recovery, +15% efficiency)*  
+  - 小型プロトタイプでの歩行・転倒回復デモ  
+    *Prototype demonstration of walking and fall recovery*  
+  - 会話・個人認識の実装テスト  
+    *Test implementation of conversation and person recognition*  
+
+- **技術拡張 / Technical Extensions**  
+  - 大トルク駆動に向けたGaN/MOSFETパワーチップ統合  
+    *Integrate GaN/MOSFET power chips for high-torque actuation*  
+  - エネルギーハーベスト効率の最適化（圧電＋PV＋回生制御）  
+    *Optimize energy harvesting (piezo + PV + regenerative control)*  
+
+- **応用展開 / Applications**  
+  - 山岳・災害現場での持続的自律活動  
+    *Sustainable autonomous activity in mountain/disaster sites*  
+  - 工場・物流での省エネ人型アシストロボット  
+    *Energy-efficient humanoid assist robots for factories/logistics*  
+
+- **最終目標 / Final Goal**  
+  Samizo-AITLの集大成として、**「自律・冗長性・持続性」を備えた世界トップ水準の人型ロボット** を確立する。  
+  *Establish a world-class humanoid robot with autonomy, fault tolerance, and sustainability as the culmination of Samizo-AITL.*
+  
 ---
 
 ## 📚 関連プロジェクト・教材 / Related Projects & Materials

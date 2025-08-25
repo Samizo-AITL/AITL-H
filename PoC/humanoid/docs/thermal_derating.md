@@ -4,6 +4,8 @@ description: LDMOS駆動ICの熱挙動とデレート発生の評価
 nav_order: 2
 ---
 
+---
+
 # 🌡️ Thermal Derating Report
 *🌡️ Thermal Derating Report*
 

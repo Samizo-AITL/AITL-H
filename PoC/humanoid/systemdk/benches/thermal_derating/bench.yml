@@ -1,0 +1,18 @@
+driver_model: ldm_035_drive_thermal
+
+mission_profile:
+  phases:
+    - {name: walk, torque_pct: 0.4, duration_s: 120}
+    - {name: lift, torque_pct: 0.8, duration_s: 30}
+    - {name: idle, torque_pct: 0.1, duration_s: 60}
+
+ambient_c: [25, 40]
+
+control:
+  shutdown_c: 125
+  derate_start_c: 100
+
+outputs:
+  - junction_temp_c
+  - derate_events
+  - allowed_peak_duration_s

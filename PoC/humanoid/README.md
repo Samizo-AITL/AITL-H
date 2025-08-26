@@ -4,7 +4,7 @@ title: AITL-H / PoC - 人型ロボット制御（集大成）
 nav_order: 2
 description: FSM + PID + 状態空間制御 + LLM による三層アーキテクチャを用いた人型ロボット制御の概念実証
 permalink: /PoC/humanoid/
-last_updated: 2025-08-25
+last_updated: 2025-08-25 
 ---
 
 ---

@@ -57,6 +57,31 @@ last_updated: 2025-08-25
 
 ---
 
+## 🛰 極限環境オプション / Extreme Environment Option
+
+- **22nm FD-SOI ベースのEE仕様**  
+  *EE specification based on 22nm FD-SOI*
+
+- **適用範囲 / Applications**  
+  宇宙（LEO/GEO・月面探査）、高放射線・高温／低温・強EMI環境  
+  *Space missions (LEO/GEO, lunar), high-radiation, wide-temp, and high-EMI environments*
+
+- **強化ポイント / Key Enhancements**  
+  1. 放射線耐性 (TID/SEL/SEU) → ミッションクリティカル用途  
+     *Radiation hardening (TID/SEL/SEU) for mission-critical reliability*  
+  2. 広温度動作 (−55～+150 °C) → 月面・惑星環境対応  
+     *Wide temperature operation (−55 to +150 °C) for lunar/planetary use*  
+  3. 低ノイズ・低リークAFE/PMIC → センサSNR向上＋低消費電力  
+     *Low-noise, low-leakage AFE/PMIC for better sensor SNR and power saving*
+
+- **導入形態 / Variants**  
+  - **Lite:** Sensor AFE / PMIC のみSOI化  
+    *Sensor AFE / PMIC only*  
+  - **Full:** SoC＋ドライバまでSOI化  
+    *SoC + drivers included*
+    
+---
+
 ## ⚙️ 制御アーキテクチャ / Control Architecture
 
 | 層 / Layer | 実装 / Implementation | 役割 / Role |

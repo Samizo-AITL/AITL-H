@@ -46,6 +46,8 @@ last_updated: 2025-08-25
 
 ---
 
+## 🧩 クロスノード・チップセット / Cross-Node Chipset
+
 | ブロック / Block | ノード / Node | 役割・IF / Role & Interface |
 |---|---|---|
 | **Brain SoC (※1)** | **22 nm** | **LLM推論・FSM管理・状態空間制御（LQR/LQG IP）**<br/>*LLM inference, FSM management, state-space control (LQR/LQG IP)*<br/>UART / SPI / I²C / MIPI-CSI2 |

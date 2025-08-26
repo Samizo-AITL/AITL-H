@@ -239,7 +239,7 @@ humanoid/
 
 ## 👤 執筆者 / Author
 
-| 項目 / Item | 内容 / Details |
+| 項目 / Item | 内容 / Details | 
 |---|---|
 | **著者 / Author** | **三溝 真一**（Shinichi Samizo）<br/>*Shinichi Samizo* |
 | **Email** | [![Email](https://img.shields.io/badge/Email-shin3t72%40gmail.com-red?style=for-the-badge&logo=gmail)](mailto:shin3t72@gmail.com) |

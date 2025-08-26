@@ -46,18 +46,7 @@ last_updated: 2025-08-25
 
 ---
 
-| ブロック / Block | ノード / Node | 役割・IF / Role & Interface |
-|---|---|---|
-| **Brain SoC (※1)** | **22 nm** | **LLM推論・FSM管理・状態空間制御（LQR/LQG IP）**<br/>*LLM inference, FSM management, state-space control (LQR/LQG IP)*<br/>UART / SPI / I²C / MIPI-CSI2 |
-| **Sensor Hub (※2)** | **0.18 µm AMS** | **CMOSカメラ・IMU・エンコーダ・力覚/圧力・MEMSマイク**<br/>*CMOS camera, IMU, encoders, force/pressure, MEMS microphone*<br/>I²C / SPI / DVP / CSI2 |
-| **Power Drive** | **0.35 µm LDMOS + 外付けパワーチップ** | **PWM/Hブリッジ・サーボ/BLDC駆動・温度/電流モニタ・大電流駆動**<br/>*PWM/H-bridge, servo/BLDC drive, temp/current monitor, high-current drive (MOSFET/GaN)* |
-| **Energy Harvest** | **Piezo / PV / Regen** | **発電・蓄電・DC-DC電源供給**<br/>*Energy harvesting, storage, DC-DC power* |
 
-(※1) 極限環境用途では **22nm FD-SOI** 実装に切替可能（放射線耐性・広温度動作・低ノイズ対応）。  
-*For extreme environments, Brain SoC can be implemented on **22nm FD-SOI** (radiation tolerance, wide-temp operation, low-noise).*  
-
-(※2) 必要に応じ **0.18 µm SOI AMS** 実装も可能（低ノイズ・サブストレート干渉抑制・放射線耐性強化）。  
-*Optionally, **0.18 µm SOI AMS** implementation is available (low-noise, reduced substrate coupling, enhanced radiation tolerance).*
 
 ---
 

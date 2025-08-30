@@ -54,6 +54,7 @@ last_updated: 2025-08-25
 | **Sensor Hub (※2)** | **0.18 µm AMS** | **CMOSカメラ・IMU・エンコーダ・力覚/圧力・MEMSマイク**<br/>*CMOS camera, IMU, encoders, force/pressure, MEMS microphone*<br/>I²C / SPI / DVP / CSI2 |
 | **Power Drive** | **0.35 µm LDMOS + 外付けパワーチップ** | **PWM/Hブリッジ・サーボ/BLDC駆動・温度/電流モニタ・大電流駆動**<br/>*PWM/H-bridge, servo/BLDC drive, temp/current monitor, high-current drive (MOSFET/GaN)* |
 | **Energy Harvest** | **Piezo / PV / Regen** | **発電・蓄電・DC-DC電源供給**<br/>*Energy harvesting, storage, DC-DC power* |
+| **Memory Subsystem** | **HBM (DRAM) + FeRAM Chiplet** | **高帯域ワーキングセット＋不揮発層（チェックポイント/メタデータ/低頻度更新）**<br/>*High-bandwidth working set + persistent tier (ckpt/metadata/low-update)*<br/>HBM3/E on interposer, NVM bus to FeRAM |
 
 (※1) 極限環境用途では **22nm FD-SOI** 実装に切替可能（放射線耐性・広温度動作・低ノイズ対応）。  
 *For extreme environments, Brain SoC can be implemented on **22nm FD-SOI** (radiation tolerance, wide-temp operation, low-noise).*  
@@ -72,6 +73,32 @@ last_updated: 2025-08-25
 | **物理制御層** | PID＋状態空間（LQR/LQG） | **関節SISO安定化＋全身MIMO協調制御＋外乱補償**<br/>*Joint SISO stabilization, whole-body MIMO control, disturbance compensation* |
 | **駆動層** | LDMOS PWM/Hブリッジ＋外付けパワーチップ | **大トルク出力・安全監視**<br/>*High-torque output, safety monitoring* |
 | **エネルギー層** | 圧電 / PV / 回生制御 | **発電・蓄電・電力マネジメント**<br/>*Energy harvesting, storage, power management* |
+
+---
+
+## 🔋 メモリサブシステム（HBM+FeRAM） / Memory Subsystem (HBM+FeRAM)
+
+- **ねらい / Rationale**  
+  HBMで制御・知覚スタックの**高帯域**を満たしつつ、FeRAMで**不揮発・低待機**・**インスタントレジューム**を実現。  
+  *Meet high bandwidth with HBM while FeRAM provides non-volatility, low standby, and instant resume.*
+
+- **役割分担 / Role Split**  
+  - **HBM**: 学習済み特徴・マップ・バッファ等の**Hot/Warm**作業領域  
+    *HBM for hot/warm working sets (features, maps, buffers)*  
+  - **FeRAM**: **チェックポイント／ポリシー／ミッション状態**などの**Persistent/Cold**層  
+    *FeRAM for persistent/cold data such as checkpoints, policies, mission state*
+
+- **ポリシー / Policies**  
+  **Tiering（Hot/Warm/Cold）**, **差分チェックポイント**, **HBMリフレッシュ抑制（FeRAM保護領域）**, **ECC/ウェア管理**  
+  *Tiering, delta checkpointing, DRAM-refresh suppression for FeRAM-backed regions, ECC & wear management.*
+
+```mermaid
+flowchart LR
+  Brain["🧠 Brain SoC (22 nm)"] -->|requests| HBM["⚡ HBM (DRAM): Working Set"]
+  HBM <-.-->|ckpt/meta| FeRAM["💾 FeRAM: Persistent Tier"]
+  PE["Policy Engine\n(tiering/ckpt/ECC)"] -.-> HBM
+  PE -.-> FeRAM
+```
 
 ---
 
@@ -173,6 +200,9 @@ flowchart TB
 - **異常検知誤差率**（LLM+FSM） < 2%<br/>*Anomaly detection error < 2%*
 - **自己発電寄与率**：消費電力量の最大 **20%補填**<br/>*Self-powering contribution up to 20%*
 - **持続行動時間延長**：従来比 **+30%**（山岳フィールドにおける動作時間）<br/>*Sustained operation time +30% in mountain/field missions*
+- **待機電力削減（HBM+FeRAM）**：従来比 **−20〜−35%**
+- **インスタントレジューム**：**≤ 1–5 ms**（全系再初期化なし）
+- **チェックポイント耐久**：FeRAM年間書込みが **10¹²** 回未満（設計上限内）
 
 ---
 

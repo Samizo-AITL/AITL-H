@@ -194,16 +194,38 @@ flowchart TB
 ---
 
 ## 🎯 成功指標（KPI） / Key Performance Indicators
-- **姿勢回復時間** ≤ 200 ms<br/>*Posture recovery time ≤ 200 ms*
-- **歩容安定度**（CoM偏差RMS）**+30%**（PID単独比）<br/>*Gait stability +30% vs. PID-only*
-- **エネルギー効率** **+15%**（協調制御＋ハーベスト）<br/>*Energy efficiency +15% (hybrid + harvesting)*
-- **異常検知誤差率**（LLM+FSM） < 2%<br/>*Anomaly detection error < 2%*
-- **自己発電寄与率**：消費電力量の最大 **20%補填**<br/>*Self-powering contribution up to 20%*
-- **持続行動時間延長**：従来比 **+30%**（山岳フィールドにおける動作時間）<br/>*Sustained operation time +30% in mountain/field missions*
-- **待機電力削減（HBM+FeRAM）**：従来比 **−20〜−35%**
-- **インスタントレジューム**：**≤ 1–5 ms**（全系再初期化なし）
-- **チェックポイント耐久**：FeRAM年間書込みが **10¹²** 回未満（設計上限内）
 
+- **姿勢回復時間** ≤ 200 ms  
+  *Posture recovery time ≤ 200 ms*  
+
+- **歩容安定度**（CoM偏差RMS）**+30%**（PID単独比）  
+  *Gait stability +30% vs. PID-only*  
+
+- **エネルギー効率** **+15%**（協調制御＋ハーベスト）  
+  *Energy efficiency +15% (hybrid + harvesting)*  
+
+- **異常検知誤差率**（LLM+FSM） < 2%  
+  *Anomaly detection error < 2%*  
+
+- **自己発電寄与率**：消費電力量の最大 **20%補填**  
+  *Self-powering contribution up to 20%*  
+
+- **持続行動時間延長**：従来比 **+30%**（山岳フィールドにおける動作時間）  
+  *Sustained operation time +30% in mountain/field missions*  
+
+---
+
+### 🧩 HBM+FeRAM Integration KPIs
+
+- **待機電力削減**：従来比 **−20〜−35%**  
+  *Standby power reduction: −20 to −35% compared to baseline*  
+
+- **インスタントレジューム**：**≤ 1–5 ms**（全系再初期化なし）  
+  *Instant resume: ≤ 1–5 ms (no full system reinitialization required)*  
+
+- **チェックポイント耐久**：FeRAM年間書込みが **10¹²** 回未満（設計上限内）  
+  *Checkpoint endurance: FeRAM annual writes below 10¹² (within design limit)*
+  
 ---
 
 ## 📂 ディレクトリ構成（予定） / Planned Directory Structure
@@ -226,7 +248,7 @@ humanoid/
 |-----------------|--------------------|----------------|
 | **Humanoid PoC Reports** | PWM Ripple / Thermal Derating / Mission Energy | [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/PoC/humanoid/docs/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/PoC/humanoid/docs) |
 | **Flagship PoC Slides** | 発表用スライド雛形 / *Presentation draft slides* | [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/PoC/humanoid/docs/flagship_poc_slides/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/blob/main/PoC/humanoid/docs/flagship_poc_slides.md) |
-| **HBM+FeRAM（Edusemi-v4x）** | モバイルエッジAI向けHBM+FeRAM統合の設計・評価 / *Design & evaluation of HBM+FeRAM for mobile edge AI* | [📄 View Detail](https://samizo-aitl.github.io/Edusemi-v4x/d_chapter1_memory_technologies/hbm_feram.md) |
+| **HBM+FeRAM（Edusemi-v4x）** | モバイルエッジAI向けHBM+FeRAM統合の設計・評価 / *Design & evaluation of HBM+FeRAM for mobile edge AI* | [📄 View Detail](https://samizo-aitl.github.io/Edusemi-v4x/d_chapter1_memory_technologies/hbm_feram/) |
 
 ---
 
@@ -274,7 +296,7 @@ humanoid/
   スタンバイ電力と再起動時間を削減するハイブリッド構成を検討・教材化。  
   *Using **SystemDK** top-down co-design (chiplets / controllers / OS), we document hybrid architectures that reduce standby power and reboot time.*  
 
-  👉 [📄 HBM+FeRAM 詳細（Edusemi-v4x）](https://samizo-aitl.github.io/Edusemi-v4x/d_chapter1_memory_technologies/hbm_feram.md)
+  👉 [📄 HBM+FeRAM 詳細（Edusemi-v4x）](https://samizo-aitl.github.io/Edusemi-v4x/d_chapter1_memory_technologies/hbm_feram/)
   
 ---
 

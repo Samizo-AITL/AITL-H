@@ -164,12 +164,18 @@ flowchart LR
   <img src="./images/humanoid_comparison_chart.png" alt="Comparison of Humanoid Robots" width="80%">
 </p>
 
-📌 **総評**  
+📌 **総評 / Overall Assessment**  
 - **Atlas** → 「運動性能」で突出（跳躍・宙返りなどアクロバット重視）。  
-- **Optimus** → 「量産・産業応用」に焦点（工場導入前提）。  
-- **Samizo-AITL PoC** → 「教育＋研究集大成＋エネルギー自立＋損傷対応」で差別化。  
+  *Atlas → Excels in dynamic performance (focused on acrobatics such as jumps and flips).*  
 
-👉 世界トップを目指すなら、「**Atlas級の運動性能**」＋「**Optimus級の産業実装性**」に加え、**Samizo-AITL独自の“自立性・冗長性”** を強調することがカギになります。
+- **Optimus** → 「量産・産業応用」に焦点（工場導入前提）。  
+  *Optimus → Focused on mass production and industrial applications (factory integration in mind).*  
+
+- **Samizo-AITL PoC** → 「教育＋研究集大成＋エネルギー自立＋損傷対応」で差別化。  
+  *Samizo-AITL PoC → Differentiated by educational and research culmination, energy autonomy, and damage tolerance.*  
+
+👉 世界トップを目指すなら、「**Atlas級の運動性能**」＋「**Optimus級の産業実装性**」に加え、**Samizo-AITL独自の“自立性・冗長性”** を強調することがカギになります。  
+*👉 To aim for world-class status, combining **Atlas-level dynamic performance** and **Optimus-level industrial applicability**, while emphasizing **Samizo-AITL’s unique autonomy and fault tolerance**, will be key.*  
 
 ---
 

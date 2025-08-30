@@ -254,7 +254,7 @@ humanoid/
 |-----------------|--------------------|----------------|
 | **Humanoid PoC Reports** | PWM Ripple / Thermal Derating / Mission Energy | [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/PoC/humanoid/docs/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/tree/main/PoC/humanoid/docs) |
 | **Flagship PoC Slides** | 発表用スライド雛形 / *Presentation draft slides* | [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/PoC/humanoid/docs/flagship_poc_slides/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H/blob/main/PoC/humanoid/docs/flagship_poc_slides.md) |
-| **HBM+FeRAM（Edusemi-v4x）** | モバイルエッジAI向けHBM+FeRAM統合の設計・評価 / *Design & evaluation of HBM+FeRAM for mobile edge AI* | [📄 View Detail](https://samizo-aitl.github.io/Edusemi-v4x/d_chapter1_memory_technologies/hbm_feram/) |
+| **HBM+FeRAM（Edusemi-v4x）** | モバイルエッジAI向けHBM+FeRAM統合の設計・評価 / *Design & evaluation of HBM+FeRAM for mobile edge AI* | [📄 View Detail](https://samizo-aitl.github.io/Edusemi-v4x/d_chapter1_memory_technologies/hbm_feram.html) |
 
 ---
 
@@ -302,7 +302,7 @@ humanoid/
   スタンバイ電力と再起動時間を削減するハイブリッド構成を検討・教材化。  
   *Using **SystemDK** top-down co-design (chiplets / controllers / OS), we document hybrid architectures that reduce standby power and reboot time.*  
 
-  👉 [📄 HBM+FeRAM 詳細（Edusemi-v4x）](https://samizo-aitl.github.io/Edusemi-v4x/d_chapter1_memory_technologies/hbm_feram/)
+  👉 [📄 HBM+FeRAM 詳細（Edusemi-v4x）](https://samizo-aitl.github.io/Edusemi-v4x/d_chapter1_memory_technologies/hbm_feram.html)
   
 ---
 

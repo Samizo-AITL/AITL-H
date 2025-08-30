@@ -94,10 +94,10 @@ last_updated: 2025-08-25
 
 ```mermaid
 flowchart LR
-  Brain["🧠 Brain SoC (22 nm)"] -->|requests| HBM["⚡ HBM (DRAM): Working Set"]
-  HBM <-.-->|ckpt/meta| FeRAM["💾 FeRAM: Persistent Tier"]
-  PE["Policy Engine\n(tiering/ckpt/ECC)"] -.-> HBM
-  PE -.-> FeRAM
+  Brain["🧠 Brain SoC (22 nm)"] -->|requests| HBM["⚡ HBM (DRAM)<br/>Working Set"]
+  HBM <-->|ckpt/meta| FeRAM["💾 FeRAM<br/>Persistent Tier"]
+  PE["📡 Policy Engine<br/>(tiering / ckpt / ECC)"] --> HBM
+  PE --> FeRAM
 ```
 
 ---

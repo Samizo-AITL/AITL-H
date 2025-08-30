@@ -236,6 +236,16 @@ humanoid/
 | **Edusemi-v4x Chapter3** | FSM × PID × LLMによるSoC設計教材<br/>*SoC design with FSM × PID × LLM* | [![🌐 Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/f_chapter3_socsystem/) [![💻 Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter3_socsystem) |
 | **AITL-Strategy-Proposal** | AITL戦略提言・政策提案<br/>*Strategy proposals & policy* | [![🌐 Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-Strategy-Proposal/) [![💻 Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-Strategy-Proposal) |
 
+- **Hybrid Memory (HBM+FeRAM)**  
+  HBMは高帯域・大容量を提供し、FeRAMは不揮発・低待機電力・瞬時復帰を補完。  
+  *HBM provides high bandwidth and capacity, while FeRAM complements with non-volatility, low standby power, and instant resume.*  
+
+  **SystemDK** によるトップダウン協調設計（チップレット／コントローラ／OS）で、  
+  スタンバイ電力と再起動時間を削減するハイブリッド構成を検討・教材化。  
+  *Using **SystemDK** top-down co-design (chiplets / controllers / OS), we document hybrid architectures that reduce standby power and reboot time.*  
+
+  👉 [📄 HBM+FeRAM 詳細（Edusemi-v4x）](https://samizo-aitl.github.io/Edusemi-v4x/d_chapter1_memory_technologies/hbm_feram.md)
+  
 ---
 
 ## 👤 執筆者 / Author

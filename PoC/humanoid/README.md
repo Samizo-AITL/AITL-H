@@ -224,16 +224,19 @@ flowchart TB
 
 ---
 
-### 🧩 HBM+FeRAM Integration KPIs
+### 🧩 Memory Subsystem KPIs (LPDDR + FRAM/EEPROM)
 
-- **待機電力削減**：従来比 **−20〜−35%**  
-  *Standby power reduction: −20 to −35% compared to baseline*  
+- **待機電力**：低消費電力モードで **数十 mW クラス**  
+  *Standby power in the tens of mW class (low-power mode)*  
 
-- **インスタントレジューム**：**≤ 1–5 ms**（全系再初期化なし）  
-  *Instant resume: ≤ 1–5 ms (no full system reinitialization required)*  
+- **レジューム時間**：**≤ 10 ms**（FRAM/EEPROMからの即時復帰）  
+  *Resume ≤ 10 ms from FRAM/EEPROM without full system reinit*  
 
-- **チェックポイント耐久**：FeRAM年間書込みが **10¹²** 回未満（設計上限内）  
-  *Checkpoint endurance: FeRAM annual writes below 10¹² (within design limit)*
+- **チェックポイント耐久**：FRAM/EEPROMで **10¹² 回級書込み耐性**（PoC要件内）  
+  *Checkpoint endurance up to 10¹² writes with FRAM/EEPROM (within PoC requirement)*  
+
+- **容量要件**：ログ／状態保存で **数MB〜数十MB規模** で十分  
+  *Log/state storage requires only a few to tens of MB, sufficient for PoC*
   
 ---
 

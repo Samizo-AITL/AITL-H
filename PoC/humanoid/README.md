@@ -76,28 +76,31 @@ last_updated: 2025-08-25
 
 ---
 
-## 🔋 メモリサブシステム（HBM+FeRAM） / Memory Subsystem (HBM+FeRAM)
+## 🔋 メモリサブシステム / Memory Subsystem
 
 - **ねらい / Rationale**  
-  HBMで制御・知覚スタックの**高帯域**を満たしつつ、FeRAMで**不揮発・低待機**・**インスタントレジューム**を実現。  
-  *Meet high bandwidth with HBM while FeRAM provides non-volatility, low standby, and instant resume.*
+  省電力・現実的な構成で、制御・知覚スタックを安定して動作させつつ、  
+  不揮発メモリでログやチェックポイントを保持する。  
+  *Provide a practical, low-power memory setup: LPDDR for active workloads, plus non-volatile memory for logs and checkpoints.*
 
-- **役割分担 / Role Split**  
-  - **HBM**: 学習済み特徴・マップ・バッファ等の**Hot/Warm**作業領域  
-    *HBM for hot/warm working sets (features, maps, buffers)*  
-  - **FeRAM**: **チェックポイント／ポリシー／ミッション状態**などの**Persistent/Cold**層  
-    *FeRAM for persistent/cold data such as checkpoints, policies, mission state*
+- **構成 / Configuration**  
+  - **LPDDR**: 制御・知覚処理・軽量LLMの作業領域  
+    *LPDDR as the working memory for control, perception, and lightweight LLM tasks*  
+  - **FRAM / EEPROM / SD / eMMC**: チェックポイント・ログ・ミッション状態保存  
+    *For non-volatile storage of checkpoints, logs, and mission state*  
 
-- **ポリシー / Policies**  
-  **Tiering（Hot/Warm/Cold）**, **差分チェックポイント**, **HBMリフレッシュ抑制（FeRAM保護領域）**, **ECC/ウェア管理**  
-  *Tiering, delta checkpointing, DRAM-refresh suppression for FeRAM-backed regions, ECC & wear management.*
+- **特徴 / Features**  
+  - シンプルかつ実装容易  
+    *Simple and easy to implement*  
+  - 低待機電力・即時復帰（FRAM/EEPROM活用）  
+    *Low standby power and instant resume using FRAM/EEPROM*  
+  - PoCとして「歩行・転倒回復・センサフュージョン」に十分対応  
+    *Sufficient for walking, fall recovery, and sensor fusion in PoC*  
 
 ```mermaid
 flowchart LR
-  Brain["🧠 Brain SoC (22 nm)"] -->|requests| HBM["⚡ HBM (DRAM)<br/>Working Set"]
-  HBM <-->|ckpt/meta| FeRAM["💾 FeRAM<br/>Persistent Tier"]
-  PE["📡 Policy Engine<br/>(tiering / ckpt / ECC)"] --> HBM
-  PE --> FeRAM
+  Brain["🧠 Brain SoC (22 nm)"] -->|requests| LPDDR["⚡ LPDDR<br/>Working Set"]
+  LPDDR <-->|logs/ckpt| NVM["💾 FRAM / EEPROM / SD / eMMC"]
 ```
 
 ---

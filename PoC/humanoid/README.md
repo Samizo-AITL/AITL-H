@@ -161,6 +161,7 @@ flowchart LR
 | **損傷対応 / Damage Tolerance** | 転倒時は動作停止<br/>*Stops after falls* | 未実装<br/>*Not implemented* | **残存関節で行動継続**<br/>*Continues acting with remaining actuators* |
 | **パワー / Power Output** | 外部バッテリ＋高出力油圧<br/>*External battery + hydraulics* | 内蔵バッテリ駆動<br/>*Internal battery powered* | **0.35 µm LDMOS＋外付けパワーチップ**で大関節高トルク<br/>*0.35 µm LDMOS + external power chips for high-torque joints* |
 | **エネルギー自立 / Energy Autonomy** | バッテリ依存<br/>*Battery only* | バッテリ依存<br/>*Battery only* | **圧電＋PV＋回生で持続行動**<br/>*Piezo + PV + regen for sustained operation* |
+| **Memory Subsystem** | **不明（カスタムDDR推定）**<br/>*Unknown (likely custom DDR)* | **標準LPDDR想定**<br/>*Standard LPDDR (embedded)* | **LPDDR + FRAM/EEPROM**<br/>*LPDDR + FRAM/EEPROM* |
 | **公開性 / Openness** | 非公開（デモ動画のみ）<br/>*Closed, demo videos only* | 限定公開（動画・一部発表）<br/>*Partially open, demos* | **GitHub Pagesで日英公開**<br/>*Published bilingual on GitHub Pages* |
 
 <p align="center">

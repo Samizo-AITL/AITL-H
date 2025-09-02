@@ -54,7 +54,7 @@ last_updated: 2025-08-25
 | **Sensor Hub (※2)** | **0.18 µm AMS** | **CMOSカメラ・IMU・エンコーダ・力覚/圧力・MEMSマイク**<br/>*CMOS camera, IMU, encoders, force/pressure, MEMS microphone*<br/>I²C / SPI / DVP / CSI2 |
 | **Power Drive** | **0.35 µm LDMOS + 外付けパワーチップ** | **PWM/Hブリッジ・サーボ/BLDC駆動・温度/電流モニタ・大電流駆動**<br/>*PWM/H-bridge, servo/BLDC drive, temp/current monitor, high-current drive (MOSFET/GaN)* |
 | **Energy Harvest** | **Piezo / PV / Regen** | **発電・蓄電・DC-DC電源供給**<br/>*Energy harvesting, storage, DC-DC power* |
-| **Memory Subsystem** | **HBM (DRAM) + FeRAM Chiplet** | **高帯域ワーキングセット＋不揮発層（チェックポイント/メタデータ/低頻度更新）**<br/>*High-bandwidth working set + persistent tier (ckpt/metadata/low-update)*<br/>HBM3/E on interposer, NVM bus to FeRAM |
+| **Memory Subsystem** | **LPDDR + FRAM/EEPROM** | **制御・知覚処理用の省電力ワーキングセット＋不揮発ログ/チェックポイント保存**<br/>*Low-power working set for control & perception + non-volatile storage for logs/checkpoints* |
 
 (※1) 極限環境用途では **22nm FD-SOI** 実装に切替可能（放射線耐性・広温度動作・低ノイズ対応）。  
 *For extreme environments, Brain SoC can be implemented on **22nm FD-SOI** (radiation tolerance, wide-temp operation, low-noise).*  

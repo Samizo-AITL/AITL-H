@@ -207,12 +207,12 @@ pie title Samizo-AITL PoC - Capability Distribution
 %% Atlas / Optimus / Samizo-AITL PoC の比較
 
 bar
-  title Comparative Features of Humanoid Robots
-  x-axis ["Posture Recovery (ms ↓)", "Energy Autonomy (%)", "Conversation", "Person Recognition", "Damage Tolerance"]
-  y-axis "Relative Score (0–100)" 0 --> 100
-  series "Atlas" [90, 10, 0, 0, 10]
-  series "Optimus" [60, 15, 20, 10, 10]
-  series "Samizo-AITL PoC" [95, 40, 80, 70, 75]
+    title Comparative Features of Humanoid Robots
+    x-axis ["Posture Recovery (ms ↓)", "Energy Autonomy (%)", "Conversation", "Person Recognition", "Damage Tolerance"]
+    y-axis "Relative Score (0–100)" 0 --> 100
+    series "Atlas" [90, 10, 0, 0, 10]
+    series "Optimus" [60, 15, 20, 10, 10]
+    series "Samizo-AITL PoC" [95, 40, 80, 70, 75]
 ```
 
 📌 **総評 / Overall Assessment**  

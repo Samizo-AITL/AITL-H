@@ -214,6 +214,40 @@ xychart-beta
     bar "Samizo-AITL PoC" [95, 40, 80, 70, 75]
 ```
 
+### 📊 世界主要人型ロボット比較 / Comparative Chart
+
+```mermaid
+gantt
+    title Comparative Features of Humanoid Robots
+    dateFormat  X
+    axisFormat  %L
+
+    section Posture Recovery (ms ↓)
+    Atlas          :done,    0, 90
+    Optimus        :active,  0, 60
+    Samizo-AITL PoC:         0, 95
+
+    section Energy Autonomy (%)
+    Atlas          :done,    0, 10
+    Optimus        :active,  0, 15
+    Samizo-AITL PoC:         0, 40
+
+    section Conversation
+    Atlas          :done,    0, 0
+    Optimus        :active,  0, 20
+    Samizo-AITL PoC:         0, 80
+
+    section Person Recognition
+    Atlas          :done,    0, 0
+    Optimus        :active,  0, 10
+    Samizo-AITL PoC:         0, 70
+
+    section Damage Tolerance
+    Atlas          :done,    0, 10
+    Optimus        :active,  0, 10
+    Samizo-AITL PoC:         0, 75
+```
+
 📌 **総評 / Overall Assessment**  
 - **Atlas** → 「運動性能」で突出（跳躍・宙返りなどアクロバット重視）。  
   *Atlas → Excels in dynamic performance (focused on acrobatics such as jumps and flips).*  

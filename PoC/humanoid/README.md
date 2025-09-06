@@ -164,8 +164,46 @@ flowchart LR
 | **Memory Subsystem** | **不明（カスタムDDR推定）**<br/>*Unknown (likely custom DDR)* | **標準LPDDR想定**<br/>*Standard LPDDR (embedded)* | **LPDDR + FRAM/EEPROM**<br/>*LPDDR + FRAM/EEPROM* |
 | **公開性 / Openness** | 非公開（デモ動画のみ）<br/>*Closed, demo videos only* | 限定公開（動画・一部発表）<br/>*Partially open, demos* | **GitHub Pagesで日英公開**<br/>*Published bilingual on GitHub Pages* |
 
+### 📊 能力配分の円グラフ比較 / Capability Distribution (Illustrative)
+
+> 各ロボットの強みを**配分**で可視化（0–100の合計=100）。  
+> *Visualize relative strengths as a distribution (sum to 100).*
+
+```mermaid
+%% Atlas - dynamic performance heavy
+pie title Atlas - Capability Distribution
+  "Dynamic Motion / 動的運動" : 45
+  "Disturbance Recovery / 外乱耐性" : 25
+  "Manipulation / 物体操作" : 15
+  "Navigation / ナビ" : 10
+  "Conversational AI / 会話" : 5
+```
+
+```mermaid
+%% Optimus - industrial applicability heavy
+pie title Optimus - Capability Distribution
+  "Industrial Applicability / 産業実装" : 40
+  "Manipulation / 物体操作" : 25
+  "Navigation / ナビ" : 20
+  "Disturbance Recovery / 外乱耐性" : 10
+  "Conversational AI / 会話" : 5
+```
+
+```mermaid
+%% Samizo-AITL PoC - autonomy & resilience heavy
+pie title Samizo-AITL PoC - Capability Distribution
+  "Autonomy & Energy / 自律・省エネ" : 30
+  "Disturbance Recovery / 外乱耐性" : 20
+  "Navigation / ナビ" : 15
+  "Conversational AI / 会話" : 15
+  "Manipulation / 物体操作" : 10
+  "Damage Tolerance / 損傷対応" : 10
+```
+
+## 🌍 世界主要人型ロボット比較 / Comparative Chart
+
 <p align="center">
-  <img src="./images/humanoid_comparison_chart.png" alt="Comparison of Humanoid Robots" width="80%">
+  <img src="./images/humanoid_comparison_radar.png" alt="Radar Comparison" width="80%">
 </p>
 
 📌 **総評 / Overall Assessment**  

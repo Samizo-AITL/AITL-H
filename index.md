@@ -12,10 +12,15 @@ show_title: false   # ← これで上部の自動H1バーを非表示
 
 [![Samizo-AITLポータルサイトに戻る](https://img.shields.io/badge/Samizo--AITL%20ポータルサイトに戻る-brightgreen)](https://samizo-aitl.github.io/) [![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](#-ライセンス--license)
 
-> ⚠️ **開発・検証中 / Under Development**  
-> 本プロジェクトは現在も **発展途上** にあり、構成・仕様・実装内容は今後変更される可能性があります。  
-> 利用・参照の際は、最新のリポジトリ内容をご確認ください。  
-> *⚠️ **Under development/testing.** This project is still evolving, and its structure, specifications, and implementation may change. Please check the latest repository contents when using or referencing it.*
+> ⚠️ **注記 / Note**  
+> 本プロジェクト **AITL-H** は、現在 **構想・検証段階** にあります。  
+> - **安定性・応答設計は PID 等の制御理論に基づくことを前提**としています。  
+> - **FSM や LLM は制御ループの外層ロジック／支援層**として設計され、直接的な安定性保証の対象ではありません。  
+> - 記述内容はアイデアや PoC の一部であり、今後の検証・実装によって変更される可能性があります。  
+> *⚠️ This project is in the **conceptual / testing stage**.  
+> - Stability and response design are assumed to rely on **control theory (e.g., PID)**.  
+> - **FSM and LLM act as outer supervisory / support layers**, not as parts of the stability-guaranteed control loop.  
+> - Contents are conceptual ideas and PoC fragments, subject to change as development progresses.*
 
 ---
 

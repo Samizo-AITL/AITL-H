@@ -203,17 +203,15 @@ pie title Samizo-AITL PoC - Capability Distribution
 ## 🌍 世界主要人型ロボット比較 / Comparative Chart
 
 ```mermaid
-%% Mermaid v9+ (GitHub Pages対応)
-%% Atlas / Optimus / Samizo-AITL PoC を棒グラフで比較
-xychart-beta
-  title "Comparative Features of Humanoid Robots"
+%% Mermaid v9 互換構文
+%% 各機能について Atlas / Optimus / Samizo-AITL PoC を比較
+bar
+  title Comparative Features of Humanoid Robots
   x-axis ["Posture Recovery (ms ↓)", "Energy Autonomy (%)", "Conversation", "Person Recognition", "Damage Tolerance"]
-  y-axis "Relative Score" 0 --> 100
-  bar ["Atlas", "Optimus", "Samizo-AITL PoC"] [
-    [90, 10, 0, 0, 10],
-    [60, 15, 20, 10, 10],
-    [95, 40, 80, 70, 75]
-  ]
+  y-axis "Relative Score (0–100)" 0 --> 100
+  series Atlas [90, 10, 0, 0, 10]
+  series Optimus [60, 15, 20, 10, 10]
+  series Samizo-AITL_PoC [95, 40, 80, 70, 75]
 ```
 
 📌 **総評 / Overall Assessment**  

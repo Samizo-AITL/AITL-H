@@ -11,9 +11,11 @@ show_title: true
 
 [![Back to Samizo-AITL Portal](https://img.shields.io/badge/Back_to-Samizo--AITL_Portal-brightgreen)](https://samizo-aitl.github.io/) [![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](#-license)
 
-> ⚠️ **Under Development / Testing**  
-> This project is still **in progress**, and its structure, specifications, and implementation are subject to change.  
-> Please always check the latest repository contents when using or referencing it.
+> ⚠️ **Note**  
+> The **AITL-H project** is currently in the **conceptual and testing stage**.  
+> - **Stability and response design rely on control theory (e.g., PID)** as a prerequisite.  
+> - **FSM and LLM are designed as outer supervisory / support layers**, and are **not part of the stability-guaranteed control loop**.  
+> - The contents are **conceptual ideas and partial PoC implementations**, and are subject to change as further testing and development progress.
 
 ---
 

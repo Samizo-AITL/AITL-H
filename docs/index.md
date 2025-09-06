@@ -12,6 +12,17 @@ description: "AITL-HのPoC実装マニュアル。PID・FSM・LLM三層構造の
 [![Samizo-AITLポータルサイトに戻る](https://img.shields.io/badge/Samizo--AITL%20ポータルサイトに戻る-brightgreen)](https://samizo-aitl.github.io/)
 [![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](#-ライセンス--license)
 
+> ⚠️ **注記 / Note**  
+> 本マニュアル **AITL-H PoC Manual** は、現在 **教育・PoC段階** にあります。  
+> - 記載内容は **教育・研究のための教材的アイデア** であり、実運用や安定動作を保証するものではありません。  
+> - **PIDによる安定化制御**を前提とし、**FSMやLLMは外層の補完ロジック**として扱います。  
+> - 内容は検証や更新により変更される可能性があります。  
+>  
+> *This manual is currently at the **educational / PoC stage**.  
+> - The contents are **educational and research-oriented ideas**, not guaranteed for operational deployment.  
+> - Stability relies on **PID-based control**, with **FSM and LLM positioned as outer-layer support logic**.  
+> - Contents may change as validation and updates progress.*
+
 本サイトは、**AITL-H（All-in-Theory Logic - Hybrid）** のPoC実装に関するマニュアルページです。  
 **PID・FSM・LLM** の三層構造に基づいた制御設計と、PoC仕様への落とし込み方を解説します。  
 _This site serves as the manual page for the PoC implementation of AITL-H (All-in-Theory Logic - Hybrid). It explains the control design based on the three-layer architecture of **PID**, **FSM**, and **LLM**, and how to realize them in PoC specifications._

@@ -31,9 +31,9 @@ last_updated: 2025-08-25
   
 ---
 
-> **本PoCは Samizo-AITL プロジェクトの「集大成」**。<br/>
-> *This PoC is positioned as the "culmination" of the Samizo-AITL project.*<br/>
-> AITL-Hの三層アーキテクチャ（FSM × PID × LLM）を基盤に、**頭脳（22 nm SoC）／感覚（0.18 µm AMS）／筋肉（0.35 µm LDMOS＋外付けパワーチップ）／自己発電ブロック**を跨いだクロスノード設計を、SystemDKで統合検証します。<br/>
+> **本PoCは Samizo-AITL プロジェクトの「集大成」**。  
+> *This PoC is positioned as the "culmination" of the Samizo-AITL project.*  
+> AITL-Hの三層アーキテクチャ（FSM × PID × LLM）を基盤に、**頭脳（22 nm SoC）／感覚（0.18 µm AMS）／筋肉（0.35 µm LDMOS＋外付けパワーチップ）／自己発電ブロック**を跨いだクロスノード設計を、SystemDKで統合検証します。  
 > *Based on AITL-H (FSM × PID × LLM), cross-node design spanning Brain (22 nm SoC), Sensing (0.18 µm AMS), Muscles (0.35 µm LDMOS + external power chips), and Energy Harvesting is integrated and verified with SystemDK.*
 
 ---
@@ -154,7 +154,7 @@ flowchart LR
 |----------------|----------------------------|-------------------|---------------------|
 | **開発目的 / Goal** | 研究用プラットフォーム（動的モーションデモ）<br/>*Research platform for dynamic motion demos* | 工場・物流向けの量産型<br/>*Mass production for factory & logistics* | 教育＋研究の集大成 / 自律・冗長性重視<br/>*Educational + research culmination, with autonomy & fault tolerance* |
 | **制御 / Control** | 高速動的制御（跳躍・宙返り）<br/>*Dynamic control for jumps/flips* | シンプルな歩行・物体操作<br/>*Simple walking & manipulation* | FSM × PID × 状態空間 × LLM<br/>*FSM × PID × State-space × LLM* |
-| **外乱耐性 / Disturbance Recovery** | 強力（押しても転ばない）<br/>*Robust (resists pushes)* | 限定的（動画では慎重な動き）<br/>*Limited (careful movements in demos)* | **200ms以内に姿勢回復**<br/>*Posture recovery ≤200 ms* |
+| **外乱耐性 / Disturbance Recovery** | 強力（押しても転ばない）<br/>*Robust (resists pushes)* | 限定的（動画では慎重な動き）<br/>*Limited (careful movements in demos)* | **200ms以内に姿勢回復**<br/>*Posture recovery ≤ 200 ms* |
 | **会話 / Conversation** | なし<br/>*None* | 基本AI応答（将来予定）<br/>*Basic AI response planned* | **LLMによる自然会話対応**<br/>*Conversational via LLM* |
 | **個人認識 / Person Recognition** | なし<br/>*None* | 顔/声認識は未実装<br/>*Not yet implemented* | **顔＋声紋で個別応答**<br/>*Face + voiceprint recognition* |
 | **目的地移動 / Navigation** | 実験的（障害物回避あり）<br/>*Experimental, with obstacle avoidance* | 工場内ナビゲーションを計画<br/>*Planned factory navigation* | **SLAM＋音声指示で目的地移動**<br/>*SLAM + voice command navigation* |
@@ -327,5 +327,3 @@ humanoid/
 
 ## 🔝 トップに戻る / Back to Top
 [![🌐 Back to Site](https://img.shields.io/badge/Back_to-Site-brightgreen?logo=github)](../../) [![💻 Back to Repo](https://img.shields.io/badge/Back_to-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H)
-
-

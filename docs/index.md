@@ -105,6 +105,27 @@ SoC設計〜物理検証の流れを理解したら、**特別編 第2a章：Sys
 
 ---
 
+## 👤 執筆者 / Author
+
+| 項目 / Item | 内容 / Details | 
+|---|---|
+| **著者 / Author** | **三溝 真一**（Shinichi Samizo）<br/>*Shinichi Samizo* |
+| **GitHub** | [![GitHub](https://img.shields.io/badge/GitHub-Samizo--AITL-blue?style=for-the-badge&logo=github)](https://github.com/Samizo-AITL) |
+
+---
+
+## 📄 ライセンス / License
+[![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](#-ライセンス--license)
+
+| 項目 / Item | ライセンス / License | 説明 / Description |
+|-------------|----------------------|--------------------|
+| **コード（Code）** | [MIT License](https://opensource.org/licenses/MIT) | 自由に使用・改変・再配布可<br/>*Free to use, modify, and redistribute* |
+| **教材テキスト（Text）** | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | 著者表示必須<br/>*Attribution required* |
+| **図表・イラスト（Figures）** | [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) | 非商用利用のみ可<br/>*Non-commercial use only* |
+| **外部引用（External refs）** | 元ライセンスに従う | 引用元を明記<br/>*Follow original license & cite* |
+
+---
+
 📅 **最終更新 / Last Updated**:
 {% if page.last_modified_at %}
   {{ page.last_modified_at | date: "%Y-%m-%d" }}
@@ -113,5 +134,3 @@ SoC設計〜物理検証の流れを理解したら、**特別編 第2a章：Sys
 {% else %}
   August 2025
 {% endif %}
-
-✍️ **著者 / Author**: 三溝 真一（Shinichi Samizo）

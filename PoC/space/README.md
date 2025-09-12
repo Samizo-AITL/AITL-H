@@ -75,7 +75,7 @@ space/
 
 ---
 
-## フロントマター / Front Matter
+## デバイス構成
 
 ### プロセス・デバイス層
 - **22 nm FDSOI (AMS/GF 22FDX)**  

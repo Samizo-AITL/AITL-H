@@ -54,5 +54,32 @@ space/
 
 ---
 
+## フロントマター / Front Matter
+
+### プロセス・デバイス層
+- **22 nm FDSOI (AMS/GF 22FDX)**  
+  - ロジック・SRAM・アナログI/Fに最適  
+  - ボディバイアス (ABB) による性能/リーク調整  
+  - 放射線耐性（ラッチアップ抑制）
+
+### NVM階層
+- **MRAM (eMRAM, 22FDX統合IP)**  
+  - 大容量コード/ログ保存用  
+  - ECC＋スクラブ＋二重スロットで保護
+- **FRAM (Rad-Hard小容量)**  
+  - セーフブート・FSM状態・緊急パラメタ保持  
+  - 即時書込＋高耐性
+
+### 実装アーキテクチャ
+- **Chiplet実装**  
+  - 制御SoC（22FDX）＋電力SiC/GaNモジュールを分離  
+  - システムインパッケージ (SiP) で冗長化
+- **SystemDK設計**  
+  - デジタルツイン連携の設計環境  
+  - ECC/FDI/制御器パラメタをモデル駆動で生成  
+  - AITL-H/PoC 実装と自動整合
+
+---
+
 ## ライセンス / License
 MIT License (c) 2025 Shinichi Samizo

@@ -29,133 +29,128 @@
 
 ### 4.1 プラントモデル（簡易例）
 $$
-P(s) = \frac{1}{Js^2 + Ds}
+P(s) = \frac{1}{J s^2 + D s}
 $$
 
 - $J$: 機体慣性モーメント  
 - $D$: 空気抵抗による減衰  
 
-## 5. 外乱対応シミュレーション（定性的デモ）
+## 5. 外乱対応シミュレーション（定性的・数値デモ）
 ![Step + Disturbance Response (qual.)](figures/fig_step_disturbance.png)  
 ![Disturbance Rejection vs Frequency (qual.)](figures/fig_bode_disturbance.png)  
+![Step + Disturbance Response (numeric)](figures/fig_step_disturbance_numeric.png)  
 
-- ステップ応答中に外乱を加えた比較図（PID vs H∞）。  
-- H∞の方が外乱後の回復が速く、オーバーシュートが小さい。  
-- 周波数領域でも外乱伝達ゲインが低い。  
+- ステップ追従中に外乱を加えた比較（PID vs H∞）。H∞の方が外乱後の回復が速く、オーバーシュートが小さい。  
+- 周波数領域でも、H∞は低〜中周波外乱の伝達ゲインが低い。  
+
+### 5.2 「制御→デバイス→メカ」の責務分担マップ
+| 障害/外乱 | 制御系（H∞/FSM/LLM） | デバイス（SoC/Drivers/Sensors） | メカ（構造/外装） |
+|---|---|---|---|
+| 突風・乱気流 | H∞でロバスト安定化 | 高レートIMU、低遅延SoC、応答性ESC | 大径可変ピッチ、剛性フレーム |
+| モータ1基故障 | FSMで推力再配分 | モニタリング、故障検知 | 6ローター冗長 |
+| 通信断/ジャミング | FSMで自律航法へ遷移 | TPM鍵管理、耐妨害リンク | ラドーム、アンテナ視界確保 |
+| 低温/電源劣化 | LLMで省電力最適化 | デュアルバッテリ、PTCヒータ | 断熱外装 |
+| 着氷リスク | FSMで高度/速度再設定 | 温湿度センサ | 撥水・防氷コート |
 
 ## 6. H∞設計①: 重み関数と感度関数
 ![Hinf weights](figures/fig_hinf_weights.png)  
 ![Sensitivity S](figures/fig_sensitivity_comparison.png)  
 ![Complementary T](figures/fig_complementary_comparison.png)  
 
-### 6.1 重み関数例
 $$
-W_1(s) = \frac{0.5s + 10}{s + 10^{-3}}, \quad
+W_1(s) = \frac{0.5 s + 10}{s + 10^{-3}}, \quad
 W_2(s) = \frac{s + 0.1}{s + 100}, \quad
 W_3(s) = \frac{s + 10}{s + 10^3}
 $$
 
-- $W_1(s)$: 低周波外乱抑圧、折返し周波数 ~8 rad/s。  
-- $W_2(s)$: 制御入力制約。  
-- $W_3(s)$: 高周波ロールオフ。  
+- $W_1$: 外乱抑圧  
+- $W_2$: 制御入力制約  
+- $W_3$: 高周波ロールオフ  
 
 ## 7. H∞設計②: 閉ループ目標と実装ガイド
 ![Hinf bounds](figures/fig_hinf_bounds.png)  
 
-- $|S| \le \frac{1}{|W_1|}$  
-- $|T| \le \frac{1}{|W_3|}$  
-- $|KS| \le \frac{1}{|W_2|}$  
-
-目標: 最大感度 $M_s \le 1.7$。  
-実機モデル同定後に再チューニング予定。  
+- $|S| \le 1/|W_1|$  
+- $|T| \le 1/|W_3|$  
+- $|KS| \le 1/|W_2|$  
 
 ---
 
 # Part II: デバイス統合（実装基盤）
 
 ## 8. デバイス統合アーキテクチャ
-- **65 nm FDSOI SoC**: IMU/GNSS/CIS統合、TinyML。  
-- **0.35 µm LDMOS**: 高耐圧モータドライバ(30–60 V)。  
-- **CMOS Image Sensor**: 可視＋近赤外、監視用途。  
-- **エナジーハーベスト**: PZT/ソーラーによる冗長電源。  
+- SoC (65 nm FDSOI)、LDMOSドライバ、CIS、エナジーハーベスト。  
 
-### 8.1 国産化の可能性
-- SoC: ラピダス/TSMC Japanで製造可能性。  
-- LDMOS: Tower Japan（旧パナソニック工場）での成熟プロセス適用。  
-- センサ: ソニー/ルネサス国内CISライン活用。  
-
-## 9. デバイス実装要件（定量）
-- SoC制御周期 $\leq 1.0$ ms、総遅延 $\leq 200 \ \mu$s。  
-- IMUサンプリング $\geq 1$ kHz、ジャイロノイズ密度 $\leq 0.005 \ ^\circ/s/\sqrt{Hz}$。  
-- ESC応答 $\leq 100 \ \mu$s、PWM $\geq 32$ kHz。  
-- セキュリティ: TPM連携セキュアブート、AES-GCM/ECC/PQC。  
-- 電源: デュアルバッテリ、$-30 \sim -50^\circ$C対応、リップル < 50 mVpp。  
+## 9. デバイス実装要件
+- 制御周期 $\leq 1.0$ ms  
+- IMU $\geq 1$ kHz  
+- ESC応答 $\leq 100 \ \mu$s  
+- セキュリティ: TPM + PQC  
 
 ## 10. デバイス候補BOMと概算コスト
-（省略、数値は本文の通り）  
+合計試算: 約 **596,700円/機体** （量産で30–50%低減可能）  
 
 ## 11. セキュリティ・国産化の可能性
-（省略、本文の通り）  
+- TPMによる鍵管理  
+- 国産半導体ラインの活用  
 
 ---
 
 # Part III: メカ設計（構造・環境耐性）
 
 ## 12. メカ設計概要
-- **レイアウト仕様**: 700–900 mmクラス、20インチ可変ピッチ対応。  
-- **重量バランス**: CGをプロペラ面±10 mmに収束。  
-- **外装**: CFRPフレーム、ラドーム（3Dプリント）、断熱バッテリカバー、防氷コート。  
+- 700–900 mm クラス  
+- 可変ピッチ20インチ  
+- CFRP構造・断熱外装  
 
-## 13. 重量・推力設計（定量結果）
-- 総重量 (TOW): **6.38 kg**  
-- ホバリング推力: $T_{hover} \approx 1.2 \times TOW = 7.66$ kgf  
-- 各モータ推力: $T_{per} \approx 1.28$ kgf  
-- 最大推力: $T_{max} \approx 2.0 \times TOW = 12.76$ kgf  
+## 13. 重量・推力設計
+- TOW: 6.38 kg  
+- ホバリング推力: 7.66 kgf  
+- 最大推力: 12.76 kgf  
+- $T/W \approx 2.82$  
 
-## 14. 可変ピッチ推力レンジ設計
-![Pitch vs Thrust (numeric)](figures/fig_pitch_thrust.png)  
-
-- ピッチ角 $\theta_p$ を増加させると推力 $T$ はほぼ線形増加。  
-- モータ定格でクリップされ、$T/W \approx 2.6$ を確保。  
+## 14. 可変ピッチ推力レンジ
+![Pitch vs Thrust](figures/fig_pitch_thrust.png)  
 
 ## 15. 可変ピッチと高度影響
 ![Pitch vs Thrust vs Angle](figures/fig_pitch_thrust_vs_angle.png)  
 
-- 空気密度 $\rho$: 海面高度 $\rho=1.225$、高度10,000 m $\rho\approx0.413$。  
-- 必要RPM（$\theta_p=10^\circ$ の例）  
-  - 海面高度: $n \approx 8,339$ rpm  
-  - 高度10,000 m: $n \approx 14,353$ rpm  
+- 海面高度: 約 8,339 rpm  
+- 高度10,000 m: 約 14,353 rpm  
 
-## 16. 可変ピッチ機構（リンク比と作動トルク）
+## 16. 可変ピッチ機構
 ![Linkage ratio](figures/fig_pitch_link_ratio.png)  
 ![Servo torque](figures/fig_pitch_servo_torque.png)  
 
-- サーボ±30° → ブレード±45°。  
-- 空力モーメント: $M_{aero} \approx 0.135$ Nm（仮定値）。  
-- サーボ要求トルク $M_s \approx 0.62$ Nm。  
-- 安全率2–3倍 → 定格 15–20 kgf·cm クラス推奨。  
+- サーボ要求トルク: 約 0.62 N·m  
+- 安全率 2–3 → 定格15–20 kgf·cm  
 
 ---
 
 # Part IV: 統合・評価・PoC
 
 ## 17. 評価計画
-（本文通り、風洞・低温・冗長性試験など）  
+- 風洞試験、低温チャンバ、冗長性試験、通信耐性評価  
 
 ## 18. PoCスケジュールと体制
 ![PoC Schedule](figures/fig_poc_schedule.png)  
 
 ## 19. 政策向け要点
-（本文通り）  
+- 防衛・防災・GX・教育  
+- 国産半導体・CFRP連携  
 
 ---
 
 # Part V: まとめ
 
 ## 20. 結論
-- SkyEdgeは「**制御理論＋デバイス＋メカ構造を統合した国産ドローン設計**」の試金石。  
-- 高高度10,000 m対応・セキュア・冗長という価値を示す。  
-- 今後はPoC試作、風洞・低温試験、共同研究・政策提言を推進。  
+- 制御＋デバイス＋メカの統合試金石  
+- 高高度1万m、セキュア、冗長性  
 
 ## 21. 参考文献
-（本文通り）  
+- Zames (1981), Skogestad & Postlethwaite (2005)  
+- Doyle (1989), Sugie (1991)  
+- u-blox ZED-F9P, Bosch BMI088, Sony IMX296  
+- 経産省「ラピダス報告書」(2023)  
+- NASA Helios, JAXA HAPS (2019)  
+- OpenAI GPT-4 Technical Report (2023)  

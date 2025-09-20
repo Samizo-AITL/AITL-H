@@ -1,0 +1,2 @@
+Date,Load(MW),FuelType,HeatRate(kJ/kWh),CO2(t/MWh),NOx(g/MWh),DrumLevelDev(%)
+2025-09-01,600,LNG,9200,0.45,320,±3.2

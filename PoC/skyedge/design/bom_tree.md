@@ -7,6 +7,7 @@
 
 ## 📂 構成ツリー
 
+```
 SkyEdge Drone Platform
 ├── Airframe
 │   ├── Frame tubes — 8 / 8
@@ -68,5 +69,4 @@ SkyEdge Drone Platform
 └── Software
     ├── RTOS/Flight stack — 1 / 1
     └── OTA/Bootloader — 1 / 1
-
----
+```

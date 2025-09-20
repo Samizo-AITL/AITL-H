@@ -1,0 +1,19 @@
+# FSM for Thermal Power Operation (safe-by-default)
+states: [準備, 起動, 同調, 負荷追従, 定常, 停止, 非常停止]
+initial: 準備
+transitions:
+  - from: 準備   ; to: 起動   ; guard: 点検OK && 燃料/空気系正常
+  - from: 起動   ; to: 同調   ; guard: 回転達成 && タービン条件成立
+  - from: 同調   ; to: 負荷追従 ; guard: 系統連系完了
+  - from: 負荷追従; to: 定常   ; guard: 負荷帯安定 && 排ガス安定
+  - from: 定常   ; to: 負荷追従 ; event: 需給指令
+  - from: 負荷追従; to: 停止   ; event: 計画停止
+  - from: 起動   ; to: 非常停止 ; guard: 火炎喪失 || 水位逸脱 || 振動大
+  - from: 同調   ; to: 非常停止 ; guard: 同左
+  - from: 定常   ; to: 非常停止 ; guard: 同左
+llm:
+  allowed_states: [定常, 負荷追従]
+  actions: [setpoint_suggestion, gain_schedule_suggestion]
+  auto_apply_limits:
+    o2_trim: {max_bias: 0.2, rate: "0.1% per 10min"}
+    drum_level: {gain_change: "±10%/apply"}

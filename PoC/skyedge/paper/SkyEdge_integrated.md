@@ -154,13 +154,19 @@ $$
 # Part V: まとめ
 
 ## 20. 結論
-- 制御＋デバイス＋メカの統合試金石  
-- 高高度1万m、セキュア、冗長性  
+本研究では、**H∞制御による外乱抑圧、国産デバイスによるセキュア実装、可変ピッチを含むメカ設計**を統合し、  
+高高度 10,000 m 級の極限環境に対応可能な国産セキュアドローンプラットフォーム「SkyEdge」の基盤設計を提示した。  
+
+提案した設計手法は、強風・低温・通信断といった空の課題に対して冗長性と信頼性を確保できることを示した。  
+さらに、本研究のアーキテクチャ（制御・デバイス・メカの統合思想）は汎用性を持ち、海底探査ドローン（AUV/ROV）等への応用、すなわち「SeaEdge」への展開も可能である。  
+これにより、空と海を両輪とした自律型ドローン基盤技術として、防衛・防災・GX・教育・資源探査を横断する国家的な技術基盤へ発展し得る。  
 
 ## 21. 参考文献
-- Zames (1981), Skogestad & Postlethwaite (2005)  
-- Doyle (1989), Sugie (1991)  
-- u-blox ZED-F9P, Bosch BMI088, Sony IMX296  
-- 経産省「ラピダス報告書」(2023)  
-- NASA Helios, JAXA HAPS (2019)  
-- OpenAI GPT-4 Technical Report (2023)  
+- Zames, G. (1981). Feedback and Optimal Sensitivity: Model Reference Transformations, Multiplicative Seminorms, and Approximate Inverses.  
+- Doyle, J. C. (1989). Guaranteed Margins for LQG Regulators.  
+- Skogestad, S., & Postlethwaite, I. (2005). *Multivariable Feedback Control*.  
+- Sugie, T. (1991). Robust Control for Uncertain Systems.  
+- u-blox ZED-F9P, Bosch BMI088, Sony IMX296 – 各種デバイス仕様書.  
+- 経済産業省 (2023). 「ラピダスに関する報告書」.  
+- NASA Helios Program, JAXA HAPS (2019). 高高度実証機研究.  
+- OpenAI (2023). *GPT-4 Technical Report*.  

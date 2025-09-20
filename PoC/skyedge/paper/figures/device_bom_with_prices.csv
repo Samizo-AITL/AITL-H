@@ -1,0 +1,24 @@
+﻿Category,Item,Model,Vendor,Qty,UnitPriceJPY,Notes,SubtotalJPY
+Flight Controller SoC,MCU/SoC,STM32H7 or NXP S32K3,ST/NXP,1,6000,"1ms loop capable, FPU",6000
+Security,TPM/SE,NXP SE050 / TPM2.0,NXP/Infineon,1,1500,"Secure boot, key storage",1500
+IMU (Primary),6-axis IMU,ICM-42688-P,TDK InvenSense,1,1200,"Low noise, 1kHz+",1200
+IMU (Redundant),6-axis IMU,BMI088,Bosch,1,1800,Redundancy,1800
+GNSS/RTK,Receiver,u-blox ZED-F9P,u-blox,1,28000,L1/L2 RTK,28000
+GNSS Antenna,Antenna,Dual-band survey-grade,Tallysman class,1,18000,L1/L2,18000
+5G Modem,Cellular,Quectel RM502Q-AE,Quectel,1,30000,Sub6,30000
+LPWA Radio,LoRa,Semtech SX1262 module,Generic,1,1500,,1500
+Satellite Modem,Iridium,Iridium 9603 / RockBLOCK,Iridium,1,45000,Optional,45000
+ESC,Motor Controller,APD F3 80A CAN,APD,6,16000,"High-speed PWM, CAN",96000
+Motor,BLDC,T-Motor U7 Lite 420kV (例),T-Motor,6,35000,"20"" class",210000
+Propeller Hub,Variable Pitch,"18–20"" var-pitch hub",Generic/Custom,6,20000,Prototype pricing,120000
+Propeller Blades,Blades,"18–20"" blades",Generic,6,7000,,42000
+Servo (Pitch),HV Servo,0.6 N·m class,KST/MKS class,6,12000,"Metal gear, HV",72000
+Battery,Pack,Li-ion/LiPo 6S〜12S,Generic,2,60000,Cold-resistant cells,120000
+Heater,PTC + control,PTC module + driver,Generic,1,5000,Battery enclosure,5000
+Compute Carrier,PCB,Main board + PDB,Custom,1,30000,Assembly est.,30000
+CIS Camera,Global Shutter,Sony IMX296 module,Sony/Module vendor,1,25000,,25000
+Gimbal,2–3 Axis,Gremsy / Tarot class,Gremsy/Tarot,1,60000,,60000
+Airframe,CFRP frame set,700–900 mm class,Custom/CNC,1,80000,Arms+plates,80000
+Radome/Enclosure,3D-printed + seals,PA-CF/PETG,In-house,1,15000,Prototype,15000
+Harness,Wiring,Power + data looms,In-house,1,8000,,8000
+Antenna set,5G/LPWA,MIMO + LPWA antennas,Generic,1,10000,,10000

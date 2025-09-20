@@ -1,0 +1,5 @@
+﻿Parameter,Value,Rationale
+Bandwidth target wb [rad/s],8.0,外乱追従/姿勢応答の帯域
+Max sensitivity Ms,1.7,外乱ピーク抑制(≤1.7)
+Actuator weight wu [rad/s],20.0,高周波での制御入力抑制
+Noise roll-off wt [rad/s],30.0,高周波雑音の遮断帯域

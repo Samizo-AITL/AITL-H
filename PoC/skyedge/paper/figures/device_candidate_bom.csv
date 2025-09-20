@@ -1,0 +1,13 @@
+﻿Category,Item,Candidate / Example,Key Specs / Notes
+IMU,Primary IMU,TDK InvenSense ICM-42688-P,"1 kHz+ ODR, low noise; alt: Bosch BMI088"
+GNSS/RTK,Receiver,u-blox ZED-F9P,"L1/L2 multi-band, RTK 1–2 cm"
+ESC,Motor Controller,APD 80F3 / 120F3 CAN,"32–96 kHz PWM, CAN, fast response"
+Motor,BLDC,T-Motor U7 Lite 420kV（例）,"20""級プロペラ対応、高トルク"
+Propeller,Variable Pitch Hub,"Var-pitch 18–20"" hub（例示）",高高度向けブレード、氷着対策
+SoC/MCU,Flight Controller SoC,NXP S32K3（例） / STM32H7（例）,1 ms制御周期、TPM連携
+Security,TPM/SE,NXP SE050 / TPM2.0,鍵格納、セキュアブート
+5G/LPWA,Modem,Quectel RM502Q-AE / Semtech LoRa,Sub6 5G + 920MHz LPWA
+Satellite,Modem,Iridium 9603 / RockBLOCK,グローバル衛星データリンク
+Camera,CIS Module,Sony IMX296（GS）,"Global shutter, low-light"
+Gimbal,2–3 Axis Gimbal,Gremsy / Tarot（例）,カスタムI/F
+Power,Battery,6S〜12S Li-ion/LiPo,耐低温セル + PTCヒータ

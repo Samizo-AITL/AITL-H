@@ -1,0 +1,17 @@
+﻿Subsystem,Item,Qty,Unit Mass [g],Total Mass [g],Notes
+Airframe,Arms (CFRP),6,150,,
+Airframe,Center plates,2,150,,
+Propulsion,Motors,6,200,,
+Propulsion,Propellers (var-pitch),6,60,,
+Propulsion,ESC,6,70,,
+Power,Battery pack (each),2,1000,,enter 1 or 2 for Qty
+Control,SoC/IMU stack,1,250,,
+Imaging,Gimbal + CIS,1,450,,
+Enclosure,Radome + covers,1,250,,
+Harness,Wiring/loom,1,250,,
+TOTAL,,,,,sum Total Mass for TOW
+,,,,,
+Flight Sizing,Parameter,Value,,,
+Thrust per motor [gf] at hover,T_hover_per_motor,,,,target ~ (TOW*1.2)/6
+Max thrust per motor [gf],T_max_per_motor,,,,>= (TOW*2.0)/6 for margin
+Thrust-to-Weight ratio,T/W,,,,sum max thrust / TOW

@@ -327,3 +327,14 @@ H∞合成で満たしたい **|S|, |T|, |KS| の上限**（目標境界）を�
 ## 17. 概算BOMと政策向け一枚紙
 - 概算BOM: `paper/device_bom_with_prices.csv`（試作前提の目安単価、量産で30–40%低減余地）  
 - 一枚紙: `reports/SkyEdge_OnePager_JP.md`（防衛・政策向けの要点まとめと見積）
+
+---
+
+## 参考文献
+論文スタイルの参考文献リストを `paper/refs.bib` にまとめた。  
+- 制御理論: Zames (1981), Skogestad & Postlethwaite (2005), Blakelock (1991)  
+- デバイス: u-blox ZED-F9P, Bosch BMI088, T-Motor U7, APD ESC, Iridium 9603, Quectel RM502Q, Sony IMX296  
+- AI/制御統合: OpenAI GPT-4 Technical Report (2023)
+
+（更新: 2025-09-20 18:49 JST）
+

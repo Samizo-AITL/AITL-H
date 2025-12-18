@@ -1,120 +1,215 @@
-/* ===============================
-   Base readability & light-weight helpers
-   =============================== */
+/* ─────────────────────────────
+   Samizo-AITL Minimal Engineering CSS
+   Semiconductor / Control / AITL
+   ───────────────────────────── */
 
-/* 本文フォント（日本語も自然なサンセリフ） */
+/* ==============================
+   Reset / Stability
+   ============================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+/* ==============================
+   Base (TECHNICAL FONT / IEEE / Datasheet)
+   ============================== */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-               "Hiragino Kaku Gothic ProN", "Hiragino Sans",
-               "Noto Sans JP", "Yu Gothic UI", "YuGothic", "Meiryo", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+
+  /* ★ 技術用フォント（確定・半導体/制御/仕様書） */
+  font-family:
+    system-ui,                 /* OS標準（最優先） */
+    -apple-system,             /* macOS */
+    BlinkMacSystemFont,        /* macOS Chromium */
+    "Segoe UI",                /* Windows（EDA/制御の王道） */
+    "Hiragino Kaku Gothic ProN",/* macOS 日本語 */
+    "Yu Gothic UI",            /* Windows 日本語 */
+    "Yu Gothic",
+    sans-serif;
+
+  font-size: 16px;
   line-height: 1.7;
+  color: #1f2933;              /* 工学向けダークグレー */
+  background: #f9fafb;        /* クールホワイト */
 }
 
-/* -------------------------------
-   Mermaid：中央寄せ＋横幅ガード
-   ------------------------------- */
-.mermaid {
-  display: block;
-  margin: 1.5em auto;
-  text-align: center;
-  max-width: 960px;   /* ある程度の読み幅で止める */
-  width: 100%;
-}
-
-/* -------------------------------
-   表：薄いテーマでも読める罫線
-   ------------------------------- */
-table {
-  border-collapse: collapse;
-  width: 100%;
-  margin: 1rem 0;
-}
-th, td {
-  border: 1px solid #d0d7de;
-  padding: .5em .8em;
-  vertical-align: top;
-}
-th {
-  background: #f6f8fa;
+/* ==============================
+   Headings
+   ============================== */
+h1, h2, h3, h4, h5, h6 {
+  margin: 1.6rem 0 0.8rem;
+  line-height: 1.25;
   font-weight: 700;
-  text-align: left;
+  color: #003366;              /* 工学ブルー */
 }
 
-/* 交互色（視線誘導。不要なら削除可） */
-tbody tr:nth-child(even) td { background: #fbfcfd; }
+h1 { font-size: 1.8rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.25rem; }
 
-/* モバイル横スクロール崩れ防止（テーブルが画面より広いとき） */
-@media (max-width: 720px) {
-  table {
-    display: block;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
+/* ==============================
+   Paragraph / Lists
+   ============================== */
+p, ul, ol {
+  margin: 0.7rem 0 1rem;
 }
 
-/* -------------------------------
-   章ヘッダー（任意：軽いバッジ群）
-   ------------------------------- */
-.section-hero { margin: 1.2rem 0 1.6rem; }
-.section-hero .badges {
-  display: inline-flex;
-  gap: .4rem;
-  flex-wrap: wrap;
-  align-items: center;
-}
-.section-hero .badge {
-  padding: .22rem .6rem;
-  border: 1px solid #d0d7de;
-  border-radius: 999px;
-  background: #f6f8fa;
-  font-size: .9em;
-  line-height: 1.4;
-  white-space: nowrap;
+ul, ol {
+  padding-left: 1.25rem;
 }
 
-/* バッジの色バリエーション（必要に応じて） */
-.badge--info  { background:#eef6ff; border-color:#9ec4ff; color:#20334d; }
-.badge--warn  { background:#fff7e6; border-color:#f0b429; color:#3b2f2f; }
-.badge--ok    { background:#eefaf2; border-color:#a7e2be; color:#20452f; }
-
-/* ===============================
-   Portal統一トーンを使う場合（theme-sepia）
-   =============================== */
-body.theme-sepia {
-  background: #fdf6e3;
-  color: #3b2f2f;
-  line-height: 1.9;
-  font-size: 1.05em;
-}
-
-body.theme-sepia h1,
-body.theme-sepia h2,
-body.theme-sepia h3 {
-  color: #003366;
-  font-weight: 700;
-  border-bottom: none;
-}
-
-body.theme-sepia a {
-  color: #0066cc;
+/* ==============================
+   Links
+   ============================== */
+a {
+  color: #2563eb;              /* 技術文書ブルー */
   font-weight: 600;
   text-decoration: underline;
 }
-body.theme-sepia a:hover { color: #004c99; }
 
-body.theme-sepia th { background: #e9ddc9; }
-body.theme-sepia table { border: 2px solid #999; }
-body.theme-sepia th { border: 2px solid #999; }
-body.theme-sepia td { border: 1.5px solid #bbb; }
-body.theme-sepia tbody tr:nth-child(even) td { background: #f3efe6; }
+a:hover {
+  color: #1d4ed8;
+}
 
-/* ===============================
-   Print（余分な背景を抑制）
-   =============================== */
+/* ==============================
+   Horizontal Rule
+   ============================== */
+hr {
+  border: 0;
+  border-top: 2px solid #000;
+  margin: 1.5rem 0;
+}
+
+/* ==============================
+   Media
+   ============================== */
+img, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1rem 0;
+}
+
+/* ==============================
+   Code / Pre (EDA / Control)
+   ============================== */
+code, kbd, samp {
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Consolas,
+    "Liberation Mono",
+    "Courier New",
+    monospace;
+  font-size: 0.95em;
+  background: #eef2f7;
+  padding: 0.15em 0.35em;
+  border-radius: 4px;
+  color: #0f172a;
+}
+
+pre {
+  background: #eef2f7;
+  border: 1px solid #cbd5e1;
+  padding: 0.9rem 1rem;
+  border-radius: 6px;
+  overflow: auto;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/* ==============================
+   Blockquote (spec / note)
+   ============================== */
+blockquote {
+  margin: 1rem 0;
+  padding: 0.6rem 1rem;
+  color: #334155;
+  background: #f1f5f9;
+  border-left: 4px solid #2563eb;
+}
+
+/* ==============================
+   Tables (Datasheet Standard)
+   ============================== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  border: 1.5px solid #cbd5e1;
+  font-size: 0.95em;           /* データシート密度 */
+}
+
+th, td {
+  border: 1px solid #cbd5e1;
+  padding: 0.4rem 0.6rem;      /* 密度高め */
+  vertical-align: middle;
+}
+
+th {
+  background: #e5e7eb;
+  font-weight: 700;
+  text-align: left;
+  white-space: nowrap;
+}
+
+td {
+  background: #ffffff;
+}
+
+/* ==============================
+   Mermaid
+   ============================== */
+.mermaid {
+  display: block;
+  margin: 1.25rem auto;
+  max-width: 100%;
+  text-align: center;
+}
+
+/* ==============================
+   Responsive
+   ============================== */
+@media (max-width: 768px) {
+  body {
+    font-size: 15.5px;
+  }
+
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.35rem; }
+  h3 { font-size: 1.15rem; }
+
+  table {
+    font-size: 0.9em;
+  }
+}
+
+/* ==============================
+   Print (Engineering Document)
+   ============================== */
 @media print {
-  a { color: #000; text-decoration: underline; }
-  th { background: #fff; }
-  .badge { border-color:#aaa; background:#fff; }
+  body {
+    background: #fff;
+    color: #000;
+  }
+
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+
+  pre, code, blockquote {
+    background: #fff;
+    border-color: #000;
+  }
 }

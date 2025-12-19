@@ -12,15 +12,21 @@ show_title: false   # ← これで上部の自動H1バーを非表示
 
 [![Samizo-AITLポータルサイトに戻る](https://img.shields.io/badge/Samizo--AITL%20ポータルサイトに戻る-brightgreen)](https://samizo-aitl.github.io/) [![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](#-ライセンス--license)
 
-> ⚠️ **注記 / Note**  
-> 本プロジェクト **AITL-H** は、現在 **構想・検証段階** にあります。  
-> - **安定性・応答設計は PID 等の制御理論に基づくことを前提**としています。  
-> - **FSM や LLM は制御ループの外層ロジック／支援層**として設計され、直接的な安定性保証の対象ではありません。  
-> - 記述内容はアイデアや PoC の一部であり、今後の検証・実装によって変更される可能性があります。  
-> *⚠️ This project is in the **conceptual / testing stage**.  
-> - Stability and response design are assumed to rely on **control theory (e.g., PID)**.  
-> - **FSM and LLM act as outer supervisory / support layers**, not as parts of the stability-guaranteed control loop.  
-> - Contents are conceptual ideas and PoC fragments, subject to change as development progresses.*
+> 🚫 **Project Status: DISCONTINUED / 開発終了**
+>
+> 本プロジェクト **AITL-H** は、設計思想の検討と検証を経た結果、  
+> **工学的な安全性・検証可能性・再現性を十分に保証できない**と判断し、  
+> **実装プロジェクトとしては意図的にディスコン（開発終了）**としました。
+>
+> - LLM を含む構造は、リアルタイム制御系における  
+>   **安定性保証・形式検証・安全認証が困難**である  
+> - 実装・検証コストが、教育的・実務的価値を上回る  
+>
+> 本ページは **設計思想と限界を記録する技術アーカイブ**として公開を継続します。
+>
+> *This project has been intentionally discontinued due to the inability  
+> to guarantee stability, verifiability, and safety in real-time control systems  
+> involving LLM-based components. This site is preserved as a technical archive.*
 
 ---
 
@@ -28,6 +34,7 @@ show_title: false   # ← これで上部の自動H1バーを非表示
 
 | 日付 | 更新内容 / Update | 参照 |
 |------|-------------------|------|
+| 2025-12-19 | 🚫 プロジェクトを **Discontinued / アーカイブ化** |
 | 2025-08-25 | 🚩 Humanoid Robot PoC（集大成）をトップに追加 | [PoCページ](./PoC/humanoid/) |
 | 2025-08-25 | 📑 PoCレポート3本（PWM Ripple / Thermal / Mission Energy）公開 | [Docs Index](./PoC/humanoid/docs/) |
 | 2025-08-25 | 🎤 発表用スライド雛形を追加 | [Slides](./PoC/humanoid/docs/flagship_poc_slides.md) |

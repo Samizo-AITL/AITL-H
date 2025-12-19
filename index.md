@@ -2,7 +2,6 @@
 layout: clean
 permalink: /
 title: ""
-show_title: false   # ← これで上部の自動H1バーを非表示
 ---
 
 ---
@@ -105,35 +104,6 @@ flowchart TB
   click P1 "https://github.com/Samizo-AITL/AITL-H/search?q=pid_controller.py" "PID Implementation"
   click L1 "https://github.com/Samizo-AITL/AITL-H/search?q=llm_interface.py" "LLM Interface"
 ```
-
----
-
-## 🌏 戦略的重要性　/  Strategic Significance
-
-AITL-Hは、単なる制御アーキテクチャではなく、  
-**状態フィードバック制御**と**状態遷移制御**を統合し、さらに**LLM（大規模言語モデル）**と**SystemDK**を組み合わせることで、  
-**リアルタイムかつ物理制約を考慮した最適設計**を実現します。  
-*AITL-H is not just a control architecture. By integrating **state feedback control** and **state transition control**, and further combining **LLMs** with **SystemDK**, it achieves **real-time optimal design under physical constraints**.*
-
-- **産業的効果**  
-  - 故障対応時間の大幅短縮（PoC評価値：94%削減）  
-  - 生産ライン再構成時間を8倍短縮  
-  - 設計変更対応コストを40%削減  
-- **Industrial effects**  
-  - Significantly reduced fault response time (PoC evaluation: 94% reduction)  
-  - 8× faster reconfiguration of production lines  
-  - 40% reduction in design change costs*  
-
-- **国家的意義**  
-  - 先端ノード半導体や産業用自律システムの競争力確保  
-  - 国際標準化における主導権獲得  
-- **National significance**  
-  - Securing competitiveness in advanced-node semiconductors and industrial autonomous systems  
-  - Gaining leadership in international standardization*  
-
-> **この技術は「今」統合しなければならない。**  
-> 特にSystemDKはAITL-H固有ではなく、**全ての先端ノード半導体設計に必須の基盤技術**です。  
-> *This technology must be integrated **now**. In particular, SystemDK is not unique to AITL-H but is an **essential foundational technology for all advanced-node semiconductor designs**.*
 
 ---
 

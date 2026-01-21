@@ -210,9 +210,7 @@ SoC設計〜物理検証の流れを理解したら、**特別編 第2a章：Sys
 | **📌 項目 / Item** | **内容 / Details** |
 |--------------------|--------------------|
 | **氏名 / Name** | **三溝 真一（Shinichi Samizo）**<br>*Shinichi Samizo* |
-| **学歴 / Education** | **信州大学大学院 電気電子工学 修了**<br>*M.S. in Electrical and Electronic Engineering, Shinshu University* |
-| **経歴 / Career** | **元 セイコーエプソン株式会社 技術者（1997年〜）**<br>*Former Engineer at Seiko Epson Corporation (since 1997)* |
-| **経験領域 / Expertise** | **半導体デバイス**（ロジック・メモリ・高耐圧混載）<br>*Semiconductor devices (logic, memory, high-voltage mixed integration)*<br>**インクジェット薄膜ピエゾアクチュエータ**<br>*Inkjet thin-film piezo actuators*<br>**PrecisionCoreプリントヘッド製品化・BOM管理・ISO教育**<br>*Productization of PrecisionCore printheads, BOM management, and ISO training* |
+| **経験領域 / Expertise** | **半導体デバイス**（ロジック・メモリ・高耐圧混載）<br>*Semiconductor devices (logic, memory, high-voltage mixed integration)*<br>**インクジェット薄膜ピエゾアクチュエータ**<br>*Inkjet thin-film piezo actuators*<br>**プリントヘッド製品化・BOM管理・ISO教育**<br>*Productization of printheads, BOM management, and ISO training* |
 | **💻 GitHub** | [![GitHub](https://img.shields.io/badge/GitHub-Samizo--AITL-blue?style=for-the-badge&logo=github)](https://github.com/Samizo-AITL) |
 
 ---

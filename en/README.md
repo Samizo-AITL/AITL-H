@@ -190,9 +190,7 @@ Once you understand the flow from SoC design to physical verification, proceed t
 | 📌 Item | Details |
 |---------|---------|
 | **Name** | **Shinichi Samizo**<br>*Shinichi Samizo* |
-| **Education** | **M.S. in Electrical and Electronic Engineering, Shinshu University** |
-| **Career** | **Former Engineer at Seiko Epson Corporation (since 1997)** |
-| **Expertise** | **Semiconductor devices** (logic, memory, high-voltage mixed integration)<br>**Inkjet thin-film piezo actuators**<br>**Productization of PrecisionCore printheads, BOM management, ISO training** |
+| **Expertise** | **Semiconductor devices** (logic, memory, high-voltage mixed integration)<br>**Inkjet thin-film piezo actuators**<br>**Productization of printheads, BOM management, ISO training** |
 | **💻 GitHub** | [![GitHub](https://img.shields.io/badge/GitHub-Samizo--AITL-blue?style=for-the-badge&logo=github)](https://github.com/Samizo-AITL) |
 
 ---
